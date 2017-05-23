@@ -10,3 +10,9 @@ RewriteRule . /yii-wordpress-integration/wordpress/index.php [L]
 </IfModule>
 
 # END WordPress
+
+#set max upload file size
+php_value upload_max_filesize 10M
+
+#set max post size
+php_value post_max_size 10M

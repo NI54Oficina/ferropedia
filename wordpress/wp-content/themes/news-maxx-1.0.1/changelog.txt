@@ -1,0 +1,11 @@
+///////////////////////////////////////////
+    News-maxx theme - Change log
+///////////////////////////////////////////
+
+#1.0.2
+    * Replace add_menu_page function by add_theme_page function
+#1.0.1
+    * Remove all plugin territory
+    * Add Licenses for images, javascript files
+#1.0.0
+[INIT] Theme release !!!
