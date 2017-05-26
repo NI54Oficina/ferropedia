@@ -8653,3 +8653,117 @@ Kopa Contact Info Widget
 .kopa-page-footer .wrapper #copyright {
     margin-bottom: 0;
     text-align: center; }
+
+
+
+
+
+
+
+/*customs styles ni 54*/
+
+/*header*/
+
+
+@font-face {
+    font-family: "Condensed-bold";
+    src: url(fonts/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Condensed-italic";
+    src: url(fonts/RobotoCondensed-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Condensed-bold-italic";
+    src: url(fonts/RobotoCondensed-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Condensed-regular";
+    src: url(fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-regular";
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-italic";
+    src: url(fonts/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-bold";
+    src: url(fonts/Roboto-Bold.ttf);
+}
+
+body{
+  background-color: #000;
+}
+
+.kp-headline-title{
+  background-color: #a43c93;
+}
+
+.breadcrumb{
+  display: none;
+  /*codigo para el location de la pagina en el header*/
+}
+
+.widget-area-1{
+  background-color: rgba(0, 0, 0, 0.5);
+  /*parte de noticias no-slide*/
+}
+
+.widget-area-1 > div{
+  background-color: transparent;
+  /*parte de noticias no-slide*/
+}
+
+.kopa-home-slider-widget .owl-theme .owl-controls .owl-page.active span{
+  border: 2px solid #a43c93;
+  background: #a43c93;
+}
+
+.kopa-home-slider-widget .owl-theme .owl-controls .owl-page span{
+  border: 2px solid black;
+  background: transparent;
+}
+
+/*footer*/
+
+#bottom-sidebar, #copyright{
+  text-align: center;
+}
+
+#bottom-sidebar h1{
+  color: #a43c93;
+  font-family: "Condensed-bold-italic";
+}
+
+#bottom-sidebar h1 span{
+  color: #a43c93;
+  font-family: "Condensed-italic";
+}
+
+#bottom-sidebar > p{
+  color: #a43c93;
+  font-family: "Roboto-bold";
+}
+
+#bottom-sidebar a i{
+  color: #a43c93;
+  margin:10px;
+}
+#bottom-sidebar a i:hover{
+  color: white;
+}
+
+
+#copyright{
+  margin: 20px auto;
+  font-family: "Roboto-regular";
+}

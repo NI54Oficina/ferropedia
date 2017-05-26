@@ -1,0 +1,2714 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: News-Maxx\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-22 15:14+0700\n"
+"PO-Revision-Date: 2014-07-22 15:14+0700\n"
+"Last-Translator: \n"
+"Language-Team: Kopatheme <kopasoft@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ news-mix
+#: ../404.php:15 ../library/ini.php:231
+msgid "404"
+msgstr ""
+
+# @ news-mix
+#: ../404.php:18
+msgid "Page not found..."
+msgstr ""
+
+#: ../404.php:19
+msgid ""
+"We're sorry, but we can't find the page you were looking for. It's probably "
+"some thing we've done wrong but now we know about it we'll try to fix it. In "
+"the meantime, try one of these options:"
+msgstr ""
+
+# @ news-mix
+#: ../404.php:21
+msgid "Go back to previous page"
+msgstr ""
+
+# @ news-mix
+#: ../404.php:22
+msgid "Go to homepage"
+msgstr ""
+
+# @ news-mix
+#: ../comments.php:3
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+# @ news-mix
+#: ../comments.php:15
+msgid "No Comment"
+msgstr ""
+
+# @ news-mix
+#: ../comments.php:15
+msgid "1 Comment"
+msgstr ""
+
+# @ news-mix
+#: ../comments.php:15
+msgid "% Comments"
+msgstr ""
+
+#: ../comments.php:63 ../comments.php:72
+msgid "Pingback"
+msgstr ""
+
+# @ news-mix
+#: ../comments.php:67 ../comments.php:101
+msgid "Edit"
+msgstr ""
+
+#: ../comments.php:130
+msgid "Name *"
+msgstr ""
+
+#: ../comments.php:134
+msgid "Email *"
+msgstr ""
+
+# @ news-mix
+#: ../comments.php:138
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:145 ../comments.php:149
+msgid "Your comment *"
+msgstr ""
+
+#: ../comments.php:155
+msgid "Your email address will not be published. Required fields are marked"
+msgstr ""
+
+#: ../comments.php:159
+msgid "POST YOUR COMMENTS"
+msgstr ""
+
+# @ news-mix
+#: ../comments.php:162
+msgid "Post Comment"
+msgstr ""
+
+# @ news-mix
+#: ../functions.php:63 ../library/includes/class-tgm-plugin-activation.php:164
+msgid "Install Required Plugins"
+msgstr ""
+
+# @ news-mix
+#: ../functions.php:64 ../library/includes/class-tgm-plugin-activation.php:165
+msgid "Install Plugins"
+msgstr ""
+
+# @ news-mix
+#: ../functions.php:65 ../library/includes/class-tgm-plugin-activation.php:166
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+# @ news-mix
+#: ../functions.php:66
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../functions.php:67
+#, php-format
+msgid ""
+"This theme requires the following plugin: %1$s. If you currently use the "
+"built-in plugin (pre-packaged plugin, e.g. shortcode...) from another "
+"WordPress themes by Kopatheme, please deactivate and delete the plugin "
+"before installing."
+msgid_plural ""
+"This theme requires the following plugins: %1$s. If you currently use the "
+"built-in plugins (pre-packaged plugins, e.g. shortcode...) from another "
+"WordPress themes by Kopatheme, please deactivate and delete the plugins "
+"before installing."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../functions.php:68
+#, php-format
+msgid ""
+"This theme recommends the following plugin: %1$s. If you currently use the "
+"built-in plugin (pre-packaged plugin, e.g. shortcode...) from another "
+"WordPress themes by Kopatheme, please deactivate and delete the plugin "
+"before installing."
+msgid_plural ""
+"This theme recommends the following plugins: %1$s. If you currently use the "
+"built-in plugins (pre-packaged plugins, e.g. shortcode...) from another "
+"WordPress themes by Kopatheme, please deactivate and delete the plugins "
+"before installing."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../functions.php:69 ../library/includes/class-tgm-plugin-activation.php:170
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../functions.php:70
+#, php-format
+msgid ""
+"The following required plugin is currently inactive: %1$s. If you currently "
+"use the built-in plugin (pre-packaged plugin, e.g. shortcode...) from "
+"another WordPress themes by Kopatheme, please delete the plugin and install "
+"the pre-packaged plugin comes with this theme."
+msgid_plural ""
+"The following required plugins are currently inactive: %1$s. If you "
+"currently use the built-in plugins (pre-packaged plugins, e.g. shortcode...) "
+"from another WordPress themes by Kopatheme, please delete the plugins and "
+"install the pre-packaged plugins come with this theme."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../functions.php:71
+#, php-format
+msgid ""
+"The following recommended plugin is currently inactive: %1$s. If you "
+"currently use the built-in plugin (pre-packaged plugin, e.g. shortcode...) "
+"from another WordPress themes by Kopatheme, please delete the plugin and "
+"install the pre-packaged plugin comes with this theme."
+msgid_plural ""
+"The following recommended plugins are currently inactive: %1$s. If you "
+"currently use the built-in plugins (pre-packaged plugins, e.g. shortcode...) "
+"from another WordPress themes by Kopatheme, please delete the plugins and "
+"install the pre-packaged plugins come with this theme."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../functions.php:72 ../library/includes/class-tgm-plugin-activation.php:173
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../functions.php:73
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s. If the plugin is built-in "
+"plugin (pre-packaged plugin, e.g. shortcode...) of this theme, please "
+"deactivate and delete its current version before installing its latest "
+"version comes with this theme."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s. If the plugins are built-in "
+"plugins (pre-packaged plugins, e.g. shortcode...) of this theme, please "
+"deactivate and delete their current version before installing their latest "
+"version come with this theme."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../functions.php:74 ../library/includes/class-tgm-plugin-activation.php:175
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../functions.php:75 ../library/includes/class-tgm-plugin-activation.php:176
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../functions.php:76 ../library/includes/class-tgm-plugin-activation.php:177
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../functions.php:77 ../library/includes/class-tgm-plugin-activation.php:178
+#: ../library/includes/class-tgm-plugin-activation.php:490
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+# @ news-mix
+#: ../functions.php:78 ../library/includes/class-tgm-plugin-activation.php:179
+#: ../library/includes/class-tgm-plugin-activation.php:1846
+msgid "Plugin activated successfully."
+msgstr ""
+
+# @ news-mix
+#: ../functions.php:79
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../library/front.php:16
+msgid "Top Menu (All Items Flat)"
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:17
+msgid "Main Menu"
+msgstr ""
+
+#: ../library/front.php:18
+msgid "Second Menu"
+msgstr ""
+
+#: ../library/front.php:19
+msgid "Bottom Menu (All Items Flat)"
+msgstr ""
+
+#: ../library/front.php:258
+msgid "SEND"
+msgstr ""
+
+#: ../library/front.php:259
+msgid "SENDING..."
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:262
+msgid "Please enter your name."
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:265
+msgid "Please enter your email."
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:266
+msgid "Please enter a valid email."
+msgstr ""
+
+#: ../library/front.php:269
+msgid "Please enter your comment."
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:311
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../library/front.php:319
+msgid "kopa size 882 x 436 (Kopatheme)"
+msgstr ""
+
+#: ../library/front.php:320
+msgid "kopa size 131 x 97 (Kopatheme)"
+msgstr ""
+
+#: ../library/front.php:321
+msgid "kopa size 866 x 428 (Kopatheme)"
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:338 ../library/front.php:339
+msgid "auto"
+msgstr ""
+
+#: ../library/front.php:385
+msgid "You are here: "
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:385 ../library/ini.php:191
+#: ../library/templates/header-style-1.php:62
+#: ../library/templates/header-style-2.php:61
+msgid "Home"
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:395
+#: ../library/includes/cpanel/theme-options/general.php:229
+msgid "Blog"
+msgstr ""
+
+#: ../library/front.php:530
+#, php-format
+msgid "<span class=\"%1$s\">Your search for \"%2$s\" return %3$s results"
+msgstr ""
+
+# @ news-mix
+#: ../library/front.php:535
+#, php-format
+msgid "Posts created by %1$s"
+msgstr ""
+
+#: ../library/front.php:538
+msgid "Error 404"
+msgstr ""
+
+#: ../library/front.php:592
+msgid "Post by related"
+msgstr ""
+
+#: ../library/front.php:592
+msgid "Related post"
+msgstr ""
+
+#: ../library/front.php:669
+msgid "&nbsp;&nbsp;Facebook "
+msgstr ""
+
+#: ../library/front.php:674
+msgid "&nbsp;&nbsp;Twitter "
+msgstr ""
+
+#: ../library/front.php:679
+msgid "&nbsp;&nbsp;Google +"
+msgstr ""
+
+#: ../library/front.php:683
+msgid "&nbsp;&nbsp;Linkedin"
+msgstr ""
+
+#: ../library/front.php:687
+msgid "&nbsp;&nbsp;Pinterest"
+msgstr ""
+
+#: ../library/front.php:774
+msgid "About"
+msgstr ""
+
+#: ../library/front.php:1786 ../library/front.php:1827
+#: ../library/templates/header-style-1.php:218
+msgid "Home slider"
+msgstr ""
+
+#: ../library/front.php:1868
+msgid "Adrian Peterson exclusive interview"
+msgstr ""
+
+#: ../library/front.php:1893
+msgid "From around the world"
+msgstr ""
+
+#: ../library/front.php:1998
+msgid "Timestamp (ago)"
+msgstr ""
+
+#: ../library/front.php:2000
+msgid "-- Select --"
+msgstr ""
+
+#: ../library/front.php:2001
+msgid "1 week"
+msgstr ""
+
+#: ../library/front.php:2002
+msgid "2 weeks"
+msgstr ""
+
+#: ../library/front.php:2003
+msgid "3 weeks"
+msgstr ""
+
+#: ../library/front.php:2004
+msgid "1 months"
+msgstr ""
+
+#: ../library/front.php:2005
+msgid "2 months"
+msgstr ""
+
+#: ../library/front.php:2006
+msgid "3 months"
+msgstr ""
+
+#: ../library/front.php:2007
+msgid "4 months"
+msgstr ""
+
+#: ../library/front.php:2008
+msgid "5 months"
+msgstr ""
+
+#: ../library/front.php:2009
+msgid "6 months"
+msgstr ""
+
+#: ../library/front.php:2010
+msgid "7 months"
+msgstr ""
+
+#: ../library/front.php:2011
+msgid "8 months"
+msgstr ""
+
+#: ../library/front.php:2012
+msgid "9 months"
+msgstr ""
+
+#: ../library/front.php:2013
+msgid "10 months"
+msgstr ""
+
+#: ../library/front.php:2014
+msgid "11 months"
+msgstr ""
+
+#: ../library/front.php:2015
+msgid "1 year"
+msgstr ""
+
+#: ../library/front.php:2016
+msgid "2 years"
+msgstr ""
+
+#: ../library/front.php:2017
+msgid "3 years"
+msgstr ""
+
+#: ../library/front.php:2018
+msgid "4 years"
+msgstr ""
+
+#: ../library/front.php:2019
+msgid "5 years"
+msgstr ""
+
+#: ../library/front.php:2020
+msgid "6 years"
+msgstr ""
+
+#: ../library/front.php:2021
+msgid "7 years"
+msgstr ""
+
+#: ../library/front.php:2022
+msgid "8 years"
+msgstr ""
+
+#: ../library/front.php:2023
+msgid "9 years"
+msgstr ""
+
+#: ../library/front.php:2024
+msgid "10 years"
+msgstr ""
+
+#: ../library/front.php:2131
+#: ../library/includes/cpanel/theme-options/general.php:431
+msgid "C"
+msgstr ""
+
+#: ../library/front.php:2131
+#: ../library/includes/cpanel/theme-options/general.php:430
+msgid "F"
+msgstr ""
+
+#: ../library/front.php:2224
+msgid "No Data"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/ajax.php:359 ../library/includes/ajax.php:390
+msgid "Oops! errors occured."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/ajax.php:384
+msgid "Website:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/ajax.php:393
+msgid "Success! Your email has been sent."
+msgstr ""
+
+#: ../library/includes/ajax.php:425
+msgid "Sorry an error has occurred."
+msgstr ""
+
+#: ../library/includes/ajax.php:449
+msgid "You cannot vote twice."
+msgstr ""
+
+#: ../library/includes/bfithumb.php:133
+msgid ""
+"The server does not have ImageMagick or GD installed and/or enabled! Any of "
+"these libraries are required for WordPress to be able to resize images. "
+"Please contact your server administrator to enable this before continuing."
+msgstr ""
+
+#: ../library/includes/bfithumb.php:252
+msgid "Image rotate failed."
+msgstr ""
+
+#: ../library/includes/bfithumb.php:274
+msgid "Image opacity change failed."
+msgstr ""
+
+#: ../library/includes/bfithumb.php:353
+msgid "Image color change failed."
+msgstr ""
+
+#: ../library/includes/bfithumb.php:369
+msgid "Image grayscale failed."
+msgstr ""
+
+#: ../library/includes/bfithumb.php:385
+msgid "Image negate failed."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:167
+msgid "Something went wrong."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:168
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:169
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:171
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:172
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:174
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:180
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:517
+#: ../library/includes/class-tgm-plugin-activation.php:2058
+msgid "Return to the Dashboard"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:545
+#, php-format
+msgid "The following plugin was activated successfully: %s."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:704
+msgid "Dismiss this notice"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1091
+msgid "External Link"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1096
+msgid "Private Repository"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1099
+msgid "Pre-Packaged"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1103
+msgid "WordPress Repository"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1106
+msgid "Required"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1106
+msgid "Recommended"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1109
+msgid "Not Installed"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1111
+msgid "Installed But Not Activated"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1281
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1297
+msgid "Plugin"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1298
+msgid "Source"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1299
+msgid "Type"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1300
+msgid "Status"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1318
+msgid "Install"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1319
+msgid "Activate"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1544
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1829
+msgid "Install package not available."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1830
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1831
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1832
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1833
+msgid "Plugin install failed."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1834
+msgid "Plugin installed successfully."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1845
+msgid "Plugin activation failed."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1955
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1956
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1956
+#: ../library/includes/class-tgm-plugin-activation.php:1965
+msgid "Show Details"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1956
+#: ../library/includes/class-tgm-plugin-activation.php:1965
+msgid "Hide Details"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1957
+msgid "All installations and activations have been completed."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1962
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1963
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1964
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1965
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1966
+msgid "All installations have been completed."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/class-tgm-plugin-activation.php:1967
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:14
+msgid "General Setting"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:15
+msgid "Single Post"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:16
+#: ../library/includes/cpanel/theme-options/social-links.php:37
+msgid "Social Links"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:17
+msgid "Custom Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:18
+msgid "Custom Font"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:19
+#: ../library/includes/cpanel/theme-options/custom-css.php:5
+msgid "Custom CSS"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:26 ../library/kopa.php:18
+#: ../library/kopa.php:23
+msgid "Theme Options"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:30
+msgid "Visit author URL:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options.php:37
+#: ../library/includes/cpanel/theme-options.php:56
+msgid "Save"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:4
+msgid "Main Color"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/custom-color.php:15
+msgid "Body Text Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:25
+msgid "Heading Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:29
+msgid "Widget title color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:33
+msgid "H1 Heading Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:37
+msgid "H2 Heading Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:41
+msgid "H3 Heading Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:45
+msgid "H4 Heading Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:49
+msgid "H5 Heading Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-color.php:53
+msgid "H6 Heading Color"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-css.php:10
+msgid "Enter the your custom CSS code"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:4
+msgid "Custom Fonts"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:8
+msgid "Heading font"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:22
+msgid "Sample Heading Font"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:36
+#: ../library/includes/cpanel/theme-options/custom-font.php:127
+#: ../library/includes/cpanel/theme-options/custom-font.php:165
+#: ../library/includes/cpanel/theme-options/custom-font.php:212
+msgid "Font size"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:37
+msgid "H1 size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:39
+#: ../library/includes/cpanel/theme-options/custom-font.php:44
+#: ../library/includes/cpanel/theme-options/custom-font.php:49
+#: ../library/includes/cpanel/theme-options/custom-font.php:54
+#: ../library/includes/cpanel/theme-options/custom-font.php:59
+#: ../library/includes/cpanel/theme-options/custom-font.php:64
+#: ../library/includes/cpanel/theme-options/custom-font.php:130
+#: ../library/includes/cpanel/theme-options/custom-font.php:168
+#: ../library/includes/cpanel/theme-options/custom-font.php:215
+#: ../library/includes/cpanel/theme-options/general.php:21
+#: ../library/includes/cpanel/theme-options/general.php:27
+#: ../library/includes/cpanel/theme-options/general.php:33
+#: ../library/includes/cpanel/theme-options/general.php:39
+#: ../library/includes/cpanel/theme-options/general.php:52
+#: ../library/includes/cpanel/theme-options/general.php:58
+#: ../library/includes/cpanel/theme-options/general.php:64
+#: ../library/includes/cpanel/theme-options/general.php:70
+msgid "px"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:42
+msgid "H2 size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:47
+msgid "H3 size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:52
+msgid "H4 size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:57
+msgid "H5 size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:62
+msgid "H6 size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:67
+#: ../library/includes/cpanel/theme-options/custom-font.php:172
+msgid "Font Weight"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:68
+msgid "H1 weight:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:72
+msgid "H2 weight:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:76
+msgid "H3 weight:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:80
+msgid "H4 weight:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:84
+msgid "H5 weight:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:88
+msgid "H6 weight:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:101
+msgid "Content font"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:113
+msgid "Sample Content Font"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:128
+msgid "Content font size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:132
+#: ../library/includes/cpanel/theme-options/custom-font.php:219
+msgid "Font weight"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:133
+msgid "Content font weight:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:138
+msgid "Main navigation font"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:150
+msgid "Sample Main Navigation Font"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:166
+msgid "Main nagivation size:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/custom-font.php:173
+msgid "Main nagivation font weight:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/custom-font.php:185
+msgid "Widget title font"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/custom-font.php:197
+msgid "Sample widget title font"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/custom-font.php:213
+msgid "Widget title font size:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/custom-font.php:220
+msgid "Widget title font weight:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:6
+msgid "Logo, Favicon, Apple Icon"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:12
+msgid "Logo 1"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:13
+#: ../library/includes/cpanel/theme-options/general.php:44
+msgid "Upload your own logo."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:16
+#: ../library/includes/cpanel/theme-options/general.php:47
+#: ../library/includes/cpanel/theme-options/general.php:79
+#: ../library/includes/cpanel/theme-options/general.php:89
+#: ../library/includes/cpanel/theme-options/general.php:94
+#: ../library/includes/cpanel/theme-options/general.php:100
+#: ../library/includes/cpanel/theme-options/general.php:106
+#: ../library/includes/cpanel/theme-options/general.php:125
+#: ../library/includes/widgets.php:341 ../library/includes/widgets.php:2008
+msgid "Upload"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:18
+#: ../library/includes/cpanel/theme-options/general.php:49
+msgid "Logo margin"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:19
+#: ../library/includes/cpanel/theme-options/general.php:50
+msgid "Top margin:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:25
+#: ../library/includes/cpanel/theme-options/general.php:56
+msgid "Left margin:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:31
+#: ../library/includes/cpanel/theme-options/general.php:62
+msgid "Right margin:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:37
+#: ../library/includes/cpanel/theme-options/general.php:68
+msgid "Bottom margin:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:43
+msgid "Logo 2"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:74
+msgid "Favicon"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:76
+msgid "Upload your own favicon."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:84
+msgid "Apple Icons"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:86
+msgid "Iphone (57px - 57px)"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:91
+msgid "Iphone Retina (114px - 114px)"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:97
+msgid "Ipad (72px - 72px)"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:103
+msgid "Ipad Retina (144px - 144px)"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:116
+#: ../library/includes/cpanel/theme-options/general.php:120
+msgid "Banner"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:122
+msgid "Upload your own banner."
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:129
+msgid "Banner Link"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:131
+msgid "Link for your banner."
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:137
+msgid "Banner Target"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:140
+#: ../library/includes/cpanel/theme-options/social-links.php:16
+msgid "Opens the linked document in the same frame as it was clicked"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:141
+#: ../library/includes/cpanel/theme-options/social-links.php:17
+msgid "Opens the linked document in a new window or tab"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:162
+msgid "Responsive layout"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:166
+msgid "Enable/Disable Responsive Layout:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:169
+msgid "Enable"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:170
+msgid "Disable"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:190
+msgid "Breadcrumb"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:194
+msgid "Show/Hide Breadcrumb:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:197
+#: ../library/includes/cpanel/theme-options/general.php:236
+#: ../library/includes/cpanel/theme-options/post.php:12
+#: ../library/includes/cpanel/theme-options/post.php:35
+#: ../library/includes/cpanel/theme-options/post.php:51
+#: ../library/includes/cpanel/theme-options/post.php:73
+#: ../library/includes/cpanel/theme-options/post.php:95
+#: ../library/includes/cpanel/theme-options/post.php:123
+msgid "Show"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:198
+#: ../library/includes/cpanel/theme-options/general.php:237
+#: ../library/includes/cpanel/theme-options/post.php:13
+#: ../library/includes/cpanel/theme-options/post.php:36
+#: ../library/includes/cpanel/theme-options/post.php:52
+#: ../library/includes/cpanel/theme-options/post.php:74
+#: ../library/includes/cpanel/theme-options/post.php:96
+#: ../library/includes/cpanel/theme-options/post.php:124
+msgid "Hide"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:214
+msgid "Excerpt length"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:218
+msgid "Frontpage excerpt length"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:222
+msgid "Blog excerpt length"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:233
+msgid "Show/Hide Read more:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:257
+msgid "Top slider"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:261
+#: ../library/includes/cpanel/theme-options/general.php:336
+#: ../library/includes/cpanel/theme-options/general.php:385
+#: ../library/includes/widgets.php:688 ../library/includes/widgets.php:1088
+#: ../library/includes/widgets.php:1352 ../library/includes/widgets.php:1663
+#: ../library/includes/widgets.php:2365
+msgid "Categories"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:278
+#: ../library/includes/cpanel/theme-options/general.php:353
+#: ../library/includes/cpanel/theme-options/general.php:402
+msgid "Number of posts"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:289
+msgid "Post excerpt length"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:297
+msgid "Slide speed"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:298
+#: ../library/includes/widgets.php:1172
+msgid "Slide speed in milliseconds"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:303
+msgid "Auto Play:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:306
+msgid "Yes"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:307
+msgid "No"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:328
+msgid "Top news"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:332
+msgid "Title"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:333
+msgid "FROM AROUND THE WORLD"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:376
+msgid "Headline"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:381
+msgid "Prefix"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:382
+msgid "BREAKING NEWS"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:422
+msgid "Weather Setting"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:427
+msgid "Unit:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:444
+msgid "Custom location:"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:450
+msgid "Override Title:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:462
+msgid "Footer"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:468
+msgid "Custom Footer Description"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:469
+msgid ""
+"Enter the content you want to display in your footer (e.g. copyright text)."
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:470
+#, php-format
+msgid "Copyright %1$s - Kopasoft. All Rights Reserved."
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/general.php:474
+msgid "Google Analytics"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/general.php:475
+msgid ""
+"Enter Google Analytics code. This should be something like: &lt;script type="
+"\"text/javascript\"&gt;  ...  &lt;/script&gt;"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/post.php:5
+msgid "Featured Post Thumbnail"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/post.php:9
+msgid "Show/Hide Featured Post Thumbnail in single post"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/post.php:28
+msgid "Meta data on post"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/post.php:32
+msgid "Show/Hide date on post"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/post.php:48
+msgid "Show/Hide view count on post"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:67
+msgid "About Author"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/post.php:89
+msgid "Post Navigation (previous article and next article)"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:111
+msgid "Sharing Buttons"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:116
+#: ../library/includes/widgets.php:2198 ../library/includes/widgets.php:2560
+msgid "Facebook"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:117
+#: ../library/includes/widgets.php:994 ../library/includes/widgets.php:2202
+msgid "Twitter"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:118
+msgid "Google"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/post.php:119
+#: ../library/includes/widgets.php:2226 ../library/includes/widgets.php:2563
+msgid "Linkedin"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:120
+#: ../library/includes/cpanel/theme-options/social-links.php:91
+#: ../library/includes/widgets.php:2222
+msgid "Pinterest"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:148
+msgid "Related Posts"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:154
+msgid "Get By"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:158
+msgid "-- Hide --"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:159
+#: ../library/ini.php:219
+msgid "Tag"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:160
+msgid "Category"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/post.php:170
+msgid "Limit"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:8
+#: ../library/includes/cpanel/theme-options/social-links.php:13
+msgid "Social Links Target"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/social-links.php:45
+msgid "RSS URL"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/social-links.php:47
+msgid ""
+"Display the RSS feed button with the default RSS feed or enter a custom feed "
+"below. <br><code>Enter <b>\"HIDE\"</b> if you want to hide it</code>"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:50
+msgid "Facebook URL"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/social-links.php:56
+msgid "Twitter URL"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:61
+msgid "Google Plus URL"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/cpanel/theme-options/social-links.php:66
+msgid "Dribbble URL"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:71
+msgid "Linkedin URL"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:76
+#: ../library/includes/widgets.php:2210
+msgid "Skype"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:81
+#: ../library/includes/widgets.php:2218
+msgid "Tumblr"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:86
+msgid "Flickr"
+msgstr ""
+
+#: ../library/includes/cpanel/theme-options/social-links.php:96
+#: ../library/includes/widgets.php:2230
+msgid "Youtube"
+msgstr ""
+
+#: ../library/includes/options_post_rating.php:11
+#: ../library/templates/template-post-rating.php:34
+msgid "Editor Rating"
+msgstr ""
+
+#: ../library/includes/options_post_rating.php:26
+msgid "Rating Name:"
+msgstr ""
+
+#: ../library/includes/options_post_rating.php:33
+msgid " Star(s)"
+msgstr ""
+
+#: ../library/includes/options_post_rating.php:38
+msgid "Remove"
+msgstr ""
+
+#: ../library/includes/options_post_rating.php:45
+msgid "Add"
+msgstr ""
+
+#: ../library/includes/options_post_rating.php:46
+msgid "Remove All"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:188
+msgid "Arbitrary text, HTML or shortcodes"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:190
+msgid "Kopa Text"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:235 ../library/includes/widgets.php:334
+#: ../library/includes/widgets.php:684 ../library/includes/widgets.php:834
+#: ../library/includes/widgets.php:986 ../library/includes/widgets.php:1084
+#: ../library/includes/widgets.php:1348 ../library/includes/widgets.php:1590
+#: ../library/includes/widgets.php:1659 ../library/includes/widgets.php:1799
+#: ../library/includes/widgets.php:1892 ../library/includes/widgets.php:1996
+#: ../library/includes/widgets.php:2079 ../library/includes/widgets.php:2361
+#: ../library/includes/widgets.php:2465 ../library/includes/widgets.php:2654
+#: ../woocommerce/widgets/class-kopa-wc-products.php:291
+msgid "Title:"
+msgstr ""
+
+#: ../library/includes/widgets.php:241
+msgid "One Half Column"
+msgstr ""
+
+#: ../library/includes/widgets.php:242
+msgid "One Thirtd Column"
+msgstr ""
+
+#: ../library/includes/widgets.php:243
+msgid "Two Third Column"
+msgstr ""
+
+#: ../library/includes/widgets.php:244
+msgid "One Fourth Column"
+msgstr ""
+
+#: ../library/includes/widgets.php:245
+msgid "Three Fourth Column"
+msgstr ""
+
+#: ../library/includes/widgets.php:246
+msgid "Add Dropcaps Text"
+msgstr ""
+
+#: ../library/includes/widgets.php:247
+msgid "Add A Button"
+msgstr ""
+
+#: ../library/includes/widgets.php:248
+msgid "Add A Alert Box"
+msgstr ""
+
+#: ../library/includes/widgets.php:249
+msgid "Add A Tabs Content"
+msgstr ""
+
+#: ../library/includes/widgets.php:250
+msgid "Add A Accordions Content"
+msgstr ""
+
+#: ../library/includes/widgets.php:251
+msgid "Add A Toggle Content"
+msgstr ""
+
+#: ../library/includes/widgets.php:252
+msgid "Add A Contact Form"
+msgstr ""
+
+#: ../library/includes/widgets.php:257
+msgid "Add A Yoube Video Box"
+msgstr ""
+
+#: ../library/includes/widgets.php:258
+msgid "Add A Vimeo Video Box"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:269
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: ../library/includes/widgets.php:283
+msgid "A widget that displays an advertising image"
+msgstr ""
+
+#: ../library/includes/widgets.php:285
+msgid "Kopa Advertising Widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:338 ../library/includes/widgets.php:2005
+msgid "Image:"
+msgstr ""
+
+#: ../library/includes/widgets.php:344
+msgid "Dimension"
+msgstr ""
+
+#: ../library/includes/widgets.php:347
+msgid "Dimension: 468x60 (px)"
+msgstr ""
+
+#: ../library/includes/widgets.php:348
+msgid "Dimension: 247x400 (px)"
+msgstr ""
+
+#: ../library/includes/widgets.php:349
+msgid "Dimension: 728x90 (px)"
+msgstr ""
+
+#: ../library/includes/widgets.php:360
+msgid "URL:"
+msgstr ""
+
+#: ../library/includes/widgets.php:365
+msgid "Open link in a new tab"
+msgstr ""
+
+#: ../library/includes/widgets.php:377
+msgid "Article list widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:379
+msgid "Kopa Widget Article List"
+msgstr ""
+
+#: ../library/includes/widgets.php:384
+msgid "List Articles"
+msgstr ""
+
+#: ../library/includes/widgets.php:424 ../library/includes/widgets.php:508
+#: ../library/includes/widgets.php:569 ../library/templates/loop-blog-1.php:31
+#: ../library/templates/loop-blog-2.php:32
+msgid "Read more"
+msgstr ""
+
+#: ../library/includes/widgets.php:454 ../library/includes/widgets.php:495
+#: ../library/includes/widgets.php:636 ../library/includes/widgets.php:1460
+#: ../library/includes/widgets.php:1555 ../library/includes/widgets.php:2312
+#: ../library/includes/widgets.php:2555
+#: ../library/templates/format-single-audio.php:11
+#: ../library/templates/format-single-audio.php:98
+#: ../library/templates/format-single-audio.php:106
+#: ../library/templates/format-single-gallery.php:11
+#: ../library/templates/format-single-gallery.php:101
+#: ../library/templates/format-single-gallery.php:109
+#: ../library/templates/format-single-video.php:11
+#: ../library/templates/format-single-video.php:102
+#: ../library/templates/format-single-video.php:110
+#: ../library/templates/format-single.php:11
+#: ../library/templates/format-single.php:78
+#: ../library/templates/format-single.php:86
+msgid "By"
+msgstr ""
+
+#: ../library/includes/widgets.php:543 ../library/templates/loop-blog-1.php:25
+#: ../library/templates/loop-blog-2.php:26
+msgid "By "
+msgstr ""
+
+#: ../library/includes/widgets.php:690 ../library/includes/widgets.php:712
+#: ../library/includes/widgets.php:1090 ../library/includes/widgets.php:1112
+#: ../library/includes/widgets.php:1354 ../library/includes/widgets.php:1665
+#: ../library/includes/widgets.php:2367 ../library/includes/widgets.php:2389
+msgid "--Select--"
+msgstr ""
+
+#: ../library/includes/widgets.php:703 ../library/includes/widgets.php:1103
+#: ../library/includes/widgets.php:2380
+msgid "Relation"
+msgstr ""
+
+#: ../library/includes/widgets.php:705 ../library/includes/widgets.php:1105
+#: ../library/includes/widgets.php:2382
+msgid "OR"
+msgstr ""
+
+#: ../library/includes/widgets.php:706 ../library/includes/widgets.php:1106
+#: ../library/includes/widgets.php:2383
+msgid "AND"
+msgstr ""
+
+#: ../library/includes/widgets.php:710 ../library/includes/widgets.php:1110
+#: ../library/includes/widgets.php:2387
+msgid "Tags"
+msgstr ""
+
+#: ../library/includes/widgets.php:726 ../library/includes/widgets.php:1126
+#: ../library/includes/widgets.php:1368 ../library/includes/widgets.php:1679
+#: ../library/includes/widgets.php:2403
+msgid "Orderby"
+msgstr ""
+
+#: ../library/includes/widgets.php:729 ../library/includes/widgets.php:1129
+#: ../library/includes/widgets.php:1371 ../library/includes/widgets.php:1682
+#: ../library/includes/widgets.php:2406
+msgid "Latest"
+msgstr ""
+
+#: ../library/includes/widgets.php:730 ../library/includes/widgets.php:1130
+#: ../library/includes/widgets.php:1372 ../library/includes/widgets.php:1683
+#: ../library/includes/widgets.php:2407
+msgid "Popular by view count"
+msgstr ""
+
+#: ../library/includes/widgets.php:731 ../library/includes/widgets.php:1131
+#: ../library/includes/widgets.php:1373 ../library/includes/widgets.php:1684
+#: ../library/includes/widgets.php:2408
+msgid "Popular by comment count"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:732 ../library/includes/widgets.php:1132
+#: ../library/includes/widgets.php:1374 ../library/includes/widgets.php:1685
+#: ../library/includes/widgets.php:2409
+msgid "Random"
+msgstr ""
+
+#: ../library/includes/widgets.php:744 ../library/includes/widgets.php:1144
+#: ../library/includes/widgets.php:1386 ../library/includes/widgets.php:1697
+#: ../library/includes/widgets.php:2421
+msgid "Number of items:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:748
+msgid "Display type"
+msgstr ""
+
+#: ../library/includes/widgets.php:751
+msgid "Grid layout with two columns, first column is featured"
+msgstr ""
+
+#: ../library/includes/widgets.php:752
+msgid "Grid layout with two columns, first column is featured style 2"
+msgstr ""
+
+#: ../library/includes/widgets.php:753
+msgid "Grid layout with 3 items per row"
+msgstr ""
+
+#: ../library/includes/widgets.php:754
+msgid "Grid layout with 1 item per row"
+msgstr ""
+
+#: ../library/includes/widgets.php:766 ../library/includes/widgets.php:1148
+msgid "Custom post excerpt length:"
+msgstr ""
+
+#: ../library/includes/widgets.php:794
+msgid "Display list images of user from Flickr API"
+msgstr ""
+
+#: ../library/includes/widgets.php:796
+msgid "Kopa Widget Flickr"
+msgstr ""
+
+#: ../library/includes/widgets.php:801
+msgid "PHOTOS ON FLICKR"
+msgstr ""
+
+#: ../library/includes/widgets.php:802
+msgid "ON FLICKR"
+msgstr ""
+
+#: ../library/includes/widgets.php:821
+msgid "Photos"
+msgstr ""
+
+#: ../library/includes/widgets.php:822
+msgid "On Flickr"
+msgstr ""
+
+#: ../library/includes/widgets.php:838 ../library/includes/widgets.php:990
+#: ../library/includes/widgets.php:2000
+msgid "Sub title:"
+msgstr ""
+
+#: ../library/includes/widgets.php:842
+msgid "User ID:"
+msgstr ""
+
+#: ../library/includes/widgets.php:847
+msgid "Number of photo:"
+msgstr ""
+
+#: ../library/includes/widgets.php:869
+msgid "Display recent tweets"
+msgstr ""
+
+#: ../library/includes/widgets.php:871
+msgid "Kopa Widget Tweet"
+msgstr ""
+
+#: ../library/includes/widgets.php:875
+msgid "RECENT "
+msgstr ""
+
+#: ../library/includes/widgets.php:876
+msgid "TWEETS "
+msgstr ""
+
+#: ../library/includes/widgets.php:908
+msgid ". Please read document to config it correct."
+msgstr ""
+
+#: ../library/includes/widgets.php:918
+msgid " ago"
+msgstr ""
+
+#: ../library/includes/widgets.php:949
+msgid "Sorry, your server don't support curl extension to run this widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:961
+msgid "Recent"
+msgstr ""
+
+#: ../library/includes/widgets.php:962
+msgid "tweets"
+msgstr ""
+
+#: ../library/includes/widgets.php:995
+msgid ""
+"To use Twitter's API, you are required to authenticate with Twitter using "
+"OAuth as of version 1.1. You can acquire your OAuth details by registering "
+"with"
+msgstr ""
+
+#: ../library/includes/widgets.php:995
+msgid "Twitter Developers"
+msgstr ""
+
+#: ../library/includes/widgets.php:995
+msgid "and creating a"
+msgstr ""
+
+#: ../library/includes/widgets.php:995
+msgid "Twitter application"
+msgstr ""
+
+#: ../library/includes/widgets.php:997
+msgid "Twitter ID"
+msgstr ""
+
+#: ../library/includes/widgets.php:999
+msgid "e.g. <strong>wordpress</strong>"
+msgstr ""
+
+#: ../library/includes/widgets.php:1003
+msgid "Twitter API key"
+msgstr ""
+
+#: ../library/includes/widgets.php:1008
+msgid "Twitter API secret"
+msgstr ""
+
+#: ../library/includes/widgets.php:1013
+msgid "Twitter Access token"
+msgstr ""
+
+#: ../library/includes/widgets.php:1018
+msgid "Twitter Access token secret"
+msgstr ""
+
+#: ../library/includes/widgets.php:1023
+msgid "Number of item:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1049
+msgid "Article list carousel"
+msgstr ""
+
+#: ../library/includes/widgets.php:1051
+msgid "Kopa Widget Article List Carousel"
+msgstr ""
+
+#: ../library/includes/widgets.php:1152
+msgid "Display:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1155
+msgid "Display random articles in flexible grid layout"
+msgstr ""
+
+#: ../library/includes/widgets.php:1156
+msgid "Grid with three items per page"
+msgstr ""
+
+#: ../library/includes/widgets.php:1170
+msgid "Slide speed:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:1176
+msgid "Auto Play"
+msgstr ""
+
+#: ../library/includes/widgets.php:1201
+msgid "List Articles Carousel"
+msgstr ""
+
+#: ../library/includes/widgets.php:1326
+msgid "Display selected categories as tab"
+msgstr ""
+
+#: ../library/includes/widgets.php:1328
+msgid "Kopa Widget Tab"
+msgstr ""
+
+#: ../library/includes/widgets.php:1418
+msgid "All"
+msgstr ""
+
+#: ../library/includes/widgets.php:1482
+msgid ""
+"A widget displays popular articles, recent articles and most comment "
+"articles."
+msgstr ""
+
+#: ../library/includes/widgets.php:1484
+msgid "Kopa Widget Combo"
+msgstr ""
+
+#: ../library/includes/widgets.php:1576
+msgid "POPULAR"
+msgstr ""
+
+#: ../library/includes/widgets.php:1577
+msgid "COMMENT"
+msgstr ""
+
+#: ../library/includes/widgets.php:1578
+msgid "RECENT"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:1594
+msgid "Number of article:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1598
+msgid "Popular tab title:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1600
+msgid "Leave it <strong>empty</strong> to hide popular tab."
+msgstr ""
+
+#: ../library/includes/widgets.php:1603
+msgid "Latest tab title:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1605
+msgid "Leave it <strong>empty</strong> to hide latest tab."
+msgstr ""
+
+#: ../library/includes/widgets.php:1608
+msgid "Comment tab title:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1610
+msgid "Leave it <strong>empty</strong> to hide comment tab."
+msgstr ""
+
+#: ../library/includes/widgets.php:1637
+msgid "Show list posts (gallery format) of categories"
+msgstr ""
+
+#: ../library/includes/widgets.php:1639
+msgid "Kopa Widget List Galleries"
+msgstr ""
+
+#: ../library/includes/widgets.php:1715
+msgid "NEW GALLERY"
+msgstr ""
+
+#: ../library/includes/widgets.php:1751
+msgid "Display Feedburner subscription form"
+msgstr ""
+
+#: ../library/includes/widgets.php:1753
+msgid "Kopa Feedburner Subscribe"
+msgstr ""
+
+#: ../library/includes/widgets.php:1761 ../library/includes/widgets.php:1789
+#: ../library/includes/widgets.php:1881
+msgid "Signup"
+msgstr ""
+
+#: ../library/includes/widgets.php:1762 ../library/includes/widgets.php:1788
+#: ../library/includes/widgets.php:1880
+msgid "Enter your email address ..."
+msgstr ""
+
+#: ../library/includes/widgets.php:1785 ../library/includes/widgets.php:1876
+msgid "NEWSLETTER"
+msgstr ""
+
+#: ../library/includes/widgets.php:1803
+msgid "Feedburner ID"
+msgstr ""
+
+#: ../library/includes/widgets.php:1805
+msgid "eg: http://feeds.feedburner.com/<strong>wordpress</strong>"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:1808 ../library/includes/widgets.php:1904
+msgid "Description"
+msgstr ""
+
+#: ../library/includes/widgets.php:1812 ../library/includes/widgets.php:1908
+msgid "Email field placeholder:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1816 ../library/includes/widgets.php:1912
+msgid "Submit button text:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1839
+msgid "Display mailchimp newsletter subscription form"
+msgstr ""
+
+#: ../library/includes/widgets.php:1841
+msgid "Kopa Mailchimp Subscribe"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:1850
+msgid "Subscribe"
+msgstr ""
+
+#: ../library/includes/widgets.php:1851
+msgid "Enter your email"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:1896
+msgid "Mailchimp Form Action:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:1901
+msgid "Enable <strong>evil</strong> popup mode"
+msgstr ""
+
+#: ../library/includes/widgets.php:1937
+msgid "Display contact info"
+msgstr ""
+
+#: ../library/includes/widgets.php:1939
+msgid "Kopa Contact Info"
+msgstr ""
+
+#: ../library/includes/widgets.php:1944
+msgid "CONTACT"
+msgstr ""
+
+#: ../library/includes/widgets.php:1945
+msgid "US"
+msgstr ""
+
+#: ../library/includes/widgets.php:1968 ../library/includes/widgets.php:2012
+#: ../library/includes/widgets.php:2666
+msgid "Email:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1969 ../library/includes/widgets.php:2017
+#: ../library/includes/widgets.php:2671
+msgid "Phone:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1970 ../library/includes/widgets.php:2021
+#: ../library/includes/widgets.php:2675
+msgid "Fax:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1971 ../library/includes/widgets.php:2025
+#: ../library/includes/widgets.php:2679
+msgid "Address:"
+msgstr ""
+
+#: ../library/includes/widgets.php:1979
+msgid "Contact"
+msgstr ""
+
+#: ../library/includes/widgets.php:1980
+msgid "Us"
+msgstr ""
+
+#: ../library/includes/widgets.php:2050
+msgid "Display social share links"
+msgstr ""
+
+#: ../library/includes/widgets.php:2052
+msgid "Kopa Widget Social Share"
+msgstr ""
+
+#: ../library/includes/widgets.php:2084
+msgid "Use settings from theme option"
+msgstr ""
+
+#: ../library/includes/widgets.php:2087
+msgid "Or use other social links below:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2089
+msgid "Rss Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2091
+msgid ""
+"Display the RSS feed button with the default RSS feed or enter a custom feed "
+"below."
+msgstr ""
+
+#: ../library/includes/widgets.php:2094
+msgid "Facebook Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2098
+msgid "Twitter Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2102
+msgid "Google Plus Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2106
+msgid "Dribble Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2110
+msgid "Linkedin Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2114
+msgid "Skype Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2118
+msgid "Tumblr Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2122
+msgid "Pinterest Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2126
+msgid "Youtube Url:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2129
+msgid "Social Links Target:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2194
+msgid "Rss"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:2206
+msgid "Google+"
+msgstr ""
+
+#: ../library/includes/widgets.php:2214
+msgid "Dribbble"
+msgstr ""
+
+#: ../library/includes/widgets.php:2264
+msgid "video list widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:2266
+msgid "Kopa Widget List Video"
+msgstr ""
+
+#: ../library/includes/widgets.php:2271
+msgid "List Videos"
+msgstr ""
+
+#: ../library/includes/widgets.php:2447
+msgid "List gallery of post"
+msgstr ""
+
+#: ../library/includes/widgets.php:2449
+msgid "Kopa Widget Single Gallery"
+msgstr ""
+
+#: ../library/includes/widgets.php:2469
+msgid "Gallery:"
+msgstr ""
+
+# @ news-mix
+#: ../library/includes/widgets.php:2471 ../library/ini.php:569
+msgid "-- None --"
+msgstr ""
+
+#: ../library/includes/widgets.php:2483
+msgid "Custom post excerpt length. (Enter 0 if you want to show full length):"
+msgstr ""
+
+#: ../library/includes/widgets.php:2499
+msgid "Gallery"
+msgstr ""
+
+#: ../library/includes/widgets.php:2561
+msgid "Twitter "
+msgstr ""
+
+#: ../library/includes/widgets.php:2562
+msgid "Google +"
+msgstr ""
+
+#: ../library/includes/widgets.php:2595
+msgid "Display map contact info"
+msgstr ""
+
+#: ../library/includes/widgets.php:2597
+msgid "Kopa Map Contact Info"
+msgstr ""
+
+#: ../library/includes/widgets.php:2636
+msgid "Contact Info"
+msgstr ""
+
+#: ../library/includes/widgets.php:2658
+msgid "Description:"
+msgstr ""
+
+#: ../library/includes/widgets.php:2662
+msgid "Gmap Iframe:"
+msgstr ""
+
+#: ../library/ini.php:5
+msgid "Front Page 1"
+msgstr ""
+
+#: ../library/ini.php:23
+msgid "Front Page 2"
+msgstr ""
+
+#: ../library/ini.php:41
+msgid "Front Page 3"
+msgstr ""
+
+#: ../library/ini.php:59
+msgid "Front Page 4"
+msgstr ""
+
+#: ../library/ini.php:77
+msgid "Blog 2"
+msgstr ""
+
+#: ../library/ini.php:92
+msgid "Blog 1"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:107 ../library/ini.php:203
+msgid "Page"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:119
+msgid "Page Full Width"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:129
+msgid "Single"
+msgstr ""
+
+#: ../library/ini.php:140
+msgid "404 Page"
+msgstr ""
+
+#: ../library/ini.php:151 ../library/ini.php:223
+msgid "Shop"
+msgstr ""
+
+#: ../library/ini.php:162
+msgid "Single product"
+msgstr ""
+
+#: ../library/ini.php:175
+msgid "Widget Area 1"
+msgstr ""
+
+#: ../library/ini.php:176
+msgid "Widget Area 2"
+msgstr ""
+
+#: ../library/ini.php:177
+msgid "Widget Area 3"
+msgstr ""
+
+#: ../library/ini.php:178
+msgid "Widget Area 4"
+msgstr ""
+
+#: ../library/ini.php:179
+msgid "Widget Area 5"
+msgstr ""
+
+#: ../library/ini.php:180
+msgid "Widget Area 6"
+msgstr ""
+
+#: ../library/ini.php:181
+msgid "Widget Area 7"
+msgstr ""
+
+#: ../library/ini.php:182
+msgid "Widget Area 8"
+msgstr ""
+
+#: ../library/ini.php:183
+msgid "Widget Area 9"
+msgstr ""
+
+#: ../library/ini.php:184
+msgid "Widget Area 10"
+msgstr ""
+
+#: ../library/ini.php:185
+msgid "Widget Area 11"
+msgstr ""
+
+#: ../library/ini.php:186
+msgid "Widget Area 12"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:195
+msgid "Front Page"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:199
+msgid "Post"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:207
+msgid "Taxonomy"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:211
+msgid "Search"
+msgstr ""
+
+# @ news-mix
+#: ../library/ini.php:215
+msgid "Archive"
+msgstr ""
+
+#: ../library/ini.php:227
+msgid "Single Product"
+msgstr ""
+
+#: ../library/ini.php:570
+msgid "Hiden sidebar"
+msgstr ""
+
+#: ../library/ini.php:574
+msgid "Content Top"
+msgstr ""
+
+#: ../library/ini.php:575
+msgid "Display random articles in flexible layout"
+msgstr ""
+
+#: ../library/ini.php:579
+msgid "Content Center Left"
+msgstr ""
+
+#: ../library/ini.php:580
+msgid "Display articles by group such as Business, Technology, etc"
+msgstr ""
+
+#: ../library/ini.php:584
+msgid "Content Center Right"
+msgstr ""
+
+#: ../library/ini.php:585
+msgid "Display the advertising and the articles by group such as Fashion"
+msgstr ""
+
+#: ../library/ini.php:589
+msgid "Content Bottom"
+msgstr ""
+
+#: ../library/ini.php:590
+msgid "Display the latest products using Woocommerce plugin"
+msgstr ""
+
+#: ../library/ini.php:594
+msgid "Sidebar Top"
+msgstr ""
+
+#: ../library/ini.php:595
+msgid "Display articles by group such as Entertainment, New media, etc"
+msgstr ""
+
+#: ../library/ini.php:599
+msgid "Sidebar Center Left"
+msgstr ""
+
+#: ../library/ini.php:600
+msgid "Display the list of categories"
+msgstr ""
+
+#: ../library/ini.php:604
+msgid "Sidebar Center Right"
+msgstr ""
+
+#: ../library/ini.php:605
+msgid "Display the list of archives"
+msgstr ""
+
+#: ../library/ini.php:609
+msgid "Sidebar Bottom"
+msgstr ""
+
+#: ../library/ini.php:610
+msgid ""
+"Display the list of tags, new gallery and the articles ordered by ramdom, "
+"popular, comment"
+msgstr ""
+
+#: ../library/ini.php:614
+msgid "Footer 1"
+msgstr ""
+
+#: ../library/ini.php:615
+msgid "Show feedburner email subscription"
+msgstr ""
+
+#: ../library/ini.php:619
+msgid "Footer 2"
+msgstr ""
+
+#: ../library/ini.php:620
+msgid "Show recent tweets"
+msgstr ""
+
+#: ../library/ini.php:624
+msgid "Footer 3"
+msgstr ""
+
+#: ../library/ini.php:625
+msgid "Show photos on flickr"
+msgstr ""
+
+#: ../library/ini.php:629
+msgid "Footer 4"
+msgstr ""
+
+#: ../library/ini.php:630
+msgid "Show contact info"
+msgstr ""
+
+#: ../library/ini.php:634
+msgid "Blog Content"
+msgstr ""
+
+#: ../library/ini.php:635
+msgid "Show articles of group in category"
+msgstr ""
+
+# @ news-mix
+#: ../library/kopa.php:28
+msgid "Sidebar Manage"
+msgstr ""
+
+# @ news-mix
+#: ../library/kopa.php:28
+msgid "Sidebar Manager"
+msgstr ""
+
+# @ news-mix
+#: ../library/kopa.php:33
+msgid "Layout Manage"
+msgstr ""
+
+# @ news-mix
+#: ../library/kopa.php:33
+msgid "Layout Manager"
+msgstr ""
+
+#: ../library/templates/format-single-audio.php:62
+#: ../library/templates/format-single-gallery.php:65
+#: ../library/templates/format-single-video.php:66
+#: ../library/templates/format-single.php:42
+msgid "Next page"
+msgstr ""
+
+#: ../library/templates/format-single-audio.php:63
+#: ../library/templates/format-single-gallery.php:66
+#: ../library/templates/format-single-video.php:67
+#: ../library/templates/format-single.php:43
+msgid "Previous page"
+msgstr ""
+
+#: ../library/templates/format-single-audio.php:70
+#: ../library/templates/format-single-gallery.php:73
+#: ../library/templates/format-single-video.php:74
+#: ../library/templates/format-single.php:50
+msgid "Tags: "
+msgstr ""
+
+#: ../library/templates/format-single-audio.php:82
+#: ../library/templates/format-single-gallery.php:85
+#: ../library/templates/format-single-video.php:86
+#: ../library/templates/format-single.php:62
+msgid "Previous article"
+msgstr ""
+
+#: ../library/templates/format-single-audio.php:87
+#: ../library/templates/format-single-gallery.php:90
+#: ../library/templates/format-single-video.php:91
+#: ../library/templates/format-single.php:67
+msgid "Next article"
+msgstr ""
+
+#: ../library/templates/header-style-1.php:63
+#: ../library/templates/header-style-2.php:62
+msgid "Contact us"
+msgstr ""
+
+#: ../library/templates/header-style-1.php:64
+#: ../library/templates/header-style-2.php:63
+msgid "Login"
+msgstr ""
+
+#: ../library/templates/header-style-1.php:188
+#: ../library/templates/header-style-2.php:191
+msgid "Menu"
+msgstr ""
+
+#: ../library/templates/loop-page.php:17
+msgid "Pages:"
+msgstr ""
+
+#: ../library/templates/template-hreview.php:7
+msgid "Reviewed by"
+msgstr ""
+
+#: ../library/templates/template-hreview.php:7
+msgid "on"
+msgstr ""
+
+#: ../library/templates/template-hreview.php:17
+msgid "Rating:"
+msgstr ""
+
+#: ../library/templates/template-post-rating.php:72
+msgid "User Rating"
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:8
+msgid "Display a list of your latest products on your site."
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:10
+msgid "Kopa Woocommerce Products"
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:52
+#: ../woocommerce/widgets/class-kopa-wc-products.php:54
+msgid "Free"
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:101
+#: ../woocommerce/widgets/class-kopa-wc-products.php:108
+msgid "Free!"
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:166
+msgid "Latest Products"
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:224
+msgid "Add to cart"
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:294
+msgid "Number of products to show:"
+msgstr ""
+
+#: ../woocommerce/widgets/class-kopa-wc-products.php:298
+msgid "Show hidden product variations"
+msgstr ""
