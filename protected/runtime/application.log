@@ -13154,3 +13154,99 @@ in C:\xampp\htdocs\ferropedia\index.php (22)
 2017/05/26 16:54:01 [trace] [system.CModule] Loading "clientScript" application component
 in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
 in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:25:01 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:25:01 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:25:01 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:25:01 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:25:03 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:29:08 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:29:08 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:29:08 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:29:08 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:09 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:09 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:09 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:09 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:09 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:36:41 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:41 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:41 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:41 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:36:41 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:37:17 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:17 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:17 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:17 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:17 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:37:28 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:28 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:28 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:28 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:37:28 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:39:46 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:39:46 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:39:46 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:39:46 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:39:46 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:41:51 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:41:51 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:41:51 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:41:51 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:41:51 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/05/29 14:42:02 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:42:02 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:42:02 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:42:02 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/05/29 14:42:02 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
