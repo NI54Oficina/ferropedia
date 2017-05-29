@@ -66,7 +66,7 @@
 </div>
 <!-- header-top -->
 
-<div class="header-top-2">
+<!-- <div class="header-top-2">
 
     <div class="wrapper clearfix">
         <?php
@@ -78,12 +78,12 @@
         <div id="logo-container" class="pull-left">
             <a href="<?php echo esc_url(home_url());?>" title="<?php bloginfo('name'); ?>"><img id="logo-image" src="<?php echo $logo_url; ?>" alt="<?php bloginfo('name'); ?>"/></a>
         </div>
-        <!-- logo-container -->
+
 
     </div>
-    <!-- wrapper -->
 
-</div>
+
+</div> -->
 <!-- header-top-2 -->
 
 <div class="header-middle">
@@ -117,6 +117,12 @@
                     <!-- mobile-menu -->
                 </div>
                 <!-- mobile-menu-wrapper -->
+
+                <div class="links-sociales" style="display:inline-flex">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </div>
 
             </div>
             <!-- wrapper -->
@@ -188,7 +194,7 @@
                         <article class="entry-item">
                                                                 <div class="entry-thumb">
                                         <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/Smile-2xau11nxy9ejeotj9qwr9m.jpg" alt="Haute Couture fact file bibendum">                                    </div>
-                                                            <!-- entry-thumb -->
+
                             <div class="flex-caption">
                                 <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=742" title="Haute Couture fact file bibendum">Haute Couture fact file bibendum</a></h3>
                                 <p>Curabitur ullamcorper, felis bibendum rutrum consectetur, justo felis elementum metus, sed feugiat nisl ligula non magna. Pellentesque vel accumsan odio.…</p>
@@ -197,14 +203,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                             </div>
-                            <!-- flex-caption -->
+
                         </article>
-                        <!-- entry-item -->
+
                     </div></div><div class="owl-item" style="width: 1261px;"><div class="item">
                         <article class="entry-item">
                                                                 <div class="entry-thumb">
                                         <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/unsplash-49-2xau11nxy9ejeotj9qwr9m.jpg" alt="J-Lo’s divisive Versace dress-trouser hybrid">                                    </div>
-                                                            <!-- entry-thumb -->
+
                             <div class="flex-caption">
                                 <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=773" title="J-Lo’s divisive Versace dress-trouser hybrid">J-Lo’s divisive Versace dress-trouser hybrid</a></h3>
                                 <p>Curabitur ullamcorper, felis bibendum rutrum consectetur, justo felis elementum metus, sed feugiat nisl ligula non magna. Pellentesque vel accumsan odio.…</p>
@@ -213,14 +219,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                             </div>
-                            <!-- flex-caption -->
+
                         </article>
-                        <!-- entry-item -->
+
                     </div></div><div class="owl-item" style="width: 1261px;"><div class="item">
                         <article class="entry-item">
                                                                 <div class="entry-thumb">
                                         <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/unsplash-79-2xau11nxy9ejeotj9qwr9m.jpg" alt="The Model Trainer: how to get legs like Gisele">                                    </div>
-                                                            <!-- entry-thumb -->
+
                             <div class="flex-caption">
                                 <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=532" title="The Model Trainer: how to get legs like Gisele">The Model Trainer: how to get legs like Gisele</a></h3>
                                 <p>Sed nec neque purus. Nulla faucibus, lectus vitae gravida mattis, ligula magna malesuada purus, vel semper nibh risus sed libero.…</p>
@@ -229,14 +235,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                             </div>
-                            <!-- flex-caption -->
+
                         </article>
-                        <!-- entry-item -->
+
                     </div></div><div class="owl-item" style="width: 1261px;"><div class="item">
                         <article class="entry-item">
                                                                 <div class="entry-thumb">
                                         <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/unsplash-18-2xau11nxy9ejeotj9qwr9m.jpg" alt="Extreme places to visit in the U.S.">                                    </div>
-                                                            <!-- entry-thumb -->
+
                             <div class="flex-caption">
                                 <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=778" title="Extreme places to visit in the U.S.">Extreme places to visit in the U.S.</a></h3>
                                 <p>Ut feugiat aliquet orci luctus euismod. Fusce egestas eget erat eget dignissim. Nullam placerat mauris a urna cursus, egestas eleifend…</p>
@@ -245,14 +251,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                             </div>
-                            <!-- flex-caption -->
+
                         </article>
-                        <!-- entry-item -->
+
                     </div></div><div class="owl-item" style="width: 1261px;"><div class="item">
                         <article class="entry-item">
                                                                 <div class="entry-thumb">
                                         <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/358881847_95d7a65f87_o-2xau12o4olo1n2sicoe03u.jpg" alt="Jodie Foster marries Alexandra Hedison">                                    </div>
-                                                            <!-- entry-thumb -->
+
                             <div class="flex-caption">
                                 <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=693" title="Jodie Foster marries Alexandra Hedison">Jodie Foster marries Alexandra Hedison</a></h3>
                                 <p>Curabitur ullamcorper, felis bibendum rutrum consectetur, justo felis elementum metus, sed feugiat nisl ligula non magna. Pellentesque vel accumsan odio.quis…</p>
@@ -261,9 +267,9 @@
                                         <span class="arrow-right"></span>
                                     </span>
                             </div>
-                            <!-- flex-caption -->
+
                         </article>
-                        <!-- entry-item -->
+
                     </div></div></div></div>
 
 
@@ -277,7 +283,7 @@
                     <article class="entry-item">
                                                     <div class="entry-thumb">
                                 <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/Smile-2xau11nw8xw8xm567y53pm.jpg" alt="Haute Couture fact file bibendum">                            </div>
-                                                    <!-- entry-thumb -->
+
                         <div class="flex-caption">
                             <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=742" title="Haute Couture fact file bibendum">Haute Couture fact file bibendum</a></h3>
                             <p>Curabitur ullamcorper, felis bibendum rutrum consectetur, justo felis elementum metus, sed feugiat nisl ligula non magna. Pellentesque vel accumsan odio.…</p>
@@ -286,14 +292,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                         </div>
-                        <!-- flex-caption -->
+
                     </article>
-                    <!-- entry-item -->
+
                 </div></div><div class="owl-item" style="width: 100px;"><div class="item">
                     <article class="entry-item">
                                                     <div class="entry-thumb">
                                 <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/unsplash-49-2xau11nw8xw8xm567y53pm.jpg" alt="J-Lo’s divisive Versace dress-trouser hybrid">                            </div>
-                                                    <!-- entry-thumb -->
+
                         <div class="flex-caption">
                             <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=773" title="J-Lo’s divisive Versace dress-trouser hybrid">J-Lo’s divisive Versace dress-trouser hybrid</a></h3>
                             <p>Curabitur ullamcorper, felis bibendum rutrum consectetur, justo felis elementum metus, sed feugiat nisl ligula non magna. Pellentesque vel accumsan odio.…</p>
@@ -302,14 +308,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                         </div>
-                        <!-- flex-caption -->
+
                     </article>
-                    <!-- entry-item -->
+
                 </div></div><div class="owl-item" style="width: 100px;"><div class="item">
                     <article class="entry-item">
                                                     <div class="entry-thumb">
                                 <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/unsplash-79-2xau11nw8xw8xm567y53pm.jpg" alt="The Model Trainer: how to get legs like Gisele">                            </div>
-                                                    <!-- entry-thumb -->
+
                         <div class="flex-caption">
                             <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=532" title="The Model Trainer: how to get legs like Gisele">The Model Trainer: how to get legs like Gisele</a></h3>
                             <p>Sed nec neque purus. Nulla faucibus, lectus vitae gravida mattis, ligula magna malesuada purus, vel semper nibh risus sed libero.…</p>
@@ -318,14 +324,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                         </div>
-                        <!-- flex-caption -->
+
                     </article>
-                    <!-- entry-item -->
+
                 </div></div><div class="owl-item" style="width: 100px;"><div class="item">
                     <article class="entry-item">
                                                     <div class="entry-thumb">
                                 <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/unsplash-18-2xau11nw8xw8xm567y53pm.jpg" alt="Extreme places to visit in the U.S.">                            </div>
-                                                    <!-- entry-thumb -->
+
                         <div class="flex-caption">
                             <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=778" title="Extreme places to visit in the U.S.">Extreme places to visit in the U.S.</a></h3>
                             <p>Ut feugiat aliquet orci luctus euismod. Fusce egestas eget erat eget dignissim. Nullam placerat mauris a urna cursus, egestas eleifend…</p>
@@ -334,14 +340,14 @@
                                         <span class="arrow-right"></span>
                                     </span>
                         </div>
-                        <!-- flex-caption -->
+
                     </article>
-                    <!-- entry-item -->
+
                 </div></div><div class="owl-item" style="width: 100px;"><div class="item">
                     <article class="entry-item">
                                                     <div class="entry-thumb">
                                 <img src="http://upsidethemes.net/demo/news-maxx/wp-content/uploads/bfi_thumb/358881847_95d7a65f87_o-2xau12o2za5r6045avmcju.jpg" alt="Jodie Foster marries Alexandra Hedison">                            </div>
-                                                    <!-- entry-thumb -->
+
                         <div class="flex-caption">
                             <h3 class="entry-title"><a href="http://upsidethemes.net/demo/news-maxx/?p=693" title="Jodie Foster marries Alexandra Hedison">Jodie Foster marries Alexandra Hedison</a></h3>
                             <p>Curabitur ullamcorper, felis bibendum rutrum consectetur, justo felis elementum metus, sed feugiat nisl ligula non magna. Pellentesque vel accumsan odio.quis…</p>
@@ -350,9 +356,9 @@
                                         <span class="arrow-right"></span>
                                     </span>
                         </div>
-                        <!-- flex-caption -->
+
                     </article>
-                    <!-- entry-item -->
+
                 </div></div></div></div>
 
 
@@ -364,7 +370,7 @@
 
 
 
-                <!-- owl-carousel top content -->
+
 
             <div class="left-box">
                 <div class="triangle"></div>
@@ -375,7 +381,7 @@
                 <span class="square-3"></span>
                 <span class="square-4"></span>
             </div>
-            <!-- left-box -->
+
 
         </div>
 
