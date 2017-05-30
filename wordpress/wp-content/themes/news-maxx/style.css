@@ -5712,10 +5712,11 @@ body {
     /* Opera, Chrome, and Safari */ }
 
 .main-section .wrapper {
-    border-left: 1px solid #d8d8d8;
-    border-right: 1px solid #d8d8d8;
+    /*border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;*/
     padding: 15px 20px;
-    background: url(images/background/dot-1.jpg) repeat-y 922px 0; }
+    /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
+  }
 .main-section .wrapper .main-col {
     width: 902px;
     padding-right: 20px; }
@@ -7050,8 +7051,8 @@ Kopa Home Slider Widget
     position: relative;
     height: 380px;
     overflow: hidden; }
-.kopa-home-slider-widget .widget-title {
-    display: none; }
+/*.kopa-home-slider-widget .widget-title {
+    display: none; }*/
 
 .kopa-home-slider .entry-item {
     position: relative; }
@@ -7142,8 +7143,8 @@ Kopa Home Slider 2 Widget
 .kopa-home-slider-2-widget {
     position: relative;
     overflow: hidden; }
-.kopa-home-slider-2-widget .widget-title {
-    display: none; }
+/*.kopa-home-slider-2-widget .widget-title {
+    display: none; }*/
 .kopa-home-slider-2-widget.loading {
     min-height: 380px;
     background: url(images/icons/loading.gif) no-repeat center; }
@@ -7244,8 +7245,8 @@ Kopa Home Slider 3 Widget
 .kopa-home-slider-3-widget.loading {
     min-height: 380px;
     background: url(images/icons/loading.gif) no-repeat center; }
-.kopa-home-slider-3-widget .widget-title {
-    display: none; }
+/*.kopa-home-slider-3-widget .widget-title {
+    display: none; }*/
 
 .kopa-home-slider-3 .entry-item {
     position: relative; }
@@ -7285,7 +7286,7 @@ Nothumb Widget
     margin-top: -40px;
     background-color: #fff; }
 .kopa-nothumb-carousel-widget .widget-title {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: white;
     background-color: #222;
     padding: 10px 0 8px 0;
@@ -7293,9 +7294,9 @@ Nothumb Widget
     text-align: center;
     border: none; }
 
-.kopa-home-4 .kopa-nothumb-carousel-widget .widget-title,
+/*.kopa-home-4 .kopa-nothumb-carousel-widget .widget-title,
 .kopa-subpage .kopa-nothumb-carousel-widget .widget-title {
-    display: none; }
+    display: none; }*/
 
 .kopa-nothumb-carousel-widget .entry-item {
     position: relative;
@@ -8702,7 +8703,9 @@ Kopa Contact Info Widget
 
 body{
   background-color: #000;
+  background-image: url("img/tile_home.png");
 }
+
 
 .kp-headline-title{
   background-color: #a43c93;
@@ -8783,4 +8786,13 @@ body{
 
 #main-menu{
   display: inline-block;
+}
+
+.header-middle {
+    background-color: #a43c93;
+    background-image: url("img/textura_barra_violeta.png");
+}
+
+.first-left-box-inner{
+  background-color: rgba(0,182,67,0.1);
 }

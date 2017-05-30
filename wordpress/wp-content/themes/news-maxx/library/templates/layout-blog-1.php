@@ -9,15 +9,32 @@
 
 <div class="wrapper clearfix">
 
-<div class="main-col pull-left">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left">
 
-    <?php kopa_breadcrumb(); ?>
-    <!-- breadcrumb -->
+<!-- PARTE COMENTADA -->
+        <!-- <?php kopa_breadcrumb(); ?> -->
+        <!-- breadcrumb -->
 
-    <section class="entry-list">
-        <?php get_template_part( 'library/templates/loop', 'blog-1' ); ?>
-    </section>
-    <!-- entry-list -->
+     <!-- <section class="entry-list">
+          <?php // get_template_part( 'library/templates/loop', 'blog-1' ); ?>
+        </section> -->
+        <!-- entry-list -->
+<!-- PARTE COMENTADA -->
+
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box">
+
+    <div class="first-left-box-inner">
+
+    </div>
+
+  </div>
+
+  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 second-right-box">
+
+  </div>
+
+
+
 
 </div>
 <!-- main-col -->

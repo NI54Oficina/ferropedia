@@ -982,7 +982,7 @@ function kopa_the_topnew()
 {
     $limit = (int) get_option('kopa_theme_options_topnew_limit', 5);
     if ($limit) {
-        $title = get_option('kopa_theme_options_topnew_title', __('From around the world', 'newsmaxx'));
+        $title = get_option('kopa_theme_options_topnew_title', __('Últimas actualizaciones', 'newsmaxx'));
         $cats = (array)get_option('kopa_theme_options_topnew_cats');
         $cats = implode(',', $cats);
         $args = array(

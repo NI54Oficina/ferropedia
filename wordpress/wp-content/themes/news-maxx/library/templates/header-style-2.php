@@ -47,7 +47,7 @@
 
     <div class="wrapper clearfix">
         <?php kopa_the_current_time(); ?>
-        <nav class="top-nav pull-right">
+        <!-- <nav class="top-nav pull-right">
             <?php
             if ( has_nav_menu( 'top-nav' ) ) {
                 wp_nav_menu( array(
@@ -58,8 +58,8 @@
                 ));
             }
             ?>
-            <!-- top-menu -->
-        </nav>
+
+        </nav> -->
         <!-- top-nav -->
     </div>
     <!-- wrapper -->
@@ -92,16 +92,31 @@
 
         <nav class="main-nav">
             <div class="wrapper clearfix">
-                <?php
+              <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows">
+
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://localhost/ferropedia/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="http://localhost/ferropedia/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://localhost/ferropedia/de-chiquito-mi-viejo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""></a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/rincon-mundo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
+              </ul>
+
+
+                <!-- <?php
                 if ( has_nav_menu( 'main-nav' )) {
-                    wp_nav_menu( array(
+                     wp_nav_menu( array(
                         'theme_location'  => 'main-nav',
                         'container'       => '',
+
                         'menu_id'         => 'main-menu',
-                        'menu_class'      => 'main-menu clearfix',
+                        'menu_class'      => 'main-menu clearfix'
+                        // 'echo'            => false
+
                     ));
                     echo '<i class="fa fa-align-justify"></i>';
-                } ?>
+
+                } ?> -->
+
+
 
                 <div class="mobile-menu-wrapper">
                     <?php
