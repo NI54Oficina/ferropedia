@@ -25,6 +25,13 @@
 
     <div class="first-left-box-inner">
 
+      <h1>Totales</h1>
+      <p></p>
+
+      <div class="">
+
+      </div>
+
     </div>
 
   </div>
