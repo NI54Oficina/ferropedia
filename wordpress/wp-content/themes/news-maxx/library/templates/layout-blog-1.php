@@ -23,14 +23,55 @@
 
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box">
 
-    <div class="first-left-box-inner">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner">
 
       <h1>Totales</h1>
-      <p></p>
+      <p>Última actualización: 24 de abril a las 19.00pm</p>
 
-      <div class="">
-
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <p class="tipo-partido">PARTIDOS JUGADOS</p>
+        <p class="puntos-partido">50</p>
+        <p class="level-partido"> L609 <span> V313</span></p>
       </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <p class="tipo-partido">PARTIDOS JUGADOS</p>
+        <p class="puntos-partido">50</p>
+        <p class="level-partido"> L609 <span> V313</span></p>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <p class="tipo-partido">PARTIDOS JUGADOS</p>
+        <p class="puntos-partido">50</p>
+        <p class="level-partido"> L609 <span> V313</span></p>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <p class="tipo-partido">PARTIDOS JUGADOS</p>
+        <p class="puntos-partido">50</p>
+        <p class="level-partido"> L609 <span> V313</span></p>
+      </div>
+
+      <p class="goles"><span>45.000</span> Goles a favor</p>
+      <div class="linea-divisoria-partido"></div>
+      <p class="goles"><span>39.000</span> Goles en contra</p>
+
+      <style >
+
+        .linea-divisoria-partido{
+          border-bottom: 2px dashed white;
+        }
+
+        .goles span {
+          background-color: rgba(0,0,0,.20);
+          color:#00b643;
+        }
+
+        .goles{
+          color:white;
+        }
+
+      </style>
 
     </div>
 
