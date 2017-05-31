@@ -75,6 +75,12 @@
 
     </div>
 
+
+
+
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-right-box">
+
+      </div>
   </div>
 
   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 second-right-box">
@@ -85,7 +91,7 @@
 
 
 </div>
-<!-- main-col -->
+
 
 <div class="sidebar widget-area-2 pull-left">
     <?php
@@ -103,7 +109,7 @@
     ?>
 
 </div>
-<!-- widget-area-7 -->
+
 
 <div class="widget-area-8 pull-left">
 
@@ -114,7 +120,7 @@
     ?>
 
 </div>
-<!-- widget-area-8 -->
+
 
 <div class="clear"></div>
 
@@ -125,11 +131,11 @@
     ?>
 
 </div>
-<!-- widget-area-2 -->
+
 
 <div class="clear"></div>
 
 </div>
-<!-- wrapper -->
+
 
 <?php get_footer();?>
