@@ -27,33 +27,23 @@ Text Domain: newsmaxx
  */
 @font-face {
     font-family: 'pt_serifregular';
-    src: url("fonts/ptf55f-webfont.eot");
-    src: url("fonts/ptf55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf55f-webfont.woff") format("woff"), url("fonts/ptf55f-webfont.ttf") format("truetype"), url("fonts/ptf55f-webfont.svg#pt_serifregular") format("svg");
-    font-weight: normal;
-    font-style: normal; }
+    src: url("fonts/RobotoCondensed-Regular.ttf"); }
 @font-face {
     font-family: 'pt_serifitalic';
-    src: url("fonts/ptf56f-webfont.eot");
-    src: url("fonts/ptf56f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf56f-webfont.woff") format("woff"), url("fonts/ptf56f-webfont.ttf") format("truetype"), url("fonts/ptf56f-webfont.svg#pt_serifitalic") format("svg");
-    font-weight: normal;
-    font-style: normal; }
+    src: url("fonts/RobotoCondensed-Italic.ttf"); }
 @font-face {
     font-family: 'pt_serifbold';
-    src: url("fonts/ptf75f-webfont.eot");
-    src: url("fonts/ptf75f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf75f-webfont.woff") format("woff"), url("fonts/ptf75f-webfont.ttf") format("truetype"), url("fonts/ptf75f-webfont.svg#pt_serifbold") format("svg");
-    font-weight: normal;
-    font-style: normal; }
+    src: url("fonts/RobotoCondensed-Bold.ttf");}
 @font-face {
     font-family: 'pt_serifbold_italic';
-    src: url("fonts/ptf76f-webfont.eot");
-    src: url("fonts/ptf76f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf76f-webfont.woff") format("woff"), url("fonts/ptf76f-webfont.ttf") format("truetype"), url("fonts/ptf76f-webfont.svg#pt_serifbold_italic") format("svg");
-    font-weight: normal;
-    font-style: normal; }
+    src: url("fonts/RobotoCondensed-BoldItalic.ttf"); }
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%; }
+    -webkit-text-size-adjust: 100%;
+    color:white;
+    }
 
 body {
     margin: 0; }
@@ -5718,7 +5708,7 @@ body {
     /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
   }
 .main-section .wrapper .main-col {
-    width: 902px;
+    /*width: 902px;*/
     padding-right: 20px; }
 .main-section .wrapper .sidebar {
     width: 287px;
