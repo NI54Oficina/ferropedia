@@ -130,8 +130,8 @@
     <h1>Historial</h1>
 
     <p>Campeonatos Locales</p>
-        <table style="width:100%">
-          <tr>
+        <table style="width:100%;">
+          <tr class="first-row">
             <th></th>
             <th>Partidos jugados <br> <span>1049</span></th>
             <th>Ganados<br>  <span>1049</span></th>
@@ -141,7 +141,7 @@
             <th>Goles en contra<br>  <span>1049</span></th>
 
           </tr>
-          <tr>
+          <tr class="second-row">
             <td>Local</td>
             <td>148</td>
             <td>50</td>
@@ -150,7 +150,7 @@
             <td>148</td>
             <td>50</td>
           </tr>
-          <tr>
+          <tr class="third-row">
             <td>Visitante</td>
             <td>148</td>
             <td>50</td>
@@ -175,9 +175,35 @@
     }
 
     .first-right-box h1{
-      
       color: white;
       font-family: 'Condensed-bold-italic';
+      font-size: 2em;
+    }
+
+    .first-right-box p{
+      color: white;
+      font-family: 'Condensed-italic';
+      font-size: 1.6em;
+      text-align: center;
+    }
+
+    .first-right-box table .first-row{
+      color: white;
+      font-family: "Condensed-regular";
+    }
+
+    .first-right-box table .first-row span{
+      font-family: "Condensed-bold-italic";
+    }
+
+    .first-right-box table .second-row{
+      font-family: "Condensed-bold";
+      color: #00b643;
+    }
+
+    .first-right-box table .third-row{
+      font-family: "Condensed-bold";
+      color:#a43c93;
     }
 
   </style>
