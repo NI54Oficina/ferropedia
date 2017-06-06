@@ -56,70 +56,6 @@
       <div class="linea-divisoria-partido"></div>
       <p class="goles"><span>39.000</span> Goles en contra</p>
 
-      <style >
-
-        .first-left-box-inner h1{
-          font-family: "Condensed-bold-italic";
-          font-size: 3em;
-          color:white;
-        }
-
-        .first-left-box-inner > div{
-          padding-left: 0;
-          padding-right: 0;
-        }
-
-        .first-left-box-inner .tipo-partido{
-          color: white;
-          font-size: 0.9em;
-        }
-
-        .first-left-box-inner .puntos-partido{
-          color: #00b643;
-          font-size: 4em;
-          text-shadow: -1px 3px 0px rgba(255, 255, 255, 1);
-          font-family: "Condensed-bold-italic";
-        }
-        .first-left-box-inner .level-partido{
-          color:  #00b643;
-          padding: 10px 0;
-          font-family: "Condensed-bold";
-        }
-
-        .first-left-box-inner .level-partido span{
-          color:  #a43c93;
-        }
-
-        .first-left-box-inner > p{
-          font-family: "Roboto-Regular";
-          font-size: .9em;
-          color: white;
-        }
-
-        .first-left-box-inner > p{
-          font-family: "Roboto-Regular";
-          font-size: .9em;
-        }
-
-        .linea-divisoria-partido{
-          border-bottom: 2px dashed white;
-          margin:20px 0;
-        }
-
-        .goles span {
-          background-color: rgba(0,0,0,.20);
-          color:#00b643;
-          padding: 5px;
-          min-width: 50px;
-        }
-
-        .goles{
-          color:white;
-        }
-
-
-
-      </style>
 
     </div>
 
@@ -162,51 +98,72 @@
         </table>
 
 
+        <p>Campeonatos Locales</p>
+            <table style="width:100%;">
+              <tr class="first-row">
+                <th></th>
+                <th>Partidos jugados <br> <span>1049</span></th>
+                <th>Ganados<br>  <span>1049</span></th>
+                <th>Empatados<br>  <span>1049</span></th>
+                <th>Perdidos<br>  <span>1049</span></th>
+                <th>Goles a favor <br>  <span>1049</span></th>
+                <th>Goles en contra<br>  <span>1049</span></th>
+
+              </tr>
+              <tr class="second-row">
+                <td>Local</td>
+                <td>148</td>
+                <td>50</td>
+                <td>148</td>
+                <td>50</td>
+                <td>148</td>
+                <td>50</td>
+              </tr>
+              <tr class="third-row">
+                <td>Visitante</td>
+                <td>148</td>
+                <td>50</td>
+                <td>148</td>
+                <td>50</td>
+                <td>148</td>
+                <td>50</td>
+              </tr>
+            </table>
+
+
+
   </div>
 
-  <style media="screen">
-    .first-right-box table{
-      border: none;
-      border-top: 1px solid #006443;
-    }
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 second-boz-lef">
+      <h1>Los jugadores de Ferro</h1>
 
-    .first-right-box table tr td{
-      border: none;
-    }
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 
-    .first-right-box h1{
-      color: white;
-      font-family: 'Condensed-bold-italic';
-      font-size: 2em;
-    }
+        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+        <p>Jose Perez</p>
+        <button type="button" name="button"></button>
+      </div>
 
-    .first-right-box p{
-      color: white;
-      font-family: 'Condensed-italic';
-      font-size: 1.6em;
-      text-align: center;
-    }
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 
-    .first-right-box table .first-row{
-      color: white;
-      font-family: "Condensed-regular";
-    }
+        <p>Delantero</p>
+        <p>Delantero</p>
+        <p>Delantero</p>
+        <p>Delantero</p>
 
-    .first-right-box table .first-row span{
-      font-family: "Condensed-bold-italic";
-    }
+      </div>
+    </div>
 
-    .first-right-box table .second-row{
-      font-family: "Condensed-bold";
-      color: #00b643;
-    }
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 
-    .first-right-box table .third-row{
-      font-family: "Condensed-bold";
-      color:#a43c93;
-    }
+      <div class="">
+          <label>Nombre de Jugador</label>
+      </div>
 
-  </style>
+    </div>
+  </div>
+
 
 
 

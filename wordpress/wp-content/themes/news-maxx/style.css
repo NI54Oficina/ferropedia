@@ -8789,6 +8789,114 @@ body{
 }
 
 
+/*primero bloque en home*/
+
+
+        .first-left-box-inner h1{
+          font-family: "Condensed-bold-italic";
+          font-size: 3em;
+          color:white;
+        }
+
+        .first-left-box-inner > div{
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .first-left-box-inner .tipo-partido{
+          color: white;
+          font-size: 0.9em;
+        }
+
+        .first-left-box-inner .puntos-partido{
+          color: #00b643;
+          font-size: 4em;
+          text-shadow: -1px 3px 0px rgba(255, 255, 255, 1);
+          font-family: "Condensed-bold-italic";
+        }
+        .first-left-box-inner .level-partido{
+          color:  #00b643;
+          padding: 10px 0;
+          font-family: "Condensed-bold";
+        }
+
+        .first-left-box-inner .level-partido span{
+          color:  #a43c93;
+        }
+
+        .first-left-box-inner > p{
+          font-family: "Roboto-Regular";
+          font-size: .9em;
+          color: white;
+        }
+
+        .first-left-box-inner > p{
+          font-family: "Roboto-Regular";
+          font-size: .9em;
+        }
+
+        .linea-divisoria-partido{
+          border-bottom: 2px dashed white;
+          margin:20px 0;
+        }
+
+        .goles span {
+          background-color: rgba(0,0,0,.20);
+          color:#00b643;
+          padding: 5px;
+          min-width: 50px;
+        }
+
+        .goles{
+          color:white;
+        }
+
+
+        .first-right-box table{
+          border: none;
+          border-top: 1px solid #006443;
+        }
+
+        .first-right-box table tr td{
+          border: none;
+        }
+
+        .first-right-box h1{
+          color: white;
+          font-family: 'Condensed-bold-italic';
+          font-size: 2em;
+        }
+
+        .first-right-box p{
+          color: white;
+          font-family: 'Condensed-italic';
+          font-size: 1.6em;
+          text-align: center;
+        }
+
+        .first-right-box table .first-row{
+          color: white;
+          font-family: "Condensed-regular";
+        }
+
+        .first-right-box table .first-row span{
+          font-family: "Condensed-bold-italic";
+        }
+
+        .first-right-box table .second-row{
+          font-family: "Condensed-bold";
+          color: #00b643;
+        }
+
+        .first-right-box table .third-row{
+          font-family: "Condensed-bold";
+          color:#a43c93;
+        }
+
+
+
+/*primero bloque en home*/
+
 
 /*mobile*/
 
