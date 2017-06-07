@@ -8792,7 +8792,7 @@ body{
 /*primero bloque en home*/
 
 
-        .first-left-box-inner h1{
+        .first-left-box-inner h1, .second-box-left h1{
           font-family: "Condensed-bold-italic";
           font-size: 3em;
           color:white;
@@ -8825,13 +8825,13 @@ body{
         }
 
         .first-left-box-inner > p{
-          font-family: "Roboto-Regular";
+          font-family: "Roboto-regular";
           font-size: .9em;
           color: white;
         }
 
         .first-left-box-inner > p{
-          font-family: "Roboto-Regular";
+          font-family: "Roboto-regular";
           font-size: .9em;
         }
 
@@ -8897,6 +8897,18 @@ body{
 
 /*primero bloque en home*/
 
+
+/*segundo bloque home*/
+.bloque{
+    padding: 7em 0;
+}
+.second-box{
+
+  background-image: url(img/bg-2.png);
+  background-size: cover;
+}
+
+/*segundo bloque home*/
 
 /*mobile*/
 

@@ -20,6 +20,8 @@
         </section> -->
         <!-- entry-list -->
 <!-- PARTE COMENTADA -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box bloque">
+
 
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box">
 
@@ -134,18 +136,84 @@
 
   </div>
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 second-boz-lef">
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box bloque">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
+
+      <style media="screen">
+
+
+        .second-box-left .box-left{
+          text-align: center;
+        }
+
+        .second-box-left .box-left img{
+          width: 80%;
+          border: 1px solid black;
+        }
+
+        .second-box-left .box-left p{
+          color: white;
+          font-family: 'Condensed-bold-italic';
+          font-size: 1.6em;
+          padding: 20px 0;
+        }
+
+        .second-box-left .box-left button{
+          color:white;
+          background-color: black;
+          font-family: 'Roboto-regular';
+          border: none;
+          text-decoration: none;
+          padding: 5px 20px;
+        }
+
+        .second-box-left .box-right{
+          border-left: 1px solid black;
+          padding-left: 20px;
+        }
+
+        .second-box-left .box-right p{
+          border-bottom: 1px dashed black;
+          color: white;
+          padding: 15px 0;
+          font-size: 1.2em;
+          font-family: 'Condensed-regular';
+          margin-bottom: 0;
+        }
+
+        .box-jugador{
+          padding: 5px;
+        }
+        .box-jugador > div{
+          background-color: #a43c93;
+          width: 100%;
+          height: 150px;
+          position: relative;
+        }
+
+        .box-jugador label{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background-color: black;
+          color:white;
+          margin-bottom: 0;
+          text-align: center;
+        }
+      </style>
+
       <h1>Los jugadores de Ferro</h1>
 
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
 
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
         <p>Jose Perez</p>
-        <button type="button" name="button"></button>
+        <button type="button" name="button">Ver Ficha</button>
       </div>
 
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
 
         <p>Delantero</p>
         <p>Delantero</p>
@@ -155,18 +223,104 @@
       </div>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-right">
 
-      <div class="">
-          <label>Nombre de Jugador</label>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+        <div class="">
+            <label>Nombre de Jugador</label>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+        <div class="">
+            <label>Nombre de Jugador</label>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+        <div class="">
+            <label>Nombre de Jugador</label>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+        <div class="">
+            <label>Nombre de Jugador</label>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+        <div class="">
+            <label>Nombre de Jugador</label>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+        <div class="">
+            <label>Nombre de Jugador</label>
+        </div>
       </div>
 
     </div>
   </div>
 
+</div>
+  <style media="screen">
 
+    .third-box{
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+    .third-box-left{
+      border: 1px solid white;
+      padding: 0;
+    }
 
+    .third-box-left > div{
+      padding: 0;
+      margin: 0;
+    }
 
+    .third-box-left > div > img{
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .triangulo-verde{
+
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: linear-gradient(139deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 29%, rgba(0,0,0,0) 49%, rgba(0,182,67,.3) 50%, rgba(0,182,67,.3) 80%, rgba(0,182,67,.3) 100%);
+    }
+
+  </style>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-box bloque">
+
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 third-box-left">
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+      <div class="triangulo-verde"></div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+      <h3> El rincon del mudo</h3>
+      <h1> Siempre igual, Todo Igual, Todo lo mismo</h1>
+      <p>En el ámbito del deporte y porque no en unos cuanto más, se ha acuñado el término “panquequear” y “panqueque”. Del panqueque la definición es “Dícese de aquella persona...</p>
+
+      <span>15 de Febrero  Ver comentarios</span>
+    </div>
+
+  </div>
+
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
+    //twitter widget
+  </div>
 
 </div>
 <!--
