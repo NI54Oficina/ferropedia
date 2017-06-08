@@ -5746,11 +5746,11 @@ body {
     margin-right: -40px;
     padding-left: 20px; }
 
-.dark-box {
+/*.dark-box {
     background-color: #222222;
     border-bottom: 4px solid #e03d3d;
     padding-top: 10px;
-    padding-bottom: 5px; }
+    padding-bottom: 5px; }*/
 
 #bottom-sidebar {
     border-bottom: 1px solid #d8d8d8; }
@@ -8897,7 +8897,9 @@ body{
 
 /*primero bloque en home*/
 
-
+.no-padding{
+  padding:0;
+}
 /*segundo bloque home*/
 .bloque{
     padding: 7em 0;
@@ -8908,7 +8910,183 @@ body{
   background-size: cover;
 }
 
+
+        .second-box-left .box-left{
+          text-align: center;
+        }
+
+        .second-box-left .box-left img{
+          width: 80%;
+          border: 1px solid black;
+        }
+
+        .second-box-left .box-left p{
+          color: white;
+          font-family: 'Condensed-bold-italic';
+          font-size: 1.6em;
+          padding: 20px 0;
+        }
+
+        .second-box-left .box-left button{
+          color:white;
+          background-color: black;
+          font-family: 'Roboto-regular';
+          border: none;
+          text-decoration: none;
+          padding: 5px 20px;
+        }
+
+        .second-box-left .box-right{
+          border-left: 1px solid black;
+          padding-left: 20px;
+        }
+
+        .second-box-left .box-right p{
+          border-bottom: 1px dashed black;
+          color: white;
+          padding: 15px 0;
+          font-size: 1.2em;
+          font-family: 'Condensed-regular';
+          margin-bottom: 0;
+        }
+
+        .box-jugador{
+          padding: 5px;
+        }
+        .box-jugador > div{
+          background-color: #a43c93;
+          width: 100%;
+          height: 150px;
+          position: relative;
+        }
+
+        .box-jugador label{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background-color: black;
+          color:white;
+          margin-bottom: 0;
+          text-align: center;
+        }
+
 /*segundo bloque home*/
+
+
+/*tercer bloque*/
+.third-box{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.third-box-left{
+  border: 1px solid white;
+  padding: 0;
+}
+
+.third-box-left > div{
+  padding: 0;
+  margin: 0;
+}
+
+.fourth-box-left .fourth-container img, .third-box-left > div > img, .six-container-left > div  img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.triangulo-verde{
+
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(139deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 29%, rgba(0,0,0,0) 49%, rgba(0,182,67,.3) 50%, rgba(0,182,67,.3) 80%, rgba(0,182,67,.3) 100%);
+}
+
+.third-box-left .box-right{
+  padding: 3em 3.5em;
+}
+
+.third-box-left .box-right h3{
+  background-color: #00b643;
+  color: white;
+  display: inline;
+  padding: 0 10px;
+}
+
+.third-box-left .box-right h1{
+  font-family: 'Condensed-bold-italic';
+  color: white;
+  font-size: 4em;
+  line-height: 1em;
+}
+
+.third-box-left .box-right p{
+  color: white;
+  font-family: 'Roboto-regular';
+}
+
+/*tercer bloque*/
+
+
+/*cuarto bloque*/
+
+.fourth-box-left h1{
+  color: #006443;
+  background-color: white;
+  border-bottom: 3px solid #006443;
+}
+
+.fourth-box-left .fourth-container img{
+  max-height: 250px;
+}
+
+.fourth-box-left .fourth-container .title-container{
+  background-color: white;
+  color: black;
+  height: 150px;
+  padding: 0;
+}
+
+.fourth-box-left .fourth-container .title-container p{
+  text-align: center;
+  font-family: 'Condensed-bold-italic';
+  font-size: 2em;
+}
+
+.fourth-box-left .fourth-container  label{
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #a43c93;
+  margin: 0;
+  padding: 10px 0;
+}
+
+
+/*cuarto bloque*/
+
+/*quinto bloque*/
+
+.fifth-box{
+  background-image:url(img/trio_violeta_home.jpg);
+  height: 450px;
+}
+
+/*quinto bloque*/
+
+/*sexto bloque*/
+
+  .six-box{
+    min-height: 1000px;
+    background-image: url(img/pelota_fondo.png), url(img/jugadores_footer_home.png);
+    background-position: 100% 100%, 90% 100%;
+    background-repeat: no-repeat;
+  }
+
+/*sexto bloque*/
 
 /*mobile*/
 
