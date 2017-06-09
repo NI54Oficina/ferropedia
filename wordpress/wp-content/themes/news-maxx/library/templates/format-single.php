@@ -88,4 +88,3 @@
 </section><!-- entry-box -->
 
 <?php kopa_about_author(); ?><!-- kopa author -->
-

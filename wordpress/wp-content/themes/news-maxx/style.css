@@ -8732,6 +8732,12 @@ body{
   text-align: center;
 }
 
+#bottom-sidebar{
+
+  background: repeating-linear-gradient(-45deg, #232621, #232621 12px, rgba(0,0,0,0.3) 3px, rgba(0,0,0,0.3) 17px);
+  padding: 25px 0;
+}
+
 #bottom-sidebar h1{
   color: #a43c93;
   font-family: "Condensed-bold-italic";
@@ -9083,10 +9089,17 @@ body{
     min-height: 1000px;
     background-image: url(img/pelota_fondo.png), url(img/jugadores_footer_home.png);
     background-position: 100% 100%, 90% 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat, no-repeat;
   }
 
 /*sexto bloque*/
+
+
+.home .main-section{
+  background-image:  url(img/tile_cesped.svg);
+  background-position: 100% 100%;
+  background-repeat: repeat-x;
+}
 
 /*mobile*/
 

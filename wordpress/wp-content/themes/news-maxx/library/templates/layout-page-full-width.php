@@ -8,6 +8,8 @@ $kopa_position = $kopa_layout[$kopa_setting['layout_id']]['positions'];
 
 <div class="wrapper clearfix">
 
+
+
     <div class="main-col pull-left">
 
         <?php kopa_breadcrumb();?>
