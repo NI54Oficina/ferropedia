@@ -223,7 +223,7 @@
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
-    //WIDGET TWITTER
+    <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
   </div>
 
 </div>
@@ -270,9 +270,95 @@
 
   </div>
 
-  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right twitter-widget">
-    //MÀS VISTO
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right mas-visto-widget">
+
+
+<style media="screen">
+
+  .mas-visto-widget .title{
+    color: white;
+    font-size: 2.5em;
+    background-color: #00b643;
+    font-family: 'Condensed-bold-italic';
+    padding: 20px;
+    text-align: center;
+  }
+
+  .mas-visto-widget  a:nth-child(even) .bloque-widget {
+    background-color: #0c0c0c
+  }
+
+  .mas-visto-widget a:nth-child(odd) .bloque-widget{
+    background-color: #006443
+  }
+
+  .mas-visto-widget .bloque-widget{
+    color:white;
+  }
+
+  .mas-visto-widget .bloque-widget{
+    font-family: 'Roboto-regular';
+    padding: 25px;
+  }
+
+  .mas-visto-widget .bloque-widget div:nth-child p{
+    padding-left: 25px;
+  }
+
+  .mas-visto-widget .bloque-widget{
+    font-family: 'Roboto-regular';
+    padding: 25px;
+  }
+
+  .mas-visto-widget .bloque-widget .widget-numero{
+    font-family: 'Condensed-bold-italic';
+    font-size: 6em;
+    margin:0;
+    position: relative;
+  }
+
+    .mas-visto-widget .bloque-widget div{
+    padding: 0;
+  }
+
+</style>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
+      MAS VISTO
+    </div>
+
+    <?php
+
+    $args = array( 'numberposts' => '4', 'post_status' => 'publish' );
+    $recent_posts = wp_get_recent_posts( $args );
+
+    $nro=1;
+
+      foreach( $recent_posts as $recent ){
+        $post_categories = wp_get_post_categories( $recent["ID"]);
+        $date= get_the_date();?>
+        <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr($recent["post_title"])?>">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bloque-widget">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <p class="widget-numero"><?php   echo $nro ?></p>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <p><?php   echo $date ?></p>
+            <p><?php echo $recent["post_title"]  ?></p>
+          </div>
+        </div>
+
+        </a>
+
+        <!-- echo $date.'<p ><a style="color:white" href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a></p>'; -->
+
+
+    <?php $nro++; } ?>
   </div>
+
+
+
+
 
 </div>
 
@@ -280,66 +366,6 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fifth-box bloque"></div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-box bloque">
-  <style media="screen">
-    .six-box .six-box-left h1{
-      background-color: #006443;
-      color:white;
-      border-bottom: 3px solid black;
-    }
-
-    .six-container-left > div  img{
-      height: 250px;
-    }
-
-    .six-container-left .title-container{
-      background-color: #006443;
-      color:white;
-      padding-top: 20px;
-      padding-left: 0;
-      height: 200px;
-    }
-
-    .six-container-left .title-container p:first-child{
-      font-family: 'Condensed-bold-italic';
-      font-size: 2em;
-    }
-
-    .six-container-left .title-container p:last-child{
-      font-family: 'Roboto-regular';
-      font-size: 1em;
-    }
-
-    .six-container-left .title-container label{
-      background-color: black;
-      color:#a43c93;
-      position: absolute;
-      bottom:0;
-      width: 100%;
-      margin: 0;
-      padding: 10px;
-    }
-
-    .six-container-right .six-inner-container{
-      padding: 15px 0;
-    }
-
-    .six-container-right .six-inner-container img{
-      /*width: 100%;*/
-      height:150px;
-      display: inline;
-    }
-
-    .six-container-right .six-inner-container p{
-      color:white;
-    }
-
-    .six-container-right .six-inner-container p span{
-      color:#a43c93;
-    }
-    
-
-
-  </style>
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 six-box-left">
 
@@ -383,7 +409,7 @@
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 six-box-right twitter-widget">
-    //MÀS VISTO
+    //ULTIMOS COMENTARIOS
   </div>
 
 </div>

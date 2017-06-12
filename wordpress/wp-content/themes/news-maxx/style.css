@@ -9091,6 +9091,63 @@ body{
     background-position: 100% 100%, 90% 100%;
     background-repeat: no-repeat, no-repeat;
   }
+  .six-box .six-box-left h1{
+    background-color: #006443;
+    color:white;
+    border-bottom: 3px solid black;
+  }
+
+  .six-container-left > div  img{
+    height: 250px;
+  }
+
+  .six-container-left .title-container{
+    background-color: #006443;
+    color:white;
+    padding-top: 20px;
+    padding-left: 0;
+    height: 200px;
+  }
+
+  .six-container-left .title-container p:first-child{
+    font-family: 'Condensed-bold-italic';
+    font-size: 2em;
+  }
+
+  .six-container-left .title-container p:last-child{
+    font-family: 'Roboto-regular';
+    font-size: 1em;
+  }
+
+  .six-container-left .title-container label{
+    background-color: black;
+    color:#a43c93;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .six-container-right .six-inner-container{
+    padding: 15px 0;
+  }
+
+  .six-container-right .six-inner-container img{
+    /*width: 100%;*/
+    height:150px;
+    display: inline;
+  }
+
+  .six-container-right .six-inner-container p{
+    color:white;
+  }
+
+  .six-container-right .six-inner-container p span{
+    color:#a43c93;
+  }
+
+
 
 /*sexto bloque*/
 
