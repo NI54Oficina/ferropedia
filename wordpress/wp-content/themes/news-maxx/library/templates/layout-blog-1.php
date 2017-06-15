@@ -272,56 +272,6 @@
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right mas-visto-widget">
 
-
-<style media="screen">
-
-  .mas-visto-widget .title{
-    color: white;
-    font-size: 2.5em;
-    background-color: #00b643;
-    font-family: 'Condensed-bold-italic';
-    padding: 20px;
-    text-align: center;
-  }
-
-  .mas-visto-widget  a:nth-child(even) .bloque-widget {
-    background-color: #0c0c0c
-  }
-
-  .mas-visto-widget a:nth-child(odd) .bloque-widget{
-    background-color: #006443
-  }
-
-  .mas-visto-widget .bloque-widget{
-    color:white;
-  }
-
-  .mas-visto-widget .bloque-widget{
-    font-family: 'Roboto-regular';
-    padding: 25px;
-  }
-
-  .mas-visto-widget .bloque-widget div:nth-child p{
-    padding-left: 25px;
-  }
-
-  .mas-visto-widget .bloque-widget{
-    font-family: 'Roboto-regular';
-    padding: 25px;
-  }
-
-  .mas-visto-widget .bloque-widget .widget-numero{
-    font-family: 'Condensed-bold-italic';
-    font-size: 6em;
-    margin:0;
-    position: relative;
-  }
-
-    .mas-visto-widget .bloque-widget div{
-    padding: 0;
-  }
-
-</style>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
       MAS VISTO
     </div>

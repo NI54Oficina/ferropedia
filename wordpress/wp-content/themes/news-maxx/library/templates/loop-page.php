@@ -8,6 +8,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 <?php ?>
 
     <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
+
         <?php the_content(); ?>
     </div>
 
@@ -19,7 +20,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
     ) ); ?>
 
     <?php comments_template(); ?>
-    
+
 <?php } // endwhile
 } // endif
 ?>
