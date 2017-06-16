@@ -5862,6 +5862,7 @@ in /Applications/XAMPP/xamppfiles/htdocs/ferropedia/index.php (22)
 in /Applications/XAMPP/xamppfiles/htdocs/ferropedia/protected/controllers/WpController.php (8)
 in /Applications/XAMPP/xamppfiles/htdocs/ferropedia/protected/components/ExceptionHandler.php (21)
 >>>>>>> 8d7c68bacd7f6f477b4b87284bfddcb1d75061ed
+<<<<<<< HEAD
 2017/06/16 14:46:36 [trace] [system.CModule] Loading "log" application component
 in C:\xampp\htdocs\ferropedia\index.php (22)
 2017/06/16 14:46:36 [trace] [system.CModule] Loading "request" application component
@@ -6164,3 +6165,5 @@ in C:\xampp\htdocs\ferropedia\index.php (22)
 2017/06/16 19:18:36 [trace] [system.CModule] Loading "clientScript" application component
 in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
 in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+=======
+>>>>>>> ef40357cd652908e76b54d27fe1977cfbd1acfbd
