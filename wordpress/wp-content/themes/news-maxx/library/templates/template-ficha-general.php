@@ -11,11 +11,6 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 <?php ?>
 
 
-<style media="screen">
-
-
-</style>
-
     <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
 
       <div class="label-name-page">
@@ -106,7 +101,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
 
 
-    <?php comments_template(); ?>
+
 
 <?php } // endwhile
 } // endif
