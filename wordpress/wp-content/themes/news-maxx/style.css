@@ -9360,8 +9360,197 @@ body{
     }
   /*pantalla de jugadores*/
 
+  /*pantalla jugadores interna*/
+
+
+  .first-box-ficha-tecnica{
+    background-image:
+  }
+    .sector-cancha-float{
+      z-index: -1;
+      position: absolute;
+      width: 86%;
+      background-color: #00b643;
+      height: 100px;
+      bottom:0;
+      top:0;
+      margin: auto;
+    }
+
+    .contenido-interno-tecnica h1{
+      color:white;
+      font-family: 'Condensed-bold-italic';
+    }
+
+    .tecnica-detalle h1, .tecnica-galeria h1{
+      background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 12px, rgba(255,255,255,0.3) 3px, rgba(255,255,255,0.3) 17px);
+    }
+
+    .tecnica-detalle p{
+      font-family: 'Roboto-regular';
+      color:white;
+    }
+
+    .tecnica-video h1{
+    background:repeating-linear-gradient(-45deg, #a43c93, #a43c93 12px, rgba(255,255,255,0.3) 3px, rgba(255,255,255,0.3) 17px);
+    }
+
+    .tecnica-video iframe {
+      width: 80%;
+      height: 350px;
+    }
+
+    .jugador-relacionado label{
+      background-color: #006443;
+      color:white;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      font-family: 'Condensed-bold-italic';
+    }
+
+    .jugador-relacionado label span{
+      font-family: 'Condensed-italic';
+    }
+
+    .jugador-relacionado{
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .columna-relacionados h1{
+      background-color: #a43c93;
+      color: white;
+      font-family: 'Condensed-bold-italic';
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 1.2em;
+      padding: 10px 0;
+    }
+
+    .informacion-tecnica h1{
+      font-family: 'Condensed-bold-italic';
+      color:white;
+    }
+    .informacion-tecnica h1 span{
+      color:rgba(0,182,67,.7);
+    }
+    .informacion-tecnica-inner p{
+      color: rgba(0,0,0,.6);
+      font-family: 'Condensed-regular';
+    }
+
+    .informacion-tecnica-inner h2{
+      color: #a43c93;
+      font-family: 'Condensed-bold-italic';
+    }
+
+    .informacion-tecnica-inner h3{
+      color:rgba(0,182,67,.7);
+      font-family: 'Condensed-bold-italic';
+    }
+
+    .info-nacimiento p{
+      color:white;
+    }
+
+    .info-nacimiento p span{
+      color:rgba(0,182,67,.7);
+    }
+
+    .informacion-dinamica h1{
+      color: white;
+      border-bottom: 1px solid #006443;
+      font-family: 'Condensed-italic';
+      text-align: center;
+      width: 100%;
+      font-size: 1.3em;
+      padding-bottom: 9px;
+    }
+
+    .first-box-ficha-tecnica{
+      padding-bottom: 5%;
+      margin-bottom: 5%;
+      border-bottom: 2px solid #00b643;
+    }
+
+    .vota{
+      background-color: #006443;
+      color: white;
+      padding: 10px;
+    }
+
+    .vota img{
+      display: inline;
+      width: 25px;
+      margin: auto 2px;
+    }
+
+
+  /*pantalla jugadores interna*/
+
 /*mobile*/
 
 @media screen and (max-width: 479px){
 
 }
+
+/*
+
+#star-five {
+   margin: 50px 0;
+   position: relative;
+   display: block;
+   color: red;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid red;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+    background-color: transparent;
+}
+#star-five:before {
+   border-bottom: 80px solid red;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+     background-color: transparent;
+
+}
+#star-five:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid red;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+     background-color: transparent;
+
+}
+
+*/
