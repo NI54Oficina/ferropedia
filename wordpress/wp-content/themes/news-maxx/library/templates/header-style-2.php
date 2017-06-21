@@ -406,12 +406,10 @@
 
             <div class="wrapper">
 
-                <div class="left-color"></div>
 
                 <?php kopa_the_topnew(); ?>
                 <!-- top new -->
 
-                <div class="right-color"></div>
             </div>
             <!-- wrapper -->
 

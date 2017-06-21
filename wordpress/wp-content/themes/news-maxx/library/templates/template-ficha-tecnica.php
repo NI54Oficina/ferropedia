@@ -62,11 +62,16 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-dinamica">
           <h1>¿Qué pensas del jugador?</h1>
-          //cuadro
+
+          <img class="estrella" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ej-2.png" alt="">
+
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-dinamica">
           <h1>Calificar al jugador</h1>
 
+          <img class="estrella" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ej-1.png" alt="">
+
+          <!--
                 <h2>5.5 pts</h2>
 
                 <?php for($i=0; $i <5 ; $i++){ ?>
@@ -79,7 +84,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
               <img class="estrella" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/estrella.svg" alt="">
             <?php } ?>
           </div>
-
+         -->
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
           <h1>Campañas del jugador</h1>

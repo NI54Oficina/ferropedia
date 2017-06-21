@@ -5577,7 +5577,7 @@ body {
     margin-bottom: 20px; }
 
 .wrapper {
-    width: 1231px;
+    /*width: 1231px;*/
     margin: 0 auto;
     position: relative; }
 
@@ -5916,7 +5916,7 @@ body {
     margin: 0 0 0 15px;
     list-style: none;
     padding-left: 15px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    /*border-left: 1px solid rgba(255, 255, 255, 0.2);*/
     line-height: 1;
     position: relative; }
 .main-menu > li:first-child {
@@ -5929,7 +5929,7 @@ body {
     color: white;
     font-size: 15px;
     font-family: "pt_serifbold";
-    padding: 15px 0 13px;
+    padding: 5px 0;
     line-height: 1; }
 .main-menu > li ul {
     position: absolute;
@@ -6178,8 +6178,17 @@ body {
  * 5.0 Content
  * -----------------------------------------------------------------------------
  */
+
+ .entry-number a img{
+   max-width: 45px;
+ }
 .entry-date {
-    margin-right: 10px; }
+    margin-right: 10px;
+    color:#c6c3c2;
+    font-family: 'Roboto-regular';
+    font-weight: 300;
+}
+
 .entry-date i {
     font-size: 14px;
     margin-right: 5px; }
@@ -6986,6 +6995,10 @@ Contact page
 
 .main-section .widget {
     margin-bottom: 20px; }
+
+    .owl-wrapper-outer{
+      padding-left: 5%;
+    }
 .main-section .widget .widget-title {
     text-transform: uppercase;
     text-align: center;
@@ -7274,11 +7287,11 @@ Nothumb Widget
 
 .kopa-nothumb-carousel-widget {
     margin-top: -40px;
-    background-color: #fff; }
+    background-color: transparent; }
 .kopa-nothumb-carousel-widget .widget-title {
     /*text-transform: uppercase;*/
-    color: white;
-    background-color: #222;
+    color: black;
+    background-color: rgba(255,255,255,.9);
     padding: 10px 0 8px 0;
     margin: 0;
     text-align: center;
@@ -7291,7 +7304,9 @@ Nothumb Widget
 .kopa-nothumb-carousel-widget .entry-item {
     position: relative;
     padding: 30px 20px;
-    border-left: 1px solid #d8d8d8; }
+    border-right: 1px solid #d8d8d8;
+  }
+
 .kopa-nothumb-carousel-widget .entry-item .entry-number {
     position: absolute;
     left: 20px;
@@ -7304,24 +7319,29 @@ Nothumb Widget
     overflow: hidden;
     margin-bottom: 5px; }
 .kopa-nothumb-carousel-widget .entry-item .entry-content .entry-title {
-    font-family: "pt_serifregular";
+
     margin: 0;
     max-height: 36px;
     overflow: hidden; }
 
+.kopa-nothumb-carousel-widget .entry-item .entry-content .entry-title a{
+  font-family: "Roboto-regular";
+  font-weight: 300;
+  color:white;
+}
 .stripe-box .wrapper {
     padding-right: 250px;
     position: relative;
-    background-color: #fff; }
+    background-color: transparent }
 .stripe-box .wrapper .left-color {
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
     top: 40px;
     right: 100%;
     width: 100%;
     height: 100%; }
 .stripe-box .wrapper .right-color {
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
     top: 40px;
     left: 100%;
@@ -7336,6 +7356,24 @@ Nothumb Widget
 .kopa-subpage .stripe-box .weather-widget-wrapper {
     top: 0; }
 
+.weather-widget-wrapper .widget h1{
+  border-bottom: 1px solid white;
+  color:white;
+  font-size: 1.4em;
+  font-family: 'Condensed-bold-italic';
+  text-align: center;
+}
+
+.weather-widget-wrapper .widget p{
+  color:white;
+  font-family: 'Condensed-bold-italic';
+  text-align: center;
+}
+
+.weather-widget-wrapper .widget p span{
+  font-family: 'Condensed-italic';
+
+}
 .kopa-home-4 .stripe-box .social-links-container,
 .kopa-subpage .stripe-box .social-links-container {
     top: -40px; }
@@ -7397,7 +7435,13 @@ Nothumb Widget
 .kopa-subpage .stripe-box {
     margin-top: 0;
     overflow: visible;
-    padding-top: 0; }
+    padding-top: 0;
+
+  background-image: url(img/slider-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .kopa-home-4 .stripe-box .kopa-nothumb-carousel-widget,
 .kopa-subpage .stripe-box .kopa-nothumb-carousel-widget {
@@ -7405,7 +7449,8 @@ Nothumb Widget
 
 .kopa-nothumb-carousel-widget .owl-theme .owl-controls {
     position: absolute;
-    left: -12px;
+    /*left: -12px;*/
+    padding-left: 3%;
     top: 50%;
     margin-top: -24px; }
 
@@ -7414,16 +7459,18 @@ Nothumb Widget
     margin: 1px 0;
     width: 23px;
     height: 23px;
-    background-color: #000;
+    background-color: rgba(0,0,0,.5);
     color: white;
     padding: 0;
     line-height: 22px;
     text-align: center;
     opacity: 1;
     filter: Anpha(Opacity=100);
-    font-size: 20px; }
+    font-size: 20px;
+    border-radius: 100%;
+  }
 .kopa-nothumb-carousel-widget .owl-theme .owl-controls .owl-buttons div:hover {
-    background-color: #e03d3d; }
+    background-color: rgba(0,182,67,0.5); }
 
 .kopa-nothumb-carousel-widget .owl-theme .owl-controls .owl-buttons div:before {
     font-family: 'FontAwesome'; }
@@ -7449,7 +7496,7 @@ Weather Widget
     z-index: 1;
     top: 0px;
     left: -103px;
-    border-top: 125px solid #e03d3d;
+    border-top: 165px solid rgba(65,115,98,0.8);
     border-bottom: 20px solid transparent;
     border-right: 0px solid transparent;
     border-left: 125px solid transparent;
@@ -7463,7 +7510,7 @@ Weather Widget
     position: absolute;
     top: 0px;
     left: -128px;
-    border-top: 125px solid #222;
+    border-top: 165px solid #006443;
     border-bottom: 20px solid transparent;
     border-right: 0px solid transparent;
     border-left: 125px solid transparent;
@@ -7482,18 +7529,20 @@ Weather Widget
     display: none; }
 
 .widget_awesomeweatherwidget {
+    z-index: 1;
+    padding-right: 15%;
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
     width: 187px;
-    background-color: #222222; }
+    background-color: rgba(65,115,98,0.8); }
 
 .awesome-weather-wrap {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #e03d3d;
+    background-color: rgba(65,115,98,0.8);
     color: white;
     text-shadow: none;
     height: 100%;
@@ -7557,11 +7606,11 @@ Breaking News
     padding: 0 10px; }
 
 .kp-headline dd a {
-    color: #8f8f8f;
+    color: #c6c3c2;
     line-height: 39px;
     font-size: 13px; }
 .kp-headline dd a:hover {
-    color: #e03d3d; }
+    color: white; }
 
 .kp-headline-title {
     font-size: 14px;
@@ -7606,7 +7655,7 @@ Breaking News
     border: none;
     border-left: 1px solid #d8d8d8;
     outline: none;
-    background: #fff;
+    background:transparent;
     margin: 1px 0 0;
     z-index: 10;
     box-sizing: border-box;
@@ -7657,7 +7706,7 @@ Breaking News
 
 .sb-icon-search {
     color: white;
-    background: #222222;
+    /*background: #222222;*/
     z-index: 90;
     font-size: 16px;
     font-family: FontAwesome;
@@ -7709,7 +7758,8 @@ Breaking News
 .kopa-subpage .sb-search input[type="text"] {
     height: 43px;
     margin: 0;
-    border-left: none; }
+    border-left: none;
+  }
 
 .kopa-home-2 .sb-icon-search,
 .kopa-home-2 .sb-search-submit,
@@ -7733,7 +7783,8 @@ Breaking News
 .kopa-home-3 .sb-search.sb-search-open .sb-icon-search,
 .kopa-home-4 .sb-search.sb-search-open .sb-icon-search,
 .kopa-subpage .sb-search.sb-search-open .sb-icon-search {
-    background: #222222; }
+    /*background: #222222;*/
+   }
 
 /*
 Masonry List Widget
@@ -7835,7 +7886,8 @@ Kopa article list widget 1
 .kopa-article-list-1-widget .older-post li .entry-item .entry-content header {
     overflow: hidden;
     margin-bottom: 5px; }
-.kopa-article-list-1-widget .older-post li .entry-item .entry-content header .entry-date {
+.kopa-article-list-1-widget .older-post li .entry-item .entry-content header .
+ {
     margin-right: 0; }
 
 .widget-area-5 .kopa-article-list-1-widget .last-item {
@@ -8703,6 +8755,9 @@ body{
 
 .kp-headline-title{
   background-color: #a43c93;
+  font-family: 'Condensed-bold-italic';
+  font-size: 1.5em;
+  margin-left: 4%;
 }
 
 .breadcrumb{
@@ -8773,8 +8828,7 @@ body{
 
 .links-sociales{
     float: right;
-    padding-right: 5%;
-    margin:15px;
+    padding:10px 5%;
 }
 
 .links-sociales i{
@@ -8795,6 +8849,7 @@ body{
 
 .first-left-box-inner{
   background-color: rgba(0,182,67,0.1);
+  padding: 15px;
 
 }
 
@@ -8806,6 +8861,7 @@ body{
           font-family: "Condensed-bold-italic";
           font-size: 3em;
           color:white;
+          margin-bottom:5px;
         }
 
         .first-left-box-inner > div{
@@ -8815,13 +8871,15 @@ body{
 
         .first-left-box-inner .tipo-partido{
           color: white;
-          font-size: 0.9em;
+          font-size: 1em;
+          font-family: 'Roboto-regular';
+          font-weight: 300;
         }
 
         .first-left-box-inner .puntos-partido{
           color: #00b643;
           font-size: 4em;
-          text-shadow: -1px 3px 0px rgba(255, 255, 255, 1);
+          text-shadow: -1px 1px 0px rgba(255, 255, 255, 1);
           font-family: "Condensed-bold-italic";
         }
         .first-left-box-inner .level-partido{
@@ -8846,7 +8904,7 @@ body{
         }
 
         .linea-divisoria-partido{
-          border-bottom: 2px dashed white;
+          border-bottom: 1px dashed white;
           margin:20px 0;
         }
 
@@ -8966,8 +9024,39 @@ body{
         .box-jugador > div{
           background-color: #a43c93;
           width: 100%;
-          height: 150px;
+          height: 220px;
           position: relative;
+        }
+        .copa-verde{
+          margin: 20px 0;
+        }
+
+        .imagen-jugador-violeta{
+          position: relative;
+        }
+
+        .box-jugador .imagen-jugador-violeta img{
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+        .capa-violeta{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #a43c93;
+          opacity: .7;
+          top:0;
+        }
+
+        .box-mas-jugador .imagen-jugador-violeta img{
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin:auto;
+          width: 50%;
         }
 
         .box-jugador label{
@@ -8977,6 +9066,14 @@ body{
           background-color: black;
           color:white;
           margin-bottom: 0;
+          text-align: left;
+          padding: 10px;
+          font-family: 'Condensed-italic';
+          font-weight: 100;
+          font-size: 1.3em;
+        }
+
+        .box-mas-jugador label{
           text-align: center;
         }
 
@@ -9358,6 +9455,8 @@ body{
     .page-content-area{
       padding-bottom: 15%;
     }
+
+
   /*pantalla de jugadores*/
 
   /*pantalla jugadores interna*/

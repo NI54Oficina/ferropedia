@@ -12,12 +12,14 @@ jQuery(document).ready(function() {
         'placement': 'top',
         'z-index': '3000'
     });
+
+    same_height();
 });
 /* =========================================================
  Tabs
  ============================================================ */
 jQuery(document).ready(function() {
-
+  same_height();
     jQuery(".tab-content-1").hide(); //Hide all content
     jQuery("ul.tabs-1 li:first").addClass("active").show(); //Activate first tab
     jQuery(".tab-content-1:first").show(); //Show first tab content
@@ -32,13 +34,16 @@ jQuery(document).ready(function() {
     });
 });
 /*======================================================================
- * 
+ *
  ======================================================================*/
 jQuery(document).ready(function() {
     kopa_initialization();
+    same_height();
 });
 function kopa_initialization() {
-    jQuery(".kopa-sidebar-box-wrapper").hide(); //Hide all contentt
+
+  console.log("asdasdas0");
+      jQuery(".kopa-sidebar-box-wrapper").hide(); //Hide all contentt
     jQuery(".kopa-cpanel-thumbnails").hide(); //Hide all content
     show_first_tab();
     show_on_checked("#kopa_custom_layout_setting");
@@ -145,7 +150,7 @@ function show_first_tab() {
                     });
                 }
             });
-            //Show image 
+            //Show image
             jQuery(kopa_box_body).children().each(function() {
                 if (jQuery(this).hasClass("kopa-thumbnails-box")) {
                     jQuery(this).children().each(function() {
@@ -506,4 +511,23 @@ function show_on_check_social_link(obj){
         jQuery('#'+dataWrapper+' *').attr('disabled', false);
     }
 
+}
+
+function same_height(){
+  console.log("entra same height");
+
+  var auxId=1;
+  while($( "[hid="+auxId+"]" ).length||auxId<20){
+    var hidHeight=0;
+    //ResetHeight();
+    $("[hid="+auxId+"]").each(function(){
+      if($(this).innerHeight()>hidHeight){
+        hidHeight= $(this).innerHeight();
+      }
+
+    });
+    //console.log(hidHeight);
+    $("[hid="+auxId+"]").css("height",hidHeight+"px");
+    auxId++;
+  }
 }

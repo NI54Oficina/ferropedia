@@ -23,9 +23,9 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box bloque">
 
 
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box" hid="1">
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner" >
 
       <h1>Totales</h1>
       <p>Última actualización: 24 de abril a las 19.00pm</p>
@@ -33,30 +33,30 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <p class="tipo-partido">PARTIDOS JUGADOS</p>
         <p class="puntos-partido">50</p>
-        <p class="level-partido"> L609 <span> V313</span></p>
+        <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <p class="tipo-partido">PARTIDOS GANADOS</p>
+        <p class="puntos-partido">50</p>
+        <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p>
       </div>
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <p class="tipo-partido">PARTIDOS JUGADOS</p>
         <p class="puntos-partido">50</p>
-        <p class="level-partido"> L609 <span> V313</span></p>
+        <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p>
       </div>
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <p class="tipo-partido">PARTIDOS JUGADOS</p>
+        <p class="tipo-partido">PARTIDOS GANADOS</p>
         <p class="puntos-partido">50</p>
-        <p class="level-partido"> L609 <span> V313</span></p>
+        <p class="level-partido">  L 609&nbsp;&nbsp;<span> V 313</span></p>
       </div>
 
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <p class="tipo-partido">PARTIDOS JUGADOS</p>
-        <p class="puntos-partido">50</p>
-        <p class="level-partido"> L609 <span> V313</span></p>
-      </div>
-
-      <p class="goles"><span>45.000</span> Goles a favor</p>
+      <p class="goles"><span>45.000  &nbsp; </span> Goles a favor</p>
       <div class="linea-divisoria-partido"></div>
-      <p class="goles"><span>39.000</span> Goles en contra</p>
+      <p class="goles"><span>39.000  &nbsp;</span> Goles en contra</p>
 
 
     </div>
@@ -64,73 +64,48 @@
 
   </div>
 
-  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 first-right-box">
+  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 first-right-box" hid="1">
     <h1>Historial</h1>
 
-    <p>Campeonatos Locales</p>
-        <table style="width:100%;">
-          <tr class="first-row">
-            <th></th>
-            <th>Partidos jugados <br> <span>1049</span></th>
-            <th>Ganados<br>  <span>1049</span></th>
-            <th>Empatados<br>  <span>1049</span></th>
-            <th>Perdidos<br>  <span>1049</span></th>
-            <th>Goles a favor <br>  <span>1049</span></th>
-            <th>Goles en contra<br>  <span>1049</span></th>
+    <?php $var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales'];
 
-          </tr>
-          <tr class="second-row">
-            <td>Local</td>
-            <td>148</td>
-            <td>50</td>
-            <td>148</td>
-            <td>50</td>
-            <td>148</td>
-            <td>50</td>
-          </tr>
-          <tr class="third-row">
-            <td>Visitante</td>
-            <td>148</td>
-            <td>50</td>
-            <td>148</td>
-            <td>50</td>
-            <td>148</td>
-            <td>50</td>
-          </tr>
-        </table>
+    for($i=0; $i<3; $i++){?>
+
+      <p><?php echo $var[$i] ?></p>
+          <table style="width:100%;">
+            <tr class="first-row">
+              <th></th>
+              <th>Partidos jugados <br> <span>1049</span></th>
+              <th>Ganados<br>  <span>1049</span></th>
+              <th>Empatados<br>  <span>1049</span></th>
+              <th>Perdidos<br>  <span>1049</span></th>
+              <th>Goles a favor <br>  <span>1049</span></th>
+              <th>Goles en contra<br>  <span>1049</span></th>
+
+            </tr>
+            <tr class="second-row">
+              <td>Local</td>
+              <td>148</td>
+              <td>50</td>
+              <td>148</td>
+              <td>50</td>
+              <td>148</td>
+              <td>50</td>
+            </tr>
+            <tr class="third-row">
+              <td>Visitante</td>
+              <td>148</td>
+              <td>50</td>
+              <td>148</td>
+              <td>50</td>
+              <td>148</td>
+              <td>50</td>
+            </tr>
+          </table>
+
+    <?php } ?>
 
 
-        <p>Campeonatos Locales</p>
-            <table style="width:100%;">
-              <tr class="first-row">
-                <th></th>
-                <th>Partidos jugados <br> <span>1049</span></th>
-                <th>Ganados<br>  <span>1049</span></th>
-                <th>Empatados<br>  <span>1049</span></th>
-                <th>Perdidos<br>  <span>1049</span></th>
-                <th>Goles a favor <br>  <span>1049</span></th>
-                <th>Goles en contra<br>  <span>1049</span></th>
-
-              </tr>
-              <tr class="second-row">
-                <td>Local</td>
-                <td>148</td>
-                <td>50</td>
-                <td>148</td>
-                <td>50</td>
-                <td>148</td>
-                <td>50</td>
-              </tr>
-              <tr class="third-row">
-                <td>Visitante</td>
-                <td>148</td>
-                <td>50</td>
-                <td>148</td>
-                <td>50</td>
-                <td>148</td>
-                <td>50</td>
-              </tr>
-            </table>
 
 
 
@@ -157,46 +132,33 @@
         <p>Delantero</p>
         <p>Delantero</p>
 
+        <img class="copa-verde" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/copa-verde.svg" alt="">
+
       </div>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-right">
 
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
+        <div class="imagen-jugador-violeta">
+          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt="">
+            <label>+ Jugadores</label>
+        </div>
+      </div>
+
+      <?php for($i=0; $i<5; $i++){ ?>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="">
+        <div class="imagen-jugador-violeta">
+
+          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+
+          <div class="capa-violeta"></div>
             <label>Nombre de Jugador</label>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="">
-            <label>Nombre de Jugador</label>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="">
-            <label>Nombre de Jugador</label>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="">
-            <label>Nombre de Jugador</label>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="">
-            <label>Nombre de Jugador</label>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="">
-            <label>Nombre de Jugador</label>
-        </div>
-      </div>
+      <?php } ?>
 
     </div>
   </div>

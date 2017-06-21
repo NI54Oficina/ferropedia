@@ -1011,11 +1011,46 @@ function kopa_the_topnew()
                 <div class="item">
                     <article class="entry-item clearfix">
                         <div class="entry-number">
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php kopa_the_image(get_the_ID(), get_the_title(), 60, 60, true, true); ?></a>
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+
+                              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/<?php
+                              $post_categories = wp_get_post_categories( get_the_ID() );
+
+                              // echo var_dump($post_categories);
+                              $c =$post_categories[0];
+
+                              //foreach($post_categories as $c){
+
+                              $cat = get_category( $c );
+
+                              switch($cat->slug){
+                               case "museo":
+                                echo 'icono-museo-verde.svg';
+                                break;
+
+                               case "chiquito-viejo":
+                                echo "icono-dechiquitomiviejo-verde.svg";
+                                break;
+
+                              case "rincon-mudo":
+                                echo "icono-rinconmudo-verde.svg";
+                                break;
+
+                              }
+
+
+                              //}
+                              ?>" alt="">
+
+
+                              <?php // kopa_the_image(get_the_ID(), get_the_title(), 60, 60, true, true); ?>
+                            </a>
                         </div>
                         <div class="entry-content">
                             <header>
-                                <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i><?php the_time(get_option('date_format')); ?></span>
+                                <span class="entry-date pull-left">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <?php the_time(get_option('date_format')); ?></span>
                             </header>
                             <h6 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a></h6>
                         </div>
@@ -1026,6 +1061,41 @@ function kopa_the_topnew()
                 <!-- item -->
                 <?php $index++; ?>
             <?php endwhile; ?>
+        </div>
+
+        <div class="weather-widget-wrapper">
+                        <span class="triangle-1st"></span>
+                        <span class="triangle-2nd"></span>
+                        <div class="widget widget_awesomeweatherwidget masonry-brick">
+
+                          <h1>Próximo Rival (L)</h1>
+                          <p>Juventud Unida <br>
+                            Gualeguaychu <br>
+                          <span>Domingo 23</span></p>
+                            <!-- <div class="awesome-weather-wrap awecf custom awe_with_stats awe_wide" id="awesome-weather-vietnam"> -->
+
+                                <!-- <div class="awesome-weather-header">VietNam</div> -->
+
+                                <!-- <div class="awesome-weather-current-temp">
+                                    +24<sup>C</sup>
+                                </div>  -->
+                                <!-- /.awesome-weather-current-temp -->
+<!--
+                    s            <div class="awesome-weather-todays-stats">
+                                    <div class="awe_desc">moderate rain</div>
+                                    <div class="awe_humidty">humidity: 100% </div>
+                                    <div class="awe_wind">wind: 2km/h NNW</div>
+                                    <div class="awe_highlow"> H 24 • L 24 </div>
+                                </div>  -->
+                                <!-- /.awesome-weather-todays-stats -->
+                                <!-- <div class="awesome-weather-forecast awe_days_1 awecf">
+                                    <div class="awesome-weather-forecast-day">
+                                        <div class="awesome-weather-forecast-day-temp">24<sup>C</sup></div>
+                                        <div class="awesome-weather-forecast-day-abbr">Wed</div>
+                                    </div>
+                                 </div>  -->
+                                 <!-- /.awesome-weather-forecast --></div> <!-- /.awesome-weather-wrap -->
+                            </div>
         </div>
         <!-- kopa-nothumb-carousel -->
     </div>

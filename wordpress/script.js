@@ -4,7 +4,7 @@ $(window).load( function(){
 
 $(document).ready( function(){
 
-
+SameHeight();
 });
 
 $(window).bind('load', function()
@@ -18,7 +18,7 @@ $(window).bind('load', function()
 
 
 function SameHeight(){
-  //console.log("entra same height");
+  console.log("entra same height");
 
   var auxId=1;
   while($( "[hid="+auxId+"]" ).length||auxId<20){
