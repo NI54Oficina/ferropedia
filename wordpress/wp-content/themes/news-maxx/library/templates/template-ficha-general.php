@@ -37,7 +37,11 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
         <div class="jugadores-content-one jugadores-content">
           <div class="jugadores-cancha col-lg-5 col-md-5 col-sm-5 col-xs-12">
-            <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha.png" alt="">
+
+            <div class="min-height-upper-container">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha.png" alt="">
+            </div>
+
 
             <h2>Ranking</h2>
             <div class="jugadores-container-ranking">
@@ -62,7 +66,11 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
           <div class="jugadores-muchosjugadores col-lg-7 col-md-7 col-sm-7 col-xs-12">
 
-            <?php for($i=0; $i<16 ; $i++){ ?>
+            <div class="min-height-upper-container">
+
+
+
+            <?php for($i=0; $i<15 ; $i++){ ?>
             <div class="jugadores-j">
               <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 
@@ -71,6 +79,8 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
             </div>
             <?php  }?>
+
+            </div>
 
 
             <div class="jugadores-container-busqueda">

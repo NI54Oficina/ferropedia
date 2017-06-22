@@ -9454,7 +9454,7 @@ padding: 0 35px;
 
     .jugadores-content .jugadores-muchosjugadores .jugadores-j{
       padding: 5px;
-      width: 20%;
+      width: 17%;
       font-family: 'Condensed-bold-italic';
       text-align: center;
       color: white;
@@ -9472,6 +9472,17 @@ padding: 0 35px;
       left: 0;
       right: 0;
       margin-top: -30px;
+    }
+
+    .min-height-upper-container{
+      max-height: 500px;
+      position: relative;
+    }
+
+    .min-height-upper-container > img{
+      position: relative;
+      height: 400px !important;
+      text-align: center;
     }
     label{
       position:relative;
