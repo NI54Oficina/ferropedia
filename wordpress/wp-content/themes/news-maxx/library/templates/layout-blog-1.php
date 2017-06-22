@@ -114,9 +114,11 @@
   </div>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box bloque">
+    <h1>Los jugadores de Ferro</h1>
+
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
 
-      <h1>Los jugadores de Ferro</h1>
+
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
 
@@ -179,7 +181,9 @@
       <h1> Siempre igual, Todo Igual, Todo lo mismo</h1>
       <p>En el ámbito del deporte y porque no en unos cuanto más, se ha acuñado el término “panquequear” y “panqueque”. Del panqueque la definición es “Dícese de aquella persona...</p>
 
-      <span>15 de Febrero  Ver comentarios</span>
+      <p class="fecha-post-home violeta">15 de Febrero, 2017</p>
+      <p class="fecha-post-home verde"> Ver comentarios</p>
+
     </div>
 
   </div>
@@ -193,9 +197,9 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fourth-box bloque">
 
 
-  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 fourth-box-left">
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title fourth-box-left">
 
-    <h1>MUSEO</h1>
+    <h1>Museo</h1>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
@@ -205,9 +209,14 @@
       </div>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-        <p>titulo del objeto</p>
+        <p>Titulo del objeto</p>
 
-        <label>14 de Febrero</label>
+        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-verde.svg" alt="">
+
+
+        <div class="info-date">
+          <p class="fecha-post-home violeta">15 de Febrero, 2017</p>
+        </div>
       </div>
 
     </div>
@@ -221,9 +230,14 @@
       </div>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-        <p>titulo del objeto</p>
+        <p>Titulo del objeto</p>
 
-        <label>14 de Febrero</label>
+        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-verde.svg" alt="">
+
+        <div class="info-date">
+          <p class="fecha-post-home violeta">15 de Febrero, 2017</p>
+          <p class="fecha-post-home verde"> Ver comentarios</p>
+        </div>
       </div>
 
     </div>
@@ -279,7 +293,7 @@
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-box bloque">
 
-  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 six-box-left">
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
 
     <h1>De chiquito mi viejo</h1>
 
@@ -291,11 +305,15 @@
       </div>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-        <p>titulo del objeto</p>
+        <p>El tren al que dejaron sin vías</p>
 
         <p>Esta carta es la historia presente del Club Ferro Carril Oeste. Dedicada...</p>
 
-        <label>14 de Febrero</label>
+        <div class="info-date">
+          <p class="fecha-post-home violeta">15 de Febrero, 2017</p>
+          <p class="fecha-post-home verde"> Ver comentarios</p>
+        </div>
+
       </div>
 
     </div>
