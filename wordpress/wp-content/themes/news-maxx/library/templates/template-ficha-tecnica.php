@@ -103,13 +103,13 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
           <?php for($i=0; $i<5;$i++){ ?>
 
-          <div class="">
-            <div class="">
-              <div class="">Año</div>
-              <div class="">Torneo</div>
-              <div class="">Division</div>
-              <div class="">Partidos jugados</div>
-              <div class="">Goles convertidos</div>
+          <div class="tabla-años-jugador">
+            <div class="titulo-tabla">
+              <div class="col-lg-2">Año</div>
+              <div class="col-lg-2">Torneo</div>
+              <div class="col-lg-2">Division</div>
+              <div class="col-lg-3">Partidos jugados</div>
+              <div class="col-lg-3">Goles convertidos</div>
             </div>
 
           </div>
