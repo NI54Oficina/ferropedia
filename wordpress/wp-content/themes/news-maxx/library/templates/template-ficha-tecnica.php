@@ -36,22 +36,24 @@ if ( is_page(get_the_ID()) && have_posts() ) {
           <?php } ?>
 
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento">
-            <p><span>Fecha y lugar de nacimiento</span>
+            <p><span>Fecha y lugar de nacimiento</span><br>
               10 de Octubre de 1980 | Merlo, San Luis
             </p>
           </div>
 
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento">
-            <p><span>Fecha y lugar de fallecimiento</span>
+            <p><span>Fecha y lugar de fallecimiento</span><br>
               10 de Octubre de 1980 | Merlo, San Luis
             </p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+          <img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 
-          <p>Compartir</p>
+
+            <p style="margin:20px auto auto auto;width:auto;text-align:center; width:50%; border:1px solid white; ">Compartir</p>
+
         </div>
     </div>
 
@@ -89,7 +91,31 @@ if ( is_page(get_the_ID()) && have_posts() ) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
           <h1>Campañas del jugador</h1>
 
-          //tabla
+          <div class="">
+            <nav>
+              <p>Todos</p>
+              <p>1997</p>
+              <p>1998</p>
+              <p>1999</p>
+              <p>2000</p>
+
+          </nav>
+
+          <?php for($i=0; $i<5;$i++){ ?>
+
+          <div class="">
+            <div class="">
+              <div class="">Año</div>
+              <div class="">Torneo</div>
+              <div class="">Division</div>
+              <div class="">Partidos jugados</div>
+              <div class="">Goles convertidos</div>
+            </div>
+
+          </div>
+
+          <?php } ?>
+          </div>
 
           <p>Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
               chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage

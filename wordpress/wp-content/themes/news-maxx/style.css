@@ -8798,7 +8798,7 @@ body{
 }
 
 #bottom-sidebar {
-    border-top: 12px solid #006443;
+    border-top: 6px solid #006443;
     position: relative;
 }
 #bottom-sidebar:before{
@@ -8863,6 +8863,7 @@ body{
 .first-left-box-inner{
   background-color: rgba(0,182,67,0.1);
   padding: 15px;
+  padding-left: 30px;
 
 }
 
@@ -8891,14 +8892,14 @@ body{
 
         .first-left-box-inner .tipo-partido{
           color: white;
-          font-size: 1em;
+          font-size: 1.2em;
           font-family: 'Roboto-regular';
           font-weight: 300;
         }
 
         .first-left-box-inner .puntos-partido{
           color: #00b643;
-          font-size: 4em;
+          font-size: 5em;
           text-shadow: -1px 1px 0px rgba(255, 255, 255, 1);
           font-family: "Condensed-bold-italic";
         }
@@ -8920,7 +8921,8 @@ body{
 
         .first-left-box-inner > p{
           font-family: "Roboto-regular";
-          font-size: .9em;
+          font-size: 1.1em;
+          margin-bottom:30px;
         }
 
         .linea-divisoria-partido{
@@ -8933,10 +8935,13 @@ body{
           color:#00b643;
           padding: 5px;
           min-width: 50px;
+          font-family: 'Condensed-bold';
         }
 
         .goles{
           color:white;
+          font-family: 'Condensed-regular';
+          font-weight: 100;
         }
 
 
@@ -8961,6 +8966,12 @@ body{
           font-size: 1.6em;
           text-align: center;
         }
+
+      .first-right-box .title-line-bg{
+        background-color: black;
+        background-image: repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px );
+        padding:8px 0 8px 0;
+      }
 
         .first-right-box table .first-row{
           color: white;
@@ -9025,7 +9036,7 @@ body{
         }
 
         .second-box-left .box-right{
-          border-left: 1px solid black;
+          border-left: 2px solid black;
           padding-left: 20px;
         }
 
@@ -9043,8 +9054,8 @@ body{
         }
         .box-jugador > div{
           background-color: #a43c93;
-          width: 100%;
-          height: 220px;
+          width: 80%;
+          height: 170px;
           position: relative;
         }
         .copa-verde{
@@ -9144,13 +9155,14 @@ body{
   color: white;
   display: inline;
   padding: 0 10px;
+  font-size: 16px;
 }
 
 .third-box-left .box-right h1{
   font-family: 'Condensed-bold-italic';
   color: white;
   font-size: 4em;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 
 .third-box-left .box-right p{
@@ -9226,6 +9238,7 @@ padding: 0 35px;
 
 .fourth-box-left .fourth-container .info-date p{
   padding: 10px 30px !important;
+  margin-bottom: 0;
 }
 
 
@@ -9244,10 +9257,7 @@ padding: 0 35px;
 /*sexto bloque*/
 
   .six-box{
-    min-height: 1000px;
-    background-image: url(img/pelota_fondo.png), url(img/jugadores_footer_home.png);
-    background-position: 100% 100%, 90% 100%;
-    background-repeat: no-repeat, no-repeat;
+
   }
 
   .six-box .six-box-left h1{
@@ -9274,6 +9284,7 @@ padding: 0 35px;
   .six-container-left .title-container p{
     text-align: left;
     padding: 10px 25px;
+    margin-bottom: 0;
   }
   .six-container-left .title-container > p:first-child{
     font-family: 'Condensed-bold-italic';
@@ -9309,12 +9320,14 @@ padding: 0 35px;
   .six-container-right .six-inner-container p{
     color:white;
     font-family: 'Condensed-bold-italic';
+    font-size: 14px;
   }
 
   .six-container-right .six-inner-container p span{
     color:#a43c93;
     font-family: 'Roboto-regular';
     font-weight: 100;
+    font-size: 12px;
   }
 
 
@@ -9323,16 +9336,17 @@ padding: 0 35px;
 
 
 .main-section{
-  background-image:  url(img/tile_cesped.svg);
-  background-position: 100% 100%;
-  background-repeat: repeat-x;
+  background-image:  url(img/tile_cesped.svg),url(img/pelota_fondo.png), url(img/jugadores_footer_home.png);
+  background-position: 100% 100%,100% 100%, 90% 100%;
+  background-repeat: repeat-x, no-repeat, no-repeat;
+  padding-bottom: 25%;
 }
 
 
 
   .mas-visto-widget .title{
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
     background-color: #00b643;
     font-family: 'Condensed-bold-italic';
     padding: 20px;
@@ -9591,16 +9605,23 @@ padding: 0 35px;
     }
 
     .tecnica-detalle h1, .tecnica-galeria h1{
-      background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 12px, rgba(255,255,255,0.3) 3px, rgba(255,255,255,0.3) 17px);
+      /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
+      background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);
     }
 
     .tecnica-detalle p{
       font-family: 'Roboto-regular';
       color:white;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .jugador-principal{
+      border: 3px solid white;
     }
 
     .tecnica-video h1{
-    background:repeating-linear-gradient(-45deg, #a43c93, #a43c93 12px, rgba(255,255,255,0.3) 3px, rgba(255,255,255,0.3) 17px);
+    background:repeating-linear-gradient(-45deg, #a43c93, #a43c93 2px, rgba(0,0,0,0.3) 6px, rgba(0,0,0,0.3) 5px);
     }
 
     .tecnica-video iframe {
@@ -9646,7 +9667,7 @@ padding: 0 35px;
       color:rgba(0,182,67,.7);
     }
     .informacion-tecnica-inner p{
-      color: rgba(0,0,0,.6);
+      color: rgba(255,255,255,.6);
       font-family: 'Condensed-regular';
     }
 

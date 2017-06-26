@@ -948,7 +948,7 @@ function kopa_the_headline()
         ?>
             <div class="kp-headline-wrapper clearfix">
                 <span class="kp-headline-title"><?php echo $prefix; ?></span>
-                <div class="kp-headline clearfix">
+                <div class="kp-headline clearfix" style="margin-left:175px;">
                         <?php
                         if ($posts->have_posts()) { ?>
                                 <dl class="ticker-1 clearfix" data-speed="<?php echo $speed;?>">
