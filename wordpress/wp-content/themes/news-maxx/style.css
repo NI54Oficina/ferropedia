@@ -9699,6 +9699,83 @@ padding: 0 35px;
       padding-bottom: 9px;
     }
 
+    .informacion-dinamica .menu-anios{
+      font-size: 15px;
+      padding-bottom:3em;
+    }
+
+    .informacion-dinamica .menu-anios nav{
+      padding-left: 3em;
+      padding-bottom: 2em;
+
+    }
+
+    .informacion-dinamica .menu-anios nav > p{
+      display:inline;
+      padding: 5px 10px 5px 10px;
+      color:white;
+      opacity: .3;
+      font-family: 'Condensed-bold-italic';
+      border-right: 1px solid rgba(255,255,255,1);
+    }
+
+    .informacion-dinamica .menu-anios nav > p:hover{
+      cursor: pointer;
+    }
+
+    .informacion-dinamica .menu-anios nav > p:last-child{
+      border-right: none;
+    }
+
+    .informacion-dinamica .menu-anios nav > p.selected{
+      color:white;
+      opacity: 1;
+      border-right: 1px solid rgba(255,255,255,.3);
+
+    }
+
+    .informacion-dinamica .menu-anios .tabla-anios-jugador .titulo-tabla{
+      color:white;
+      font-family: 'Condensed-bold-italic';
+      padding:10px 0 20px 0;
+      text-align: center;
+    }
+
+
+
+    .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla:not(:first-child){
+      color:white;
+      font-family: 'Condensed-regular';
+      padding:10px 0 20px 0;
+      display: none;
+      text-align: center;
+    }
+
+
+    .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla div{
+
+      padding:15px;
+      /*display: none;*/
+    }
+
+
+    .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .columna-gris{
+      color:white;
+      opacity: .3;
+    }
+
+    .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .partidos-jugados{
+      color:#A43C93;
+    }
+
+    .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .goles-convertidos{
+      color:#428F56;
+    }
+
+    .informacion-dinamica .texto-fuente{
+      padding: 5em 0 3em 0;
+    }
+
     .first-box-ficha-tecnica{
       padding-bottom: 5%;
       margin-bottom: 5%;

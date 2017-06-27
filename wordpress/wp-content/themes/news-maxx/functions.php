@@ -12,3 +12,11 @@ require trailingslashit(get_template_directory()) . '/library/includes/metabox/p
 require trailingslashit(get_template_directory()) . '/library/includes/metabox/category.php';
 require trailingslashit(get_template_directory()) . '/library/includes/metabox/page.php';
 require trailingslashit(get_template_directory()) . '/library/front.php';
+
+function theme_add_query() {
+wp_enqueue_script( 'jquery-min-js', site_url() . '/jquery.min.js');
+wp_enqueue_script( 'script-js', site_url() . '/script.js');
+
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_add_query' );

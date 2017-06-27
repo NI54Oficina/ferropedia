@@ -91,9 +91,9 @@ if ( is_page(get_the_ID()) && have_posts() ) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
           <h1>Campañas del jugador</h1>
 
-          <div class="">
+          <div class="menu-anios">
             <nav>
-              <p>Todos</p>
+              <p class="selected">Todos</p>
               <p>1997</p>
               <p>1998</p>
               <p>1999</p>
@@ -101,9 +101,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
           </nav>
 
-          <?php for($i=0; $i<5;$i++){ ?>
-
-          <div class="tabla-años-jugador">
+          <div class="tabla-anios-jugador">
             <div class="titulo-tabla">
               <div class="col-lg-2">Año</div>
               <div class="col-lg-2">Torneo</div>
@@ -112,12 +110,31 @@ if ( is_page(get_the_ID()) && have_posts() ) {
               <div class="col-lg-3">Goles convertidos</div>
             </div>
 
+          <?php for($i=0; $i<5;$i++){ $m=28; $n=15 ?>
+
+            <div class="col-lg-12 cuerpo-tabla">
+
+              <?php for($k=0; $k<3;$k++){ ?>
+
+
+
+                <div class="col-lg-2 columna-gris">1190</div>
+                <div class="col-lg-2">Torneo</div>
+                <div class="col-lg-2 columna-gris">Division</div>
+                <div class="col-lg-3 partidos-jugados"><?php echo $m ?></div>
+                <div class="col-lg-3 goles-convertidos"><?php echo $n ?></div>
+
+            <?php  $m++; $n++;} ?>
+
+
           </div>
+
 
           <?php } ?>
           </div>
+          </div>
 
-          <p>Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
+          <p class="col-lg-12 texto-fuente">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
               chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage
               ham hock leberkas pork chop tongue bacon tenderloin alcatra. Kevin picanha
               alcatra tenderloin prosciutto. Pancetta pork belly pig jerky. Filet
