@@ -91,7 +91,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
           <h1>Campañas del jugador</h1>
 
-          <div class="menu-anios">
+          <div class="menu-anios menu-dinamico">
             <nav>
               <p class="selected">Todos</p>
               <p>1997</p>
@@ -112,7 +112,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
           <?php for($i=0; $i<5;$i++){ $m=28; $n=15 ?>
 
-            <div class="col-lg-12 cuerpo-tabla">
+            <div class="col-lg-12 cuerpo-tabla contenido-dinamico">
 
               <?php for($k=0; $k<3;$k++){ ?>
 

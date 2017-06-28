@@ -5,7 +5,9 @@ $(window).load( function(){
 $(document).ready( function(){
 console.log("Script cargado");
 SameHeight();
-slider();
+slider('.jugadores-container-ranking','.contenido-1' );
+slider('.menu-2','.jugadores-muchosjugadores' );
+slider('.menu-anios','.cuerpo-tabla' );
 });
 
 $(window).bind('load', function()
@@ -59,24 +61,26 @@ function ResetHeight(){
   }
 }
 
-function slider(){
+function slider(padreMenu,padreContenedor ){
+
+  //if(padreMenu==null && padreContenedor==null){padreMenu=''; padreContenedor='';}
 
     var index=0;
-    $('.tabla-anios-jugador .cuerpo-tabla').eq(0).fadeIn();
+    $(padreContenedor+'.contenido-dinamico').eq(0).fadeIn();
     var currentIndex = 0,
-      items = $('.tabla-anios-jugador .cuerpo-tabla'),
+      items = $(padreContenedor+'.contenido-dinamico'),
       itemAmt = items.length;
 
     function cycleItems() {
-      var item = $('.tabla-anios-jugador .cuerpo-tabla').eq(currentIndex);
+      var item = $(padreContenedor+'.contenido-dinamico').eq(currentIndex);
       items.hide();
       item.fadeIn("slow");
     }
 
 
 
-    $('.menu-anios nav p').click(function() {
-      $('.menu-anios nav p').removeClass('selected');
+    $(padreMenu+'.menu-dinamico nav p').click(function() {
+      $(padreMenu+'.menu-dinamico nav p').removeClass('selected');
       $(this).addClass('selected');
       currentIndex=$(this).index();
 

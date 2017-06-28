@@ -9437,7 +9437,11 @@ padding: 0 35px;
       padding: 10px 0;
     }
 
-    nav.menu-jugadores ul li,  nav.menu-jugadores p{
+     nav.menu-jugadores{
+       display: initial;
+     }
+
+   nav.menu-jugadores p{
       display: inline;
       color: white;
       font-family: 'Condensed-bold-italic';
@@ -9446,24 +9450,27 @@ padding: 0 35px;
       padding: 5px 10px;
     }
 
-    nav.menu-jugadores ul{
+    nav.menu-jugadores p{
       display: inline;
     }
 
-    nav.menu-jugadores p{
+    .menu-dinamico .ver-dts{
     float: right;
     border: 1px solid #006327;
     padding-left: 20px;
     padding-right:  20px;
     }
 
-    nav.menu-jugadores ul li.selected{
+    nav.menu-jugadores p.selected{
       background-color: #006327;
     }
 
-    nav.menu-jugadores{
+    .menu-dinamico{
       border-bottom: 2px solid #006327;
       padding-bottom: 15px;
+    }
+    .jugadores-content .jugadores-muchosjugadores {
+      display: none;
     }
 
     .jugadores-content .jugadores-muchosjugadores .jugadores-j{
@@ -9489,14 +9496,15 @@ padding: 0 35px;
     }
 
     .min-height-upper-container{
-      max-height: 500px;
+      /*max-height: 500px;*/
       position: relative;
     }
 
     .min-height-upper-container > img{
       position: relative;
-      height: 400px !important;
+        max-height: 500px !important;
       text-align: center;
+      /*height: inherit;*/
     }
     label{
       position:relative;
@@ -9519,15 +9527,27 @@ padding: 0 35px;
       font-size: 1.3em;
     }
 
-    .jugadores-content nav.menu-interno ul li{
-      display: inline;
+    .jugadores-content nav.menu-interno p{
+      display: inline-grid;
       color:white;
       font-family: 'Roboto-regular';
       padding: 5px;
       text-align: center;
+      width: 32%;
+      text-align: center;
     }
 
-    .jugadores-content nav.menu-interno ul li.selected{
+    .menu-dinamico nav p:hover{
+      cursor: pointer;
+    }
+
+    .jugadores-content .contenido-dinamico{
+      display:none;
+      padding: 30px 0 0 20px;
+    }
+
+
+    .jugadores-content nav.menu-interno p.selected{
       background-color: #00b643;
     }
     .jugadores-content .jugadores-cancha p{
@@ -9544,6 +9564,21 @@ padding: 0 35px;
       background-color: #0c0c0c;
     }
 
+    .jugadores-container-busqueda .menu-busqueda{
+      background: transparent;
+      border: none;
+      color: white;
+      font-family: 'Roboto-regular';
+      outline: none;
+    }
+
+    .jugadores-container-busqueda .menu-busqueda option{
+      border: none;
+      background-color: #a43c93;
+      padding: 30px;
+      outline: none;
+    }
+
     .jugadores-container-busqueda .label-busqueda{
       border-bottom: 1px solid #a43c93;
     }
@@ -9552,7 +9587,7 @@ padding: 0 35px;
       float: right;
     }
     .jugadores-container-busqueda .resultado{
-      width: 47%;
+      /*width: 47%;*/
       display: inline-flex;
       color: white;
     }
@@ -9562,14 +9597,13 @@ padding: 0 35px;
       font-family: 'Roboto-regular';
     }
 
-    .jugadores-container-busqueda .resultado:nth-child(even){
+    .jugadores-container-busqueda .resultado:nth-child(3n+1){
       background-color: rgba(0,100,67,1);
     }
 
     .page-content-area{
       padding-bottom: 15%;
     }
-
 
   /*pantalla de jugadores*/
 

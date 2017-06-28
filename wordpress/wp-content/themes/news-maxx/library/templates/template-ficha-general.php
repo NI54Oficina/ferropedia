@@ -24,49 +24,63 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
       <div class="wrapper clearfix">
 
-        <nav class="menu-jugadores">
-          <ul>
-            <li class="selected">Arqueros</li>
-            <li>Defensores</li>
-            <li>Mediocampista</li>
-            <li>Delanteros</li>
-          </ul>
-          <p>Ver Dt's</p>
-        </nav>
+        <div class="menu-2 menu-dinamico">
+          <nav class="menu-jugadores">
+
+            <p class="selected">Arqueros</p>
+            <p>Defensores</p>
+            <p>Mediocampista</p>
+            <p>Delanteros</p>
+
+
+          </nav>
+
+            <p class="ver-dts">Ver Dt's</p>
+
+        </div>
+
+
 
 
         <div class="jugadores-content-one jugadores-content">
           <div class="jugadores-cancha col-lg-5 col-md-5 col-sm-5 col-xs-12">
 
-            <div class="min-height-upper-container">
+            <div class="min-height-upper-container" hid="1">
                 <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha.png" alt="">
             </div>
 
 
             <h2>Ranking</h2>
-            <div class="jugadores-container-ranking">
+            <div class="jugadores-container-ranking menu-dinamico">
 
 
                 <nav class="menu-interno">
-                  <ul>
-                    <li class="selected">Más visitados de la semana</li>
-                    <li>Más votados</li>
-                    <li>Últimos ingresados</li>
+                    <p class="selected">Más visitados de la semana</p>
+                    <p>Más votados</p>
+                    <p>Últimos ingresados</p>
                   </ul>
                 </nav>
 
-                <p><span>01</span> 08 Nombre</p>
-                <p><span>01</span> 08 Nombre</p>
-                <p><span>01</span> 08 Nombre</p>
-                <p><span>01</span> 08 Nombre</p>
+                <?php for($i=0; $i<3; $i++){ ?>
+
+                <div class="contenido-1 contenido-dinamico">
+                  <p><span>01</span> 08 Nombre</p>
+                  <p><span>01</span> 08 Nombre</p>
+                  <p><span>01</span> 08 Nombre</p>
+                  <p><span>01</span> 08 Nombre</p>
+                </div>
+
+                <?php } ?>
 
             </div>
 
           </div>
 
-          <div class="jugadores-muchosjugadores col-lg-7 col-md-7 col-sm-7 col-xs-12">
+          <?php for($m=0; $m<4; $m++){ ?>
 
-            <div class="min-height-upper-container">
+          <div class="jugadores-muchosjugadores contenido-dinamico col-lg-7 col-md-7 col-sm-7 col-xs-12">
+
+            <div class="min-height-upper-container" hid="1">
 
 
 
@@ -85,23 +99,34 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
             <div class="jugadores-container-busqueda">
               <div class="label-busqueda">
-                <nav class="menu-busqueda">
+
+                <select class="menu-busqueda" name="">
+                  <option value="">Alfabeto</option>
+                  <option value="">Popularidad</option>
+                  <option value="">Por campeonato</option>
+
+                </select>
+                <!-- <nav class="menu-busqueda">
                   <ul>
-                    <li>Alfabeto</li>
+                    <li></li>
                     <li>Popularidad</li>
                     <li>Por campeonato</li>
                   </ul>
-                </nav>
+                </nav> -->
 
                 <p>Busqueda avanzada</p>
               </div>
+              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
 
               <?php for($i=0; $i<27; $i++){?>
-                <p class="resultado"><span>09 </span> Nombre de juego</p>
+                <p class="col-lg-6 col-md-6 col-xs-6 col-sm-6 resultado"><span>09 </span> Nombre de juego</p>
               <?php } ?>
-
+                </div>
             </div>
           </div>
+
+          <?php }  ?>
         </div>
 
       </div>
