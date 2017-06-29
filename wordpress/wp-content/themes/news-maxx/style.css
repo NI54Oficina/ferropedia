@@ -9831,7 +9831,22 @@ padding: 0 35px;
 
   /*pantalla jugadores interna*/
 
+  /*galeria*/
+   .container-gallery .gallery .gallery-item{
+      width: 30% !important;
+  }
+
+  .container-gallery{
+    padding: 5em 10em;
+  }
+
+
+  /*galeria*/
+
 /*mobile*/
+
+
+
 
 @media screen and (max-width: 479px){
 
