@@ -23,9 +23,9 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box bloque">
 
 
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box" hid="1">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box" >
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner" >
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner" hid="1" >
 
       <h1>Totales</h1>
       <p>Última actualización: 24 de abril a las 19.00pm</p>

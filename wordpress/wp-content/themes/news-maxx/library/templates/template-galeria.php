@@ -17,6 +17,12 @@ if ( is_page(get_the_ID()) && have_posts() ) {
     <?php the_post_thumbnail( 'full' );   ?>
 
   </div>
+
+
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <?php the_content(); ?>
+  </div>
   <div class="wrapper clearfix">
 
 
