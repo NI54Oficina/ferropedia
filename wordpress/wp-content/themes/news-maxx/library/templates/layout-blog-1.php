@@ -73,8 +73,6 @@
 
       <div class="" style="background-color:black">
 
-
-
       <p class="title-line-bg"><?php echo $var[$i] ?></p>
           <table style="width:100%;">
             <tr class="first-row">
