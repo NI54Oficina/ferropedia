@@ -13,9 +13,16 @@ require trailingslashit(get_template_directory()) . '/library/includes/metabox/c
 require trailingslashit(get_template_directory()) . '/library/includes/metabox/page.php';
 require trailingslashit(get_template_directory()) . '/library/front.php';
 
+wp_enqueue_style ('photoswipe-style', get_template_directory_uri().'/photoswipe/photoswipe.css');
+wp_enqueue_style ('default-skin-style', get_template_directory_uri().'/photoswipe/default-skin/default-skin.css');
+
+
 function theme_add_query() {
-wp_enqueue_script( 'jquery-min-js', site_url() . '/jquery.min.js');
-wp_enqueue_script( 'script-js', site_url() . '/script.js');
+  wp_enqueue_script( 'jquery-min-js', site_url() . '/jquery.min.js');
+
+  wp_enqueue_script( 'swipe-js', site_url() . '/photoswipe/photoswipe.min.js');
+  wp_enqueue_script( 'swipe-ui-js', site_url() . '/photoswipe/photoswipe-ui-default.min.js');
+    wp_enqueue_script( 'script-js', site_url() . '/script.js');
 
 }
 
