@@ -12,13 +12,13 @@ get_header(); ?>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/js.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatables/datatables.js"></script>
 
-<div style="padding:10px;">
+<div style="padding:10px;" id="nav-admin">
 <?php if(is_user_logged_in()){ ?>
 <?php
 $secciones= ["jugador","partido","campeonato","club","categoria"];
 	foreach($secciones as $seccion){
 		?>
-		<div style="display:inline-block;width:200px;">
+		<div style="display:inline-block;width:200px;" class="btn-nav">
 		<h3 style="text-transform:capitalize;padding-top:0;"><?php echo $seccion; ?></h3>
 		<a href="<?php echo home_url().'/'.$seccion.'/create'; ?>" >Crear</a><span> / </span>
 		<a href="<?php echo home_url().'/'.$seccion.'/admin'; ?>" >Administrar</a>
@@ -27,12 +27,15 @@ $secciones= ["jugador","partido","campeonato","club","categoria"];
 		<?php
 	}
 	?>
+</div>
 	<?php } ?>
+<div class="content-admin">
 	<?php
 		// echos Yii content
 	     echo $content;
 	?>
 </div>
+
 
 <script>
     var elems = document.getElementsByClassName('confirmation');
@@ -43,4 +46,15 @@ $secciones= ["jugador","partido","campeonato","club","categoria"];
         elems[i].addEventListener('click', confirmIt, false);
     }
 </script>
+
+<style>
+#nav-admin{color:white;}
+#nav-admin .btn-nav{
+}
+.content-admin{color:black;padding:20px;background-color:rgba(255,255,255,0.8);}
+.content-admin table{color:black;}
+.content-admin #sidebar{display:none;}
+.content-admin .form-group{max-width:600px;}
+</style>
+
 <?php get_footer(); ?>

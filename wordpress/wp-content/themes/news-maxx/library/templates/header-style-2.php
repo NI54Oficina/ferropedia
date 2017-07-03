@@ -384,10 +384,12 @@
 
 
 
+			
+			<div id="logo-container2">asd</div> 
+			<div id="logo-container" >asd</div> 
 
 
-
-            <div class="left-box">
+            <div class="left-box" style="display:none;">
                 <div class="triangle"></div>
                 <div class="triangle-2"></div>
                 <div class="rectangle"></div>
@@ -396,7 +398,33 @@
                 <span class="square-3"></span>
                 <span class="square-4"></span>
             </div>
-
+			<style>
+			#logo-container:after{border-image:none;
+			border-style:solid;
+			border-width:  210px 175px 0 175px;
+			border-color: white transparent transparent transparent;
+			content:"";
+			height:0;
+			margin-left:0px;position:absolute;
+			left:45px;
+			top:-20px;
+			width:0;
+			
+			}
+			
+			#logo-container2:after{
+			border-image:none;
+			border-style:solid;
+			border-width:    300px 0 300px 250px;
+			border-color: transparent transparent transparent green;
+			content:"";
+			height:0;
+			margin-left:0px;position:absolute;
+			left:-30px;
+			top:-110px;
+			width:0;
+			}
+			</style>
 
         </div>
 

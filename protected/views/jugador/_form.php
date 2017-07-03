@@ -15,19 +15,19 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
 
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->labelEx($model,'apellido'); ?>
-		<?php echo $form->textField($model,'apellido',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'apellido',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'apellido'); ?>
 	</div>
 
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->labelEx($model,'nacimiento'); ?>
 		<?php //echo $form->textField($model,'nacimiento',array('size'=>60,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'nacimiento'); ?>
@@ -54,26 +54,26 @@
 
 	    
 
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->labelEx($model,'ciudad_natal'); ?>
-		<?php echo $form->textField($model,'ciudad_natal',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'ciudad_natal',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'ciudad_natal'); ?>
 	</div>
 
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->labelEx($model,'puesto'); ?>
-		<?php echo $form->textField($model,'puesto',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->textField($model,'puesto',array('size'=>60,'maxlength'=>100,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'puesto'); ?>
 	</div>
 
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->labelEx($model,'detalle_puesto'); ?>
-		<?php echo $form->textField($model,'detalle_puesto',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'detalle_puesto',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'detalle_puesto'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-block btn-primary")); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
