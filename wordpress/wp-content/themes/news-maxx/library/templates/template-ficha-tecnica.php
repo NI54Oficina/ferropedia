@@ -189,7 +189,7 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
 
 
-    <?php comments_template(); ?>
+    <?php//comments_template(); ?>
 
 <?php } // endwhile
 } // endif

@@ -27,12 +27,15 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
       <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
         <?php  $galleries = get_post_galleries_images( $post );
+
+        // var_dump($galleries);
                $gal=$galleries[0];
 
               foreach ($gal as $g) {?>
-                <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <figure class="col-lg-4 col-md-3 col-sm-6 col-xs-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                    <a href="<?php echo $g ?>" itemprop="contentUrl" data-size="600x400">
                        <img class=""src="<?php echo $g ?>" itemprop="thumbnail" alt="Image description" />
+
                    </a>
                    <figcaption itemprop="caption description">Image caption</figcaption>
                </figure>
@@ -64,8 +67,13 @@ if ( is_page(get_the_ID()) && have_posts() ) {
         background: white;
       }
 
-
-
+      .pswp__zoom-wrap{
+        width: 50%;
+      }
+      .pswp img{
+        width: 100% !important;
+        position: relative;
+      }
   </style>
 <!--
   <script type="text/javascript">
@@ -309,9 +317,12 @@ initPhotoSwipeFromDOM('.my-gallery');
 
         <div class="pswp__container">
 
+            <div class="pswp__item">
+            <div class="">sometextss</div></div>
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
+
+
         </div>
 
 
@@ -346,14 +357,19 @@ initPhotoSwipeFromDOM('.my-gallery');
                 <div class="pswp__share-tooltip"></div>
             </div>
 
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
 
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
 
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="bottom:10%; position:absolute;padding-left:25% ">
+              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">Foto anterior
+              </button>
+
+              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">Siguiente foto
+              </button>
             </div>
 
           </div>
@@ -362,5 +378,21 @@ initPhotoSwipeFromDOM('.my-gallery');
 
 </div>
 
+<style media="screen">
+  .pswp__button{
+    display: inline-block;
+    float: none;
+    position: relative;
+    width: 150px;
+  }
+  ç
+  .pswp__button--arrow--left:before{
+    right: 100%;
+    }
+
+  .pswp__button--arrow--right:before {
+    left: 100%;
+  }
+</style>
 
 <?php get_footer();?>

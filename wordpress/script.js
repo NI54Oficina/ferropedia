@@ -8,7 +8,7 @@ $(document).ready( function(){
   slider('.jugadores-container-ranking','.contenido-1' );
   slider('.menu-2','.jugadores-muchosjugadores' );
   slider('.menu-anios','.cuerpo-tabla' );
-
+  _square();
   gallerie_swipe();
 
 });
@@ -18,6 +18,12 @@ $(window).bind('load', function(){
 
 
 });
+
+
+
+$(window).on('resize', function(){
+   _square();
+})
 
 
 
@@ -301,5 +307,33 @@ function gallerie_swipe(){
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
+
+}
+
+function _square(){
+	//edit by fran, preguntar porque
+	$(".square").each(function(){
+		if($(this).attr("onlymobile")=="true"&&!isMobile){
+			//console.log("entra poyo");
+			 $(this).css('height', "auto");
+		}else{
+		var ancho = $(this).outerWidth();
+		//console.log("ancho "+ancho);
+	  $(this).css('height', ancho+"px");
+
+/*
+	   $(".box-producir-2 > div > div > p" ).each(function( index ) {
+		 var alto_div = ancho;
+		 var alto_parrafo = $(this).height();
+		 var alto=((alto_div/2)-(alto_parrafo/2));
+		 console.log("alto "+alto);
+		$(this).css("margin-top", alto+"px" );
+	  });
+	  */
+
+
+	}
+	});
+
 
 }

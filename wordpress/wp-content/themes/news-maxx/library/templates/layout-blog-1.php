@@ -147,15 +147,15 @@
 
 
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
-        <div class="imagen-jugador-violeta">
+        <div class="imagen-jugador-violeta square">
           <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt="">
             <label>+ Jugadores</label>
         </div>
       </div>
 
-      <?php for($i=0; $i<5; $i++){ ?>
+      <?php for($i=0; $i<2; $i++){ ?>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="imagen-jugador-violeta">
+        <div class="imagen-jugador-violeta square">
 
           <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 
@@ -165,6 +165,31 @@
       </div>
 
       <?php } ?>
+
+
+      <!-- dt -->
+
+
+
+      <?php for($i=0; $i<2; $i++){ ?>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+        <div class="imagen-jugador-verde square">
+
+          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+
+          <div class="capa-verde"></div>
+            <label>Nombre deL Dt</label>
+        </div>
+      </div>
+
+      <?php } ?>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
+        <div class="imagen-jugador-verde square">
+          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt="">
+            <label>+ Dts</label>
+        </div>
+      </div>
 
     </div>
   </div>
