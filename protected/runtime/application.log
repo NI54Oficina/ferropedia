@@ -9346,3 +9346,1489 @@ in C:\xampp\htdocs\ferropedia\index.php (22)
 in C:\xampp\htdocs\ferropedia\protected\views\categoria\admin.php (55)
 in C:\xampp\htdocs\ferropedia\protected\controllers\CategoriaController.php (143)
 in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:04:58 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (93)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:05:42 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (93)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:05:43 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (93)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:06:09 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (94)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (73)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:06:43 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (94)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:06:54 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (94)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\create.php (18)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (79)
+2017/07/05 20:07:04 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (65)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.db.ar.CActiveRecord] Jugador.insert()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (73)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:04 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tbl_jugador` (`nombre`, `apellido`, `nacimiento`, `ciudad_natal`, `puesto`, `detalle_puesto`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (73)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `activerecordlog`
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (40)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (73)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `activerecordlog`
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (40)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (73)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.ar.CActiveRecord] ActiveRecordLog.insert()
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (50)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (73)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `activerecordlog` (`description`, `action`, `model`, `idModel`, `field`, `creationdate`, `userid`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, NOW(), :yp5)
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (50)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (73)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:05 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:05 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+2017/07/05 20:07:05 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:05 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (88)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (88)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:05 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:51 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:07:51 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+2017/07/05 20:07:51 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:07:51 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (88)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (88)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:51 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:53 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:53 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\update.php (21)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (103)
+2017/07/05 20:07:53 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (94)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\update.php (21)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (103)
+2017/07/05 20:07:59 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:59 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:07:59 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.ar.CActiveRecord] Jugador.update()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.ar.CActiveRecord] Jugador.updateByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tbl_jugador` SET `id`=:yp0, `nombre`=:yp1, `apellido`=:yp2, `nacimiento`=:yp3, `ciudad_natal`=:yp4, `puesto`=:yp5, `detalle_puesto`=:yp6, `defuncion`=:yp7 WHERE `tbl_jugador`.`id`=22
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `activerecordlog`
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (25)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `activerecordlog`
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (25)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.ar.CActiveRecord] ActiveRecordLog.insert()
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (36)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:07:59 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `activerecordlog` (`description`, `action`, `model`, `idModel`, `field`, `creationdate`, `userid`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, NOW(), :yp5)
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (36)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:00 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:00 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+2017/07/05 20:08:00 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (35)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (56)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:00 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (88)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (88)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:00 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:45 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:08:45 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:08:45 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:08:45 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:08:45 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:00 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:00 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:11:00 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:00 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:00 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:09 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:09 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:11:09 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:09 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:09 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:42 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:11:42 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:11:42 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:11:42 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:11:42 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:21 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:21 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:12:21 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:21 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:21 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:23 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:23 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (12)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\update.php (21)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (103)
+2017/07/05 20:12:23 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\_form.php (94)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\update.php (21)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (103)
+2017/07/05 20:12:30 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:30 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+2017/07/05 20:12:30 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (89)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.ar.CActiveRecord] Jugador.update()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.ar.CActiveRecord] Jugador.updateByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tbl_jugador` SET `id`=:yp0, `nombre`=:yp1, `apellido`=:yp2, `nacimiento`=:yp3, `ciudad_natal`=:yp4, `puesto`=:yp5, `detalle_puesto`=:yp6, `defuncion`=:yp7 WHERE `tbl_jugador`.`id`=22
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `activerecordlog`
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (25)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `activerecordlog`
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (25)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.ar.CActiveRecord] ActiveRecordLog.insert()
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (36)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:30 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `activerecordlog` (`description`, `action`, `model`, `idModel`, `field`, `creationdate`, `userid`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, NOW(), :yp5)
+in C:\xampp\htdocs\ferropedia\protected\behaviors\ActiveRecordLogableBehavior.php (36)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (97)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.web.filters.CFilterChain] Running filter JugadorController.filteraccessControl()
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:31 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+2017/07/05 20:12:31 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=22 LIMIT 1
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (156)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (55)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.avatar
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_imagen`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT `avatar`.`id` AS `t1_c0`, `avatar`.`model` AS `t1_c1`, `avatar`.`modelId` AS `t1_c2`, `avatar`.`imagen` AS `t1_c3`, `avatar`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `avatar`  WHERE (avatar.destacada=1 and avatar.model = 'Jugador' ) AND (`avatar`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (20)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_rel_partido_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\RelPartidoJugador.php (22)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+2017/07/05 20:12:31 [trace] [system.db.ar.CActiveRecord] RelPartidoJugador.findAllByAttributes()
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_partido`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_campeonato`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`jugador` AS `t0_c1`, `t`.`partido` AS `t0_c2`, `t`.`campo` AS `t0_c3`, `t`.`camiseta` AS `t0_c4`, `t`.`detalle` AS `t0_c5`, `partido_data`.`id` AS `t1_c0`, `partido_data`.`liga` AS `t1_c1`, `partido_data`.`fecha` AS `t1_c2`, `partido_data`.`comentario` AS `t1_c3`, `campeonato`.`id` AS `t2_c0`, `campeonato`.`torneo` AS `t2_c1`, `campeonato`.`division` AS `t2_c2`, `campeonato`.`fecha` AS `t2_c3`, `campeonato`.`ganado` AS `t2_c4`, `campeonato`.`detalle` AS `t2_c5` FROM `tbl_rel_partido_jugador` `t`  LEFT OUTER JOIN `tbl_partido` `partido_data` ON (`partido_data`.`id`=`t`.`partido`)  LEFT OUTER JOIN `tbl_campeonato` `campeonato` ON (`partido_data`.`liga`=`campeonato`.`id`)  WHERE (`t`.`jugador`=:yp0)
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (114)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (38)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.data
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_data_extra`
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`.`id` AS `t1_c0`, `data`.`model` AS `t1_c1`, `data`.`modelId` AS `t1_c2`, `data`.`titulo` AS `t1_c3`, `data`.`texto` AS `t1_c4` FROM `tbl_data_extra` `data`  WHERE (model = 'Jugador') AND (`data`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (59)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+2017/07/05 20:12:31 [trace] [system.db.ar.CActiveRecord] lazy loading Jugador.imagenes
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT `imagenes`.`id` AS `t1_c0`, `imagenes`.`model` AS `t1_c1`, `imagenes`.`modelId` AS `t1_c2`, `imagenes`.`imagen` AS `t1_c3`, `imagenes`.`destacada` AS `t1_c4` FROM `tbl_rel_imagen` `imagenes`  WHERE (model = 'Jugador') AND (`imagenes`.`modelId`=:ypl0)
+in C:\xampp\htdocs\ferropedia\protected\views\jugador\view.php (91)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\ferropedia\protected\views\layouts\column2.php (1)
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/05 20:12:31 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\JugadorController.php (56)
+in C:\xampp\htdocs\ferropedia\index.php (22)

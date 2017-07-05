@@ -39,7 +39,24 @@
 				<input type="hidden" id="dtp_input2" value="<?php if(isset($model->nacimiento)) echo $model->nacimiento; ?>"  name="Jugador[nacimiento]" />
             </div>
 			
-			<script>
+			
+		<?php if(isset($model->id)){ ?>
+	   <div class="form-group">
+		<?php echo $form->labelEx($model,'defuncion'); ?>
+		<?php //echo $form->textField($model,'nacimiento',array('size'=>60,'maxlength'=>300)); ?>
+		<label>Defuncion</label>
+		<div class="input-group date form_date col-md-5" data-date="<?php echo date('d/m/Y', time()) ?>" data-date-format="dd mm yyyy" data-link-field="ddtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" placeholder="Elegí Fecha" size="16" type="text" value="<?php if(isset($model->defuncion)&&$model->defuncion!=0) echo $model->defuncion; ?>" readonly >
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+				<input type="hidden" id="ddtp_input2" value="<?php if(isset($model->defuncion)&&$model->defuncion!=0) echo $model->defuncion; ?>"  name="Jugador[defuncion]" />
+            </div>
+			
+			
+		<?php } ?>
+	    
+		<script>
 			jQuery('.form_date').datetimepicker({
 			language:  'ar',
 			weekStart: 0,
@@ -51,8 +68,6 @@
 			forceParse: 0
 			});
 			</script>
-
-	    
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'ciudad_natal'); ?>

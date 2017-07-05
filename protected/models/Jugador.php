@@ -42,6 +42,7 @@ class Jugador extends CActiveRecord
 		return array(
 			array('nombre, apellido, nacimiento, ciudad_natal, puesto', 'required'),
 			array('nombre, apellido, nacimiento, ciudad_natal, detalle_puesto', 'length', 'max'=>300),
+			array('defuncion', 'safe'),
 			array('puesto', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
