@@ -104,7 +104,7 @@ class GolController extends Controller
 		{
 			$model->attributes=$_POST['Gol'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array("partido/view","id"=>$model->partido));
 		}
 
 		$this->render('update',array(

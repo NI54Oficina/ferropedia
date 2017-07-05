@@ -175,7 +175,7 @@ foreach($jugadores as $jugador){
   <input type="hidden" name="club"  value="<?php echo $club->id; ?>" />
   <br>
   <label>Seleccionar plantel</label><br>
-  <select name="plantel">
+  <select name="plantel" class="form-control">
   
 	<?php foreach($planteles as $plantel){ ?>
 		<option value="<?php echo $plantel->id; ?>"><?php echo $plantel->nombre; ?></option>
@@ -202,7 +202,7 @@ foreach($jugadores as $jugador){
 </ul>
 
 
-
+<div class="extra-data">
 <?php if(count($model->data())>0|| is_user_logged_in()){ ?>
 <h4>Data adicional</h4>
 <ul>
@@ -249,7 +249,7 @@ foreach($model->imagenes as $imagen){
 	<?php
 	if(is_user_logged_in()){ ?>
 	<br>
-		<button type="button" class="assign-avatar" image-id="<?php echo $imagen->id; ?>" style="color:white;" >Asignar como avatar</button><br>
+		<button type="button" class="assign-avatar" image-id="<?php echo $imagen->id; ?>" style="color:white;" >Asignar como destacada</button><br>
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/relImagenJugador/delete/<?php echo $imagen->id; ?>" class="confirmation">Quitar relación</a> / 
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/imagen/delete/<?php echo $imagen->imagen_data["id"]; ?>" class="confirmation">Borrar</a> 
 	<?php } ?>
@@ -257,7 +257,7 @@ foreach($model->imagenes as $imagen){
 	<?php
 } }
 ?>
-
+</div>
 <style>
 h3{margin-top:10px;padding-top:0;}
 </style>

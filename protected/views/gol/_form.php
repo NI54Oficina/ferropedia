@@ -29,18 +29,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'minuto'); ?>
-		<?php echo $form->textField($model,'minuto',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->textField($model,'minuto',array('size'=>60,'maxlength'=>100,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'minuto'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'descripcion'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

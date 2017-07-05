@@ -18,7 +18,7 @@ $this->menu=array(
 
 <h1>Plantel </h1>
 
-<?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/campeonato/update/<?php echo $model->id; ?>">Editar plantel</a><br><br><?php } ?>
+<?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/plantel/update/<?php echo $model->id; ?>">Editar plantel</a><br><br><?php } ?>
 
 <?php /*$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -80,16 +80,17 @@ $plantel= $model->id;
 	<div class="row">
 		<?php echo $form->labelEx($model,'jugador'); ?>
 		<?php //echo $form->textField($model,'jugador'); ?>
-		<input id="RelPlantelJugador_jugador2" type="text" placeholder="" />
+		<input id="RelPlantelJugador_jugador2" type="text" placeholder="" class="form-control"/>
 		<input type="hidden" id="RelPlantelJugador_jugador" type="text" name="RelPlantelJugador[jugador]" />
 		<?php echo $form->error($model,'jugador'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'campo'); ?>
+		<?php //echo $form->labelEx($model,'campo'); ?>
+		<label>Titular</label>
 		<?php //echo $form->textField($model,'campo'); ?>
-		<select name="RelPlantelJugador[campo]" id="RelPlantelJugador_campo">
-		<option value="1">Titular</option>
+		<select name="RelPlantelJugador[campo]" id="RelPlantelJugador_campo" class="form-control">
+		<option value="1">Si</option>
 		<option value="0">Suplente</option>
 		</select>
 		<?php echo $form->error($model,'campo'); ?>
@@ -97,18 +98,18 @@ $plantel= $model->id;
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'camiseta'); ?>
-		<?php echo $form->textField($model,'camiseta',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'camiseta',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'camiseta'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'detalle'); ?>
-		<?php echo $form->textField($model,'detalle',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'detalle',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'detalle'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar',array("class"=>"admin-submit")); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

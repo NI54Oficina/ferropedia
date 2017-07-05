@@ -13,6 +13,8 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create RelImagen</h1>
+<h1>Cargar imagen</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo $model['model']; ?>/<?php  echo $model['modelId']; ?>">Volver</a>

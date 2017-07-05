@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Jugador</h1>
+<h1>Jugador</h1> <?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/jugador/update/<?php echo $model->id; ?>">Editar</a><br><br><?php } ?>
 <?php if(isset($model->avatar[0])){ ?>
 <img src="<?php 
 echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>" style="max-width:200px;" />
@@ -25,6 +25,9 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 <p><strong>Nombre:</strong> <?php echo $model->nombre; ?></p>
 <p><strong>Apellido:</strong> <?php echo $model->apellido; ?></p>
 <p><strong>Nacimiento:</strong> <?php echo $model->nacimiento; ?></p>
+<?php if(isset($model->defuncion)&&$model->defuncion!=0){ ?>
+<p><strong>Defunción:</strong> <?php echo $model->defuncion; ?></p>
+<?php } ?>
 <p><strong>Ciudad Natal:</strong> <?php echo $model->ciudad_natal; ?></p>
 <p><strong>Puesto:</strong> <?php echo $model->puesto; ?>
 <?php if(isset($model->detalle_puesto)&&$model->detalle_puesto!=""){ ?>

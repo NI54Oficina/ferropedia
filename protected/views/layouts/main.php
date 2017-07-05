@@ -1,5 +1,8 @@
 <?php
-get_header(); ?>
+$kopa_header = 'style-3';
+
+get_template_part('library/templates/header', $kopa_header);
+ ?>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.min.css" >
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" >
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-theme.css" >
@@ -48,13 +51,18 @@ $secciones= ["jugador","partido","campeonato","club","categoria"];
 </script>
 
 <style>
-#nav-admin{color:white;}
+#nav-admin{color:black;}
+
 #nav-admin .btn-nav{
 }
 .content-admin{color:black;padding:20px;background-color:rgba(255,255,255,0.8);}
 .content-admin table{color:black;}
 .content-admin #sidebar{display:none;}
 .content-admin .form-group{max-width:600px;}
+.content-admin button, .admin-submit,[type=submit],.label-show{padding:10px;border:none;border-radius:10px;font-size:16px;min-width:100px;background-color:#a43c93;margin-top:10px;color:white;}
+.form_date{margin-bottom:10px;}
+.content-admin .form{max-width:600px;}
+.extra-data{width:100%;}
 </style>
 
 <?php get_footer(); ?>

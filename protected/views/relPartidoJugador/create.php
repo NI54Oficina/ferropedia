@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create RelPartidoJugador</h1>
+<h1>Asignar Jugador al partido</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
