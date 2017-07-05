@@ -65,8 +65,69 @@ $footer_sidebar[3] = ($kopa_setting) ? $sidebars[$kopa_position[($total-1)]] : '
       <a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
 
         <p id="copyright">© 2013 - 2017 FERROPEDIA • LEGALES</p>
+<!--
+    <div class="wrapper">
+
+        <div class="row">
+
+            <div class="col-md-3 col-sm-3 widget-area-9">
+                <div class="bottom-logo">
+                    <?php
+                    $logo_url =  get_option('kopa_theme_options_logo_url_2');
+                    if( !$logo_url ) {
+                        $logo_url = get_template_directory_uri().'/images/sample/logo1.png';
+                    }
+                    ?>
+                    <a href="<?php echo esc_url(home_url());?>" title="<?php bloginfo('name'); ?>"><img id="logo-image2" src="<?php echo $logo_url; ?>" alt="<?php bloginfo('name'); ?>"/></a>
+                </div>
+
+
+                <?php
+                if ( is_active_sidebar( $footer_sidebar[0] ) ) {
+                    dynamic_sidebar($footer_sidebar[0]);
+                }
+                ?>
+            </div>
+
+            <div class="col-md-3 col-sm-3 widget-area-10">
+                <?php
+                if ( is_active_sidebar( $footer_sidebar[1] ) ) {
+                    dynamic_sidebar($footer_sidebar[1]);
+                }
+                ?>
+            </div>
+
+            <div class="col-md-3 col-sm-3 widget-area-11">
+                <?php
+                if ( is_active_sidebar( $footer_sidebar[2] ) ) {
+                    dynamic_sidebar($footer_sidebar[2]);
+                }
+                ?>
+            </div>
+
+            <div class="col-md-3 col-sm-3 widget-area-12">
+
+                <?php
+                if ( is_active_sidebar( $footer_sidebar[3] ) ) {
+                    dynamic_sidebar($footer_sidebar[3]);
+                }
+                ?>
+
+            </div>
+
+
+        </div>
+
+
+    </div> -->
+    <!-- wrapper -->
+
+</section>
+<!-- bottom-sidebar -->
 
 <footer class="kopa-page-footer">
+
+
 
 
 

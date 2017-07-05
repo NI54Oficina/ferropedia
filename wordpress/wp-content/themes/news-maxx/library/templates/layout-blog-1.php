@@ -118,7 +118,7 @@
   </div>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box bloque">
-    <h1>Los jugadores de Ferro</h1>
+    <h1>Con la verde</h1>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
 
@@ -128,7 +128,7 @@
 
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
         <p>Jose Perez</p>
-        <button type="button" name="button">Ver Ficha</button>
+        <a href="http://localhost/ferropedia/ficha-jugador-interna"><button type="butto n" name="button">Ver Ficha</button></a>
       </div>
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
@@ -145,14 +145,14 @@
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-right">
 
-
+      <a href="http://localhost/ferropedia/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
         <div class="imagen-jugador-violeta square">
           <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt="">
-            <label>+ Jugadores</label>
+          <label>+ Jugadores</label>
         </div>
       </div>
-
+    </a>
       <?php for($i=0; $i<2; $i++){ ?>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
         <div class="imagen-jugador-violeta square">
@@ -172,24 +172,27 @@
 
 
       <?php for($i=0; $i<2; $i++){ ?>
+
+
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
         <div class="imagen-jugador-verde square">
 
           <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 
           <div class="capa-verde"></div>
-            <label>Nombre deL Dt</label>
+          <label>Nombre deL Dt</label>
         </div>
       </div>
 
       <?php } ?>
-
+      <a href="http://localhost/ferropedia/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
         <div class="imagen-jugador-verde square">
           <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt="">
             <label>+ Dts</label>
         </div>
       </div>
+    </a>
 
     </div>
   </div>
@@ -200,20 +203,35 @@
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 third-box-left">
 
+    <?php    $posts= get_posts( array('numberposts' => 1, "post_type"=>"post", 'category'=>2 ) );
+
+
+    foreach($posts as $post){
+    ?>
+
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
-      <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-2.png" alt="">
+      <?php the_post_thumbnail( 'thumbnail' ) ?>
       <div class="triangulo-verde"></div>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
       <h3> El rincón del Mudo</h3>
-      <h1> Siempre igual, Todo Igual, Todo lo mismo</h1>
-      <p>En el ámbito del deporte y porque no en unos cuanto más, se ha acuñado el término “panquequear” y “panqueque”. Del panqueque la definición es “Dícese de aquella persona...</p>
+      <h1><?php the_title_attribute($posts[0]->ID ); ?></h1>
+      <p>
+        <?php // Fetch post content
+              $content = get_post_field( 'post_content',$posts[0]->ID );
 
-      <p class="fecha-post-home violeta">15 de Febrero, 2017</p>
-      <p class="fecha-post-home verde"> Ver comentarios</p>
+              // Get content parts
+              $content_parts = get_extended( $content );
 
+              // Output part before <!--more--> tag
+              echo $content_parts['main'].'...'; ?>
+    </p>
+
+      <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
     </div>
+
+  <?php } ?>
 
   </div>
 
@@ -230,39 +248,69 @@
 
     <h1>De la cuna hasta el cajón</h1>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-left">
+    <?php
+    $posts= get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>4 ) );
+?>
+    <a href="<?php the_permalink($posts[0]->ID ); ?>">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-left">
 
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-2.png" alt="">
-        <div class="triangulo-verde"></div>
-      </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                <?php echo the_post_thumbnail( 'thumbnail' )?>
+                <div class="triangulo-verde"></div>
+              </div>
 
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-        <p>El tren al que dejaron sin vías</p>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
+                <p><?php the_title_attribute($posts[0]->ID ); ?></p>
 
-        <p>Esta carta es la historia presente del Club Ferro Carril Oeste. Dedicada...</p>
+                <p><?php // Fetch post content
+                      $content = get_post_field( 'post_content',$posts[0]->ID );
 
-        <div class="info-date">
-          <p class="fecha-post-home violeta">15 de Febrero, 2017</p>
-          <p class="fecha-post-home verde"> Ver comentarios</p>
-        </div>
+                      // Get content parts
+                      $content_parts = get_extended( $content );
 
-      </div>
+                      // Output part before <!--more--> tag
+                      echo $content_parts['main'].'...'; ?></p>
 
-    </div>
+                <div class="info-date">
+                  <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
+                  <p class="fecha-post-home verde"> Ver comentarios</p>
+                </div>
+
+              </div>
+
+            </div>
+        </a>
+
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-right">
 
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-inner-container">
-        <img class="col-lg-5 col-md-5 col-sm-5 col-xs-5" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-2.png" alt="">
-        <p class="col-lg-7 col-md-7 col-sm-7 col-xs-7">¡Gracias por todo, Ferro! Hasta la victoria, siemprebr <br>  <span> 17 de febrero</span></p>
-      </div>
 
+      <?php
+      //CATEGORIA 4  = DE LA CUNA HASTA EL CAJON
+      $first=FALSE;
+
+        foreach ($posts as $post) {
+
+          if ($first != TRUE)
+             {
+                 $first = TRUE;
+                 continue;
+             }
+
+
+         ?>
+         <a href="<?php the_permalink($post->ID ); ?>">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-inner-container">
+        <?php echo the_post_thumbnail( 'thumbnail' )?>
+        <p class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><?php the_title_attribute($post->ID ); ?> <br>  <span> <?php echo  get_the_date( 'l F j, Y' ) ?></span></p>
+      </div></a>
+
+          <?php }  wp_reset_postdata();  ?>
+      <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-inner-container">
         <img class="col-lg-5 col-md-5 col-sm-5 col-xs-5" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-2.png" alt="">
         <p class="col-lg-7 col-md-7 col-sm-7 col-xs-7">¡Gracias por todo, Ferro! Hasta la victoria, siemprebr <br>  <span> 17 de febrero</span></p>
-      </div>
+      </div> -->
 
     </div>
 
@@ -318,7 +366,7 @@
 
     <h1>Museo</h1>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
+    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-2.png" alt="">
@@ -338,26 +386,43 @@
 
     </div>
 
+ -->
+    <?php
+      	$posts= get_posts( array('numberposts' => 2, "post_type"=>"post") );
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
+        // echo var_dump($posts);
 
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-2.png" alt="">
-        <div class="triangulo-verde"></div>
-      </div>
+      foreach ($posts as $post) {
+        $post_categories = wp_get_post_categories($post->ID );
+        $cat = get_category($post_categories[0]);
+        if( $cat->slug=='museo'){
+        ?>
 
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-        <p>Titulo del objeto</p>
 
-        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-verde.svg" alt="">
+        <a href="<?php the_permalink($post->ID ); ?>">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
-        <div class="info-date">
-          <p class="fecha-post-home violeta">15 de Febrero, 2017</p>
-          <p class="fecha-post-home verde"> Ver comentarios</p>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+          <?php echo the_post_thumbnail( 'thumbnail' )?>
+            <div class="triangulo-verde"></div>
+          </div>
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
+            <p><?php the_title_attribute($post->ID ); ?></p>
+
+            <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-verde.svg" alt="">
+
+            <div class="info-date">
+              <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
+              <p class="fecha-post-home verde"> Ver comentarios</p>
+            </div>
+          </div>
+
         </div>
-      </div>
 
-    </div>
+        </a>
+
+    <?php }  }  wp_reset_postdata();   ?>
 
 
 
@@ -365,7 +430,8 @@
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right ultimos-comentarios-widget">
 
-        ///comentarios ultimos
+        <?php// get_recent_comments(); ?>
+
     </div>
 
 

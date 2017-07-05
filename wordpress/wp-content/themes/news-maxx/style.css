@@ -8864,6 +8864,7 @@ body{
   background-color: rgba(0,182,67,0.1);
   padding: 15px;
   padding-left: 30px;
+  padding-top: 30px;
 
 }
 
@@ -8890,6 +8891,11 @@ body{
           padding-right: 0;
         }
 
+        .first-right-box table tr td:first-child {
+          font-family: "Condensed-regular";
+          font-weight: 100;
+        }
+
         .first-left-box-inner .tipo-partido{
           color: white;
           font-size: 1.2em;
@@ -8902,6 +8908,7 @@ body{
           font-size: 5em;
           text-shadow: -1px 1px 0px rgba(255, 255, 255, 1);
           font-family: "Condensed-bold-italic";
+          margin: 20px 0 20px 0;
         }
         .first-left-box-inner .level-partido{
           color:  #00b643;
@@ -8971,6 +8978,7 @@ body{
         background-color: black;
         background-image: repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px );
         padding:8px 0 8px 0;
+        margin-bottom: 0;
       }
 
         .first-right-box table .first-row{
@@ -9032,7 +9040,7 @@ body{
           font-family: 'Roboto-regular';
           border: none;
           text-decoration: none;
-          padding: 5px 20px;
+          padding: 5px 50px;
         }
 
         .second-box-left .box-right{
@@ -9329,7 +9337,7 @@ padding: 0 35px;
   }
 
   .six-container-right .six-inner-container img{
-    /*width: 100%;*/
+  width: 40%;
     height:90px;
     display: inline;
   }
