@@ -36,18 +36,18 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 <?php if(is_user_logged_in()){ ?>
 <hr>
 <h3>Agregar Plantel</h3>
-<form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/plantel/create" method="post">
-	<input type="hidden" name="club"  value="<?php echo $model->id; ?>" />
+<form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/plantel/create" method="post" style="max-width:600px;">
+	<input type="hidden" name="club"   value="<?php echo $model->id; ?>" />
 	<label>Nombre</label>
-	<input  type="text" name="nombre" />
+	<input  type="text" name="nombre" class="form-control" />
 	<label>Categoria</label><br>
-	<select name="categoria" type="text" >
+	<select name="categoria" class="form-control" type="text" >
 		<?php $categorias= Categoria::model()->findAll();
 		foreach($categorias as $categoria){ ?>
 		<option value="<?php echo $categoria->id; ?>" ><?php echo $categoria->nombre; ?></option>
 		<?php } ?>
 	</select><br><br>
-	<button style="color:white;">Crear Plantel</button><br><br>
+	<button >Crear Plantel</button><br><br>
 </form>
 <hr>
 <?php } ?>
@@ -72,7 +72,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 <form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/dataExtra/create" method="post" >
 	<input name="model" value="<?php echo get_class($model); ?>" type="hidden" />
   <input type="hidden" name="modelId"  value="<?php echo $model->id; ?>" />
-  <button style="color:white;">Agregar data</button>
+  <button >Agregar data</button>
 </form>
 <hr>
 
@@ -81,7 +81,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
   <input type="hidden" name="modelId"  value="<?php echo $model->id; ?>" />
   <input type="hidden" name="model"  value="<?php echo get_class($model); ?>" />
-  <button style="color:white;">Agregar Imagen</button>
+  <button >Agregar Imagen</button>
 </form>
 <?php } ?>
 
@@ -96,7 +96,7 @@ foreach($model->imagenes as $imagen){
 	<?php
 	if(is_user_logged_in()){ ?>
 	<br>
-		<button type="button" class="assign-avatar" image-id="<?php echo $imagen->id; ?>" style="color:white;" >Asignar como avatar</button><br>
+		<button type="button" class="assign-avatar" image-id="<?php echo $imagen->id; ?>"  >Asignar como avatar</button><br>
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/relImagenJugador/delete/<?php echo $imagen->id; ?>" class="confirmation">Quitar relación</a> / 
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/imagen/delete/<?php echo $imagen->imagen_data["id"]; ?>" class="confirmation">Borrar</a> 
 	<?php } ?>

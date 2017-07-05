@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create RelPlantelJugador</h1>
+<h1>Asignar jugador al plantel</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

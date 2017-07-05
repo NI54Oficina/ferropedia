@@ -21,13 +21,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'torneo'); ?>
-		<?php echo $form->textField($model,'torneo',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'torneo',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'torneo'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'division'); ?>
-		<select name="Campeonato[division]" >
+		<select name="Campeonato[division]" class="form-control" >
 			<?php 
 			$categorias= Categoria::model()->findAll();
 			foreach($categorias as $categoria){ ?>
@@ -65,9 +65,9 @@
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'ganado'); ?>
+		<label>Ganador</label>	
 		<?php //echo $form->textField($model,'ganado'); ?>
-		<input id="Campeonato_ganado2" type="text" value="<?php if(isset($model->ganado)){
+		<input id="Campeonato_ganado2" class="form-control" type="text" value="<?php if(isset($model->ganado)){
 			$club= Club::model()->findByPk($model->ganado);
 			echo $club->nombre;
 		} ?>" />
@@ -77,12 +77,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'detalle'); ?>
-		<?php echo $form->textArea($model,'detalle',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'detalle',array('rows'=>6, 'cols'=>50,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'detalle'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

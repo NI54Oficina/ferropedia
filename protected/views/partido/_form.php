@@ -23,13 +23,13 @@
 		<?php echo $form->labelEx($model,'liga'); ?>
 		<?php //echo $form->textField($model,'liga',array('size'=>60,'maxlength'=>300)); ?>
 		<?php if(isset($model->liga)){ ?>
-		<input id="Partido_liga2" type="text" placeholder="" value="<?php $campeonato= Campeonato::model()->findByPk($model->liga);
+		<input id="Partido_liga2" class="form-control" type="text" placeholder="" value="<?php $campeonato= Campeonato::model()->findByPk($model->liga);
 		$division= Categoria::model()->findByPk($campeonato->division);
 		echo $campeonato->torneo.'('.$division->nombre.','.$campeonato->fecha.')';
 		?>" <?php if(!isset($update)){ ?>disabled <?php } ?> />
 		<input type="hidden" id="Partido_liga" type="text" name="Partido[liga]" value="<?php echo $model->liga; ?>" />
 		<?php }else{ ?>
-		<input id="Partido_liga2" type="text" placeholder="" />
+		<input id="Partido_liga2" class="form-control" type="text" placeholder="" />
 		<input type="hidden" id="Partido_liga" type="text" name="Partido[liga]" />
 		<?php } ?>
 		<?php echo $form->error($model,'liga'); ?>
@@ -78,12 +78,12 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'comentario'); ?>
-		<?php echo $form->textArea($model,'comentario',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'comentario',array('rows'=>6, 'cols'=>50,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'comentario'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'model'); ?>
-		<?php echo $form->hiddenField($model,'model',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->hiddenField($model,'model',array('size'=>60,'maxlength'=>100,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'model'); ?>
 	</div>
 
@@ -29,18 +29,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'titulo'); ?>
-		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'texto'); ?>
-		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'texto'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

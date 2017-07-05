@@ -11,14 +11,14 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'plantel'); ?>
 		<?php //echo $form->textField($model,'plantel'); ?>
-		<input id="RelPlantelJugador_plantel2" type="text" name="plantel" value="<?php $plantel= Plantel::model()->findByPk($model->plantel); echo $plantel->nombre; ?>"  disabled />
+		<input id="RelPlantelJugador_plantel2" type="text" class="form-control" name="plantel" value="<?php $plantel= Plantel::model()->findByPk($model->plantel); echo $plantel->nombre; ?>"  disabled />
 		<input id="RelPlantelJugador_plantel" type="hidden" name="RelPlantelJugador[plantel]" value="<?php echo $model->plantel; ?>" />
 		<?php echo $form->error($model,'plantel'); ?>
 	</div>
@@ -26,7 +26,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'jugador'); ?>
 		<?php //echo $form->textField($model,'jugador'); ?>
-		<input id="RelPlantelJugador_jugador2" type="text" placeholder="" <?php if(isset($model->jugador)){ ?> disabled value="<?php 
+		<input id="RelPlantelJugador_jugador2" type="text" placeholder="" class="form-control" <?php if(isset($model->jugador)){ ?> disabled value="<?php 
 		$jugador= Jugador::model()->findByPk($model->jugador);
 		echo $jugador->nombre." ".$jugador->apellido;
 		?>" <?php } ?> />
@@ -37,7 +37,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'campo'); ?>
 		<?php //echo $form->textField($model,'campo'); ?>
-		<select name="RelPlantelJugador[campo]" id="RelPlantelJugador_campo">
+		<select name="RelPlantelJugador[campo]" id="RelPlantelJugador_campo" class="form-control">
 		<option value="1" <?php if(isset($model->campo)&&$model->campo==1){echo "selected";} ?>>Titular</option>
 		<option value="0" <?php if(isset($model->campo)&&$model->campo==0){echo "selected";} ?>>Suplente</option>
 		</select>
@@ -46,18 +46,18 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'camiseta'); ?>
-		<?php echo $form->textField($model,'camiseta',array('size'=>3,'maxlength'=>3)); ?>
+		<?php echo $form->textField($model,'camiseta',array('size'=>3,'maxlength'=>3,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'camiseta'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'detalle'); ?>
-		<?php echo $form->textField($model,'detalle',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'detalle',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'detalle'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
