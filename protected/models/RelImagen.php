@@ -106,6 +106,13 @@ class RelImagen extends CActiveRecord
 		foreach(DataDefault::model()->findAll("model='RelImagen' ") as $data){
 			$data->delete();
 		}
+		
 		return true;
+	}
+	
+	protected function afterDelete()
+    {
+    parent::afterDelete();
+	Imagen::model()->deleteIfRel($this->imagen);
 	}
 }
