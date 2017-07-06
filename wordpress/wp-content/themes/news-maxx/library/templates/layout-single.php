@@ -7,26 +7,214 @@
 ?>
 
 <div class="wrapper clearfix">
-<div class="main-col pull-left">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-post-template">
 
-    <?php kopa_breadcrumb();?>
-    <!-- breadcrumb -->
-
-    <?php get_template_part( 'library/templates/loop', 'single' ); ?>
-
-</div>
-<!-- main-col -->
-
-<div class="sidebar widget-area-2 pull-left">
-    <?php
-    if ( is_active_sidebar( $sidebars[$kopa_position[0]] ) ) {
-        dynamic_sidebar($sidebars[$kopa_position[0]]);
+  <style media="screen">
+    .custom-post-template .nombre-categoria{
+      color:#00b643;
+      border-bottom: 2px solid #00b643;
+      padding: 5px 0;
+      font-family: 'Roboto-regular';
+      font-size: 1.2em;
+      margin: 30px 0;
     }
-    ?>
-</div>
-<!-- widget-area-2 -->
 
-<div class="clear"></div>
+    .custom-post-template .subtitulo{
+      color:#00b643;
+      font-family: 'Condensed-regular';
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    .custom-post-template h1{
+      color:black;
+      font-size: 3em;
+      font-family: 'Condensed-bold-italic';
+      margin: 20px 0 40px 0;
+    }
+
+    .custom-post-template .thumbnail-container{
+      background-color: #006443;
+      position: relative;
+      min-height: 500px;
+      overflow: hidden;
+    }
+
+    .custom-post-template .thumbnail-container img{
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin:auto;
+    }
+
+    .custom-post-template .post-content-text{
+      color:#5c585d;
+      font-family: 'Roboto-regular';
+    }
+
+    .custom-post-template .post-left-colum > div{
+      padding: 20px 0;
+    }
+    .custom-post-template .post-left-colum .fuente img{
+      max-width: 30px;
+    }
+
+    .custom-post-template .post-left-colum .fuente p{
+      color:#006443;
+      font-family: 'Condensed-bold-italic';
+    }
+
+    .custom-post-template .post-left-colum p.title-left-colum{
+      border: 1px solid black;
+      padding: 10px;
+      font-family: 'Condensed-bold-italic';
+      color:black;
+      font-size: 1.2em;
+    }
+
+    .custom-post-template .post-left-colum .tags label a {
+      color:#a43c93;
+      font-size: 'Roboto-regular';
+      display: inline;
+    }
+
+    .custom-post-template .post-left-colum .related p.relacionados{
+      color:#a43c93;
+      font-size: 'Roboto-regular';
+      border-bottom: 1px solid #5c585d;
+    }
+
+      .custom-post-template .post-left-colum .related p.relacionados:last-child{
+        border: none;
+      }
+
+    .custom-post-template .post-left-colum .related p.relacionados span{
+      font-size: .8em;
+    }
+
+    .custom-post-template .widget{
+      padding: 50px 20px 0 20px;
+    }
+
+  </style>
+
+  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+
+
+
+        <?php kopa_breadcrumb();?>
+        <!-- breadcrumb -->
+
+        <?php// get_template_part( 'library/templates/loop', 'single' ); ?>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nombre-categoria">
+          <?php 	$post_categories = wp_get_post_categories( get_the_ID() );
+            foreach($post_categories as $c){
+            $cat = get_category( $c );
+            echo $cat->name."  ";
+
+            }?>
+        </div>
+
+        <p class="subtitulo">Texto que no se de donde viene- PREGUNTAR</p>
+
+        <h1><?php the_title_attribute(); ?></h1>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">
+          <?php the_post_thumbnail(array(1000, 520)); ?>
+
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-title">
+          <p>titulo de la imagen</p>
+        </div>
+
+
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-left-colum">
+          <?php if(strlen(get_field('fuente'))!=0){ ?>
+
+          <div class="fuente">
+            <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-verde.svg" alt="">
+            <p>Fuente:</p>
+            <p><?php echo get_field('fuente'); ?></p>
+          </div>
+
+        <?php } ?>
+
+        <?php if(has_tag()){ ?>
+          <div class="tags">
+            <p class="title-left-colum">ETIQUETAS</p>
+
+            <?php the_tags( '<label>', '</label>, <label>', '</label>' ); ?>
+
+          </div>
+
+          <?php  }?>
+
+          <div class="related">
+            <p  class="title-left-colum">RELACIONADOS</p>
+            <p class="relacionados"><span>Fecha</span><br>
+            titulo noticia</p>
+
+            <p class="relacionados"><span>Fecha</span><br>
+            titulo noticia</p>
+
+          </div>
+
+          <div class="share">
+            <p  class="title-left-colum">COMPARTIR</p>
+
+          </div>
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 post-content-text">
+          <?php the_content(); ?>
+
+        </div>
+
+        </div>
+        <!-- main-col -->
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 widget">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-box-right mas-visto-widget">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
+              MAS VISTO
+            </div>
+
+              <?php
+
+              $args = array( 'numberposts' => '4', 'post_status' => 'publish' );
+              $recent_posts = wp_get_recent_posts( $args );
+
+              $nro=1;
+
+              foreach( $recent_posts as $recent ){
+                $post_categories = wp_get_post_categories( $recent["ID"]);
+                $date= get_the_date();?>
+                <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr($recent["post_title"])?>">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bloque-widget">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <p class="widget-numero"><?php   echo $nro ?></p>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <p><?php   echo $date ?></p>
+                    <p><?php echo $recent["post_title"]  ?></p>
+                  </div>
+                </div>
+
+              </a>
+
+              <!-- echo $date.'<p ><a style="color:white" href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a></p>'; -->
+
+
+              <?php $nro++; } ?>
+          </div>
+        </div>
+
+        <div class="clear"></div>
+
+
+</div>
 
 </div>
 <!-- wrapper -->
