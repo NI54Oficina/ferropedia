@@ -55,8 +55,10 @@ class RelPartidoJugador extends CActiveRecord
         return array(
             'jugador_data'=>array(self::HAS_ONE, 'Jugador', array('id'=>'jugador')),
             'partido_data'=>array(self::HAS_ONE , 'Partido', array('id'=>'partido')),
+			'tarjeta'=>array(self::HAS_MANY , 'Tarjeta', array('rel'=>'id')),
 			'campeonato'=>array(self::HAS_ONE ,"Campeonato",array('liga'=>'id'),'through' => 'partido_data' ),
 			'torneos'=>array(self::HAS_MANY ,"Campeonato",array('liga'=>'id'),'through' => 'partido_data' ),
+			
 			//'place' => array( self::BELONGS_TO, 'Place', array('place_id'=>'id'), 'through' => 'event' )
         );
     }
@@ -134,9 +136,13 @@ class RelPartidoJugador extends CActiveRecord
 		foreach(Gol::model()->findAll('partido = '.$this->id." and jugador = ".$this->jugador) as $gol){
 			$gol->delete();
 		}
+		foreach(Tarjeta::model()->findAll('rel = '.$this->id) as $tarjeta){
+			$tarjeta->delete();
+		}
 		foreach(RelImagen::model()->findAll('modelId = '.$this->id." and model='RelPartidoJugador'") as $rel){
 			$rel->delete();
 		}
+		
 		foreach(DataExtra::model()->findAll('modelId = '.$this->id." and model='RelPartidoJugador' ") as $data){
 			$data->delete();
 		}

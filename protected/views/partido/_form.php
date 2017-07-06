@@ -51,7 +51,14 @@
 	<?php } ?>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
+		<label>Fecha</label>
+		<?php echo $form->textField($model,'ronda',array('size'=>300,'maxlength'=>30,"class"=>"form-control")); ?>
+		<?php echo $form->error($model,'ronda'); ?>
+	</div>
+	
+	<div class="row">
+		<?php //echo $form->labelEx($model,'fecha'); ?>
+		<label>Día</label>
 		<?php //echo $form->textField($model,'fecha'); ?>
 		<?php echo $form->error($model,'fecha'); ?>
 		<div class="input-group date form_date col-md-5" data-date="<?php echo date('d/m/Y hh/mm', time()) ?>" data-date-format="dd mm yyyy hh mm" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd-hh-mm">
@@ -76,11 +83,7 @@
 			</script>
 
 	
-	<div class="row">
-		<?php echo $form->labelEx($model,'comentario'); ?>
-		<?php echo $form->textArea($model,'comentario',array('rows'=>6, 'cols'=>50,"class"=>"form-control")); ?>
-		<?php echo $form->error($model,'comentario'); ?>
-	</div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Guardar'); ?>

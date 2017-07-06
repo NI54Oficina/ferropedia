@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Editar Gol</h1>
+<h1>Editar Gol de <?php echo $model->jugador_data->nombre." ".$model->jugador_data->apellido; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

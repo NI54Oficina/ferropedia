@@ -39,11 +39,12 @@ class Partido extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('liga, fecha', 'required'),
-			array('liga', 'length', 'max'=>300),
+			array('liga,ronda', 'length', 'max'=>300),
 			/*array('categoria', 'numerical', 'integerOnly'=>true),*/
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, liga,, fecha, comentario', 'safe', 'on'=>'search'),
+			array("ronda","safe"),
+			array('id, liga,ronda, fecha', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,7 +59,7 @@ class Partido extends CActiveRecord
 			'id' => 'ID',
 			'liga' => 'Liga',
 			'fecha' => 'Fecha',
-			'comentario' => 'Comentario',
+			'ronda' => 'Ronda',
 		);
 	}
 
@@ -77,7 +78,7 @@ class Partido extends CActiveRecord
 		$criteria->compare('liga',$this->liga,true);
 	
 		$criteria->compare('fecha',$this->fecha,true);
-		$criteria->compare('comentario',$this->comentario,true);
+		$criteria->compare('ronda',$this->ronda,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -101,6 +102,7 @@ class Partido extends CActiveRecord
 			'clubes'=>array(self::HAS_MANY ,"RelPartidoClub",array('partido'=>'id'), "with"=>array("club_data","goles","plantel") ),
 			'data'=>array(self::HAS_MANY ,"DataExtra",array('modelId'=>'id'),"condition"=>"model = '$nombreClase'", ),
 			'imagenes'=>array(self::HAS_MANY ,"RelImagen",array('modelId'=>'id'),"condition"=>"model = '$nombreClase'", ),
+			'avatar'=>array(self::HAS_MANY ,"RelImagen","modelId","condition"=>"avatar.destacada=1 and avatar.model = '$nombreClase' " ),
 		);
 	}
 
