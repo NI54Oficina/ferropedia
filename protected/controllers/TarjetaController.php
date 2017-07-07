@@ -1,6 +1,6 @@
 <?php
 
-class ClubController extends Controller
+class TarjetaController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -36,7 +36,7 @@ class ClubController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete',"setAvatar"),
+				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -51,10 +51,8 @@ class ClubController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$model=Club::model()->findByPk($id);
-		$model=Club::model()->with(array("planteles"))->findByPk($id);
 		$this->render('view',array(
-			'model'=>$model,
+			'model'=>$this->loadModel($id),
 		));
 	}
 
@@ -64,21 +62,43 @@ class ClubController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Club;
+		$model=new Tarjeta;
+		
+		if(isset($_POST["rel"])){
+			$model->rel=$_POST["rel"];
+		}
+		if(isset($_POST["tarjeta"])){
+			$model->tarjeta=$_POST["tarjeta"];
+		}
+		if(isset($_POST["comentario"])){
+			$model->comentario=$_POST["comentario"];
+		}
+		if(isset($_POST["minuto"])){
+			$model->minuto=$_POST["minuto"];
+		}
+			
+			if($model->save())
+				$this->redirect(array("partido/view","id"=>RelPartidoClub::model()->findByPk($model->rel_data->partido)->partido));
+			//$this->redirect(array('view','id'=>$model->id));
+		
+	//print_r($model->getErrors());
 
+		
+		
+		/*
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Club']))
+		if(isset($_POST['Tarjeta']))
 		{
-			$model->attributes=$_POST['Club'];
+			$model->attributes=$_POST['Tarjeta'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
-		));
+		));*/
 	}
 
 	/**
@@ -93,9 +113,9 @@ class ClubController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Club']))
+		if(isset($_POST['Tarjeta']))
 		{
-			$model->attributes=$_POST['Club'];
+			$model->attributes=$_POST['Tarjeta'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -112,11 +132,13 @@ class ClubController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
+		$model=$this->loadModel($id);
+		$auxID=RelPartidoClub::model()->findByPk($model->rel_data->partido)->partido;
+		$model->delete();
+		$this->redirect(array("partido/view","id"=>$auxID));
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		/*if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));*/
 	}
 
 	/**
@@ -124,7 +146,7 @@ class ClubController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Club');
+		$dataProvider=new CActiveDataProvider('Tarjeta');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -135,10 +157,10 @@ class ClubController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Club('search');
+		$model=new Tarjeta('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Club']))
-			$model->attributes=$_GET['Club'];
+		if(isset($_GET['Tarjeta']))
+			$model->attributes=$_GET['Tarjeta'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -149,12 +171,12 @@ class ClubController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Club the loaded model
+	 * @return Tarjeta the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Club::model()->with("planteles")->findByPk($id);
+		$model=Tarjeta::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -162,26 +184,14 @@ class ClubController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Club $model the model to be validated
+	 * @param Tarjeta $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='club-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='tarjeta-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	}
-	
-	public function actionSetAvatar($id,$imagen){
-		$auxRel= RelImagenClub::model()->find("club=$id and avatar=1");
-		if(isset($auxRel)){
-			$auxRel->avatar=0;
-			$auxRel->save();
-		}
-		$auxRel= RelImagenClub::model()->findByPk($imagen);
-		$auxRel->avatar=1;
-		$auxRel->save();
-		echo "1";
 	}
 }

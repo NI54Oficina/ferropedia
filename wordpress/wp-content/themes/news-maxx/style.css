@@ -5182,14 +5182,15 @@ ol li > ul > li {
 .more-link {
     display: inline-block;
     padding: 2px;
-    background: #e03d3d; }
+    background: #000; }
 .more-link span {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     display: block;
-    padding: 6px 10px 4px;
-    font-family: "pt_serifregular";
+    padding: 6px 15px 4px;
+    font-family: "Roboto-regular";
     color: white;
-    border: 1px solid white; }
+    /*border: 1px solid white;*/
+   }
 
 .icon-btn {
     display: inline-block;
@@ -6346,7 +6347,7 @@ Categories page
     padding-top: 0;
     border-top: none; }
 .entry-list > ul > li .entry-item {
-    background-color: #f9f9f9; }
+    background-color: #fff; }
 .entry-list > ul > li .entry-item .entry-thumb {
     float: left;
     margin-right: 20px;
@@ -6358,8 +6359,8 @@ Categories page
     overflow: hidden;
     margin-bottom: 10px; }
 .entry-list > ul > li .entry-item .entry-content header .entry-title {
-    font-size: 15px;
-    font-family: "pt_serifbold";
+    font-size: 2em;
+    font-family: "Condensed-bold-italic";
     margin-bottom: 8px; }
 .entry-list > ul > li .entry-item .entry-content header .entry-date {
     margin-right: 0; }
@@ -9855,6 +9856,10 @@ padding: 0 35px;
       display: inline;
       width: 25px;
       margin: auto 2px;
+    }
+
+    .custom-search{
+      padding: 5em;
     }
 
 

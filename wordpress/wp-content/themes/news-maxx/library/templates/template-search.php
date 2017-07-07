@@ -9,12 +9,17 @@
 
 <div class="wrapper clearfix">
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-search">
 
 
-    <section class="entry-list">
+    <section class="col-lg-9 col-md-9 col-sm-12 col-xs-12 entry-list">
          <?php get_template_part( 'library/templates/loop', 'blog-1' ); ?>
    </section>
+
+
+   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <?php echo do_shortcode("[custom-twitter-feeds]"); ?>
+   </div>
 
     <div class="clear"></div>
 

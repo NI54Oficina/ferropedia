@@ -101,6 +101,9 @@ class RelPartidoClub extends CActiveRecord
 		foreach(RelPartidoJugador::model()->findAll('partido = '.$this->id) as $rel){
 			$rel->delete();
 		}
+		foreach(Gol::model()->findAll('partido = '.$this->id) as $rel){
+			$rel->delete();
+		}
 		foreach(RelImagen::model()->findAll('modelId = '.$this->id." and model='RelPartidoClub'") as $rel){
 			$rel->delete();
 		}
@@ -110,6 +113,7 @@ class RelPartidoClub extends CActiveRecord
 		foreach(DataDefault::model()->findAll("model='RelPartidoClub' ") as $data){
 			$data->delete();
 		}
+		
 		
 		return true;
         

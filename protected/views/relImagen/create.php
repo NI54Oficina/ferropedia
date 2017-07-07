@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Cargar imagen</h1>
+<h1>Cargar imagen para <?php echo $model['model']; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
 

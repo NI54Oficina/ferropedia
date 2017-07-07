@@ -1,21 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "tbl_rel_imagen".
+ * This is the model class for table "tbl_tarjeta".
  *
- * The followings are the available columns in table 'tbl_rel_imagen':
+ * The followings are the available columns in table 'tbl_tarjeta':
  * @property integer $id
- * @property string $model
- * @property integer $modelId
- * @property integer $imagen
- * @property integer $destacada
+ * @property integer $tarjeta
+ * @property integer $rel
+ * @property string $comentario
  */
-class RelImagen extends CActiveRecord
+class Tarjeta extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return RelImagen the static model class
+	 * @return Tarjeta the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +26,7 @@ class RelImagen extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'tbl_rel_imagen';
+		return 'tbl_tarjeta';
 	}
 
 	/**
@@ -38,12 +37,12 @@ class RelImagen extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('model, modelId, imagen', 'required'),
-			array('modelId, imagen, destacada', 'numerical', 'integerOnly'=>true),
-			array('model', 'length', 'max'=>100),
+			array('tarjeta, rel,minuto', 'required'),
+			array('tarjeta, rel', 'numerical', 'integerOnly'=>true),
+			array('comentario,minuto', "safe"),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, model, modelId, imagen, destacada', 'safe', 'on'=>'search'),
+			array('id, tarjeta, rel, comentario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,7 +54,8 @@ class RelImagen extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'imagen_data'=>array(self::HAS_ONE ,"Imagen",array('id'=>'imagen') ),
+			'rel_data'=>array(self::HAS_ONE , 'RelPartidoJugador', array('id'=>'rel')),
+			
 		);
 	}
 
@@ -66,10 +66,10 @@ class RelImagen extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'model' => 'Model',
-			'modelId' => 'Model',
-			'imagen' => 'Imagen',
-			'destacada' => 'Destacada',
+			'tarjeta' => 'Tarjeta',
+			'rel' => 'Rel',
+			'minuto' => 'Minuto',
+			'comentario' => 'Comentario',
 		);
 	}
 
@@ -85,34 +85,13 @@ class RelImagen extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('model',$this->model,true);
-		$criteria->compare('modelId',$this->modelId);
-		$criteria->compare('imagen',$this->imagen);
-		$criteria->compare('destacada',$this->destacada);
+		$criteria->compare('tarjeta',$this->tarjeta);
+		$criteria->compare('rel',$this->rel);
+		$criteria->compare('minuto',$this->minuto);
+		$criteria->compare('comentario',$this->comentario);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-	
-	public function beforeDelete()
-    {
-		foreach(RelImagen::model()->findAll('modelId = '.$this->id." and model='RelImagen'") as $rel){
-			$rel->delete();
-		}
-		foreach(DataExtra::model()->findAll('modelId = '.$this->id." and model='RelImagen' ") as $data){
-			$data->delete();
-		}
-		foreach(DataDefault::model()->findAll("model='RelImagen' ") as $data){
-			$data->delete();
-		}
-		
-		return true;
-	}
-	
-	protected function afterDelete()
-    {
-    parent::afterDelete();
-	Imagen::model()->deleteIfRel($this->imagen);
 	}
 }

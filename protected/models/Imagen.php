@@ -100,8 +100,20 @@ class Imagen extends CActiveRecord
 		);
 	}
 	
+	public function deleteIfRel($id){
+		$rels=RelImagen::model()->countByAttributes(array(
+                        "imagen"=>$id
+                ));
+				
+				if($rels<=0){
+					Imagen::model()->findByPk($id)->delete();
+					
+				}
+	}
+	
 	public function beforeDelete()
     {
+		
 		foreach(RelImagen::model()->findAll('imagen = '.$this->id) as $rel){
 			$rel->delete();
 		}

@@ -19,6 +19,11 @@ $this->menu=array(
 <h1>Partido</h1>
 <?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/partido/update/<?php echo $model->id; ?>" >Editar partido</a><br><br><?php } ?>
 
+<?php if(isset($model->avatar[0])){ ?>
+<img src="<?php 
+echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>" style="max-width:200px;" />
+<?php } ?>
+
 <?php if(false){ ?>
 <p><strong>Categoria:</strong> <?php
 if($model->categoria==0){
@@ -29,10 +34,9 @@ if($model->categoria==0){
 }
 ?></p>
 <?php } ?>
-<p><strong>Fecha:</strong> <?php echo $model->fecha; ?></p>
-<?php if(isset($model->comentario)&&$model->comentario!=""){ ?>
-<p><?php echo $model->comentario; ?></p>
-<?php } ?>
+
+<p><strong>Fecha:</strong> <?php echo $model->ronda; ?></p>
+<p><strong>Día:</strong> <?php echo $model->fecha; ?></p>
 
 
 
@@ -100,14 +104,14 @@ if($club->resultado==0){
 <label class="label-show" for="toggle-<?php echo $club->id;?>">Agregar gol</label>
 <input type="checkbox" class="hider" id="toggle-<?php echo $club->id;?>" />
 <form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/gol/create" method="post">
-	<input type="hidden" name="partido"  value="<?php echo $model->id; ?>" />
+	<input type="hidden" name="partido"  value="<?php echo $model->id; ?>"  />
 	<input type="hidden" name="rel"  value="<?php echo $club->id; ?>" />
 	<label>Jugador</label>
-	<input id="RelPartidoJugador_jugador2<?php echo $club->id;?>" type="text" placeholder="" />
+	<input id="RelPartidoJugador_jugador2<?php echo $club->id;?>" type="text" placeholder=""  class="form-control"/>
 	<label>Minuto</label>
-	<input  type="text" name="minuto" />
+	<input  type="text" name="minuto" class="form-control" />
 	<label>Descripción</label>
-	<textarea name="desc"></textarea>
+	<textarea name="desc" class="form-control"></textarea>
 	<input type="hidden" id="RelPartidoJugador_jugador<?php echo $club->id;?>" type="text" name="jugador" />
 	<button style="color:white;">Agregar</button>
 </form>
@@ -115,18 +119,19 @@ if($club->resultado==0){
 
 <script>
 		
-		var data = [
+		var data<?php echo $club->id; ?> = [
 			//{ value: "AL", label: "Alabama" },
 			<?php
-			$jugadores= Jugador::model()->findAll();
+			$jugadores=$club->plantel;
+			//$jugadores= Jugador::model()->findAll();
 			foreach($jugadores as $jugador){ ?>
-				{value:"<?php echo $jugador->id; ?>",label: "<?php echo $jugador->nombre." ".$jugador->apellido; ?>"},
+				{value:"<?php echo $jugador->jugador; ?>",label: "<?php echo $jugador->jugador_data['nombre']." ".$jugador->jugador_data['apellido']; ?>"},
 			<?php } ?>
 		];
 		jQuery(function() {
 			
 			jQuery("#RelPartidoJugador_jugador2<?php echo $club->id;?>").autocomplete({
-				source: data,
+				source: data<?php echo $club->id; ?>,
 				focus: function(event, ui) {
 					// prevent autocomplete from updating the textbox
 					event.preventDefault();
@@ -147,7 +152,7 @@ if($club->resultado==0){
 <?php } ?>
 
 <?php 
-$jugadores=$club->plantel;
+
 if(count($jugadores)>0){ ?>
 <hr>
 <h3>Plantel</h3>
@@ -159,6 +164,29 @@ foreach($jugadores as $jugador){
 	<?php if(is_user_logged_in()){ ?>
 	<a href="<?php echo Yii::app()->request->baseUrl; ?>/relPartidoJugador/deletePartido/<?php echo $jugador["id"]; ?>" class="confirmation">Quitar</a> / <a href="<?php echo Yii::app()->request->baseUrl; ?>/relPartidoJugador/update/<?php echo $jugador["id"]; ?>">Editar</a>
 	<?php } ?>
+	<?php foreach($jugador->tarjeta as $tarjeta){ ?>
+		<p>Tarjeta <?php if($tarjeta->tarjeta==0){echo "amarilla";}else{echo "roja";} ?> - Minuto: <?php echo $tarjeta["minuto"]; ?> <?php if(is_user_logged_in()){ ?> <a href="<?php echo Yii::app()->request->baseUrl; ?>/tarjeta/delete/<?php echo $tarjeta["id"]; ?>" class="confirmation">Quitar</a>  <?php }?></p>
+		 
+	<?php } ?>
+	 <?php if(is_user_logged_in()){ ?>
+	<br>
+	<label class="label-show" for="toggleJ-<?php echo $jugador->id;?>">Agregar tarjeta</label>
+	<input type="checkbox" class="hider" id="toggleJ-<?php echo $jugador->id;?>" />
+	<form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/tarjeta/create" method="post" >
+		<label>Tarjeta</label>
+		<select name="tarjeta" class="form-control">
+			<option value="0">Amarilla</option>
+			<option value="1">Roja</option>
+		</select>
+		<label>Minuto</label>
+		<input name="minuto" value="" required  class="form-control"/>
+		<label>Comentario</label>
+		<input name="comentario" value=""  class="form-control"/>
+		<input type="hidden" name="rel"  value="<?php echo $jugador["id"]; ?>" />
+		<button style="color:white;">Agregar</button><br><br>
+	</form>
+	</hr>
+	 <?php } ?>
 <?php }
  ?>
  </ul>
@@ -263,3 +291,20 @@ h3{margin-top:10px;padding-top:0;}
 </style>
 		 
 <?php //$auxA= wp_list_categories(array("hide_empty"=>false,"echo"=>false)); ?>
+
+<?php if(is_user_logged_in()){ ?>
+<script>
+jQuery("body").on("click",".assign-avatar",function(){
+	var auxThis=jQuery(this);
+	jQuery.post("<?php echo  Yii::app()->request->baseUrl.'/relImagen/destacada/modelClass/'.get_class($model).'/id/'.$model->id.'/imagen/'; ?>"+jQuery(this).attr("image-id"),function(data){
+		if(data=="1"){
+			console.log("entra");
+			console.log(jQuery(auxThis));
+			jQuery(auxThis).css("background-color","green");
+			location.reload();
+		}
+	});
+});
+</script>
+
+<?php } ?>

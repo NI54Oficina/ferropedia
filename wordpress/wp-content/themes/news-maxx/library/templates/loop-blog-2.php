@@ -28,7 +28,7 @@
                     <p><?php the_excerpt(); ?></p>
                     <?php if ( 'show' === get_option( 'kopa_theme_options_blog_readmore_status', 'show' ) ) : ?>
                         <i class="fa fa-external-link search-icon"></i>
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="more-link"><span><?php _e('Read more', 'newsmaxx'); ?></span></a>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="more-link"><span>Leer más</span></a>
                     <?php endif; ?>
                 </div>
                 <!-- entry-content -->
@@ -44,6 +44,3 @@
 <div class="pagination clearfix">
     <?php get_template_part('library/templates/template', 'pagination'); ?>
 </div>
-
-
-
