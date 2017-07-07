@@ -96,6 +96,17 @@
       padding: 50px 20px 0 20px;
     }
 
+    .custom-post-template .thumbnail-title{
+      padding: 10px 0;
+    }
+
+    .custom-post-template .thumbnail-title p{
+      color:black;
+      font-family: 'Condensed-bold-italic';
+      font-size: 1.1em;
+    }
+
+
   </style>
 
   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
@@ -125,7 +136,7 @@
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-title">
-          <p>titulo de la imagen</p>
+          <p>  <?php echo get_post(get_post_thumbnail_id())->post_excerpt;   ?>  </p>
         </div>
 
 
@@ -153,11 +164,45 @@
 
           <div class="related">
             <p  class="title-left-colum">RELACIONADOS</p>
-            <p class="relacionados"><span>Fecha</span><br>
+
+            <?php
+                $tags = wp_get_post_terms( get_queried_object_id(), 'post_tag', ['fields' => 'ids'] );
+                $args = [
+                    'post__not_in'        => array( get_queried_object_id() ),
+                    'posts_per_page'      => 5,
+                    'ignore_sticky_posts' => 1,
+                    'orderby'             => 'rand',
+                    'tax_query' => [
+                        [
+                            'taxonomy' => 'post_tag',
+                            'terms'    => $tags
+                        ]
+                    ]
+                ];
+                $my_query = new wp_query( $args );
+                 $max=0;
+                if( $my_query->have_posts() ) {
+
+                        while( $my_query->have_posts() && $max<4) {
+                            $my_query->the_post(); ?>
+
+                            <a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow">
+                            <p class="relacionados">
+                              <span><?php echo  get_the_date( 'l F j, Y' ) ?><br></span>
+                                <?php the_title(); ?>
+                            </p>
+                            </a>
+                        <?php $max++; }
+                        wp_reset_postdata();
+
+                }
+                ?>
+
+            <!-- <p class="relacionados"><span>Fecha</span><br>
             titulo noticia</p>
 
             <p class="relacionados"><span>Fecha</span><br>
-            titulo noticia</p>
+            titulo noticia</p> -->
 
           </div>
 
@@ -175,6 +220,13 @@
         </div>
         <!-- main-col -->
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 widget">
+
+
+          <div class="twitter-container">
+          <?php echo do_shortcode("[custom-twitter-feeds]"); ?>
+          </div>
+
+
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-box-right mas-visto-widget">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
               MAS VISTO

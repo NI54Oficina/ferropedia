@@ -8753,7 +8753,7 @@ body{
     background-color: #000;
 }
 
-body.post-template-default.single.single-post{
+body.post-template-default.single.single-post, body.archive.tag{
   background-color: white;
 }
 

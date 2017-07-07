@@ -11,6 +11,9 @@
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left">
 
+
+
+
 <!-- PARTE COMENTADA -->
         <!-- <?php kopa_breadcrumb(); ?> -->
         <!-- breadcrumb -->
@@ -236,7 +239,8 @@
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
-    <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
+      <?php echo do_shortcode("[custom-twitter-feeds]"); ?>
+    <!-- <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt=""> -->
   </div>
 
 </div>
@@ -388,14 +392,14 @@
 
  -->
     <?php
-      	$posts= get_posts( array('numberposts' => 2, "post_type"=>"post") );
+      	$posts= get_posts( array('numberposts' => 2, "post_type"=>"post", 'category'=>3 ) );
 
         // echo var_dump($posts);
 
       foreach ($posts as $post) {
-        $post_categories = wp_get_post_categories($post->ID );
-        $cat = get_category($post_categories[0]);
-        if( $cat->slug=='museo'){
+        // $post_categories = wp_get_post_categories($post->ID );
+        // $cat = get_category($post_categories[0]);
+        // if( $cat->slug=='museo'){
         ?>
 
 
@@ -422,7 +426,7 @@
 
         </a>
 
-    <?php }  }  wp_reset_postdata();   ?>
+    <?php  }  wp_reset_postdata();   ?>
 
 
 
