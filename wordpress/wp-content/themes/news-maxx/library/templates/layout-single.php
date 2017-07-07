@@ -162,8 +162,7 @@
 
           <?php  }?>
 
-          <div class="related">
-            <p  class="title-left-colum">RELACIONADOS</p>
+
 
             <?php
                 $tags = wp_get_post_terms( get_queried_object_id(), 'post_tag', ['fields' => 'ids'] );
@@ -181,9 +180,13 @@
                 ];
                 $my_query = new wp_query( $args );
                  $max=0;
-                if( $my_query->have_posts() ) {
+                if( $my_query->have_posts() ) {?>
 
-                        while( $my_query->have_posts() && $max<4) {
+
+                  <div class="related">
+                    <p  class="title-left-colum">RELACIONADOS</p>
+
+                    <?php     while( $my_query->have_posts() && $max<4) {
                             $my_query->the_post(); ?>
 
                             <a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow">
@@ -193,9 +196,10 @@
                             </p>
                             </a>
                         <?php $max++; }
-                        wp_reset_postdata();
+                        wp_reset_postdata();?>
+                       </div>
 
-                }
+              <?php   }
                 ?>
 
             <!-- <p class="relacionados"><span>Fecha</span><br>
@@ -204,7 +208,7 @@
             <p class="relacionados"><span>Fecha</span><br>
             titulo noticia</p> -->
 
-          </div>
+
 
           <div class="share">
             <p  class="title-left-colum">COMPARTIR</p>

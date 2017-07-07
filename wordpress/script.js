@@ -1,5 +1,5 @@
 $(window).load( function(){
-  SameHeight();
+  // SameHeight();
 });
 
 $(document).ready( function(){

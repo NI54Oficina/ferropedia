@@ -5566,7 +5566,7 @@ ol li > ul > li {
  * -----------------------------------------------------------------------------
  */
 body {
-    background: #fff;
+    background: #fff ;
     position: relative;
     font-family: "Arial", sans-serif;
     color: #8f8f8f;
@@ -8754,8 +8754,8 @@ body{
     background-color: #000;
 }
 
-body.post-template-default.single.single-post, body.archive.tag{
-  background-color: white;
+body.post-template-default.single.single-post, body.archive.tag, body.seach{
+  background-color: white !important;
 }
 
 .kp-headline-title{
@@ -9545,6 +9545,9 @@ padding: 0 35px;
       width: 100%;
       height: auto;
       border: 1px solid white;
+    }
+    .jugadores-content {
+      min-height: 500px;
     }
 
     .jugadores-content h2{
