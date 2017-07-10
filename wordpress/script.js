@@ -26,6 +26,14 @@ $(window).on('resize', function(){
 })
 
 
+function _openmodal(){
+
+  $('.max-box-gallery').on('click', function(){
+    
+  })
+
+}
+
 
 
 function SameHeight(){

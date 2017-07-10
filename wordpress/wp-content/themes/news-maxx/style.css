@@ -8754,7 +8754,7 @@ body{
     background-color: #000;
 }
 
-body.post-template-default.single.single-post, body.archive.tag, body.seach{
+body.post-template-default.single.single-post, body.archive.tag, body.seach, body.page-template-template-galeria{
   background-color: white !important;
 }
 
