@@ -62,7 +62,7 @@ global $kopa_setting;
       object={};
       object['title']='<?php the_title(); ?>';
       object['content']='<?php echo(get_the_excerpt($post->ID)); ?>';
-      object['type']='<?php the_title(); ?>';
+      object['volanta']='<?php the_title(); ?>';
       object['category']='<?php the_title(); ?>';
       object['notes']='<?php the_title(); ?>';
 
@@ -82,7 +82,7 @@ global $kopa_setting;
 
     </script>
 
-      <a href="<?php the_permalink();?>">
+      <!-- <a href="<?php the_permalink();?>"> -->
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery">
 
 
@@ -95,7 +95,7 @@ global $kopa_setting;
       </div>
 
 
-     </a>
+     <!-- </a> -->
      <?php } wp_reset_postdata(); ?>
 
   </div>
@@ -112,19 +112,45 @@ global $kopa_setting;
       /*opacity: .5;*/
       z-index: 2;
       color: black;
-      padding: 4em 3em
+      padding: 4em 3em;
+      display: none;
+    }
+
+
+    .img-sector p, .info-sector .buttons{
+      display: inline;
+      font-family: 'Condensed-bold';
+    }
+
+    .info-sector .volanta, .info-sector .content{
+      font-family: 'Roboto-regular'
+    }
+    .info-sector .notas{
+      font-family: 'Condensed-bold-italic'
+    }
+    .info-sector .title{
+      font-family: 'Condensed-bold-italic';
+      color: #00b643;
+    }
+
+    .modal-gallery span{
+      position: absolute;
+      right:5%;
+      top:15%;
     }
   </style>
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-gallery">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+    <span>X</span>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector">
       <img src="" alt="">
       <p>"<" Foto anterior</p> <p>1</p> <p>Foto siguiente ">"</p>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-      <p>Volante</p>
-      <h1>Titulo</h1>
-      <p>inforgrafia</p>
-      <p>texto de relleno bleblelblelbelbleblelbelblel
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 info-sector">
+      <p class="volanta">Volante</p>
+      <h1 class="title">Titulo</h1>
+      <p class="notas">inforgrafia</p>
+      <p class="content">texto de relleno bleblelblelbelbleblelbelblel
           texto de relleno bleblelblelbelbleblelbelble
           texto de relleno bleblelblelbelbleblelbelble
           texto de relleno bleblelblelbelbleblelbelble
@@ -132,7 +158,7 @@ global $kopa_setting;
           texto de relleno bleblelblelbelbleblelbelble
           texto de relleno bleblelblelbelbleblelbelble
       </p>
-      <p>Anterior</p>|<p>Siguiente</p>
+      <p  class="buttons prev-post">Anterior</p>|<p  class="buttons next-post">Siguiente</p>
     </div>
   </div>
 
@@ -144,6 +170,10 @@ global $kopa_setting;
 //} // endif
 ?>
 
+
+<script>
+  
+</script>
 
 
 <style media="screen">
