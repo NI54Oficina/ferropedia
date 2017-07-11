@@ -1,6 +1,6 @@
 <!-- SLIDER AGREGADO -->
 
-      <div class="widget kopa-home-slider-widget">
+      <div class="widget kopa-home-slider-widget hidden-xs">
 
 
         <?php get_template_part( 'library/templates/header', 'menu' ); ?>

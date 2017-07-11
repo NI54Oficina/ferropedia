@@ -30,7 +30,7 @@
 
         <nav class="main-nav">
             <div class="wrapper clearfix">
-              <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows">
+              <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:35%;">
 
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://localhost/ferropedia/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="http://localhost/ferropedia/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
@@ -40,20 +40,20 @@
               </ul>
 
 
-                <!-- <?php
-                if ( has_nav_menu( 'main-nav' )) {
-                     wp_nav_menu( array(
-                        'theme_location'  => 'main-nav',
-                        'container'       => '',
-
-                        'menu_id'         => 'main-menu',
-                        'menu_class'      => 'main-menu clearfix'
-                        // 'echo'            => false
-
-                    ));
-                    echo '<i class="fa fa-align-justify"></i>';
-
-                } ?> -->
+                <?php
+                // if ( has_nav_menu( 'main-nav' )) {
+                //      wp_nav_menu( array(
+                //         'theme_location'  => 'main-nav',
+                //         'container'       => '',
+                //
+                //         'menu_id'         => 'main-menu',
+                //         'menu_class'      => 'main-menu clearfix'
+                //         // 'echo'            => false
+                //
+                //     ));
+                //     echo '<i class="fa fa-align-justify"></i>';
+                //
+                // } ?>
 
 
 
@@ -86,7 +86,7 @@
 
         <?php get_search_form(); ?>
         <!-- search box -->
-
+      <span class="glyphicon glyphicon-home"></span>
     </div>
     <!-- wrapper -->
 
