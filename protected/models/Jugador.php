@@ -40,10 +40,11 @@ class Jugador extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, nacimiento, ciudad_natal, puesto', 'required'),
+			array('nombre, apellido, nacimiento, puesto', 'required'),
 			array('nombre, apellido, nacimiento, ciudad_natal, detalle_puesto', 'length', 'max'=>300),
 			array('defuncion', 'safe'),
 			array('puesto', 'length', 'max'=>100),
+			array('ciudad_natal,nacimiento,staff', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, nombre, apellido, nacimiento, ciudad_natal, puesto, detalle_puesto', 'safe', 'on'=>'search'),
