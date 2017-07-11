@@ -16,3 +16,11 @@ assets
 yii
 wordpress/wp-admin
 wordpress/wp-includes
+
+(?i)**application.log
+(?i)**application.log1
+(?i)**application.log2
+(?i)**application.log3
+(?i)**application.log4
+(?i)**application.log5
+*.log
