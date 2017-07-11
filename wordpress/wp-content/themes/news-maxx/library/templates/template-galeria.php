@@ -4,11 +4,10 @@
 
 
 global $kopa_setting;
-if ( is_page(get_the_ID()) && have_posts() ) {
-    while ( have_posts() ) {
-        the_post(); ?>
+// if ( is_page(get_the_ID()) && have_posts() ) {
+//     while ( have_posts() ) {
+//         the_post(); ?>
 
-<?php ?>
 
 
 <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
@@ -22,361 +21,160 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-gallery">
 
+    <style>
+
+    .max-box-gallery{ padding: 30px;}
+    .box-gallery{   padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}
+    .box-gallery span{
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      background:  rgba(0,0,0,.5);
+      position: absolute;
+      top:0;
+      color: white;
+      text-align: center;
+      padding-top: 45%;
+      font-size:4em;
+      font-family: 'Condensed-bold-italic';
+    }
+
+    .box-gallery span:hover{
+      opacity: 1;
+      transition: 1s all;
+    }
+    </style>
+
   <h1>Galeria de Imágenes</h1>
 
+  <script>
+  //  imgPerObject={};
+    ListElements=[];
+  </script>
+  <?php  $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>3 ) );
 
-      <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-        <?php  $galleries = get_post_galleries_images( $post );
+  foreach($posts as $post){
+    ?>
 
-        // var_dump($galleries);
-               $gal=$galleries[0];
+    <script>
 
-              foreach ($gal as $g) {?>
-                <figure class="col-lg-4 col-md-3 col-sm-6 col-xs-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                   <a href="<?php echo $g ?>" itemprop="contentUrl" data-size="600x400">
-                       <img class=""src="<?php echo $g ?>" itemprop="thumbnail" alt="Image description" />
+    //Arreglar esta parte con las cosas q corresponden
+      object={};
+      object['title']='<?php the_title(); ?>';
+      object['content']='<?php echo(get_the_excerpt($post->ID)); ?>';
+      object['volanta']='<?php the_title(); ?>';
+      object['category']='<?php the_title(); ?>';
+      object['notes']='<?php the_title(); ?>';
 
-                   </a>
-                   <figcaption itemprop="caption description">Image caption</figcaption>
-               </figure>
+      innerImgs=[];
 
-            <?php  }   ?>
+      <?php  $galleries = get_post_galleries_images( $post );
+              $gal=$galleries[0];
+      foreach ($gal as $g) {?>
+
+        innerImgs.push('<?php echo $g; ?>');
+
+      <?php  } ?>
+
+      object['images']=innerImgs;
+
+      ListElements.push(object);
+
+    </script>
+
+      <!-- <a href="<?php the_permalink();?>"> -->
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery">
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery">
+            <?php  echo the_post_thumbnail('full' ); ?>
+
+           <span> Ver</span>
+        </div>
 
       </div>
 
+
+     <!-- </a> -->
+     <?php } wp_reset_postdata(); ?>
+
   </div>
-  <style media="screen">
-        .my-gallery {
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrapper clearfix"></div>
+
+  <style>
+    .modal-gallery{
+      position: fixed;
+      top:0;
+      height: 100%;
       width: 100%;
-      float: left;
-      }
-      .my-gallery img {
-      width: 100%;
-      height: auto;
-      }
-      .my-gallery figure {
-      display: block;
-      float: left;
-      margin-bottom: 20px;
-      }
-      .my-gallery figcaption {
+      background-color:white;
+      /*opacity: .5;*/
+      z-index: 2;
+      color: black;
+      padding: 4em 3em;
       display: none;
-      }
+    }
 
-      .pswp__bg{
-        background: white;
-      }
 
-      .pswp__zoom-wrap{
-        width: 50%;
-      }
-      .pswp img{
-        width: 100% !important;
-        position: relative;
-      }
+    .img-sector p, .info-sector .buttons{
+      display: inline;
+      font-family: 'Condensed-bold';
+    }
+
+    .info-sector .volanta, .info-sector .content{
+      font-family: 'Roboto-regular'
+    }
+    .info-sector .notas{
+      font-family: 'Condensed-bold-italic'
+    }
+    .info-sector .title{
+      font-family: 'Condensed-bold-italic';
+      color: #00b643;
+    }
+
+    .modal-gallery span{
+      position: absolute;
+      right:5%;
+      top:15%;
+    }
   </style>
-<!--
-  <script type="text/javascript">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-gallery">
 
-  var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-    // parse slide data (url, title, size ...) from DOM elements
-    // (children of gallerySelector)
-    var parseThumbnailElements = function(el) {
-        var thumbElements = el.childNodes,
-            numNodes = thumbElements.length,
-            items = [],
-            figureEl,
-            linkEl,
-            size,
-            item;
-
-        for(var i = 0; i < numNodes; i++) {
-
-            figureEl = thumbElements[i]; // <figure> element
-
-            // include only element nodes
-            if(figureEl.nodeType !== 1) {
-                continue;
-            }
-
-            linkEl = figureEl.children[0]; // <a> element
-
-            size = linkEl.getAttribute('data-size').split('x');
-
-            // create slide object
-            item = {
-                src: linkEl.getAttribute('href'),
-                w: parseInt(size[0], 10),
-                h: parseInt(size[1], 10)
-            };
-
-
-
-            if(figureEl.children.length > 1) {
-                // <figcaption> content
-                item.title = figureEl.children[1].innerHTML;
-            }
-
-            if(linkEl.children.length > 0) {
-                // <img> thumbnail element, retrieving thumbnail url
-                item.msrc = linkEl.children[0].getAttribute('src');
-            }
-
-            item.el = figureEl; // save link to element for getThumbBoundsFn
-            items.push(item);
-        }
-
-        return items;
-    };
-
-    // find nearest parent element
-    var closest = function closest(el, fn) {
-        return el && ( fn(el) ? el : closest(el.parentNode, fn) );
-    };
-
-    // triggers when user clicks on thumbnail
-    var onThumbnailsClick = function(e) {
-      console.log("asdasd");
-        e = e || window.event;
-        e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-        var eTarget = e.target || e.srcElement;
-
-        // find root element of slide
-        var clickedListItem = closest(eTarget, function(el) {
-            return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
-        });
-
-        if(!clickedListItem) {
-            return;
-        }
-
-        // find index of clicked item by looping through all child nodes
-        // alternatively, you may define index via data- attribute
-        var clickedGallery = clickedListItem.parentNode,
-            childNodes = clickedListItem.parentNode.childNodes,
-            numChildNodes = childNodes.length,
-            nodeIndex = 0,
-            index;
-
-        for (var i = 0; i < numChildNodes; i++) {
-            if(childNodes[i].nodeType !== 1) {
-                continue;
-            }
-
-            if(childNodes[i] === clickedListItem) {
-                index = nodeIndex;
-                break;
-            }
-            nodeIndex++;
-        }
-
-
-
-        if(index >= 0) {
-            // open PhotoSwipe if valid index found
-            openPhotoSwipe( index, clickedGallery );
-        }
-        return false;
-    };
-
-    // parse picture index and gallery index from URL (#&pid=1&gid=2)
-    var photoswipeParseHash = function() {
-        var hash = window.location.hash.substring(1),
-        params = {};
-
-        if(hash.length < 5) {
-            return params;
-        }
-
-        var vars = hash.split('&');
-        for (var i = 0; i < vars.length; i++) {
-            if(!vars[i]) {
-                continue;
-            }
-            var pair = vars[i].split('=');
-            if(pair.length < 2) {
-                continue;
-            }
-            params[pair[0]] = pair[1];
-        }
-
-        if(params.gid) {
-            params.gid = parseInt(params.gid, 10);
-        }
-
-        return params;
-    };
-
-    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-        var pswpElement = document.querySelectorAll('.pswp')[0],
-            gallery,
-            options,
-            items;
-
-        items = parseThumbnailElements(galleryElement);
-
-        // define options (if needed)
-        options = {
-
-            // define gallery index (for URL)
-            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-            getThumbBoundsFn: function(index) {
-                // See Options -> getThumbBoundsFn section of documentation for more info
-                var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                    rect = thumbnail.getBoundingClientRect();
-
-                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-            }
-
-        };
-
-        // PhotoSwipe opened from URL
-        if(fromURL) {
-            if(options.galleryPIDs) {
-                // parse real index when custom PIDs are used
-                // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-                for(var j = 0; j < items.length; j++) {
-                    if(items[j].pid == index) {
-                        options.index = j;
-                        break;
-                    }
-                }
-            } else {
-                // in URL indexes start from 1
-                options.index = parseInt(index, 10) - 1;
-            }
-        } else {
-            options.index = parseInt(index, 10);
-        }
-
-        // exit if index not found
-        if( isNaN(options.index) ) {
-            return;
-        }
-
-        if(disableAnimation) {
-            options.showAnimationDuration = 0;
-        }
-
-        // Pass data to PhotoSwipe and initialize it
-        gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-        gallery.init();
-    };
-
-    // loop through all gallery elements and bind events
-    var galleryElements = document.querySelectorAll( gallerySelector );
-
-    for(var i = 0, l = galleryElements.length; i < l; i++) {
-        galleryElements[i].setAttribute('data-pswp-uid', i+1);
-        galleryElements[i].onclick = onThumbnailsClick;
-    }
-
-    // Parse URL and open gallery if it contains #&pid=3&gid=1
-    var hashData = photoswipeParseHash();
-    if(hashData.pid && hashData.gid) {
-        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
-    }
-};
-
-// execute above function
-initPhotoSwipeFromDOM('.my-gallery');
-
-  </script> -->
-
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrapper clearfix">
-
-
-
-
-
-
+    <span>X</span>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector">
+      <img src="" alt="">
+      <p>"<" Foto anterior</p> <p>1</p> <p>Foto siguiente ">"</p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 info-sector">
+      <p class="volanta">Volante</p>
+      <h1 class="title">Titulo</h1>
+      <p class="notas">inforgrafia</p>
+      <p class="content">texto de relleno bleblelblelbelbleblelbelblel
+          texto de relleno bleblelblelbelbleblelbelble
+          texto de relleno bleblelblelbelbleblelbelble
+          texto de relleno bleblelblelbelbleblelbelble
+          texto de relleno bleblelblelbelbleblelbelble
+          texto de relleno bleblelblelbelbleblelbelble
+          texto de relleno bleblelblelbelbleblelbelble
+      </p>
+      <p  class="buttons prev-post">Anterior</p>|<p  class="buttons next-post">Siguiente</p>
+    </div>
   </div>
 
 </div>
 
 
 
-    <?php comments_template(); ?>
-
-<?php } // endwhile
-} // endif
+<?php //} // endwhile
+//} // endif
 ?>
 
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pswp" tabindex="-1" role="dialog" aria-hidden="true" style="top:0">
+<script>
+  
+</script>
 
-
-    <div class="pswp__bg"></div>
-
-    <div class="pswp__scroll-wrap">
-
-
-        <div class="pswp__container">
-
-            <div class="pswp__item">
-            <div class="">sometextss</div></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-
-
-        </div>
-
-
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="bottom:10%; position:absolute;padding-left:25% ">
-              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">Foto anterior
-              </button>
-
-              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">Siguiente foto
-              </button>
-            </div>
-
-          </div>
-
-        </div>
-
-</div>
 
 <style media="screen">
   .pswp__button{

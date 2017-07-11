@@ -334,7 +334,7 @@ class Kopa_Widget_Articles_List extends WP_Widget {
                                    <h6 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a></h6>
                                    <?php global $post; ?>
                                    <p><?php echo kopa_get_the_excerpt_for_widget($post->post_excerpt, $post->post_content, $limit); ?></p>
-                                   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="more-link"><span><?php _e('Read more', 'newsmaxx'); ?></span></a>
+                                   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="more-link"><span>Leer más</span></a>
                                </div>
                                <!-- entry-content -->
                            </article>
@@ -1321,4 +1321,3 @@ class Kopa_Widget_Video extends WP_Widget {
         return $instance;
     }
 }
-

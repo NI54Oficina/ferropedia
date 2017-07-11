@@ -5182,14 +5182,15 @@ ol li > ul > li {
 .more-link {
     display: inline-block;
     padding: 2px;
-    background: #e03d3d; }
+    background: #000; }
 .more-link span {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     display: block;
-    padding: 6px 10px 4px;
-    font-family: "pt_serifregular";
+    padding: 6px 15px 4px;
+    font-family: "Roboto-regular";
     color: white;
-    border: 1px solid white; }
+    /*border: 1px solid white;*/
+   }
 
 .icon-btn {
     display: inline-block;
@@ -5565,7 +5566,7 @@ ol li > ul > li {
  * -----------------------------------------------------------------------------
  */
 body {
-    background: #fff;
+    background: #fff ;
     position: relative;
     font-family: "Arial", sans-serif;
     color: #8f8f8f;
@@ -6346,7 +6347,7 @@ Categories page
     padding-top: 0;
     border-top: none; }
 .entry-list > ul > li .entry-item {
-    background-color: #f9f9f9; }
+    background-color: #fff; }
 .entry-list > ul > li .entry-item .entry-thumb {
     float: left;
     margin-right: 20px;
@@ -6358,8 +6359,8 @@ Categories page
     overflow: hidden;
     margin-bottom: 10px; }
 .entry-list > ul > li .entry-item .entry-content header .entry-title {
-    font-size: 15px;
-    font-family: "pt_serifbold";
+    font-size: 2em;
+    font-family: "Condensed-bold-italic";
     margin-bottom: 8px; }
 .entry-list > ul > li .entry-item .entry-content header .entry-date {
     margin-right: 0; }
@@ -7590,7 +7591,8 @@ Breaking News
 .kp-headline-wrapper {
     max-height: 39px;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+  background: black;}
 
 .kp-headline {
     margin: 0 20px 0 165px; }
@@ -8752,6 +8754,9 @@ body{
     background-color: #000;
 }
 
+body.post-template-default.single.single-post, body.archive.tag, body.seach, body.page-template-template-galeria{
+  background-color: white !important;
+}
 
 .kp-headline-title{
   background-color: #a43c93;
@@ -9147,12 +9152,12 @@ body{
   max-height: 500px;
 }
 
-.third-box-left > div{
+.third-box-left >a> div{
   padding: 0;
   margin: 0;
 }
 
-.fourth-box-left .fourth-container img, .third-box-left > div > img, .six-container-left > div  img{
+.fourth-box-left .fourth-container img, .third-box-left > a > div  > img, .six-container-left > div  img{
   width: 100%;
   height: 100%;
   padding: 0;
@@ -9362,7 +9367,7 @@ padding: 0 35px;
 
 .main-section{
   background-image:  url(img/tile_cesped.svg),url(img/pelota_fondo.png), url(img/jugadores_footer_home.png);
-  background-position: 100% 100%,100% 100%, 90% 105.1%;
+  background-position: 100% 100%,100% 100%, 90% 101.5%;
   background-repeat: repeat-x, no-repeat, no-repeat;
   padding-bottom: 25%;
 }
@@ -9540,6 +9545,9 @@ padding: 0 35px;
       width: 100%;
       height: auto;
       border: 1px solid white;
+    }
+    .jugadores-content {
+      min-height: 500px;
     }
 
     .jugadores-content h2{
@@ -9851,6 +9859,10 @@ padding: 0 35px;
       display: inline;
       width: 25px;
       margin: auto 2px;
+    }
+
+    .custom-search{
+      padding: 5em;
     }
 
 

@@ -7,7 +7,7 @@
         <?php endif; ?>
 
         <span class="entry-meta pull-left">&nbsp;/&nbsp;</span>
-        <span class="entry-author pull-left"><?php _e('By', 'newsmaxx');?> <?php the_author_posts_link(); ?></span>
+        <span class="entry-author pull-left"><?php _e('Por', 'newsmaxx');?> <?php the_author_posts_link(); ?></span>
 
     </header>
 

@@ -11,6 +11,9 @@
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left">
 
+
+
+
 <!-- PARTE COMENTADA -->
         <!-- <?php kopa_breadcrumb(); ?> -->
         <!-- breadcrumb -->
@@ -208,7 +211,7 @@
 
     foreach($posts as $post){
     ?>
-
+<a href="<?php the_permalink($posts[0]->ID ); ?>">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
       <?php the_post_thumbnail( 'thumbnail' ) ?>
       <div class="triangulo-verde"></div>
@@ -230,13 +233,14 @@
 
       <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
     </div>
-
-  <?php } ?>
+</a>
+  <?php }  wp_reset_postdata();  ?>
 
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
-    <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
+      <?php echo do_shortcode("[custom-twitter-feeds]"); ?>
+    <!-- <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt=""> -->
   </div>
 
 </div>
@@ -249,21 +253,21 @@
     <h1>De la cuna hasta el cajón</h1>
 
     <?php
-    $posts= get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>4 ) );
+    $posts_cuna= get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>4 ) );
 ?>
-    <a href="<?php the_permalink($posts[0]->ID ); ?>">
+    <a href="<?php the_permalink($posts_cuna[0]->ID ); ?>">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-left">
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-                <?php echo the_post_thumbnail( 'thumbnail' )?>
+                <?php echo the_post_thumbnail( 'thumbnail' );?>
                 <div class="triangulo-verde"></div>
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-                <p><?php the_title_attribute($posts[0]->ID ); ?></p>
+                <p><?php the_title_attribute($posts_cuna[0]->ID ); ?></p>
 
                 <p><?php // Fetch post content
-                      $content = get_post_field( 'post_content',$posts[0]->ID );
+                      $content = get_post_field( 'post_content',$posts_cuna[0]->ID );
 
                       // Get content parts
                       $content_parts = get_extended( $content );
@@ -290,7 +294,7 @@
       //CATEGORIA 4  = DE LA CUNA HASTA EL CAJON
       $first=FALSE;
 
-        foreach ($posts as $post) {
+        foreach ($posts_cuna as $post) {
 
           if ($first != TRUE)
              {
@@ -388,14 +392,14 @@
 
  -->
     <?php
-      	$posts= get_posts( array('numberposts' => 2, "post_type"=>"post") );
+      	$posts= get_posts( array('numberposts' => 2, "post_type"=>"post", 'category'=>3 ) );
 
         // echo var_dump($posts);
 
       foreach ($posts as $post) {
-        $post_categories = wp_get_post_categories($post->ID );
-        $cat = get_category($post_categories[0]);
-        if( $cat->slug=='museo'){
+        // $post_categories = wp_get_post_categories($post->ID );
+        // $cat = get_category($post_categories[0]);
+        // if( $cat->slug=='museo'){
         ?>
 
 
@@ -422,7 +426,7 @@
 
         </a>
 
-    <?php }  }  wp_reset_postdata();   ?>
+    <?php  }  wp_reset_postdata();   ?>
 
 
 
