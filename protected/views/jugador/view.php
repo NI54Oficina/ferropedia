@@ -122,4 +122,7 @@ jQuery("body").on("click",".assign-avatar",function(){
 });
 </script>
 
-<?php } ?>
+<?php } 
+?>
+</div>
+</div>

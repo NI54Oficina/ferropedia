@@ -59,3 +59,33 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
+
+<?php 
+
+$jugadores= Jugador::model()->findAll();
+foreach($jugadores as $jugador){
+	if($jugador->puesto==""||!isset($jugadro->puesto)){
+	$jugador->puesto= GetPuesto($jugador->detalle_puesto);
+	$jugador->save();
+	}
+	
+}
+
+function GetPuesto($detalle){
+	switch($detalle){
+		case "Centrodelantero": case "Delantero": case "Insider derecho": case "Insider derecho o izquierdo": case "Insider iquierdo": case "Insider izquierdo": case "Puntero derecho": case "Puntero derecho e izquierdo": case "Puntero izquierdo": case "Puntero derecho o izquierdo":
+		return "delantero"; break;
+		case "Half izquierdo": case "Back  derecho": case "Back derecho": case "Back central": case "Back izquierdo": case "Centre half":  case "Defensor": case "Half derecho": case "Half derecho o izquierdo": case "Back  derecho o izquierdo": case "Back derecho y centromedio": 
+		return "defensor"; break;
+		case "Arquero":
+		return "arquero";break;
+		case "Centromedio": case "Entreala derecho": case "Enterala izquierdo": case "Entreala": case "Entreala izquierdo": case "Polifuncional": case "Volante": case "Volante central": 
+		return "mediocampista"; break;
+		
+		
+		
+	}
+	
+}
+
+?>
