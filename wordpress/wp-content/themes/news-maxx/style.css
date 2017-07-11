@@ -5705,7 +5705,7 @@ body {
 .main-section .wrapper {
     /*border-left: 1px solid #d8d8d8;
     border-right: 1px solid #d8d8d8;*/
-    padding: 15px 20px;
+    /*padding: 15px 20px;*/
     /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
   }
 .main-section .wrapper .main-col {
@@ -6995,12 +6995,14 @@ Contact page
     list-style: none; }
 
 .main-section .widget {
-    margin-bottom: 20px; }
+    /*margin-bottom: 20px;*/
+   }
 
     .owl-wrapper-outer{
       padding-left: 5%;
     }
 .main-section .widget .widget-title {
+  margin: 0 !important;
     text-transform: uppercase;
     text-align: center;
     border-bottom: 1px solid #d8d8d8;
@@ -8754,7 +8756,7 @@ body{
     background-color: #000;
 }
 
-body.post-template-default.single.single-post, body.archive.tag, body.seach, body.page-template-template-galeria{
+body.post-template-default.single.single-post, body.archive.tag, body.seach, body.page-template-template-galeria, body.category-cuna-cajon{
   background-color: white !important;
 }
 
