@@ -8897,7 +8897,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           padding:0 0 20px 0px;
 		  border-bottom: 3px solid rgba(0,0,0,1);
 		  margin-bottom:30px;
-		  
+		  text-shadow:2px 2px black
         }
 		
 		.second-interior{
@@ -8979,7 +8979,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           border: none;
         }
 
-        .first-right-box h1{
+        .first-right-box h2{
           color: white;
           font-family: 'Condensed-bold-italic';
           font-size: 2em;
@@ -9084,14 +9084,14 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
         .box-jugador{
           padding: 5px;
         }
-        .box-jugador > .imagen-jugador-violeta {
+        .box-jugador .imagen-jugador-violeta {
           background-color: #a43c93;
           width: 100%;
           height: 170px;
           position: relative;
         }
 
-        .box-jugador > .imagen-jugador-verde{
+        .box-jugador  .imagen-jugador-verde{
           background-color:#00b643;
           width: 100%;
           height: 170px;
@@ -9134,6 +9134,10 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           opacity: .7;
           top:0;
         }
+		
+		.border-jugador{
+			width:100%;height:100%;border:2px solid rgba(255,255,255,0.2);
+		}
 
         .box-mas-jugador .imagen-jugador-violeta img,   .box-mas-jugador .imagen-jugador-verde img{
           position: absolute;
@@ -9157,6 +9161,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           font-family: 'Condensed-italic';
           font-weight: 100;
           font-size: 1.3em;
+		  text-align:center;
         }
 
         .box-mas-jugador label{
@@ -9167,9 +9172,10 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
 
 /*tercer bloque*/
-.third-box{
-  padding-left: 2em;
-  padding-right: 2em;
+.main-section .wrapper > .col-lg-12.third-box{
+
+  padding: 60px;
+  padding-bottom:0;
 }
 .third-box-left{
   border: 1px solid white;
@@ -9177,10 +9183,18 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
   max-height: 500px;
 }
 
+.third-box-left .box-left{
+	background-size:100% auto;
+	background-position: top center;
+	height:100%;
+}
+
 .third-box-left >a> div{
   padding: 0;
   margin: 0;
 }
+
+
 
 .fourth-box-left .fourth-container img, .third-box-left > a > div  > img, .six-container-left > div  img{
   width: 100%;
@@ -9213,7 +9227,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
   font-size: 16px;
 }
 
-.third-box-left .box-right h1{
+.third-box-left .box-right h2{
   font-family: 'Condensed-bold-italic';
   color: white;
   font-size: 4em;
@@ -9247,10 +9261,37 @@ p.fecha-post-home.verde{
 
 /*cuarto bloque*/
 
-.fourth-box-left h1{
+.main-section .wrapper > .fourth-box{
+	padding:60px;
+}
+
+.fourth-box-left{
+	padding:0;
+}
+
+.fourth-box-left h2{
   color: #006443;
   background-color: white;
   border-bottom: 3px solid #006443;
+}
+
+.six-container-left .thumb , .fourth-box-left .fourth-container  .thumb{
+	width: 100%;
+	
+	padding:0;
+	margin:0;
+	background-position:top center;
+	background-size:100% auto;
+	height:250px;
+}
+
+.mini-thumb{
+	background-color:rgba(0,182,67,.3);
+	padding:0;
+	margin:0;
+	background-position:top center;
+	background-size:100% auto;
+	height:60px;
 }
 
 .fourth-box-left .fourth-container{
@@ -9311,11 +9352,15 @@ padding: 0 35px;
 
 /*sexto bloque*/
 
-  .six-box{
-
+  .main-section .wrapper > .six-box{
+	padding:60px;
+  }
+  
+  .six-box-left{
+	padding:0;
   }
 
-  .six-box .six-box-left h1{
+  .six-box .six-box-left h2{
     background-color: #006443;
     color:white;
     border-bottom: 3px solid black;
@@ -9484,7 +9529,7 @@ padding: 0 35px;
       color:white;
     }
 
-    .label-name-page h1{
+    .label-name-page h2{
       font-family: 'Condensed-bold-italic';
       font-size: 2em;
       color:white;
@@ -9667,10 +9712,12 @@ padding: 0 35px;
 
   /*generales*/
 
-.box-with-title h1{
+.box-with-title h2{
   font-family: 'Condensed-bold-italic';
   padding: 5px 4%;
   margin-top: 0;
+  font-size:24px;
+  line-height:28px;
 }
   /*generales*/
 
@@ -9741,7 +9788,7 @@ padding: 0 35px;
       margin-bottom: 20px;
     }
 
-    .columna-relacionados h1{
+    .columna-relacionados h2{
       background-color: #a43c93;
       color: white;
       font-family: 'Condensed-bold-italic';
