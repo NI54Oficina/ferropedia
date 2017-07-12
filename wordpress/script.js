@@ -343,6 +343,16 @@ function _square(){
 		var ancho = $(this).outerWidth();
 		//console.log("ancho "+ancho);
 	  $(this).css('height', ancho+"px");
+		}
+	});
+	$(".rectangle").each(function(){
+		if($(this).attr("onlymobile")=="true"&&!isMobile){
+			//console.log("entra poyo");
+			 $(this).css('height', "auto");
+		}else{
+		var ancho = $(this).outerWidth();
+		//console.log("ancho "+ancho);
+	  $(this).css('height', ancho*1.2+"px");
 
 /*
 	   $(".box-producir-2 > div > div > p" ).each(function( index ) {

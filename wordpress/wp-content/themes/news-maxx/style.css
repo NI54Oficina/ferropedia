@@ -5708,9 +5708,10 @@ body {
     /*padding: 15px 20px;*/
     /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
   }
+.main-section .wrapper > .col-lg-12{padding-left:0;padding-right:0;}
 .main-section .wrapper .main-col {
     /*width: 902px;*/
-    padding-right: 20px; }
+    /*padding-right: 20px;*/ }
 .main-section .wrapper .sidebar {
     width: 287px;
     padding-left: 20px; }
@@ -8879,19 +8880,29 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 /*primero bloque en home*/
 
 
-        .first-left-box-inner h1, .second-box h1{
+        .first-left-box-inner h2, .second-box h2{
           font-family: "Condensed-bold-italic";
           font-size: 3em;
           color:white;
           margin-bottom:5px;
         }
+		
+		.second-box.bloque{
+			padding:50px 40px;
+			;
+		}
+		
 
-        .second-box h1{
-          padding:0 0 20px 60px;
+        .second-box h2{
+          padding:0 0 20px 0px;
+		  border-bottom: 3px solid rgba(0,0,0,1);
+		  margin-bottom:30px;
+		  
         }
-        .second-box.bloque{
-          padding-top:  3em !important;
-        }
+		
+		.second-interior{
+			width:100%;text-align:center;
+		}
 
         .first-left-box-inner > div{
           padding-left: 0;
@@ -9026,11 +9037,17 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
 
         .second-box-left .box-left{
-          text-align: center;
+          text-align: left;
+		  padding-left:0;
+		  padding-right:50px;
         }
+		
+		.second-box-left{
+			padding-right:50px;
+		}
 
         .second-box-left .box-left img{
-          width: 80%;
+          max-width: 100%;
           border: 1px solid black;
         }
 
@@ -9051,12 +9068,12 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
         }
 
         .second-box-left .box-right{
-          border-left: 2px solid black;
+          border-left: 2px solid rgba(0,0,0,0.3);
           padding-left: 20px;
         }
 
         .second-box-left .box-right p{
-          border-bottom: 1px dashed black;
+          border-bottom: 2px dashed rgba(0,0,0,0.5);
           color: white;
           padding: 15px 0;
           font-size: 1.2em;
@@ -9087,13 +9104,19 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
         .imagen-jugador-violeta,.imagen-jugador-verde{
           position: relative;
+		  background-position: top center;
+		  background-size: auto 100%;
+		  background-repeat:no-repeat;
+        }
+		
+		.imagen-jugador-violeta.placeholder-avatar,.imagen-jugador-verde.placeholder-avatar{
+          background-size:60% auto;
+		  background-repeat:no-repeat;
+		  background-position: 50% 70%;
+		  
         }
 
-        .box-jugador .imagen-jugador-violeta img,   .box-jugador .imagen-jugador-verde img{
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
+        
         .capa-violeta{
           position: absolute;
           width: 100%;

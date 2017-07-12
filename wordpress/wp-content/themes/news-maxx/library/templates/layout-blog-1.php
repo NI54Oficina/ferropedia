@@ -30,7 +30,7 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner" hid="1" >
 
-      <h1>Totales</h1>
+      <h2>Totales</h2>
       <p>Última actualización: 24 de abril a las 19.00pm</p>
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -121,25 +121,30 @@
   </div>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box bloque">
-    <h1>Con la verde</h1>
+    
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
+		<h2>Con la verde</h2>
 
-
-
+		<?php $jugador= Jugador::model()->findByPk(27); ?>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
 
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
-        <p>Jose Perez</p>
+		<div class="second-interior">
+        <p><?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
         <a href="http://localhost/ferropedia/ficha-jugador-interna"><button type="butto n" name="button">Ver Ficha</button></a>
+		</div>
       </div>
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
 
-        <p>Delantero</p>
-        <p>Delantero</p>
-        <p>Delantero</p>
-        <p>Delantero</p>
+        <p><?php echo $jugador->detalle_puesto; ?></p>
+        <p>38 partidos jugados</p>
+        <p>30 goles</p>
+        <p>Debút <br>
+		18 de marzo de 2011<br>
+		Ferro 2 - 1 Rival
+		</p>
 
         <img class="copa-verde" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/copa-verde.svg" alt="">
 
@@ -150,17 +155,17 @@
 
       <a href="http://localhost/ferropedia/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
-        <div class="imagen-jugador-violeta square">
-          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt="">
+        <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
+          
           <label>+ Jugadores</label>
         </div>
       </div>
     </a>
       <?php for($i=0; $i<2; $i++){ ?>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="imagen-jugador-violeta square">
+        <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
-          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+          
 
           <div class="capa-violeta"></div>
             <label>Nombre de Jugador</label>
@@ -178,9 +183,9 @@
 
 
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
-        <div class="imagen-jugador-verde square">
+        <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
-          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+          
 
           <div class="capa-verde"></div>
           <label>Nombre deL Dt</label>
@@ -190,8 +195,8 @@
       <?php } ?>
       <a href="http://localhost/ferropedia/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
-        <div class="imagen-jugador-verde square">
-          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt="">
+        <div class="imagen-jugador-verde rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
+          
             <label>+ Dts</label>
         </div>
       </div>
