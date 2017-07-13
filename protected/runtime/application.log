@@ -873,3 +873,38 @@ in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (643)
 2017/07/12 16:53:16 [trace] [system.CModule] Loading "clientScript" application component
 in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
 in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
+2017/07/13 12:27:20 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/13 12:27:20 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/13 12:27:20 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/13 12:27:20 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\ferropedia\index.php (22)
+2017/07/13 12:27:21 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-content\themes\news-maxx\library\templates\layout-blog-1.php (129)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (686)
+2017/07/13 12:27:21 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-content\themes\news-maxx\library\templates\layout-blog-1.php (129)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (686)
+2017/07/13 12:27:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-content\themes\news-maxx\library\templates\layout-blog-1.php (129)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (686)
+2017/07/13 12:27:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_jugador`
+in C:\xampp\htdocs\ferropedia\protected\models\Jugador.php (24)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-content\themes\news-maxx\library\templates\layout-blog-1.php (129)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (686)
+2017/07/13 12:27:21 [trace] [system.db.ar.CActiveRecord] Jugador.findByPk()
+in C:\xampp\htdocs\ferropedia\wordpress\wp-content\themes\news-maxx\library\templates\layout-blog-1.php (129)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (686)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (643)
+2017/07/13 12:27:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_jugador` `t` WHERE `t`.`id`=27 LIMIT 1
+in C:\xampp\htdocs\ferropedia\wordpress\wp-content\themes\news-maxx\library\templates\layout-blog-1.php (129)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (686)
+in C:\xampp\htdocs\ferropedia\wordpress\wp-includes\template.php (643)
+2017/07/13 12:27:22 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\ferropedia\protected\controllers\WpController.php (8)
+in C:\xampp\htdocs\ferropedia\protected\components\ExceptionHandler.php (21)
