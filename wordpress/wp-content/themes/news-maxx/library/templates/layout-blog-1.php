@@ -68,7 +68,7 @@
   </div>
 
   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 first-right-box" hid="1">
-    <h1>Historial</h1>
+    <h2>Historial</h2>
 
     <?php $var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales'];
 
@@ -126,7 +126,7 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
 		<h2>Con la verde</h2>
 
-		<?php $jugador= Jugador::model()->findByPk(27); ?>
+		<?php $jugador= Jugador::model()->findByPk(26); ?>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
 
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
@@ -141,9 +141,14 @@
         <p><?php echo $jugador->detalle_puesto; ?></p>
         <p>38 partidos jugados</p>
         <p>30 goles</p>
+		<?php $jugador->data; ?>
+		
         <p>Debút <br>
-		18 de marzo de 2011<br>
-		Ferro 2 - 1 Rival
+		<?php foreach($jugador->data as $data){ ?>
+			<?php if($data["titulo"]=="Debut"){ ?>
+				<?php echo $data["texto"]; ?>
+			<?php } ?>
+		<?php } ?>
 		</p>
 
         <img class="copa-verde" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/copa-verde.svg" alt="">
@@ -155,14 +160,17 @@
 
       <a href="http://localhost/ferropedia/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
+		<div class="border-jugador">
         <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
           
           <label>+ Jugadores</label>
         </div>
+		</div>
       </div>
     </a>
       <?php for($i=0; $i<2; $i++){ ?>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+		<div class="border-jugador">
         <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
           
@@ -170,6 +178,7 @@
           <div class="capa-violeta"></div>
             <label>Nombre de Jugador</label>
         </div>
+		</div>
       </div>
 
       <?php } ?>
@@ -183,6 +192,7 @@
 
 
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
+		<div class="border-jugador">
         <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
           
@@ -190,15 +200,18 @@
           <div class="capa-verde"></div>
           <label>Nombre deL Dt</label>
         </div>
+		</div>
       </div>
 
       <?php } ?>
       <a href="http://localhost/ferropedia/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
+		<div class="border-jugador">
         <div class="imagen-jugador-verde rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
           
             <label>+ Dts</label>
         </div>
+		</div>
       </div>
     </a>
 
@@ -209,22 +222,22 @@
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-box bloque">
 
-  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 third-box-left">
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 third-box-left" style="overflow:hidden;">
 
     <?php    $posts= get_posts( array('numberposts' => 1, "post_type"=>"post", 'category'=>2 ) );
 
 
     foreach($posts as $post){
     ?>
-<a href="<?php the_permalink($posts[0]->ID ); ?>">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
-      <?php the_post_thumbnail( 'thumbnail' ) ?>
+<a href="<?php the_permalink($posts[0]->ID ); ?>" style="display:block;width:100%;height:500px;">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);" >
+		<h4 style="color:white;"> </h4>
       <div class="triangulo-verde"></div>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
       <h3> El rincón del Mudo</h3>
-      <h1><?php the_title_attribute($posts[0]->ID ); ?></h1>
+      <h2><?php the_title_attribute($posts[0]->ID ); ?></h2>
       <p>
         <?php // Fetch post content
               $content = get_post_field( 'post_content',$posts[0]->ID );
@@ -255,7 +268,7 @@
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
 
-    <h1>De la cuna hasta el cajón</h1>
+    <h2>De la cuna hasta el cajón</h2>
 
     <?php
     $posts_cuna= get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>4 ) );
@@ -263,8 +276,9 @@
     <a href="<?php the_permalink($posts_cuna[0]->ID ); ?>">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-left">
 
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-                <?php echo the_post_thumbnail( 'thumbnail' );?>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" >
+				<div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($posts_cuna[0]->ID, 'full'); ?>);"></div>
+                <?php //echo the_post_thumbnail( 'thumbnail' );?>
                 <div class="triangulo-verde"></div>
               </div>
 
@@ -311,8 +325,10 @@
          ?>
          <a href="<?php the_permalink($post->ID ); ?>">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-inner-container">
-        <?php echo the_post_thumbnail( 'thumbnail' )?>
+        
+		<div class="col-lg-3 col-md-3 mini-thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>);"></div>
         <p class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><?php the_title_attribute($post->ID ); ?> <br>  <span> <?php echo  get_the_date( 'l F j, Y' ) ?></span></p>
+		
       </div></a>
 
           <?php }  wp_reset_postdata();  ?>
@@ -373,7 +389,7 @@
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title fourth-box-left">
 
-    <h1>Museo</h1>
+    <h2>Museo</h2>
 
     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
@@ -412,7 +428,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-          <?php echo the_post_thumbnail( 'thumbnail' )?>
+          <div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);"></div>
             <div class="triangulo-verde"></div>
           </div>
 
@@ -437,8 +453,8 @@
 
   </div>
 
-  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right ultimos-comentarios-widget">
-
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right ultimos-comentarios-widget" style="overflow:hidden;">
+		<div style="width:100%;height:400px; background-color:#a43c93;"><h3 style="color:white;text-align:center;margin-top:0;padding-top:10px;">Ultimos comentarios <br><span style="font-size:8px;">(placeholder)</span></div>
         <?php// get_recent_comments(); ?>
 
     </div>
