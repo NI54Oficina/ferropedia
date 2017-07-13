@@ -63,7 +63,7 @@ global $kopa_setting;
       object={};
       object['title']='<?php the_title(); ?>';
       object['content']='<?php echo(get_the_excerpt($post->ID)); ?>';
-      object['volanta']='<?php the_title(); ?>';
+      object['volanta']='<?php echo get_field('volanta')?>';
       object['category']='<?php the_title(); ?>';
       object['notes']='<?php the_title(); ?>';
 
@@ -155,7 +155,7 @@ global $kopa_setting;
     <span id="close-modal">X</span>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector">
       <img src="" alt="">
-      <p>"<" Foto anterior</p> <p>1</p> <p>Foto siguiente ">"</p>
+      <p class="prev-image">"<" Foto anterior</p> <p>1</p> <p class="next-image">Foto siguiente ">"</p>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 info-sector">
       <p class="volanta"></p>
