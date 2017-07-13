@@ -5707,6 +5707,7 @@ body {
     border-right: 1px solid #d8d8d8;*/
     /*padding: 15px 20px;*/
     /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
+	background-color:#20201f;
   }
 .main-section .wrapper > .col-lg-12{padding-left:0;padding-right:0;}
 .main-section .wrapper .main-col {
@@ -8973,11 +8974,17 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
         .first-right-box table{
           border: none;
           border-top: 1px solid #006443;
+		  
         }
 
         .first-right-box table tr td{
           border: none;
+		  
         }
+		
+		.first-right-box table tr td:first-child{
+			padding-left:35px;
+		}
 
         .first-right-box h2{
           color: white;
@@ -9648,7 +9655,16 @@ padding: 0 35px;
       display:none;
       padding: 30px 0 0 20px;
     }
-
+	
+	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row{
+		padding:0;
+		border-bottom:1px solid gray;
+		margin:0 10px;
+	}
+	
+	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row:last-child{
+		border:none;
+	}
 
     .jugadores-content nav.menu-interno p.selected{
       background-color: #00b643;
@@ -9724,26 +9740,63 @@ padding: 0 35px;
   /*pantalla jugadores interna*/
 
 
-  .first-box-ficha-tecnica{
-    background-image:
+  .main-section .wrapper > .first-box-ficha-tecnica{
+    background:repeating-linear-gradient( -45deg,   #232621,   #232621 5px,   #191b17 5px,   #191b17 10px );
+	padding:40px 50px;
+	
   }
     .sector-cancha-float{
-      z-index: -1;
+      z-index: 10;
       position: absolute;
-      width: 86%;
+      /*width: 86%;*/
+	  width:100%;
       background-color: #00b643;
       height: 100px;
       bottom:0;
       top:0;
-      margin: auto;
+     /* margin: auto;*/
     }
+	
+	.cancha{
+		position:relative;
+		z-index:11;
+		background-image: url(img/cancha-transparente-01.svg);
+		background-size:100% auto;
+		width:100%;
+		height:100%;
+		min-height:340px;
+		background-repeat:no-repeat;
+		overflow:hidden;
+	}
+	
+	.cancha-delantero{
+		
+		top:0;
+	}
+	.cancha-mediocampista{
+		
+		
+		top:30%;
+	}
+	.cancha-defensor{
+		
+		top:50%;
+	}
+	.cancha-arquero{
+		
+		top:65%;
+	}
+	
+	.contenido-interno-tecnica{
+		padding:60px;
+	}
 
-    .contenido-interno-tecnica h1{
+    .contenido-interno-tecnica h2{
       color:white;
       font-family: 'Condensed-bold-italic';
     }
 
-    .tecnica-detalle h1, .tecnica-galeria h1{
+    .tecnica-detalle h2, .tecnica-galeria h2{
       /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
       background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);
     }
@@ -9758,8 +9811,17 @@ padding: 0 35px;
     .jugador-principal{
       border: 3px solid white;
     }
+	
+	.tecnica-detalle h2, .tecnica-galeria h2,.tecnica-video h2{
+		font-size:33px;
+		padding:10px 25px;
+		-webkit-box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
+margin-bottom:40px;
+	}
 
-    .tecnica-video h1{
+    .tecnica-video h2{
     background:repeating-linear-gradient(-45deg, #a43c93, #a43c93 2px, rgba(0,0,0,0.3) 6px, rgba(0,0,0,0.3) 5px);
     }
 
@@ -9801,6 +9863,8 @@ padding: 0 35px;
     .informacion-tecnica h1{
       font-family: 'Condensed-bold-italic';
       color:white;
+	  font-size:40px;
+	  padding-left:15px;
     }
     .informacion-tecnica h1 span{
       color:rgba(0,182,67,.7);
@@ -9816,8 +9880,16 @@ padding: 0 35px;
     }
 
     .informacion-tecnica-inner h3{
+	font-size:24px;
+	line-height:28px;
       color:rgba(0,182,67,.7);
       font-family: 'Condensed-bold-italic';
+    }
+	
+	.informacion-tecnica-inner h4{
+      color:rgba(0,182,67,.7);
+      font-family: 'Condensed-bold-italic';
+	  text-transform:capitalize;
     }
 
     .info-nacimiento p{
@@ -9827,26 +9899,37 @@ padding: 0 35px;
     .info-nacimiento p span{
       color:rgba(0,182,67,.7);
     }
-
-    .informacion-dinamica h1{
+	
+	.informacion-dinamica.campanas-jugador {
+		
+		
+		margin-top:10px;
+		
+	}
+    .informacion-dinamica h2{
       color: white;
       border-bottom: 1px solid #006443;
       font-family: 'Condensed-italic';
       text-align: center;
       width: 100%;
-      font-size: 1.3em;
-      padding-bottom: 9px;
+      font-size: 23px;
+      
+	  background:repeating-linear-gradient( -45deg,   #232621,   #232621 5px,   #191b17 5px,   #191b17 10px );
+	  margin-top:0;
+	  margin-bottom:0;
+	  padding:20px;
     }
 
     .informacion-dinamica .menu-anios{
       font-size: 15px;
       padding-bottom:3em;
+	  background-color:#080808;
     }
 
     .informacion-dinamica .menu-anios nav{
       padding-left: 3em;
       padding-bottom: 2em;
-
+		padding-top:1em;
     }
 
     .informacion-dinamica .menu-anios nav > p{

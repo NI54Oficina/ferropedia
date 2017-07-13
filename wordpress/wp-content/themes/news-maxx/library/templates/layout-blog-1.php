@@ -126,29 +126,38 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
 		<h2>Con la verde</h2>
 
-		<?php $jugador= Jugador::model()->findByPk(26); ?>
+		<?php $destacado= Jugador::model()->findByPk(26); ?>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
 
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 		<div class="second-interior">
-        <p><?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
+        <p><?php echo $destacado->nombre." ".$destacado->apellido; ?></p>
         <a href="http://localhost/ferropedia/ficha-jugador-interna"><button type="butto n" name="button">Ver Ficha</button></a>
 		</div>
       </div>
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
-
-        <p><?php echo $jugador->detalle_puesto; ?></p>
-        <p>38 partidos jugados</p>
-        <p>30 goles</p>
-		<?php $jugador->data; ?>
+		<?php $destacado->data;
+		$lastTorneo="";
+		$debut="";
+		foreach($destacado->data as $data){ ?>
+			<?php if($data["titulo"]=="Debut"){
+				$debut =$data["texto"];
+			}else if($data["titulo"]=="Torneo"){
+				$lastTorneo= $data["texto"];
+			}
+		 }
+		$lastTorneo= explode("/",$lastTorneo);
+		$debut= explode(";",$debut);
+		 ?>
+        <p><?php echo $destacado->detalle_puesto; ?></p>
+        <p><?php echo $lastTorneo[0]; ?> partidos jugados</p>
+        <p><?php echo $lastTorneo[1]; ?> goles</p>
+		
 		
         <p>Debút <br>
-		<?php foreach($jugador->data as $data){ ?>
-			<?php if($data["titulo"]=="Debut"){ ?>
-				<?php echo $data["texto"]; ?>
-			<?php } ?>
-		<?php } ?>
+		<?php echo $debut[0]; ?><br>
+		Ferro <?php echo $debut[1]; ?>
 		</p>
 
         <img class="copa-verde" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/copa-verde.svg" alt="">
@@ -168,7 +177,21 @@
 		</div>
       </div>
     </a>
-      <?php for($i=0; $i<2; $i++){ ?>
+		<?php
+		$destacadoId= $destacado->id;
+		$criteria = new CDbCriteria;
+$criteria->limit = 2;
+$criteria->condition = "id != $destacadoId";
+$criteria->order = 'RAND()';
+$criteria->select = "*";
+
+		$jugadores= Jugador::model()->findAll($criteria);
+		
+		?>
+      <?php foreach($jugadores as $jugador){ 
+		
+	  ?>
+	  <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
@@ -176,11 +199,11 @@
           
 
           <div class="capa-violeta"></div>
-            <label>Nombre de Jugador</label>
+            <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?></label>
         </div>
 		</div>
       </div>
-
+	</a>
       <?php } ?>
 
 

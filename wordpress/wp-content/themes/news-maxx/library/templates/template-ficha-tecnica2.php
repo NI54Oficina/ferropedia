@@ -4,7 +4,35 @@ $model= $GLOBALS["jugador"];
 <?php
   get_header();
 
-
+$model->data;
+		$lastTorneo="";
+		$debut="";
+		$ultimo="";
+		$torneos=array();
+		$otros= array();
+foreach($model->data as $data){ 
+	if($data["titulo"]=="Debut"){
+		$debut =$data["texto"];
+	}else if($data["titulo"]=="Torneo"){
+		$auxT= explode("/",$data["texto"]);
+		if(count($auxT)>2){
+			if(isset($torneos[$auxT[0]])){
+				array_push($torneos[$auxT[0]],$auxT);
+			}else{
+				$torneos[$auxT[0]]= array($auxT);
+			}
+		}
+		$lastTorneo= $data["texto"];
+	}else if($data["titulo"]=="Último partido"){
+		$ultimo= $data["texto"];
+	}else{
+		array_push($otros,$data);
+	}
+ }
+ 
+$lastTorneo= explode("/",$lastTorneo);
+$debut= explode(";",$debut);
+$ultimo= explode(";",$ultimo);
 
  ?>
 
@@ -18,24 +46,47 @@ $model= $GLOBALS["jugador"];
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box-ficha-tecnica">
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;">
 
-          <div class="sector-cancha-float"></div>
-            <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-transparente-01.svg" alt="">
+          <div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>
+		  <div class="cancha">
+		  
+		  </div>
+			
+            <!--<img class="cancha" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-transparente-01.svg" alt="">!-->
         </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-tecnica">
+        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 informacion-tecnica">
           <h1><?php echo $model->nombre; ?> <span><?php echo $model->apellido; ?></span></h1>
-          <?php for($i=0; $i<3; $i++){ ?>
+          
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
-            <h2>350</h2>
+            <h2><?php echo $lastTorneo[0]; ?></h2>
             <p>Todos partidos jugados</p>
             <h3><?php echo $model->detalle_puesto; ?></h3>
-            <p><?php echo $model->puesto; ?></p>
+            <h4><?php echo $model->puesto; ?></h4>
+            <p>Puesto</p>
           </div>
-          <?php } ?>
-
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento">
+         
+		  
+		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
+            <h2>??</h2>
+            <p>Total partidos ganados</p>
+            <h3><?php echo $debut[0]; ?></h3>
+            <h4>Ferro <?php echo $debut[1]; ?></h4>
+            <p>Debut</p>
+          </div>
+		  
+		  
+		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
+            <h2><?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?></h2>
+            <p>Total Goles Convertidos</p>
+            <h3><?php echo $ultimo[0]; ?></h3>
+            <h4>Ferro <?php echo $ultimo[1]; ?></h4>
+            <p>Último partido</p>
+          </div>
+		
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#1b211e;">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento" style="border-right: 1px solid white;">
             <p><span>Fecha y lugar de nacimiento</span><br>
               <?php echo $model->nacimiento; ?> <?php if(isset($model->ciudad_natal)&&$model->ciudad_natal!=""){ ?>| <?php echo $model->ciudad_natal;  }?>
             </p>
@@ -46,6 +97,7 @@ $model= $GLOBALS["jugador"];
               <?php echo $model->defuncion; ?>
             </p>
           </div>
+		  </div>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -88,8 +140,9 @@ $model= $GLOBALS["jugador"];
           </div>
          -->
         </div>
+		<?php if(false){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
-          <h1>Campañas del jugador</h1>
+          <h2>Campañas del jugador</h2>
 
           <div class="menu-anios menu-dinamico">
             <nav>
@@ -143,18 +196,104 @@ $model= $GLOBALS["jugador"];
               pork belly. Tenderloin ham hock venison kielbasa jowl fatback.
           </p>
         </div>
+		<?php } ?>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador">
+          <h2>Campañas del jugador</h2>
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
+            <nav>
+              <p class="selected">Todos</p>
+			  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+              <p><?php echo $key; ?></p>
+			  <?php } ?>
+
+          </nav>
+			<?php //var_dump($torneos); ?>
+          <div class="tabla-anios-jugador">
+            <div class="titulo-tabla">
+              <div class="col-lg-2">Año</div>
+              <div class="col-lg-4">Torneo</div>
+              <!--<div class="col-lg-2">Division</div>!-->
+              <div class="col-lg-3">Partidos jugados</div>
+              <div class="col-lg-3">Goles convertidos</div>
+            </div>
+			
+         
+
+            <div class="col-lg-12 cuerpo-tabla contenido-dinamico">
+
+           
+				<?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+
+				<?php foreach($value as $torneo){ ?>
+				<div class="row">
+                <div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
+                <div class="col-lg-4"><?php echo $torneo[1]; ?></div>
+                <div class="col-lg-3 partidos-jugados"><?php echo $torneo[2]; ?></div>
+                <div class="col-lg-3 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
+				</div>
+				
+				
+				<?php } } ?>
+				
+				
+     
 
 
+          </div>
+		  
+		  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+				<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
+				<?php foreach($value as $torneo){ ?>
+				<div class="row">
+                <div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
+                <div class="col-lg-4"><?php echo $torneo[1]; ?></div>
+                <div class="col-lg-3 partidos-jugados"><?php echo $torneo[2]; ?></div>
+                <div class="col-lg-3 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
+				</div>
+				<?php } ?>
+				</div>
+				
+				<?php  } ?>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle contenido-interno-tecnica">
-          <h1>Detalle</h1>
+
+          
+          </div>
+          </div>
+
+          <p class="col-lg-12 texto-fuente">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
+              chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage
+              ham hock leberkas pork chop tongue bacon tenderloin alcatra. Kevin picanha
+              alcatra tenderloin prosciutto. Pancetta pork belly pig jerky. Filet
+              mignon beef shoulder ball tip short ribs, shankle turducken kielbasa.
+              Turducken cow pork drumstick filet mignon chuck andouille ribeye tri-tip
+              pork belly. Tenderloin ham hock venison kielbasa jowl fatback.
+          </p>
+        </div>
+
+
+		<?php if(false){ ?>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle">
+          <h2>Detalle</h2>
           <p><b>Algo destacado <br></b>
             Shank ham hock tenderloin spare ribs, meatloaf flank pork chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage ham hock leberkas pork chop tongue bacon tenderloin alcatra. Kevin picanha alcatra tenderloin prosciutto. Pancetta pork belly pig jerky. Filet mignon beef shoulder ball tip short ribs, shankle turducken kielbasa. Turducken cow pork drumstick filet mignon chuck andouille ribeye tri-tip pork belly. Tenderloin ham hock venison kielbasa jowl fatback.
           </p>
         </div>
+		<?php } ?>
+		
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle">
+          <h2>Detalle</h2>
+		  <?php foreach($otros as $data){ ?>
+		  
+          <p><b><?php echo $data["titulo"]; ?> <br></b>
+            <?php echo $data["texto"]; ?>
+          </p>
+        </div>
+		<?php } ?>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-video contenido-interno-tecnica">
-          <h1>Video</h1>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-video ">
+          <h2>Video</h2>
           <iframe src="https://www.youtube.com/embed/YoMwrh4_ThE" frameborder="0" allowfullscreen></iframe>
         </div>
 
@@ -171,10 +310,22 @@ $model= $GLOBALS["jugador"];
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 columna-relacionados">
         <h1>JUGADORES RELACIONADOS</h1>
 
-        <?php for($i=0; $i<5; $i++){ ?>
+        <?php
+		
+		$destacadoId= $model->id;
+		$criteria = new CDbCriteria;
+$criteria->limit = 5;
+$criteria->condition = "id != $destacadoId";
+$criteria->order = 'RAND()';
+$criteria->select = "*";
+
+		$jugadores= Jugador::model()->findAll($criteria);
+		
+		foreach($jugadores as $jugador){ 
+		?>
         <div class="jugador-relacionado">
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
-        <label>Nombre del Jugador <br> <span>Puesto</span></label>
+        <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?> <br> <span><?php echo $jugador["puesto"]; ?></span></label>
         </div>
 
         <?php } ?>
