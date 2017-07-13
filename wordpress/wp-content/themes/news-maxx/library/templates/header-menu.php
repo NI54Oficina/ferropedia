@@ -40,6 +40,8 @@
               </ul>
 
 
+
+
                 <?php
                 // if ( has_nav_menu( 'main-nav' )) {
                 //      wp_nav_menu( array(
@@ -78,15 +80,94 @@
                   <i class="fa fa-youtube" aria-hidden="true"></i>
                 </div>
 
+                <?php get_search_form(); ?>
+
+
             </div>
             <!-- wrapper -->
 
         </nav>
         <!-- main-nav -->
+        <style media="screen">
+        .menu-despegable ul a li{
+          list-style: none;
+          color: white;
+          padding: 15px 0;
+          font-size: 1.2em;
+        }
 
-        <?php get_search_form(); ?>
+        .menu-despegable span{
+          padding:15px;
+        }
+
+        .menu-despegable span:hover{
+          cursor: pointer;
+        }
+        .menu-despegable p{
+          background-color: #2d3032;
+          z-index: 9999999;
+          width: 60%;
+          margin: 15px auto 15px auto;
+          text-align: center;
+          font-size: 2em;
+                  }
+
+        .menu-despegable p:after {
+            background: #ffffff;
+            height: 1px;
+            /* margin-top: -.5px; */
+            top: 95px;
+            left: 0;
+            width: 80%;
+            position: absolute;
+            content: '';
+            outline: none;
+            border: none;
+            z-index: -999;
+            margin: auto;
+            left: 0;
+            right: 0;
+          }
+          .menu-despegable{
+            position:fixed;
+            right: 0;
+            top:0;
+            z-index:999999;
+            background-color: #2d3032;
+            text-align: center;
+            color: white;
+            font-family: 'Condensed-bold';
+            padding: 50px;
+            transform: rotateY(90deg);
+            transform-origin: 100% 10%;
+            transform-style: preserve-3d;
+            transition: 0.6s;
+            height: 100vh;
+          }
+
+          .menu-despegable-active{
+
+            transform: translate3d(0px,0,0);
+          }
+
+        </style>
+
+                <i  id="open-menu" class="fa fa-bars" aria-hidden="true" style="    display: inline-flex;position: absolute;  right: 20px;  font-size: 2em;  color: white;top: 10px;"></i>
+                <nav class="menu-despegable">
+                  <span id="close-menu">X</span>
+                  <p>Menú</p>
+                  <ul>
+                    <a href="<?php echo site_url(); ?>"><li>INICIO</li></a>
+                    <a href="<?php echo site_url(); ?>"><li>JUGADORES</li></a>
+                    <a href="<?php echo site_url(); ?>">  <li>DT'S</li></a>
+                    <a href="<?php echo site_url(); ?>/cuna-cajon">  <li>DE LA CUNA HASTA EL CAJÓN</li></a>
+                    <a href="<?php echo site_url(); ?>/museo">  <li>MUSEO</li></a>
+                    <a href="<?php echo site_url(); ?>/rincon-mundo">  <li>EL RINCÓN DEL MUDO</li></a>
+                    <a href="<?php echo site_url(); ?>/equipo-laferropedia/">  <li>EQUIPO LA FERROPEDIA</li></a>
+                  </ul>
+                </nav>
         <!-- search box -->
-      <span class="glyphicon glyphicon-home"></span>
+
     </div>
     <!-- wrapper -->
 

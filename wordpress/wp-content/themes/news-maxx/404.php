@@ -1,42 +1,82 @@
 <?php
-    get_header();
-    $kopa_setting = kopa_get_template_setting();
-    $sidebars = $kopa_setting['sidebars'][$kopa_setting['layout_id']];
-    $kopa_layout = unserialize(KOPA_LAYOUT);
-    $kopa_position = $kopa_layout[$kopa_setting['layout_id']]['positions'];
+    // get_header();
+    // $kopa_setting = kopa_get_template_setting();
+    // $sidebars = $kopa_setting['sidebars'][$kopa_setting['layout_id']];
+    // $kopa_layout = unserialize(KOPA_LAYOUT);
+    // $kopa_position = $kopa_layout[$kopa_setting['layout_id']]['positions'];
 ?>
-<div class="wrapper clearfix">
 
-    <div class="main-col pull-left">
-        <?php kopa_breadcrumb(); ?>
-        <!-- breadcrumb -->
-        <section class="error-404 clearfix">
-            <div class="left-col">
-                <p><?php _e( '404', 'newsmaxx' ); ?></p>
-            </div><!--left-col-->
-            <div class="right-col">
-                <h1<?php _e( 'Page not found...', 'newsmaxx' ); ?></h1>
-                <p><?php _e( "We're sorry, but we can't find the page you were looking for. It's probably some thing we've done wrong but now we know about it we'll try to fix it. In the meantime, try one of these options:", 'newsmaxx' ); ?></p>
-                <ul class="arrow-list">
-                    <li><a href="javascript: history.go(-1);"><?php _e( 'Go back to previous page', 'newsmaxx' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url() ); ?>"><?php _e( 'Go to homepage', 'newsmaxx' ); ?></a></li>
-                </ul>
-            </div><!--right-col-->
-        </section><!--error-404-->
-    </div>
-    <!-- main-col -->
-
-    <div class="sidebar widget-area-2 pull-left">
-        <?php
-        if ( is_active_sidebar( $sidebars[$kopa_position[0]] ) ) {
-            dynamic_sidebar($sidebars[$kopa_position[0]]);
-        }
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="utf-8">
+    <title><?php wp_title('|', true, 'right'); ?></title>
+    <?php
+    if ('enable' === get_option('kopa_theme_options_responsive_status', 'enable')) {
         ?>
-    </div>
-    <!-- widget-area-2 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php
+    }
+    ?>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <!-- Le fav and touch icons -->
+    <?php if (get_option('kopa_theme_options_favicon_url')) { ?>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('kopa_theme_options_favicon_url'); ?>">
+    <?php } ?>
+    <?php if (get_option('kopa_theme_options_apple_iphone_icon_url')) { ?>
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="<?php echo get_option('kopa_theme_options_apple_iphone_icon_url'); ?>">
+    <?php } ?>
 
-    <div class="clear"></div>
+    <?php if (get_option('kopa_theme_options_apple_ipad_icon_url')) { ?>
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="<?php echo get_option('kopa_theme_options_apple_ipad_icon_url'); ?>">
+    <?php } ?>
+
+    <?php if (get_option('kopa_theme_options_apple_iphone_retina_icon_url')) { ?>
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="<?php echo get_option('kopa_theme_options_apple_iphone_retina_icon_url'); ?>">
+    <?php } ?>
+
+    <?php if (get_option('kopa_theme_options_apple_ipad_retina_icon_url')) { ?>
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="<?php echo get_option('kopa_theme_options_apple_ipad_retina_icon_url'); ?>">
+    <?php } ?>
+
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+<style media="screen">
+
+  .screen-404{
+    height: 90vh;
+    background-image: url("<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/404.png"), url("<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/pelota-404.png");
+    background-position: center, 80% 80%;
+    background-size: 50%, 50px;
+    background-repeat: no-repeat, no-repeat;
+    background-color: #22221f;
+  }
+
+    .screen-404 a{
+      position: absolute;
+      left: 0;
+      right: 0;
+      color: #a43c93;
+      margin: auto;
+      text-align: center;
+      bottom: 25%;
+      font-size: 2em;
+      font-family: 'Condensed-italic';
+    }
+
+</style>
+<div class="wrapper clearfix screen-404">
+
+  <a href="http://localhost/ferropedia">INICIO</a>
 
 </div>
 <!-- wrapper -->
-<?php get_footer(); ?>
+<?php //get_footer(); ?>

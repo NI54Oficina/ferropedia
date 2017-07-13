@@ -11,6 +11,7 @@ $(document).ready( function(){
   _square();
   gallerie_swipe();
   _openmodal();
+  menu();
 
 });
 
@@ -369,4 +370,19 @@ function _square(){
 	});
 
 
+}
+
+
+function menu(){
+
+
+  $("#open-menu").on("click", function(){
+    // $(".menu-despegable").fadeIn();
+    $(".menu-despegable").addClass( "menu-despegable-active" );
+  })
+
+  $("#close-menu").on("click", function(){
+    // $(".menu-despegable").fadeOut();
+    $(".menu-despegable").removeClass( "menu-despegable-active" );
+  })
 }

@@ -7637,7 +7637,7 @@ Breaking News
 
 .sb-search-wrapper {
     position: absolute;
-    right: 0;
+    right: 5%;
     top: -1px;
     width: 300px; }
 
@@ -8849,7 +8849,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
 .links-sociales{
     float: right;
-    padding:10px 5%;
+    padding:10px 10%;
 }
 
 .links-sociales i{
@@ -8886,12 +8886,12 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           color:white;
           margin-bottom:5px;
         }
-		
+
 		.second-box.bloque{
 			padding:50px 40px;
 			;
 		}
-		
+
 
         .second-box h2{
           padding:0 0 20px 0px;
@@ -8899,7 +8899,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 		  margin-bottom:30px;
 		  text-shadow:2px 2px black
         }
-		
+
 		.second-interior{
 			width:100%;text-align:center;
 		}
@@ -9041,7 +9041,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 		  padding-left:0;
 		  padding-right:50px;
         }
-		
+
 		.second-box-left{
 			padding-right:50px;
 		}
@@ -9108,15 +9108,15 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 		  background-size: auto 100%;
 		  background-repeat:no-repeat;
         }
-		
+
 		.imagen-jugador-violeta.placeholder-avatar,.imagen-jugador-verde.placeholder-avatar{
           background-size:60% auto;
 		  background-repeat:no-repeat;
 		  background-position: 50% 70%;
-		  
+
         }
 
-        
+
         .capa-violeta{
           position: absolute;
           width: 100%;
@@ -9134,7 +9134,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           opacity: .7;
           top:0;
         }
-		
+
 		.border-jugador{
 			width:100%;height:100%;border:2px solid rgba(255,255,255,0.2);
 		}
@@ -9277,7 +9277,7 @@ p.fecha-post-home.verde{
 
 .six-container-left .thumb , .fourth-box-left .fourth-container  .thumb{
 	width: 100%;
-	
+
 	padding:0;
 	margin:0;
 	background-position:top center;
@@ -9355,7 +9355,7 @@ padding: 0 35px;
   .main-section .wrapper > .six-box{
 	padding:60px;
   }
-  
+
   .six-box-left{
 	padding:0;
   }
