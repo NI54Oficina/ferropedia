@@ -30,22 +30,31 @@ $(window).on('resize', function(){
 
 function _openmodal(){
 
-  $('.max-box-gallery').on('click', function(){
+  $('.container-gallery  div.max-box-gallery').on('click', function(){
 
-    var indx=$(".container-gallery "+this).index();
+    // console.log($(this));
+    //
+    // return;
+    var indx=$(".container-gallery  div.max-box-gallery").index(this);
+
     console.log(indx);
 
     var element = ListElements[indx];
+
     console.log(element);
 
     // $('.modal-gallery .img-sector img').attr('src', )
-    $('.modal-gallery .info-sector .title').val(element.title);
-    $('.modal-gallery .info-sector .volanta').val(element.volanta);
-    $('.modal-gallery .info-sector .content').val(element.content);
-    $('.modal-gallery .info-sector .notas').val(element.category+" / "+element.notes);
-    $('.modal-gallery .info-sector title').val(element.title);
+    $('.modal-gallery .info-sector .title').text(element.title);
+    $('.modal-gallery .info-sector .volanta').text(element.volanta);
+    $('.modal-gallery .info-sector .content').text(element.content);
+    $('.modal-gallery .info-sector .notas').text(element.category+" / "+element.notes);
+    $('.modal-gallery .info-sector title').text(element.title);
     $('.modal-gallery').fadeIn();
 
+  })
+
+  $("#close-modal").on("click", function(){
+    $('.modal-gallery').fadeOut();
   })
 
 }
