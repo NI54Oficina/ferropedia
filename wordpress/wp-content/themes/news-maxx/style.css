@@ -7001,7 +7001,7 @@ Contact page
    }
 
     .owl-wrapper-outer{
-      padding-left: 5%;
+      /*padding-left: 5%;*/
     }
 .main-section .widget .widget-title {
   margin: 0 !important;
@@ -7066,13 +7066,13 @@ Kopa Home Slider Widget
     position: relative; }
 
 .kopa-home-slider .flex-caption {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
     position: absolute;
-    right: 59px;
-    bottom: 0;
+    right: 10%;
+    bottom: 30%;
     padding: 20px 40px 5px;
     font-size: 14px;
-    color: #5e5e5e;
+    color:white;
     width: 540px; }
 .kopa-home-slider .flex-caption .entry-title {
     font-size: 23px;
