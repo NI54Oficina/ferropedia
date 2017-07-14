@@ -12,8 +12,20 @@ global $kopa_setting;
 
 <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
 
-  <div class="label-name-page">
+  <div class="label-name-page" style="max-height:400px;overflow:hidden">
     <?php the_post_thumbnail( 'full' );   ?>
+
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); max-height:400px;">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height:400px;">
+        <img src="<?php echo get_field('foto_portada') ?>" style="position:absolute; bottom:0" alt="">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:20px;">
+      <h1 style="border-bottom:2px solid black;"><?php echo the_title(); ?></h1>
+      <p style="color:black;"><?php echo(get_the_excerpt()); ?></p>
+    </div>
+
 
   </div>
 
@@ -65,7 +77,13 @@ global $kopa_setting;
     //Arreglar esta parte con las cosas q corresponden
       object={};
       object['title']='<?php the_title(); ?>';
-      object['content']='<?php echo(get_the_excerpt($post->ID)); ?>';
+      object['content']='<?php  $content = get_post_field( 'post_content', get_the_ID() );
+
+// Get content parts
+$content_parts = get_extended( $content );
+
+// Output part before <!--more--> tag
+echo $content_parts['main']; ?>';
       object['volanta']='<?php echo get_field('volanta')?>';
       object['category']='<?php the_title(); ?>';
       object['notes']='<?php the_title(); ?>';
