@@ -22,6 +22,9 @@ global $kopa_setting;
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-gallery">
 
     <style>
+    .max-box-gallery:hover{
+      cursor: pointer;
+    }
 
     .max-box-gallery{ padding: 30px;}
     .box-gallery{   padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}

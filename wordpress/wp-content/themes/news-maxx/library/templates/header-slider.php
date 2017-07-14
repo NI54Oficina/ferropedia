@@ -185,8 +185,8 @@
 
 
 
-			<div id="logo-container2">asd</div>
-			<div id="logo-container" >asd</div>
+			<div id="logo-container2"></div>
+			<div id="logo-container" ></div>
 
 
             <div class="left-box" style="display:none;">

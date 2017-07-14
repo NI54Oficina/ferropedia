@@ -217,4 +217,4 @@
 <!-- kopa-page-header -->
 
 
-    <section class="main-section">
+    <!-- <section class="main-section"> -->
