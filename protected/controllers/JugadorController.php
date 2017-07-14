@@ -32,7 +32,7 @@ class JugadorController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update',"checkDatos"),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -43,6 +43,45 @@ class JugadorController extends Controller
 				'users'=>array('*'),
 			),
 		);
+	}
+	
+	public function actionCheckDatos(){
+		set_time_limit(300000);
+		$jugadores= Jugador::model()->findAll();
+		foreach($jugadores as $jugador){
+			$jugador->data;
+			
+		$lastTorneo="";
+		$debut="";
+		$ultimo="";
+		$torneos=array();
+		$otros= array();
+		foreach($jugador->data as $data){ 
+			if($data["titulo"]=="Debut"){
+				$debut =$data["texto"];
+			}else if($data["titulo"]=="Torneo"){
+				$auxT= explode("/",$data["texto"]);
+				if(count($auxT)>2){
+					if(isset($torneos[$auxT[0]])){
+						array_push($torneos[$auxT[0]],$auxT);
+					}else{
+						$torneos[$auxT[0]]= array($auxT);
+					}
+				}
+				$lastTorneo= $data["texto"];
+			}else if($data["titulo"]=="Último partido"){
+				$ultimo= $data["texto"];
+			}else{
+				array_push($otros,$data);
+			}
+		 }
+		 $lastTorneo= explode("/",$lastTorneo);
+		 if(count($lastTorneo)>3){
+			echo "id ".$jugador->id." = ".count($lastTorneo);
+			echo "<br>";
+		 }
+		}
+		
 	}
 
 	/**

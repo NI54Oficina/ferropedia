@@ -32,7 +32,9 @@ foreach($model->data as $data){
  
 $lastTorneo= explode("/",$lastTorneo);
 $debut= explode(";",$debut);
+$debut=str_replace("(","<br>(",$debut);
 $ultimo= explode(";",$ultimo);
+$ultimo=str_replace("(","<br>(",$ultimo);
 
  ?>
 
@@ -71,8 +73,8 @@ $ultimo= explode(";",$ultimo);
 		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
             <h2>??</h2>
             <p>Total partidos ganados</p>
-            <h3><?php echo $debut[0]; ?></h3>
-            <h4>Ferro <?php echo $debut[1]; ?></h4>
+            <h3><?php if($debut[0]!=""){ echo $debut[0]; }else{ echo "---"; } ?></h3>
+            <h4><?php if($debut[1]!=""){ echo "Ferro ".$debut[1]; }else{ echo "---"; } ?></h4>
             <p>Debut</p>
           </div>
 		  
@@ -80,13 +82,13 @@ $ultimo= explode(";",$ultimo);
 		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
             <h2><?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?></h2>
             <p>Total Goles Convertidos</p>
-            <h3><?php echo $ultimo[0]; ?></h3>
-            <h4>Ferro <?php echo $ultimo[1]; ?></h4>
+			<h3><?php if($ultimo[0]!=""){ echo $ultimo[0]; }else{ echo "---"; } ?></h3>
+            <h4><?php if($ultimo[1]!=""){ echo "Ferro ".$ultimo[1]; }else{ echo "---"; } ?></h4>
             <p>Último partido</p>
           </div>
 		
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#1b211e;">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento" style="border-right: 1px solid white;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px 10px;background-color:rgba(32, 32, 31,0.5)">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento" style="border-right: 2px solid rgba(255,255,255,0.4)">
             <p><span>Fecha y lugar de nacimiento</span><br>
               <?php echo $model->nacimiento; ?> <?php if(isset($model->ciudad_natal)&&$model->ciudad_natal!=""){ ?>| <?php echo $model->ciudad_natal;  }?>
             </p>
@@ -110,18 +112,21 @@ $ultimo= explode(";",$ultimo);
     </div>
 
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box-ficha-tecnica">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box-ficha-tecnica" >
 
       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 contenido-interno-tecnica">
-
+	  
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica content-shadow" style="margin-bottom:20px;padding-left:0;padding-right:0;"><h2 >Calificación</h2></div></div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-dinamica">
-          <h1>¿Qué pensas del jugador?</h1>
+          <!--<h2>¿Qué pensas del jugador?</h2>!-->
 
           <img class="estrella" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ej-2.png" alt="">
 
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-dinamica">
-          <h1>Calificar al jugador</h1>
+          <!--<h2>Calificar al jugador</h2>!-->
 
           <img class="estrella" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ej-1.png" alt="">
 
@@ -140,6 +145,7 @@ $ultimo= explode(";",$ultimo);
           </div>
          -->
         </div>
+		</div>
 		<?php if(false){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
           <h2>Campañas del jugador</h2>
@@ -187,7 +193,7 @@ $ultimo= explode(";",$ultimo);
           </div>
           </div>
 
-          <p class="col-lg-12 texto-fuente">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
+          <p class="col-lg-12 texto-fuente content-shadow">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
               chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage
               ham hock leberkas pork chop tongue bacon tenderloin alcatra. Kevin picanha
               alcatra tenderloin prosciutto. Pancetta pork belly pig jerky. Filet
@@ -197,71 +203,74 @@ $ultimo= explode(";",$ultimo);
           </p>
         </div>
 		<?php } ?>
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador">
-          <h2>Campañas del jugador</h2>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shadow" style="padding:0;" >
+			  <h2>Campañas del jugador</h2>
 
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
-            <nav>
-              <p class="selected">Todos</p>
-			  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
-              <p><?php echo $key; ?></p>
-			  <?php } ?>
+			  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
+				<nav>
+				  <p class="selected">Todos</p>
+				  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+				  <p><?php echo $key; ?></p>
+				  <?php } ?>
 
-          </nav>
-			<?php //var_dump($torneos); ?>
-          <div class="tabla-anios-jugador">
-            <div class="titulo-tabla">
-              <div class="col-lg-2">Año</div>
-              <div class="col-lg-4">Torneo</div>
-              <!--<div class="col-lg-2">Division</div>!-->
-              <div class="col-lg-3">Partidos jugados</div>
-              <div class="col-lg-3">Goles convertidos</div>
-            </div>
-			
-         
-
-            <div class="col-lg-12 cuerpo-tabla contenido-dinamico">
-
-           
-				<?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
-
-				<?php foreach($value as $torneo){ ?>
-				<div class="row">
-                <div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
-                <div class="col-lg-4"><?php echo $torneo[1]; ?></div>
-                <div class="col-lg-3 partidos-jugados"><?php echo $torneo[2]; ?></div>
-                <div class="col-lg-3 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
+			  </nav>
+				<?php //var_dump($torneos); ?>
+			  <div class="tabla-anios-jugador">
+				<div class="titulo-tabla">
+				  <div class="col-lg-2">Año</div>
+				  <div class="col-lg-4">Torneo</div>
+				  <!--<div class="col-lg-2">Division</div>!-->
+				  <div class="col-lg-3">Partidos jugados</div>
+				  <div class="col-lg-3">Goles convertidos</div>
 				</div>
 				
-				
-				<?php } } ?>
-				
-				
-     
+			 
 
-
-          </div>
-		  
-		  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
 				<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
-				<?php foreach($value as $torneo){ ?>
-				<div class="row">
-                <div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
-                <div class="col-lg-4"><?php echo $torneo[1]; ?></div>
-                <div class="col-lg-3 partidos-jugados"><?php echo $torneo[2]; ?></div>
-                <div class="col-lg-3 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
-				</div>
-				<?php } ?>
-				</div>
-				
-				<?php  } ?>
+
+			   
+					<?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+
+					<?php foreach($value as $torneo){ ?>
+					<div class="row">
+					<div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
+					<div class="col-lg-4"><?php echo $torneo[1]; ?></div>
+					<div class="col-lg-3 partidos-jugados"><?php echo $torneo[2]; ?></div>
+					<div class="col-lg-3 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
+					</div>
+					
+					
+					<?php } } ?>
+					
+					
+		 
 
 
-          
-          </div>
-          </div>
+			  </div>
+			  
+			  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+					<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
+					<?php foreach($value as $torneo){ ?>
+					<div class="row">
+					<div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
+					<div class="col-lg-4"><?php echo $torneo[1]; ?></div>
+					<div class="col-lg-3 partidos-jugados"><?php echo $torneo[2]; ?></div>
+					<div class="col-lg-3 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
+					</div>
+					<?php } ?>
+					</div>
+					
+					<?php  } ?>
 
-          <p class="col-lg-12 texto-fuente">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
+
+			  
+			  </div>
+			  </div>
+
+			  
+			</div>
+		<p class="col-lg-12 texto-fuente content-shadow">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
               chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage
               ham hock leberkas pork chop tongue bacon tenderloin alcatra. Kevin picanha
               alcatra tenderloin prosciutto. Pancetta pork belly pig jerky. Filet
@@ -282,15 +291,16 @@ $ultimo= explode(";",$ultimo);
 		<?php } ?>
 		
 		
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle">
-          <h2>Detalle</h2>
+		
 		  <?php foreach($otros as $data){ ?>
-		  
-          <p><b><?php echo $data["titulo"]; ?> <br></b>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle">
+          <h2><?php echo $data["titulo"]; ?></h2>
+          <p>
             <?php echo $data["texto"]; ?>
           </p>
-        </div>
+       
 		<?php } ?>
+		 </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-video ">
           <h2>Video</h2>
@@ -298,7 +308,7 @@ $ultimo= explode(";",$ultimo);
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-galeria contenido-interno-tecnica">
-          <h1>Galería de fotos</h1>
+          <h2>Galería de fotos</h2>
 
           // queda aplicar galeria.
 
@@ -308,7 +318,7 @@ $ultimo= explode(";",$ultimo);
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 columna-relacionados">
-        <h1>JUGADORES RELACIONADOS</h1>
+        <h2>JUGADORES RELACIONADOS</h2>
 
         <?php
 		

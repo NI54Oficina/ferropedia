@@ -9658,8 +9658,8 @@ padding: 0 35px;
 	
 	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row{
 		padding:0;
-		border-bottom:1px solid gray;
-		margin:0 10px;
+		border-bottom:1px solid rgba(255,255,255,0.2);
+		margin:0px;
 	}
 	
 	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row:last-child{
@@ -9741,7 +9741,7 @@ padding: 0 35px;
 
 
   .main-section .wrapper > .first-box-ficha-tecnica{
-    background:repeating-linear-gradient( -45deg,   #232621,   #232621 5px,   #191b17 5px,   #191b17 10px );
+    background:repeating-linear-gradient( -45deg,   #25362c,   #25362c 5px,   #1c2a23 5px,   #1c2a23 10px );
 	padding:40px 50px;
 	
   }
@@ -9750,7 +9750,7 @@ padding: 0 35px;
       position: absolute;
       /*width: 86%;*/
 	  width:100%;
-      background-color: #00b643;
+      background-color: #b13c93;
       height: 100px;
       bottom:0;
       top:0;
@@ -9798,7 +9798,8 @@ padding: 0 35px;
 
     .tecnica-detalle h2, .tecnica-galeria h2{
       /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
-      background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);
+      /*background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);*/
+	  background: repeating-linear-gradient( -45deg, rgb(59, 175, 62), rgba(52, 195, 57, 0.75) 2px, #00b643 4px, #00b643 6px )
     }
 
     .tecnica-detalle p{
@@ -9812,17 +9813,26 @@ padding: 0 35px;
       border: 3px solid white;
     }
 	
+	.tecnica-galeria{
+		padding:15px;
+	}
+	
+	.tecnica-detalle,.tecnica-video,.tecnica-galeria{
+		margin-top:35px;
+	}
+	
+	
 	.tecnica-detalle h2, .tecnica-galeria h2,.tecnica-video h2{
 		font-size:33px;
 		padding:10px 25px;
 		-webkit-box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
 box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
-margin-bottom:40px;
+margin-bottom:15px;
 	}
 
     .tecnica-video h2{
-    background:repeating-linear-gradient(-45deg, #a43c93, #a43c93 2px, rgba(0,0,0,0.3) 6px, rgba(0,0,0,0.3) 5px);
+    background:repeating-linear-gradient(-45deg, rgb(156, 57, 139), rgba(132, 55, 118, 0.95) 2px, #a43c93 4px, #a43c93 6px)
     }
 
     .tecnica-video iframe {
@@ -9865,6 +9875,7 @@ margin-bottom:40px;
       color:white;
 	  font-size:40px;
 	  padding-left:15px;
+	  margin-bottom:35px;
     }
     .informacion-tecnica h1 span{
       color:rgba(0,182,67,.7);
@@ -9872,43 +9883,53 @@ margin-bottom:40px;
     .informacion-tecnica-inner p{
       color: rgba(255,255,255,.6);
       font-family: 'Condensed-regular';
+	  font-size:14px;
+	  margin-bottom:40px;
     }
 
     .informacion-tecnica-inner h2{
       color: #a43c93;
+	  font-size:35px;
       font-family: 'Condensed-bold-italic';
+	  margin-bottom:5px;
     }
 
     .informacion-tecnica-inner h3{
-	font-size:24px;
+	font-size:21px;
 	line-height:28px;
       color:rgba(0,182,67,.7);
       font-family: 'Condensed-bold-italic';
+	  margin-bottom:0;
+	  margin-top:40px;
     }
 	
 	.informacion-tecnica-inner h4{
       color:rgba(0,182,67,.7);
       font-family: 'Condensed-bold-italic';
 	  text-transform:capitalize;
+	  margin-top:5px;
+	  margin-bottom:5px;
     }
 
     .info-nacimiento p{
       color:white;
+	  font-size:14px;
     }
 
     .info-nacimiento p span{
       color:rgba(0,182,67,.7);
+	  
     }
-	
+		
 	.informacion-dinamica.campanas-jugador {
 		
 		
-		margin-top:10px;
+		margin-top:20px;
 		
 	}
     .informacion-dinamica h2{
       color: white;
-      border-bottom: 1px solid #006443;
+      border-bottom: 2px solid #006443;
       font-family: 'Condensed-italic';
       text-align: center;
       width: 100%;
@@ -9924,12 +9945,15 @@ margin-bottom:40px;
       font-size: 15px;
       padding-bottom:3em;
 	  background-color:#080808;
+	  padding-left:0;
+	  padding-right:0;
     }
 
     .informacion-dinamica .menu-anios nav{
       padding-left: 3em;
+      padding-right: 3em;
       padding-bottom: 2em;
-		padding-top:1em;
+		padding-top:2em;
     }
 
     .informacion-dinamica .menu-anios nav > p{
@@ -9939,6 +9963,7 @@ margin-bottom:40px;
       opacity: .3;
       font-family: 'Condensed-bold-italic';
       border-right: 1px solid rgba(255,255,255,1);
+	  display:inline-block;
     }
 
     .informacion-dinamica .menu-anios nav > p:hover{
@@ -9983,7 +10008,7 @@ margin-bottom:40px;
 
     .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .columna-gris{
       color:white;
-      opacity: .3;
+      opacity: .5;
     }
 
     .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .partidos-jugados{
@@ -9991,12 +10016,38 @@ margin-bottom:40px;
     }
 
     .informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .goles-convertidos{
-      color:#428F56;
+      color:rgb(0, 182, 67);
     }
 
-    .informacion-dinamica .texto-fuente{
-      padding: 5em 0 3em 0;
+   .texto-fuente{
+	padding: 10px 30px;
+	margin-top:20px;
+	background-color:#080808;
+	
     }
+	
+	.titular-negro{
+		color:white;
+		background-color:#080808;
+		
+		text-align:center;
+		padding:10px 0px;
+		margin-bottom:15px;
+	}
+	.titular-negro h2{
+		border-bottom:2px solid  #006443;
+		margin:0;
+		font-size:25px;
+		font-family:'Condensed-italic';
+		padding:15px;
+	}
+	
+	.content-shadow{
+		-webkit-box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
+-moz-box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
+box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
+	
+	}
 
     .first-box-ficha-tecnica{
       padding-bottom: 5%;
