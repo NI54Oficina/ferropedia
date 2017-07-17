@@ -56,8 +56,6 @@
   $post_categories = wp_get_post_categories( get_the_ID() );
   $c= $post_categories[0];
   $cat = get_category( $c );
-  echo var_dump($cat);
-
 
   if($cat->slug =="cuna-cajon"){?>
 
@@ -67,7 +65,7 @@
 
     <div class="" style="background-color:black; padding: 0 30px; position:relative">
       <div class="" style="position:absolute; bottom:70%; height:150px; width:90%; left:0; right:0; margin:auto;font-family:'Condensed-bold-italic';padding-top:50px; padding-left:50px;color:white; font-size:3em; background-image:url('<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/tablon.png');"> <?php echo $cat->name ?></div>
-      <p style="color:white; padding:50px 20px; font-family:'Roboto-Regular'"><?php echo $cat->description ?></p>
+      <p style="font-size:1.2em;color:white; padding:50px 20px; font-family:'Roboto-Regular'"><?php echo $cat->description ?></p>
     </div>
 
   <?php  }  ?>
