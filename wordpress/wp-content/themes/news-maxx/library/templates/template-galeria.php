@@ -12,8 +12,20 @@ global $kopa_setting;
 
 <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
 
-  <div class="label-name-page">
+  <div class="label-name-page" style="max-height:400px;overflow:hidden">
     <?php the_post_thumbnail( 'full' );   ?>
+
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); max-height:400px;">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height:400px;">
+        <img src="<?php echo get_field('foto_portada') ?>" style="position:absolute; bottom:0" alt="">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:20px;">
+      <h1 style="border-bottom:2px solid black;"><?php echo the_title(); ?></h1>
+      <p style="color:black;"><?php echo(get_the_excerpt()); ?></p>
+    </div>
+
 
   </div>
 
@@ -22,6 +34,9 @@ global $kopa_setting;
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-gallery">
 
     <style>
+    .max-box-gallery:hover{
+      cursor: pointer;
+    }
 
     .max-box-gallery{ padding: 30px;}
     .box-gallery{   padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}
@@ -62,7 +77,13 @@ global $kopa_setting;
     //Arreglar esta parte con las cosas q corresponden
       object={};
       object['title']='<?php the_title(); ?>';
-      object['content']='<?php echo(get_the_excerpt($post->ID)); ?>';
+      object['content']='<?php  $content = get_post_field( 'post_content', get_the_ID() );
+
+// Get content parts
+$content_parts = get_extended( $content );
+
+// Output part before <!--more--> tag
+echo $content_parts['main']; ?>';
       object['volanta']='<?php echo get_field('volanta')?>';
       object['category']='<?php the_title(); ?>';
       object['notes']='<?php the_title(); ?>';
@@ -101,7 +122,7 @@ global $kopa_setting;
 
   </div>
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrapper clearfix"></div>
+  <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrapper clearfix"></div> -->
 
   <style>
     .modal-gallery{
@@ -124,6 +145,25 @@ global $kopa_setting;
     .img-sector p, .info-sector .buttons{
       display: inline;
       font-family: 'Condensed-bold';
+      padding: 5px 10px;
+    }
+
+    .img-sector p:hover, .info-sector .buttons:hover,.modal-gallery span:hover{
+      cursor: pointer;
+      opacity: .5;
+      transition: all .5s;
+    }
+
+    .img-sector .nro-image{
+      color: #a43c93;
+    }
+
+    .img-sector img{
+      width: 80%;
+      box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50);
+      border-style: double;
+      border-width: 4px;
+      border-color: #c3c3c3;
     }
 
     .info-sector .volanta, .info-sector .content{
@@ -154,8 +194,16 @@ global $kopa_setting;
 
     <span id="close-modal">X</span>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector">
-      <img src="" alt="">
-      <p class="prev-image">"<" Foto anterior</p> <p>1</p> <p class="next-image">Foto siguiente ">"</p>
+      <img src="" alt=""><br>
+      <div class="" style="position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    padding: 20px 0;">
+          <p class="prev-image">&lt; Foto anterior</p> <p class="nro-image">1</p> <p class="next-image">Siguiente foto &gt;</p>
+      </div>
+
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 info-sector">
       <p class="volanta"></p>
@@ -163,7 +211,7 @@ global $kopa_setting;
       <p class="notas"></p>
       <p class="content">
       </p>
-      <p  class="buttons prev-post">Anterior</p>|<p  class="buttons next-post">Siguiente</p>
+      <p  class="buttons prev-post">Entrada anterior</p>|<p  class="buttons next-post">Siguiente entrada</p>
     </div>
   </div>
 

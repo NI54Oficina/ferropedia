@@ -8,7 +8,7 @@ protected/config/mode.php
 protected/config/local.php
 
 # Yii temp files we don't want to be bothered about
-protected/runtime/*
+
 protected/data/*.db
 protected/tests/report/*
 
@@ -16,6 +16,9 @@ assets
 yii
 wordpress/wp-admin
 wordpress/wp-includes
+wordpress/wp-content/upgrade
+wordpress/wp-content/uploads
+protected/runtime
 
 (?i)**application.log
 (?i)**application.log1
@@ -24,3 +27,10 @@ wordpress/wp-includes
 (?i)**application.log4
 (?i)**application.log5
 *.log
+protected/runtime/application.log.5
+protected/runtime/application.log.3
+protected/runtime/application.log
+*.1
+protected/runtime/application.log.1
+protected/runtime/application.log.1
+*.3

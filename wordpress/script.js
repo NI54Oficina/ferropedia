@@ -53,7 +53,12 @@ function _openmodal(){
     $('.next-image').on("click", function(){
       if(cursor < element.images.length){
         cursor++;
+        a=cursor;
+        a++;
+        $('.modal-gallery .img-sector img').fadeOut();
+        $('.modal-gallery .img-sector .nro-image').text(a);
         $('.modal-gallery .img-sector img').attr('src', element.images[cursor]);
+        $('.modal-gallery .img-sector img').fadeIn();
       }
 
     })
@@ -61,24 +66,44 @@ function _openmodal(){
     $('.prev-image').on("click", function(){
       if(cursor>0){
         cursor--;
+        a=cursor;
+        a++;
+        $('.modal-gallery .img-sector img').fadeOut();
         $('.modal-gallery .img-sector img').attr('src', element.images[cursor]);
+        $('.modal-gallery .img-sector .nro-image').text(a);
+        $('.modal-gallery .img-sector img').fadeIn();
 
         }
       })
 
 
-      $('.prev-articulo').on("click", function(){
+      $('.prev-post').on("click", function(){
         if(indx > 0){
-          cursor--;
-        //mostrar los articulos anteriores
+          indx--;
+
+          element = ListElements[indx];
+          $('.modal-gallery .info-sector .title').text(element.title);
+          $('.modal-gallery .info-sector .volanta').text(element.volanta);
+          $('.modal-gallery .info-sector .content').text(element.content);
+          $('.modal-gallery .info-sector .notas').text(element.category+" / "+element.notes);
+          $('.modal-gallery .info-sector title').text(element.title);
+          $('.modal-gallery .img-sector img').attr('src',  element.images[0]);
 
           }
         })
 
-      $('.next-articulo').on("click", function(){
-        if(indx < ListElements.length ){
-          cursor--;
+      $('.next-post').on("click", function(){
+        if(indx < ListElements.length-1 ){
+          indx++;
           //mostrar los siguientes articulos
+
+          element = ListElements[indx];
+          $('.modal-gallery .info-sector .title').text(element.title);
+          $('.modal-gallery .info-sector .volanta').text(element.volanta);
+          $('.modal-gallery .info-sector .content').text(element.content);
+          $('.modal-gallery .info-sector .notas').text(element.category+" / "+element.notes);
+          $('.modal-gallery .info-sector title').text(element.title);
+          $('.modal-gallery .img-sector img').attr('src',  element.images[0]);
 
           }
         })
