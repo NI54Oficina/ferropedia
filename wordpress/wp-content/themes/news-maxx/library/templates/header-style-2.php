@@ -50,6 +50,7 @@
 
     <div class="widget-area-1">
 
+<div class="prueba-bg">
 
 
         <div class="stripe-box">
@@ -79,7 +80,7 @@
         </div>
         <!-- wrapper -->
   </div>
-    <!-- </div> -->
+</div>
     <!-- bn-box -->
 
     <section class="main-section">

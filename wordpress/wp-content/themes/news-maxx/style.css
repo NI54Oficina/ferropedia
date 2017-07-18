@@ -7443,7 +7443,7 @@ Nothumb Widget
     -webkit-transition: border 0.3s ease-in-out 0s; }
 
 .kopa-home-4 .stripe-box,
-.kopa-subpage .stripe-box {
+.kopa-subpage .stripe-box , .widget-area-1{
     margin-top: 0;
     overflow: visible;
     padding-top: 0;
@@ -7602,7 +7602,7 @@ Breaking News
     max-height: 39px;
     overflow: hidden;
     position: relative;
-  background: black;}
+  background:transparent;}
 
 .kp-headline {
     margin: 0 20px 0 165px; }
