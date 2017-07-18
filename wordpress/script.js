@@ -205,6 +205,7 @@ function slider(padreMenu,padreContenedor ){
 
 
 function gallerie_swipe(){
+	
 
   var initPhotoSwipeFromDOM = function(gallerySelector) {
 

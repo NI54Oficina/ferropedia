@@ -340,7 +340,8 @@ if (jQuery('.kopa-home-slider').length > 0) {
                     slideSpeed: data_slideSpeed,
                     autoPlay: data_autoPlay,
                     stopOnHover: true
-                });
+                })
+				;
             } );
 
         }

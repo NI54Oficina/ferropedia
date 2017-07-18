@@ -102,11 +102,19 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 		  </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-          <img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
-
-
-            <p style="margin:20px auto auto auto;width:auto;text-align:center; width:50%; border:1px solid white; ">Compartir</p>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;">
+			<div class="jugador-principal rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);"></div>
+			<!--<img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">!-->
+			
+			<div class="compartir-jugador">
+			<p style="">Compartir</p>
+			<div class="links-sociales" >
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  
+                </div>
+            
+			</div>
 
         </div>
     </div>
