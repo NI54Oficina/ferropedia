@@ -1,4 +1,4 @@
-<?php 
+<?php
 $model= $GLOBALS["jugador"];
 ?>
 <?php
@@ -10,7 +10,7 @@ $model->data;
 		$ultimo="";
 		$torneos=array();
 		$otros= array();
-foreach($model->data as $data){ 
+foreach($model->data as $data){
 	if($data["titulo"]=="Debut"){
 		$debut =$data["texto"];
 	}else if($data["titulo"]=="Torneo"){
@@ -29,7 +29,7 @@ foreach($model->data as $data){
 		array_push($otros,$data);
 	}
  }
- 
+
 $lastTorneo= explode("/",$lastTorneo);
 $debut= explode(";",$debut);
 $debut=str_replace("(","<br>(",$debut);
@@ -52,15 +52,15 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
           <div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>
 		  <div class="cancha">
-		  
+
 		  </div>
-			
+
             <!--<img class="cancha" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-transparente-01.svg" alt="">!-->
         </div>
 
         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 informacion-tecnica">
           <h1><?php echo $model->nombre; ?> <span><?php echo $model->apellido; ?></span></h1>
-          
+
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
             <h2><?php echo $lastTorneo[0]; ?></h2>
             <p>Todos partidos jugados</p>
@@ -68,8 +68,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
             <h4><?php echo $model->puesto; ?></h4>
             <p>Puesto</p>
           </div>
-         
-		  
+
+
 		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
             <h2><?php echo rand(1,8); ?></h2>
             <p>Total partidos ganados</p>
@@ -77,8 +77,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
             <h4><?php if($debut[1]!=""){ echo "Ferro ".$debut[1]; }else{ echo "---"; } ?></h4>
             <p>Debut</p>
           </div>
-		  
-		  
+
+
 		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
             <h2><?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?></h2>
             <p>Total Goles Convertidos</p>
@@ -86,7 +86,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
             <h4><?php if($ultimo[1]!=""){ echo "Ferro ".$ultimo[1]; }else{ echo "---"; } ?></h4>
             <p>Último partido</p>
           </div>
-		
+
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px 10px;background-color:rgba(32, 32, 31,0.5)">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento" style="border-right: 2px solid rgba(255,255,255,0.4)">
             <p><span>Fecha y lugar de nacimiento</span><br>
@@ -115,9 +115,9 @@ $ultimo=str_replace("(","<br>(",$ultimo);
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box-ficha-tecnica" >
 
       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 contenido-interno-tecnica">
-	  
+
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica content-shadow" style="margin-bottom:20px;padding-left:0;padding-right:0;"><h2 >Calificación</h2></div></div>
-		
+
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-dinamica">
           <!--<h2>¿Qué pensas del jugador?</h2>!-->
@@ -224,12 +224,12 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 				  <div class="col-lg-3">Partidos jugados</div>
 				  <div class="col-lg-3">Goles convertidos</div>
 				</div>
-				
-			 
+
+
 
 				<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
 
-			   
+
 					<?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
 
 					<?php foreach($value as $torneo){ ?>
@@ -239,16 +239,16 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 					<div class="col-lg-3 partidos-jugados"><?php echo $torneo[2]; ?></div>
 					<div class="col-lg-3 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
 					</div>
-					
-					
+
+
 					<?php } } ?>
-					
-					
-		 
+
+
+
 
 
 			  </div>
-			  
+
 			  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
 					<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
 					<?php foreach($value as $torneo){ ?>
@@ -260,15 +260,15 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 					</div>
 					<?php } ?>
 					</div>
-					
+
 					<?php  } ?>
 
 
-			  
+
 			  </div>
 			  </div>
 
-			  
+
 			</div>
 		<p class="col-lg-12 texto-fuente content-shadow">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
               chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage
@@ -289,28 +289,30 @@ $ultimo=str_replace("(","<br>(",$ultimo);
           </p>
         </div>
 		<?php } ?>
-		
-		
-		
+
+
+
 		  <?php foreach($otros as $data){ ?>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle">
           <h2><?php echo $data["titulo"]; ?></h2>
           <p>
             <?php echo $data["texto"]; ?>
           </p>
-       
+
 		<?php } ?>
 		 </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-video ">
           <h2>Video</h2>
-          <iframe src="https://www.youtube.com/embed/YoMwrh4_ThE" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/LoETC4jtASI" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-galeria contenido-interno-tecnica">
           <h2>Galería de fotos</h2>
 
-          // queda aplicar galeria.
+          <p>EN DESARROLLO</p>
+
+          <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/galeria-imagenes.png" alt="">
 
         </div>
 
@@ -321,7 +323,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
         <h2>JUGADORES RELACIONADOS</h2>
 
         <?php
-		
+
 		$destacadoId= $model->id;
 		$criteria = new CDbCriteria;
 $criteria->limit = 5;
@@ -330,8 +332,8 @@ $criteria->order = 'RAND()';
 $criteria->select = "*";
 
 		$jugadores= Jugador::model()->findAll($criteria);
-		
-		foreach($jugadores as $jugador){ 
+
+		foreach($jugadores as $jugador){
 		?>
 		<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
         <div class="jugador-relacionado">
@@ -353,7 +355,7 @@ $criteria->select = "*";
 
     <?php//comments_template(); ?>
 
-<?php 
+<?php
 ?>
 <style>
 .informacion-tecnica-inner h3{text-transform:uppercase;}

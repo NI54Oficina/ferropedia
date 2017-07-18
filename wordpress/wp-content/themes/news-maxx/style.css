@@ -7448,7 +7448,7 @@ Nothumb Widget
     -webkit-transition: border 0.3s ease-in-out 0s; }
 
 .kopa-home-4 .stripe-box,
-.kopa-subpage .stripe-box {
+.kopa-subpage .stripe-box , .widget-area-1{
     margin-top: 0;
     overflow: visible;
     padding-top: 0;
@@ -7552,13 +7552,13 @@ Weather Widget
     top: 0;
     height: 100%;
     width: 187px;
-    background-color: rgba(65,115,98,0.8); }
+    background-color: rgba(65,115,98,1); }
 
 .awesome-weather-wrap {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(65,115,98,0.8);
+    background-color: rgba(65,115,98,1);
     color: white;
     text-shadow: none;
     height: 100%;
@@ -7607,7 +7607,7 @@ Breaking News
     max-height: 39px;
     overflow: hidden;
     position: relative;
-  background: black;}
+  background:transparent;}
 
 .kp-headline {
     margin: 0 20px 0 165px; }
@@ -7672,7 +7672,7 @@ Breaking News
     border: none;
     border-left: 1px solid #d8d8d8;
     outline: none;
-    background:transparent;
+    background:white;
     margin: 1px 0 0;
     z-index: 10;
     box-sizing: border-box;
@@ -7744,7 +7744,7 @@ Breaking News
 
 .sb-search.sb-search-open .sb-icon-search,
 .no-js .sb-search .sb-icon-search {
-    background: #e03d3d;
+    background: transparent;
     color: white;
     z-index: 11; }
 

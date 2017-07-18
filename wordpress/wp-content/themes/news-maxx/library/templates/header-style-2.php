@@ -44,12 +44,14 @@
 <!-- //header-menu -->
 
 <?php// get_template_part( 'library/templates/header', 'menu' ); ?>
+  <?php get_template_part( 'library/templates/header', 'slider' ); ?>
 
 <div id="main-content">
 
     <div class="widget-area-1">
 
-  <?php get_template_part( 'library/templates/header', 'slider' ); ?>
+<div class="prueba-bg">
+
 
         <div class="stripe-box">
 
@@ -65,7 +67,7 @@
         </div>
         <!-- stripe-box -->
 
-    </div>
+
     <!-- widget-area-1 -->
 
     <div class="bn-box">
@@ -77,8 +79,8 @@
 
         </div>
         <!-- wrapper -->
-
-    </div>
+  </div>
+</div>
     <!-- bn-box -->
 
     <section class="main-section">

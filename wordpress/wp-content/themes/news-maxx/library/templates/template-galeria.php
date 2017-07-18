@@ -22,8 +22,9 @@ global $kopa_setting;
         <img src="<?php echo get_field('foto_portada') ?>" style="position:absolute; bottom:0" alt="">
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:20px;">
-      <h1 style="border-bottom:2px solid black;"><?php echo the_title(); ?></h1>
-      <p style="color:black;"><?php echo(get_the_excerpt()); ?></p>
+      <h1 style="border-bottom:2px solid black;font-size:48px; line-height:60px;"><?php $title= the_title_attribute(array("echo" => 0));
+        $t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></h1>
+      <div style="font-size:15px;color:black; font-family='Roboto-Regular'"><?php the_content(); ?></div>
     </div>
 
 
@@ -39,7 +40,7 @@ global $kopa_setting;
     }
 
     .max-box-gallery{ padding: 30px;}
-    .box-gallery{   padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}
+    .box-gallery{ overflow: hidden;  padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}
     .box-gallery span{
       opacity: 0;
       width: 100%;
@@ -67,7 +68,12 @@ global $kopa_setting;
     ListElements=[];
 
   </script>
-  <?php  $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>3 ) );
+
+  <?php
+  $categories = get_the_category();
+   $category_id= $categories[0]->cat_ID;
+
+    $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id ) );
 
   foreach($posts as $post){
     ?>
@@ -108,7 +114,7 @@ echo $content_parts['main']; ?>';
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery">
 
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery square">
             <?php  echo the_post_thumbnail('full' ); ?>
 
            <span> Ver</span>

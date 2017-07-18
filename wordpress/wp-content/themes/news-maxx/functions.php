@@ -61,3 +61,10 @@ function pw_show_gallery_image_urls( $content ) {
 
 }
 add_filter( 'the_content', 'pw_show_gallery_image_urls' );
+
+
+add_action( 'init', 'wpse34528_add_page_cats' );
+function wpse34528_add_page_cats()
+{
+    register_taxonomy_for_object_type( 'category', 'page' );
+}

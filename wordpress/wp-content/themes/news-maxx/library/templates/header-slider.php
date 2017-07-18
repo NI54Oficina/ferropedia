@@ -16,7 +16,7 @@
                             <div class="flex-caption">
                                 <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white ">NACÍA CARLOS TIMOTEO GRIGUOL</h3>
                                 <p style="font-family:'Roboto-regular'; padding-top:50px;">Ex futbolista y director técnico argentino.  Nació en Las Palmas, Córdoba el 4 de septiembre de 1934.
-Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
+                                  Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
                                     <!-- <span class="arrow-wrapper">
                                         <span class="arrow-left"></span>
                                         <span class="arrow-right"></span>
@@ -33,13 +33,13 @@ Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
 
 
 
-<div class="owl-controls clickable">
-  <div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div>
-  <div class="owl-page"><span class=""></span></div>
-    <div class="owl-page active"><span class=""></span></div>
+  <div class="owl-controls clickable">
+    <div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div>
     <div class="owl-page"><span class=""></span></div>
+      <div class="owl-page active"><span class=""></span></div>
+      <div class="owl-page"><span class=""></span></div>
+    </div>
   </div>
-</div>
 </div>
 
 
@@ -79,7 +79,7 @@ Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
 			border-image:none;
 			border-style:solid;
 			border-width:    300px 0 300px 250px;
-			border-color: transparent transparent transparent green;
+			border-color: transparent transparent transparent #006443;
 			content:"";
 			height:0;
 			margin-left:0px;position:absolute;
@@ -88,6 +88,6 @@ Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
 			width:0;
 			}
 			</style>
-</div>
+<!-- </div> -->
 
 <!-- SLIDER AGREGADO -->

@@ -30,12 +30,12 @@
 
         <nav class="main-nav">
             <div class="wrapper clearfix">
-              <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:35%;">
+              <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:29%;">
 
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://localhost/ferropedia/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="http://localhost/ferropedia/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://localhost/ferropedia/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""></a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/rincon-mundo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
+                <li title="Jugadores" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
+                <li title="Museo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
+                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""></a></li>
+                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/rincon-mundo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
                 <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li> -->
               </ul>
 
@@ -157,13 +157,13 @@
                   <span id="close-menu">X</span>
                   <p>Menú</p>
                   <ul>
-                    <a href="<?php echo site_url(); ?>"><li>INICIO</li></a>
-                    <a href="<?php echo site_url(); ?>"><li>JUGADORES</li></a>
-                    <a href="<?php echo site_url(); ?>">  <li>DT'S</li></a>
-                    <a href="<?php echo site_url(); ?>/cuna-cajon">  <li>DE LA CUNA HASTA EL CAJÓN</li></a>
-                    <a href="<?php echo site_url(); ?>/museo">  <li>MUSEO</li></a>
-                    <a href="<?php echo site_url(); ?>/rincon-mundo">  <li>EL RINCÓN DEL MUDO</li></a>
-                    <a href="<?php echo site_url(); ?>/equipo-laferropedia/">  <li>EQUIPO LA FERROPEDIA</li></a>
+                    <a href="<?php echo home_url(); ?>"><li>INICIO</li></a>
+                    <a href="<?php echo home_url(); ?>/ficha-jugador/"><li>JUGADORES</li></a>
+                    <!-- <a href="<?php echo home_url(); ?>">  <li>DT'S</li></a> -->
+                    <a href="<?php echo home_url(); ?>/category/cuna-cajon/">  <li>DE LA CUNA HASTA EL CAJÓN</li></a>
+                    <a href="<?php echo home_url(); ?>/museo">  <li>MUSEO</li></a>
+                    <a href="<?php echo home_url(); ?>/rincon-mundo">  <li>EL RINCÓN DEL MUDO</li></a>
+                    <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>EQUIPO LA FERROPEDIA</li></a>
                   </ul>
                 </nav>
         <!-- search box -->
