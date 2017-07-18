@@ -1028,7 +1028,7 @@ function kopa_the_topnew()
                                 echo 'icono-museo-verde.svg';
                                 break;
 
-                               case "chiquito-viejo":
+                               case "cuna-cajon":
                                 echo "icono-dechiquitomiviejo-verde.svg";
                                 break;
 

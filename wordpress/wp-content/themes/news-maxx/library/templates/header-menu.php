@@ -30,7 +30,7 @@
 
         <nav class="main-nav">
             <div class="wrapper clearfix">
-              <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:35%;">
+              <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:29%;">
 
                 <li title="Jugadores" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
                 <li title="Museo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
