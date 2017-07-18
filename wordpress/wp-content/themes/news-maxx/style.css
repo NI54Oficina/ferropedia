@@ -7547,13 +7547,13 @@ Weather Widget
     top: 0;
     height: 100%;
     width: 187px;
-    background-color: rgba(65,115,98,0.8); }
+    background-color: rgba(65,115,98,1); }
 
 .awesome-weather-wrap {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(65,115,98,0.8);
+    background-color: rgba(65,115,98,1);
     color: white;
     text-shadow: none;
     height: 100%;

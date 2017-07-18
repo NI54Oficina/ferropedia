@@ -24,7 +24,7 @@ global $kopa_setting;
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:20px;">
       <h1 style="border-bottom:2px solid black;font-size:48px; line-height:60px;"><?php $title= the_title_attribute(array("echo" => 0));
         $t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></h1>
-      <div style="color:black; font-family='Roboto-Regular'"><?php the_content(); ?></div>
+      <div style="font-size:15px;color:black; font-family='Roboto-Regular'"><?php the_content(); ?></div>
     </div>
 
 
