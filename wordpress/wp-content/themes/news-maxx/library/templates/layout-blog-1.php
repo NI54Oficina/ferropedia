@@ -121,7 +121,7 @@
   </div>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box bloque">
-    
+
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
 		<h2>Con la verde</h2>
@@ -153,8 +153,8 @@
         <p><?php echo $destacado->detalle_puesto; ?></p>
         <p><?php echo $lastTorneo[0]; ?> partidos jugados</p>
         <p><?php echo $lastTorneo[1]; ?> goles</p>
-		
-		
+
+
         <p>Debút <br>
 		<?php echo $debut[0]; ?><br>
 		Ferro <?php echo $debut[1]; ?>
@@ -171,7 +171,7 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
-          
+
           <label>+ Jugadores</label>
         </div>
 		</div>
@@ -186,17 +186,17 @@ $criteria->order = 'RAND()';
 $criteria->select = "*";
 
 		$jugadores= Jugador::model()->findAll($criteria);
-		
+
 		?>
-      <?php foreach($jugadores as $jugador){ 
-		
+      <?php foreach($jugadores as $jugador){
+
 	  ?>
 	  <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
-          
+
 
           <div class="capa-violeta"></div>
             <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?></label>
@@ -218,7 +218,7 @@ $criteria->select = "*";
 		<div class="border-jugador">
         <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
-          
+
 
           <div class="capa-verde"></div>
           <label>Nombre deL Dt</label>
@@ -231,7 +231,7 @@ $criteria->select = "*";
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-verde rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
-          
+
             <label>+ Dts</label>
         </div>
 		</div>
@@ -280,8 +280,8 @@ $criteria->select = "*";
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
-      <?php echo do_shortcode("[custom-twitter-feeds]"); ?>
-    <!-- <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt=""> -->
+      <?php // echo do_shortcode("[custom-twitter-feeds]"); ?>
+    <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
   </div>
 
 </div>
@@ -348,10 +348,10 @@ $criteria->select = "*";
          ?>
          <a href="<?php the_permalink($post->ID ); ?>">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-inner-container">
-        
+
 		<div class="col-lg-3 col-md-3 mini-thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>);"></div>
         <p class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><?php the_title_attribute($post->ID ); ?> <br>  <span> <?php echo  get_the_date( 'l F j, Y' ) ?></span></p>
-		
+
       </div></a>
 
           <?php }  wp_reset_postdata();  ?>
@@ -477,8 +477,11 @@ $criteria->select = "*";
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right ultimos-comentarios-widget" style="overflow:hidden;">
-		<div style="width:100%;height:400px; background-color:#a43c93;"><h3 style="color:white;text-align:center;margin-top:0;padding-top:10px;">Ultimos comentarios <br><span style="font-size:8px;">(placeholder)</span></div>
+		<!-- <div style="width:100%;height:400px; background-color:#a43c93;"><h3 style="color:white;text-align:center;margin-top:0;padding-top:10px;">Ultimos comentarios <br><span style="font-size:8px;">(placeholder)</span></div> -->
         <?php// get_recent_comments(); ?>
+
+      <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/comentarios-demo.png" alt="">
+
 
     </div>
 

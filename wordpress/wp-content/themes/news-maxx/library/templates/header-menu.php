@@ -32,10 +32,10 @@
             <div class="wrapper clearfix">
               <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:35%;">
 
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://localhost/ferropedia/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="http://localhost/ferropedia/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://localhost/ferropedia/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""></a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/rincon-mundo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
+                <li title="Jugadores" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
+                <li title="Museo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
+                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""></a></li>
+                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://localhost/ferropedia/rincon-mundo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
                 <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li> -->
               </ul>
 
