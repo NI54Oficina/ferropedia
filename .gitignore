@@ -33,3 +33,9 @@ protected/runtime/application.log
 protected/runtime/application.log.1
 protected/runtime/application.log.1
 *.3
+protected/runtime/application.log.1
+*.1
+protected/runtime/application.log.2
+protected/runtime/application.log.2
+protected/runtime/application.log.2
+protected/runtime/application.log.5

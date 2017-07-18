@@ -5702,13 +5702,17 @@ body {
     -webkit-transform: rotate(45deg);
     /* Opera, Chrome, and Safari */ }
 
+
 .main-section .wrapper {
     /*border-left: 1px solid #d8d8d8;
     border-right: 1px solid #d8d8d8;*/
     /*padding: 15px 20px;*/
-    /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
+    
 	background-color:#20201f;
   }
+ .main-section .wrapper.home {
+	background:none;
+}
 .main-section .wrapper > .col-lg-12{padding-left:0;padding-right:0;}
 .main-section .wrapper .main-col {
     /*width: 902px;*/

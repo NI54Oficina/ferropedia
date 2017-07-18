@@ -7,7 +7,7 @@
     $kopa_position = $kopa_layout[$kopa_setting['layout_id']]['positions'];
 ?>
 
-<div class="wrapper clearfix">
+<div class="wrapper clearfix home">
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left">
 
@@ -132,7 +132,7 @@
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 		<div class="second-interior">
         <p><?php echo $destacado->nombre." ".$destacado->apellido; ?></p>
-        <a href="http://localhost/ferropedia/ficha-jugador-interna"><button type="butto n" name="button">Ver Ficha</button></a>
+        <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $destacado->id; ?>"><button type="butto n" name="button">Ver Ficha</button></a>
 		</div>
       </div>
 
