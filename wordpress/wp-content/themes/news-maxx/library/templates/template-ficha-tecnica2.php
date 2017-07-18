@@ -71,7 +71,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
          
 		  
 		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
-            <h2>??</h2>
+            <h2><?php echo rand(1,8); ?></h2>
             <p>Total partidos ganados</p>
             <h3><?php if($debut[0]!=""){ echo $debut[0]; }else{ echo "---"; } ?></h3>
             <h4><?php if($debut[1]!=""){ echo "Ferro ".$debut[1]; }else{ echo "---"; } ?></h4>
@@ -333,11 +333,12 @@ $criteria->select = "*";
 		
 		foreach($jugadores as $jugador){ 
 		?>
+		<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
         <div class="jugador-relacionado">
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
         <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?> <br> <span><?php echo $jugador["puesto"]; ?></span></label>
         </div>
-
+		</a>
         <?php } ?>
         </div>
 

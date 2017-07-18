@@ -28,7 +28,7 @@ class JugadorController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"ver"),
+				'actions'=>array('index','view',"ver","listar"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -99,6 +99,18 @@ class JugadorController extends Controller
 		$this->layout='jugador';
 		$this->render('ver',array(
 			'model'=>$this->loadModel($id),
+		));
+	}
+	
+	public function actionListar(){
+		$puestos= array();
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"arquero")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"defensor")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"delantero")));
+		$this->layout='jugador';
+		$this->render('listar',array("model"=>$puestos
+			
 		));
 	}
 

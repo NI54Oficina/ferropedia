@@ -16,7 +16,9 @@ $(document).ready( function(){
 });
 
 
-$(window).bind('load', function(){
+$(window).on('load', function(){
+	ResetHeight();
+	SameHeight();
 	slider('.jugadores-container-ranking','.contenido-1' );
   slider('.menu-2','.jugadores-muchosjugadores' );
   slider('.menu-anios','.cuerpo-tabla' );
@@ -30,6 +32,7 @@ $(window).bind('load', function(){
 
 
 $(window).on('resize', function(){
+	
    _square();
 })
 

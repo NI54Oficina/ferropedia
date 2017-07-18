@@ -5712,6 +5712,11 @@ body {
 	/*background-color:#20201f;*/
 
   }
+  
+  .page-template-template-ficha-general .page-content-area .wrapper{
+	padding:60px;
+  }
+  
  .main-section .wrapper.home {
 	background:none;
 }
@@ -8884,8 +8889,12 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 }
 
 
-/*primero bloque en home*/
 
+/*primero bloque en home*/
+		.first-box.bloque{
+			padding-left:45px;
+			padding-right:45px;
+		}
 
         .first-left-box-inner h2, .second-box h2{
           font-family: "Condensed-bold-italic";
@@ -8959,29 +8968,48 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
         .linea-divisoria-partido{
           border-bottom: 1px dashed white;
-          margin:20px 0;
+          margin:10px 0;
         }
 
         .goles span {
           background-color: rgba(0,0,0,.20);
           color:#00b643;
           padding: 5px;
-          min-width: 50px;
+          min-width: 100px;
           font-family: 'Condensed-bold';
+		  margin-right:10px;
+		  display:inline-block;
         }
 
-        .goles{
+        p.goles{
           color:white;
           font-family: 'Condensed-regular';
           font-weight: 100;
+		  font-size:17px;
+		  display:inline-block;
+		  margin-bottom:0;
         }
-
+		.goles-totales-home{
+			margin-top:30px;
+			margin-bottom:30px;
+		}
 
         .first-right-box table{
           border: none;
           border-top: 1px solid #006443;
-
+			
         }
+		
+		.first-right-box table th{
+			padding-left:20px;
+		}
+		.first-right-box table th .even{
+			color:#A43C93;
+		}
+		.first-right-box table th .odd{
+			color:rgb(0, 182, 67);
+		}
+		
 
         .first-right-box table tr td{
           border: none;
@@ -8995,8 +9023,10 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
         .first-right-box h2{
           color: white;
           font-family: 'Condensed-bold-italic';
-          font-size: 2em;
+          font-size: 2.2em;
         }
+		
+		.first-right-box div:last-child table{margin:0;}
 
         .first-right-box p{
           color: white;
@@ -9526,15 +9556,27 @@ padding: 0 35px;
 
 
   /*pantalla de jugadores*/
+  
+  
 
   .label-name-page .header-text-content{
     font-family: 'Roboto-regular';
     padding: 0 20%;
     background-image: url(img/header-jugadores.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
-    background-size: cover;
-    padding: 4%;
+    background-size: auto 100%;
+    padding: 20px;
+	position:relative;
+	top:-50px;
+	width:100%;
+	margin:auto;
+  }
+  .label-name-page  h1{
+  text-align:left;
+  color:white;
+  font-family:'Condensed-bold-italic';
+	font-size:40px;
   }
 
     .label-name-page{
@@ -9551,21 +9593,36 @@ padding: 0 35px;
     }
 
      nav.menu-jugadores{
-       display: initial;
+       display: inline-block;
+	   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+								  width:100%;
+								  border-bottom:3px solid #006327;
+								  padding:0 10px;
      }
 
+   nav.menu-jugadores div{
+	width: 200px;
+	  max-width:20%;
+	  display:inline-block;
+	  
+   }
+   
    nav.menu-jugadores p{
-      display: inline;
+      display: inline-block;
       color: white;
       font-family: 'Condensed-bold-italic';
       font-size:1.2em;
       text-align: center;
       padding: 5px 10px;
     }
-
-    nav.menu-jugadores p{
-      display: inline;
-    }
+	
+	
 
     .menu-dinamico .ver-dts{
     float: right;
@@ -9594,10 +9651,14 @@ padding: 0 35px;
       color: white;
       display: inline-block;
     }
+	
+	.jugadores-content .jugadores-muchosjugadores .jugadores-j label{
+		height:50px;
+	}
 
     .jugadores-content .jugadores-muchosjugadores .jugadores-j span{
       background-image: url(img/banderin.svg);
-      background-size:auto 100%;
+      background-size:auto 80%;
       background-position: center;
       background-repeat: no-repeat;
       padding: 5px;
@@ -9641,7 +9702,18 @@ padding: 0 35px;
       text-align: center;
       font-family: 'Condensed-bold-italic';
       font-size: 1.3em;
+	  margin-bottom:10px;
     }
+	
+	.menu-interno{
+		-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+	}
 
     .jugadores-content nav.menu-interno p{
       display: inline-grid;
@@ -9687,6 +9759,7 @@ padding: 0 35px;
 
     .jugadores-content .jugadores-container-ranking{
       background-color: #0c0c0c;
+	  padding-bottom:10px;
     }
 
     .jugadores-container-busqueda .menu-busqueda{
@@ -9713,17 +9786,27 @@ padding: 0 35px;
     }
     .jugadores-container-busqueda .resultado{
       /*width: 47%;*/
-      display: inline-flex;
+      display: inline-block;
+	  width:100%;
       color: white;
+	  padding:5px;
+	  margin:0;
     }
 
     .jugadores-container-busqueda .resultado span{
       color: #00b643;
       font-family: 'Roboto-regular';
+	  
     }
 
-    .jugadores-container-busqueda .resultado:nth-child(3n+1){
+    .jugadores-container-busqueda .resultado.even{
       background-color: rgba(0,100,67,1);
+    }
+	.jugadores-container-busqueda .left-side{
+      padding-right:25px;
+    }
+	.jugadores-container-busqueda .right-side{
+      padding-left:25px;
     }
 
     .page-content-area{
@@ -9855,10 +9938,14 @@ margin-bottom:15px;
       width: 100%;
       margin: 0;
       font-family: 'Condensed-bold-italic';
+	  font-size:18px;
+	  padding:10px;
     }
 
     .jugador-relacionado label span{
       font-family: 'Condensed-italic';
+	  font-size:13px;
+	  text-transform:capitalize;
     }
 
     .jugador-relacionado{

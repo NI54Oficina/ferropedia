@@ -1,3 +1,21 @@
+<?php 
+//$puestos= $GLOBALS["puestos"];
+$puestos= array();
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"arquero")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"defensor")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"delantero")));
+			
+$criteria = new CDbCriteria;
+$criteria->limit = 4;
+$criteria->order = 'RAND()';
+$criteria->select = "*";
+
+$visitados= Jugador::model()->findAll($criteria);
+$votados= Jugador::model()->findAll($criteria);
+$ingresos= Jugador::model()->findAll($criteria);
+		
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -46,9 +64,9 @@
 
 
 global $kopa_setting;
-if ( is_page(get_the_ID()) && have_posts() ) {
+/*if ( is_page(get_the_ID()) && have_posts() ) {
     while ( have_posts() ) {
-        the_post(); ?>
+        the_post();*/ ?>
 
 <?php ?>
 
@@ -57,27 +75,30 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
       <div class="label-name-page">
         <?php the_post_thumbnail( 'full' );   ?>
+		<div style="padding:0 60px;">
         <div class="header-text-content">
           <h1>Los jugadores</h1>
-          <?php the_content(); ?>
+          <?php //the_content(); ?>
         </div>
+		</div>
 
       </div>
 
       <div class="wrapper clearfix">
-
+	  <?php if(false){ ?>
+		<p class="ver-dts" style="position:absolute;right:60px;">Ver Dt's</p>
+	<?php } ?>
         <div class="menu-2 menu-dinamico">
           <nav class="menu-jugadores">
-
-            <p class="selected">Arqueros</p>
-            <p>Defensores</p>
-            <p>Mediocampista</p>
-            <p>Delanteros</p>
+			<div><p class="selected">Arqueros</p></div>
+            <div><p>Defensores</p></div>
+            <div><p>Mediocampista</p></div>
+            <div><p>Delanteros</p></div>
 
 
           </nav>
 
-            <p class="ver-dts">Ver Dt's</p>
+            
 
         </div>
 
@@ -97,45 +118,64 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
 
                 <nav class="menu-interno">
-                    <p class="selected">Más visitados de la semana</p>
-                    <p>Más votados</p>
-                    <p>Últimos ingresados</p>
+                    <p class="selected" hid="5">Más visitados de la semana</p>
+                    <p hid="5" >Más votados</p>
+                    <p hid="5">Últimos ingresados</p>
                   </ul>
                 </nav>
 
-                <?php for($i=0; $i<3; $i++){ ?>
+                
 
                 <div class="contenido-1 contenido-dinamico">
-                  <p><span>01</span> 08 Nombre</p>
-                  <p><span>01</span> 08 Nombre</p>
-                  <p><span>01</span> 08 Nombre</p>
-                  <p><span>01</span> 08 Nombre</p>
+					<?php $auxPos=1; foreach($visitados as $jugador){ ?>
+					<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+					<p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p></a>
+					<?php } ?>
+                  
                 </div>
 
-                <?php } ?>
+                <div class="contenido-1 contenido-dinamico">
+                  <?php $auxPos=1; foreach($votados as $jugador){ ?>
+				  <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+                  <p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
+				  </a>
+				  <?php } ?>
+                </div>
+				
+
+                <div class="contenido-1 contenido-dinamico">
+					<?php $auxPos=1; foreach($ingresos as $jugador){ ?>
+					<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+					<p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
+					</a>
+					<?php } ?>
+                </div>
+
 
             </div>
 
           </div>
 
-          <?php for($m=0; $m<4; $m++){ ?>
+          <?php if(false){ for($m=0; $m<4; $m++){ ?>
 
           <div class="jugadores-muchosjugadores contenido-dinamico col-lg-7 col-md-7 col-sm-7 col-xs-12">
 
             <div class="min-height-upper-container" hid="1">
 
-
+			
 
             <?php for($i=0; $i<15 ; $i++){ ?>
             <div class="jugadores-j">
               <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 
               <!-- <img src="" alt=""> -->
-              <label><span>10</span>Nombre jugador</label>
+              <label><span><?php if(false){ ?>10<?php } ?></span>Nombre jugador</label>
 
             </div>
-            <?php  }?>
+            <?php  } ?>
+			
 
+			
             </div>
 
 
@@ -168,6 +208,96 @@ if ( is_page(get_the_ID()) && have_posts() ) {
             </div>
           </div>
 
+          <?php } }  ?>
+		  
+		  <?php 
+			
+			
+			?>
+			
+		  <?php foreach($puestos as $puesto){ ?>
+
+          <div class="jugadores-muchosjugadores contenido-dinamico col-lg-7 col-md-7 col-sm-7 col-xs-12">
+
+            <div class="min-height-upper-container" hid="1">
+
+			
+
+            <?php 
+			$auxJ=0;
+			foreach($puesto as $jugador){ ?>
+			<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+            <div class="jugadores-j">
+              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+
+              <!-- <img src="" alt=""> -->
+			<label><span><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
+
+            </div>
+			</a>
+            <?php
+			$auxJ++;
+			if($auxJ>=15){
+				break;
+			}
+			} ?>
+			
+
+			
+            </div>
+
+
+            <div class="jugadores-container-busqueda">
+              <div class="label-busqueda">
+
+                <select class="menu-busqueda" name="">
+                  <option value="">Alfabeto</option>
+                  <option value="">Popularidad</option>
+                  <option value="">Por campeonato</option>
+
+                </select>
+                <!-- <nav class="menu-busqueda">
+                  <ul>
+                    <li></li>
+                    <li>Popularidad</li>
+                    <li>Por campeonato</li>
+                  </ul>
+                </nav> -->
+
+                <p>Busqueda avanzada</p>
+              </div>
+              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+				<?php $even=true;
+						$auxE=0;
+					?>
+              <?php foreach($puesto as $jugador){ ?>
+				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 <?php 
+				if($auxE==0){echo " left-side";}else{ echo " right-side";}				
+				?>">
+				<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+                <p class=" resultado <?php 
+			  /*if($even){ if($auxE==0){echo "even";}else{echo "odd";}}
+				if(!$even){ if($auxE==0){echo "odd";}else{echo "even";}}
+				$auxE++;
+				if($auxE>1){
+					$auxE=0;
+					$even= !$even;
+				}*/
+				if($even){ echo "even";}
+				if(!$even){echo "odd";}
+				$auxE++;
+				if($auxE>1){
+					$auxE=0;
+					$even= !$even;
+				}
+				?>"><span>-&nbsp; </span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p></a>
+				</div>
+              <?php } ?>
+                </div>
+            </div>
+          </div>
+
           <?php }  ?>
         </div>
 
@@ -180,8 +310,8 @@ if ( is_page(get_the_ID()) && have_posts() ) {
 
 
 
-<?php } // endwhile
-} // endif
+<?php //} // endwhile
+//} // endif
 ?>
 
 
