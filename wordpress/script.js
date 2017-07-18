@@ -5,19 +5,25 @@ $(window).load( function(){
 $(document).ready( function(){
   console.log("Script cargado");
   SameHeight();
-  slider('.jugadores-container-ranking','.contenido-1' );
+  //slider('.jugadores-container-ranking','.contenido-1' );
+  //slider('.menu-2','.jugadores-muchosjugadores' );
+  //slider('.menu-anios','.cuerpo-tabla' );
+  _square();
+  //gallerie_swipe();
+  //_openmodal();
+  //menu();
+
+});
+
+
+$(window).bind('load', function(){
+	slider('.jugadores-container-ranking','.contenido-1' );
   slider('.menu-2','.jugadores-muchosjugadores' );
   slider('.menu-anios','.cuerpo-tabla' );
   _square();
   gallerie_swipe();
   _openmodal();
   menu();
-
-});
-
-$(window).bind('load', function(){
-
-
 
 });
 

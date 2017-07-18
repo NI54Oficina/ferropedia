@@ -5703,7 +5703,7 @@ body {
     /* Opera, Chrome, and Safari */ }
 
 
-.main-section .wrapper {
+.main-section .wrapper ,.page-content-area{
     /*border-left: 1px solid #d8d8d8;
     border-right: 1px solid #d8d8d8;*/
     /*padding: 15px 20px;*/
