@@ -5707,8 +5707,10 @@ body {
     /*border-left: 1px solid #d8d8d8;
     border-right: 1px solid #d8d8d8;*/
     /*padding: 15px 20px;*/
-    
 	background-color:#20201f;
+    /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
+	/*background-color:#20201f;*/
+
   }
  .main-section .wrapper.home {
 	background:none;
@@ -8978,14 +8980,14 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
         .first-right-box table{
           border: none;
           border-top: 1px solid #006443;
-		  
+
         }
 
         .first-right-box table tr td{
           border: none;
-		  
+
         }
-		
+
 		.first-right-box table tr td:first-child{
 			padding-left:35px;
 		}
@@ -9659,13 +9661,13 @@ padding: 0 35px;
       display:none;
       padding: 30px 0 0 20px;
     }
-	
+
 	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row{
 		padding:0;
 		border-bottom:1px solid rgba(255,255,255,0.2);
 		margin:0px;
 	}
-	
+
 	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row:last-child{
 		border:none;
 	}
@@ -9747,7 +9749,7 @@ padding: 0 35px;
   .main-section .wrapper > .first-box-ficha-tecnica{
     background:repeating-linear-gradient( -45deg,   #25362c,   #25362c 5px,   #1c2a23 5px,   #1c2a23 10px );
 	padding:40px 50px;
-	
+
   }
     .sector-cancha-float{
       z-index: 10;
@@ -9760,7 +9762,7 @@ padding: 0 35px;
       top:0;
      /* margin: auto;*/
     }
-	
+
 	.cancha{
 		position:relative;
 		z-index:11;
@@ -9772,25 +9774,25 @@ padding: 0 35px;
 		background-repeat:no-repeat;
 		overflow:hidden;
 	}
-	
+
 	.cancha-delantero{
-		
+
 		top:0;
 	}
 	.cancha-mediocampista{
-		
-		
+
+
 		top:30%;
 	}
 	.cancha-defensor{
-		
+
 		top:50%;
 	}
 	.cancha-arquero{
-		
+
 		top:65%;
 	}
-	
+
 	.contenido-interno-tecnica{
 		padding:60px;
 	}
@@ -9816,16 +9818,16 @@ padding: 0 35px;
     .jugador-principal{
       border: 3px solid white;
     }
-	
+
 	.tecnica-galeria{
 		padding:15px;
 	}
-	
+
 	.tecnica-detalle,.tecnica-video,.tecnica-galeria{
 		margin-top:35px;
 	}
-	
-	
+
+
 	.tecnica-detalle h2, .tecnica-galeria h2,.tecnica-video h2{
 		font-size:33px;
 		padding:10px 25px;
@@ -9906,7 +9908,7 @@ margin-bottom:15px;
 	  margin-bottom:0;
 	  margin-top:40px;
     }
-	
+
 	.informacion-tecnica-inner h4{
       color:rgba(0,182,67,.7);
       font-family: 'Condensed-bold-italic';
@@ -9922,14 +9924,14 @@ margin-bottom:15px;
 
     .info-nacimiento p span{
       color:rgba(0,182,67,.7);
-	  
+
     }
-		
+
 	.informacion-dinamica.campanas-jugador {
-		
-		
+
+
 		margin-top:20px;
-		
+
 	}
     .informacion-dinamica h2{
       color: white;
@@ -9938,7 +9940,7 @@ margin-bottom:15px;
       text-align: center;
       width: 100%;
       font-size: 23px;
-      
+
 	  background:repeating-linear-gradient( -45deg,   #232621,   #232621 5px,   #191b17 5px,   #191b17 10px );
 	  margin-top:0;
 	  margin-bottom:0;
@@ -10027,13 +10029,13 @@ margin-bottom:15px;
 	padding: 10px 30px;
 	margin-top:20px;
 	background-color:#080808;
-	
+
     }
-	
+
 	.titular-negro{
 		color:white;
 		background-color:#080808;
-		
+
 		text-align:center;
 		padding:10px 0px;
 		margin-bottom:15px;
@@ -10045,12 +10047,12 @@ margin-bottom:15px;
 		font-family:'Condensed-italic';
 		padding:15px;
 	}
-	
+
 	.content-shadow{
 		-webkit-box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
 -moz-box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
 box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
-	
+
 	}
 
     .first-box-ficha-tecnica{
