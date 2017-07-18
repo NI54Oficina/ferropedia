@@ -217,8 +217,8 @@ return array(
 					'class'=>'CWebLogRoute',
 				),
 				*/
-			),
-		),*/
+			//),
+		//),
 
 	),
 
