@@ -79,7 +79,7 @@
 			border-image:none;
 			border-style:solid;
 			border-width:    300px 0 300px 250px;
-			border-color: transparent transparent transparent green;
+			border-color: transparent transparent transparent #006443;
 			content:"";
 			height:0;
 			margin-left:0px;position:absolute;
