@@ -7,6 +7,9 @@
     $kopa_position = $kopa_layout[$kopa_setting['layout_id']]['positions'];
 ?>
 
+<section class="main-section trio">
+
+
 <div class="wrapper clearfix home">
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left">

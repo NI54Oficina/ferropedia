@@ -5,12 +5,12 @@
   get_template_part( 'library/templates/header', 'links' );
 	  get_template_part( 'library/templates/header', 'extra' );
   get_template_part( 'library/templates/header', 'menu' );
-
+ $current_id_slide;
 global $kopa_setting;
 // if ( is_page(get_the_ID()) && have_posts() ) {
 //     while ( have_posts() ) {
 //         the_post(); ?>
-
+<div id="main-content">
 <section class="main-section trio-<?php $categories = get_the_category();$cat= $categories[0];echo $cat->slug;?>">
 
 
@@ -21,14 +21,23 @@ global $kopa_setting;
 
   </div>
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); max-height:400px;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); min-height:400px;">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height:400px;">
         <img src="<?php echo get_field('foto_portada') ?>" style="position:absolute; bottom:0" alt="">
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:20px;">
       <h1 style="border-bottom:2px solid black;font-size:48px; line-height:60px;"><?php $title= the_title_attribute(array("echo" => 0));
         $t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></h1>
-      <div style="font-size:15px;color:black; font-family='Roboto-Regular'"><?php the_content(); ?></div>
+      <div style="font-size:15px;color:black; font-family='Roboto-Regular'"><?php
+
+$post_id_5369 = get_post(get_the_ID());
+
+$content = $post_id_5369->post_content;
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]>', $content);
+echo  $content ;
+?>
+</div>
     </div>
 
 
@@ -44,7 +53,7 @@ global $kopa_setting;
     }
 
     .max-box-gallery{ padding: 30px;}
-    .box-gallery{ overflow: hidden;  padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}
+    .box-gallery{text-align: center; overflow: hidden;  padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}
     .box-gallery span{
       opacity: 0;
       width: 100%;
@@ -62,6 +71,12 @@ global $kopa_setting;
     .box-gallery span:hover{
       opacity: 1;
       transition: 1s all;
+    }
+
+    .box-gallery img{
+      height: 100%;
+      width: auto;
+
     }
     </style>
 
@@ -87,13 +102,34 @@ global $kopa_setting;
     //Arreglar esta parte con las cosas q corresponden
       object={};
       object['title']='<?php the_title(); ?>';
-      object['content']='<?php  $content = get_post_field( 'post_content', get_the_ID() );
+      var content;
+
+
+    <?php  $content = get_post_field( 'post_content', get_the_ID() );
 
 // Get content parts
 $content_parts = get_extended( $content );
 
-// Output part before <!--more--> tag
-echo $content_parts['main']; ?>';
+$new =trim($content_parts['main']);
+//echo $new;
+
+?>
+  object['content']='El partido Alemania Federal-Austria del Mundial de España fue escandaloso:como a los dos les convenía empatar para avanzar a la siguiente ronda, jugaron a pasarse la pelota toda la tarde hasta asegurase el 0 a 0 y dejar afuera a Argelia. Cinco semanas después, en Parque de los Patricios, el árbitro Juan Carlos Demaro creyó ver una situación parecida entre los jugadores de Ferro y lo resolvió como si la AFA le hubiera conferido poderes sobre terrenales: dio un insólito tiro libre por “acción antideportiva y desleal”.'
+  <?php $post_id_5369 = get_post(get_the_ID());
+
+  $content = $post_id_5369->post_content;
+  // $content = apply_filters('the_content', $content);
+  $content = str_replace(']]>', ']]>', $content);
+  // $content = explode(' ', $content);
+  // $content = explode(":<!--more-->", $content);
+  // $content = explode(' ', $content[0]);
+  // foreach($content as $con){
+  //   echo $con.' ';
+  // }
+
+  //print($content);
+  ?> ;
+
       object['volanta']='<?php echo get_field('volanta')?>';
       object['category']='<?php the_title(); ?>';
       object['notes']='<?php the_title(); ?>';
