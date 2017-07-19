@@ -5712,6 +5712,9 @@ body {
 	background-color:#20201f;
 
   }
+  .trio-museo .page-content-area,.trio-rincon-mudo .page-content-area{
+	background-color:white;
+  }
 
   .page-template-template-ficha-general .page-content-area .wrapper{
 	padding:60px;
