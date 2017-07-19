@@ -1,15 +1,17 @@
 
 <?php
   get_header();
-
+  // get_template_part( 'library/templates/header', 'links' );
+  // get_template_part( 'library/templates/header', 'extra' );
+  //      get_template_part( 'library/templates/header', 'menu' );
 
 global $kopa_setting;
 // if ( is_page(get_the_ID()) && have_posts() ) {
 //     while ( have_posts() ) {
 //         the_post(); ?>
 
-
-
+<div id="main-content">
+<section class="main-section">
 <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix" style="padding:50px 100px;">
 
   <p style="background-color:white; color:#006443; width:100%; border-bottom:4px solid #006443; font-size:2em; padding:10px; font-family: 'Condensed-bold-italic';">Ferropedistas</p>

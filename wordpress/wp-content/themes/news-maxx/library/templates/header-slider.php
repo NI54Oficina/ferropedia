@@ -151,10 +151,15 @@
                 <span class="square-4"></span>
             </div>
 			<style>
+
+      #logo-container{
+          background-image: url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/logo-laferropedia.png);
+      }
 			#logo-container:after{border-image:none;
 			border-style:solid;
 			border-width:  210px 175px 0 175px;
 			border-color: white transparent transparent transparent;
+
 			content:"";
 			height:0;
 			margin-left:0px;position:absolute;

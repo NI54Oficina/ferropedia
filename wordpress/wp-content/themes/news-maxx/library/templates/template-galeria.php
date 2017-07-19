@@ -102,11 +102,16 @@ echo $content_parts['main']; ?>';
 
       <?php  $galleries = get_post_galleries_images( $post );
               $gal=$galleries[0];
+
+
+      if($gal){
+
+
       foreach ($gal as $g) {?>
 
         innerImgs.push('<?php echo $g; ?>');
 
-      <?php  } ?>
+      <?php  }} ?>
 
       object['images']=innerImgs;
 
