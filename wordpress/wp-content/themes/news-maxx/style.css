@@ -9832,6 +9832,11 @@ padding: 0 35px;
       background-color: #0c0c0c;
 	  padding-bottom:10px;
     }
+	
+	.jugadores-container-busqueda{
+	padding:5px;
+		background-color:black;
+	}
 
     .jugadores-container-busqueda .menu-busqueda{
       background: transparent;
@@ -9976,13 +9981,14 @@ padding: 0 35px;
 		background-position:center;
 		background-repeat:no-repeat;
 		background-size:cover;
+		
 	}
 
 	.compartir-jugador {
 		margin-top:15px;
 		border:rgba(0,182,67,.7) solid 1px;
 		text-align:center;
-		padding:1px 10px;
+		padding:5px 10px;
 		display:inline-block;
 		color:white;
 	}

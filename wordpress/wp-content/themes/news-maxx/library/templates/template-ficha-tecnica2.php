@@ -90,7 +90,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box-ficha-tecnica">
 
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;padding-top:80px;">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;padding-top:90px;">
 
           <!--<div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>!-->
 		  <div class="cancha cancha-<?php echo $model->puesto; ?>">
@@ -144,8 +144,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 		  </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;">
-			<div class="jugador-principal rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:90px;padding-left:20px;padding-right:20px;">
+			<div class="jugador-principal square" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);"></div>
 			<!--<img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">!-->
 
 			<div class="compartir-jugador">
@@ -348,9 +348,9 @@ $ultimo=str_replace("(","<br>(",$ultimo);
           <p>
             <?php echo $data["texto"]; ?>
           </p>
-
+		</div>
 		<?php } ?>
-		 </div>
+		 
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-video ">
           <h2>Video</h2>
