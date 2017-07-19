@@ -2,8 +2,11 @@
 $model= $GLOBALS["jugador"];
 ?>
 <?php
-  get_header();
+// get_header();
 
+ get_template_part( 'library/templates/header', 'links' );
+ get_template_part( 'library/templates/header', 'extra' );
+get_template_part( 'library/templates/header', 'menu' );
 $model->data;
 		$lastTorneo="";
 		$debut="";
@@ -39,6 +42,45 @@ $ultimo=str_replace("(","<br>(",$ultimo);
  ?>
 
 <?php ?>
+
+<!-- <div id="main-content"> -->
+
+    <div class="widget-area-1">
+
+<div class="prueba-bg">
+
+
+        <div class="stripe-box">
+
+            <div class="wrapper">
+
+
+                <?php kopa_the_topnew(); ?>
+                <!-- top new -->
+
+            </div>
+            <!-- wrapper -->
+
+        </div>
+        <!-- stripe-box -->
+
+
+    <!-- widget-area-1 -->
+
+    <div class="bn-box">
+
+        <div class="wrapper clearfix">
+
+            <?php kopa_the_headline(); ?>
+            <!-- kp-headline-wrapper -->
+
+        </div>
+        <!-- wrapper -->
+  </div>
+</div>
+    <!-- bn-box -->
+
+    <section class="main-section non-trio">
 
 
 <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
@@ -105,15 +147,15 @@ $ultimo=str_replace("(","<br>(",$ultimo);
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;">
 			<div class="jugador-principal rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);"></div>
 			<!--<img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">!-->
-			
+
 			<div class="compartir-jugador">
 			<p style="">Compartir</p>
 			<div class="links-sociales" >
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                   <i class="fa fa-twitter" aria-hidden="true"></i>
-                  
+
                 </div>
-            
+
 			</div>
 
         </div>

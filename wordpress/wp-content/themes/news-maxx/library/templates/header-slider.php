@@ -6,7 +6,7 @@
         <?php get_template_part( 'library/templates/header', 'menu' ); ?>
 		<?php if(true){ ?>
           <div class="kopa-md-slider owl-carousel kopa-home-slider owl-theme" data-autoplay="true" data-slidespeed="700" style="opacity: 1; display: block;">
-             
+
                     <div class="item">
                         <article class="entry-item">
                           <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_mudo.jpg);background-size:100% auto; ">
@@ -26,7 +26,7 @@
                         </article>
 
                     </div>
-                  
+
 				  <div class="item">
                         <article class="entry-item">
                           <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_jugadores.jpg);background-size:auto 100%; ">
@@ -46,10 +46,10 @@
                         </article>
 
                     </div>
-                  
-				  
+
+
 		</div>
-                  
+
 
 
 

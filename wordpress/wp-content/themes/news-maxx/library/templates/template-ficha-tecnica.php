@@ -1,6 +1,9 @@
 
 <?php
-  get_header();
+  // get_header();
+
+   get_template_part( 'library/templates/header', 'links' );
+   get_template_part( 'library/templates/header', 'extra' );
 
 
 global $kopa_setting;

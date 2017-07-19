@@ -5707,16 +5707,16 @@ body {
     /*border-left: 1px solid #d8d8d8;
     border-right: 1px solid #d8d8d8;*/
     /*padding: 15px 20px;*/
-	background-color:#20201f;
+	background-color:transparent;
     /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
 	/*background-color:#20201f;*/
 
   }
-  
+
   .page-template-template-ficha-general .page-content-area .wrapper{
 	padding:60px;
   }
-  
+
  .main-section .wrapper.home {
 	background:none;
 }
@@ -7014,7 +7014,7 @@ Contact page
     .owl-wrapper-outer{
       /*padding-left: 5%;*/
     }
-	
+
 	.entry-thumb{
 		width:100%;
 		height:340px;
@@ -9008,9 +9008,9 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
         .first-right-box table{
           border: none;
           border-top: 1px solid #006443;
-			
+
         }
-		
+
 		.first-right-box table th{
 			padding-left:20px;
 			font-weight:initial;
@@ -9021,7 +9021,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 		.first-right-box table th .odd{
 			color:rgb(0, 182, 67);
 		}
-		
+
 
         .first-right-box table tr td{
           border: none;
@@ -9037,7 +9037,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           font-family: 'Condensed-bold-italic';
           font-size: 2.2em;
         }
-		
+
 		.first-right-box div:last-child table{margin:0;}
 
         .first-right-box p{
@@ -9470,7 +9470,7 @@ padding: 0 35px;
   .six-container-right .six-inner-container{
     padding: 15px 0;
   }
-  
+
   .six-container-right .six-inner-container{
 	border-bottom:2px solid black;
   }
@@ -9499,14 +9499,45 @@ padding: 0 35px;
 /*sexto bloque*/
 
 
-.main-section{
+.main-section.trio{
   background-image:  url(img/tile_cesped.svg),url(img/pelota_fondo.png), url(img/jugadores_footer_home.png);
   background-position: 100% 100%,100% 100%, 90% 101.5%;
   background-repeat: repeat-x, no-repeat, no-repeat;
   padding-bottom: 25%;
 }
 
+.main-section.non-trio{
+  background-image:  url(img/tile_cesped.svg) !important;
+  background-position: 100% 100%;
+  background-repeat: repeat-x;
+  padding-bottom: 25%;
 
+}
+
+
+.main-section.trio-museo{
+  background-image:  url(img/tile_cesped.svg),url(img/pelota_fondo.png), url(img/trio_museo.png);
+  background-position: 100% 100%,100% 100%, 90% 101.5%;
+  background-repeat: repeat-x, no-repeat, no-repeat;
+  padding-bottom: 25%;
+
+}
+
+.main-section.trio-rincon-mudo{
+  background-image:  url(img/tile_cesped.svg),url(img/pelota_fondo.png), url(img/trio_mudo.png);
+  background-position: 100% 100%,100% 100%, 90% 101.5%;
+  background-repeat: repeat-x, no-repeat, no-repeat;
+  padding-bottom: 25%;
+
+}
+
+.main-section.trio-cuna-cajon{
+  background-image:  url(img/tile_cesped.svg),url(img/pelota_fondo.png), url(img/trio_delacuna.png);
+  background-position: 100% 100%,100% 100%, 90% 101.5%;
+  background-repeat: repeat-x, no-repeat, no-repeat;
+  padding-bottom: 25%;
+
+}
 
   .mas-visto-widget .title{
     color: white;
@@ -9577,8 +9608,8 @@ padding: 0 35px;
 
 
   /*pantalla de jugadores*/
-  
-  
+
+
 
   .label-name-page .header-text-content{
     font-family: 'Roboto-regular';
@@ -9631,9 +9662,9 @@ padding: 0 35px;
 	width: 200px;
 	  max-width:20%;
 	  display:inline-block;
-	  
+
    }
-   
+
    nav.menu-jugadores p{
       display: inline-block;
       color: white;
@@ -9642,8 +9673,8 @@ padding: 0 35px;
       text-align: center;
       padding: 5px 10px;
     }
-	
-	
+
+
 
     .menu-dinamico .ver-dts{
     float: right;
@@ -9672,7 +9703,7 @@ padding: 0 35px;
       color: white;
       display: inline-block;
     }
-	
+
 	.jugadores-content .jugadores-muchosjugadores .jugadores-j label{
 		height:50px;
 	}
@@ -9725,7 +9756,7 @@ padding: 0 35px;
       font-size: 1.3em;
 	  margin-bottom:10px;
     }
-	
+
 	.menu-interno{
 		-webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -9817,7 +9848,7 @@ padding: 0 35px;
     .jugadores-container-busqueda .resultado span{
       color: #00b643;
       font-family: 'Roboto-regular';
-	  
+
     }
 
     .jugadores-container-busqueda .resultado.even{
@@ -9926,7 +9957,7 @@ padding: 0 35px;
 		background-repeat:no-repeat;
 		background-size:cover;
 	}
-	
+
 	.compartir-jugador {
 		margin-top:15px;
 		border:rgba(0,182,67,.7) solid 1px;
@@ -9938,18 +9969,18 @@ padding: 0 35px;
 	.compartir-jugador .links-sociales i{
 		margin:5px;
 	}
-	
+
 	.compartir-jugador .links-sociales{
 		display:inline-block;
 		float:initial;
 		padding:0;
 	}
-	
+
 	.compartir-jugador p{
 		display:inline-block;
 		margin:0;
 		font-size:15px;
-		
+
 	}
 
 	.tecnica-galeria{
@@ -10225,6 +10256,7 @@ box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
   .container-gallery{
     padding: 5em 10em;
   }
+
 
 
   /*galeria*/

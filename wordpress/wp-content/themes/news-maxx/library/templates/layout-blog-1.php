@@ -6,7 +6,7 @@
     $kopa_layout = unserialize(KOPA_LAYOUT);
     $kopa_position = $kopa_layout[$kopa_setting['layout_id']]['positions'];
 ?>
-
+<section class="main-section trio">
 <div class="wrapper clearfix home">
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left">
@@ -29,7 +29,7 @@
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 first-left-box" >
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner" hid="1" >
-		<?php $totales= DataExtra::model()->findAllByAttributes(array("model"=>"General","modelId"=>1)); 
+		<?php $totales= DataExtra::model()->findAllByAttributes(array("model"=>"General","modelId"=>1));
 		$general= array_shift($totales);
 		$gTexto= explode('/',$general["texto"]);
 	?>
@@ -75,15 +75,15 @@
     <h2>Historial</h2>
 
     <?php //$var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales']; ?>
-	
-	
 
-    
-		<?php foreach($totales as $total){ 
+
+
+
+		<?php foreach($totales as $total){
 		$texto= explode("/",$total["texto"]);
 		?>
       <div class="" style="background-color:black">
-		
+
       <p class="title-line-bg"><?php echo $total["titulo"]; ?></p>
           <table style="width:100%;">
             <tr class="first-row">
@@ -120,7 +120,7 @@
 
         </div>
 		<?php } ?>
-    
+
 
 
 
@@ -181,7 +181,7 @@
 		<div class="border-jugador">
 
         <div class="imagen-jugador-verde rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono_jugador_grande.svg);">
-          
+
           <label>+ Jugadores</label>
         </div>
 		</div>

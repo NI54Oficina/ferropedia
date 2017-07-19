@@ -1,13 +1,17 @@
 
 <?php
-  get_header();
+  // get_header();
 
+  get_template_part( 'library/templates/header', 'links' );
+	  get_template_part( 'library/templates/header', 'extra' );
+  get_template_part( 'library/templates/header', 'menu' );
 
 global $kopa_setting;
 // if ( is_page(get_the_ID()) && have_posts() ) {
 //     while ( have_posts() ) {
 //         the_post(); ?>
 
+<section class="main-section trio-<?php $categories = get_the_category();$cat= $categories[0];echo $cat->slug;?>">
 
 
 <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
