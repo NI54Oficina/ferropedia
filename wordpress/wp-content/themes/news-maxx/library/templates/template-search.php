@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="utf-8">
-    <title><?php wp_title('|', true, 'right'); ?></title>
-    <?php
-    if ('enable' === get_option('kopa_theme_options_responsive_status', 'enable')) {
-        ?>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php
-    }
-    ?>
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <!-- Le fav and touch icons -->
-    <?php if (get_option('kopa_theme_options_favicon_url')) { ?>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('kopa_theme_options_favicon_url'); ?>">
-    <?php } ?>
-    <?php if (get_option('kopa_theme_options_apple_iphone_icon_url')) { ?>
-    <link rel="apple-touch-icon" sizes="57x57"
-          href="<?php echo get_option('kopa_theme_options_apple_iphone_icon_url'); ?>">
-    <?php } ?>
 
-    <?php if (get_option('kopa_theme_options_apple_ipad_icon_url')) { ?>
-    <link rel="apple-touch-icon" sizes="72x72"
-          href="<?php echo get_option('kopa_theme_options_apple_ipad_icon_url'); ?>">
-    <?php } ?>
-
-    <?php if (get_option('kopa_theme_options_apple_iphone_retina_icon_url')) { ?>
-    <link rel="apple-touch-icon" sizes="114x114"
-          href="<?php echo get_option('kopa_theme_options_apple_iphone_retina_icon_url'); ?>">
-    <?php } ?>
-
-    <?php if (get_option('kopa_theme_options_apple_ipad_retina_icon_url')) { ?>
-    <link rel="apple-touch-icon" sizes="144x144"
-          href="<?php echo get_option('kopa_theme_options_apple_ipad_retina_icon_url'); ?>">
-    <?php } ?>
-
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <?php
+get_template_part( 'library/templates/header', 'links' );
+get_template_part( 'library/templates/header', 'extra' );
      get_template_part( 'library/templates/header', 'menu' );
 
     global $kopa_layout;
@@ -50,7 +11,7 @@
     $kopa_position = $kopa_layout[$kopa_setting['layout_id']]['positions'];
 ?>
 
-
+<section class="main-section trio-<?php $categories = get_the_category();$cat= $categories[0];echo $cat->slug;?>">
 <div class="wrapper clearfix" style="background-color:white">
 <?php
   $post_categories = wp_get_post_categories( get_the_ID() );
