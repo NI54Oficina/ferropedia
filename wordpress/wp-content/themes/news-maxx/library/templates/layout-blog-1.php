@@ -29,41 +29,49 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box bloque">
 
 
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 fist-left-box" >
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 first-left-box" >
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner" hid="1" >
+		<?php $totales= DataExtra::model()->findAllByAttributes(array("model"=>"General","modelId"=>1)); 
+		$general= array_shift($totales);
+		$gTexto= explode('/',$general["texto"]);
+	?>
 
-      <h2>Totales</h2>
+      <h2>Totales<span style="color:#8f8f8f">*</span></h2>
       <p>Última actualización: 24 de abril a las 19.00pm</p>
 
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:30px;">
         <p class="tipo-partido">PARTIDOS JUGADOS</p>
-        <p class="puntos-partido">50</p>
-        <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p>
+        <p class="puntos-partido"><?php echo $gTexto[0]; ?></p>
+        <?php if(false){ ?><p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p><?php } ?>
       </div>
 
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:30px;">
         <p class="tipo-partido">PARTIDOS GANADOS</p>
-        <p class="puntos-partido">50</p>
-        <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p>
+        <p class="puntos-partido"><?php echo $gTexto[1]; ?></p>
+       <?php if(false){ ?> <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p><?php } ?>
+      </div>
+		
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <p class="tipo-partido">PARTIDOS EMPATADOS</p>
+        <p class="puntos-partido"><?php echo $gTexto[2]; ?></p>
+       <?php if(false){ ?> <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p><?php } ?>
       </div>
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <p class="tipo-partido">PARTIDOS JUGADOS</p>
-        <p class="puntos-partido">50</p>
-        <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p>
+        <p class="tipo-partido">PARTIDOS PERDIDOS</p>
+        <p class="puntos-partido"><?php echo $gTexto[3]; ?></p>
+        <?php if(false){ ?><p class="level-partido">  L 609&nbsp;&nbsp;<span> V 313</span></p><?php } ?>
       </div>
-
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <p class="tipo-partido">PARTIDOS GANADOS</p>
-        <p class="puntos-partido">50</p>
-        <p class="level-partido">  L 609&nbsp;&nbsp;<span> V 313</span></p>
-      </div>
-
-      <p class="goles"><span>45.000  &nbsp; </span> Goles a favor</p>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goles-totales-home">
+      <p class="goles"><span><?php echo $gTexto[4]; ?>  &nbsp; </span> Goles a favor</p>
       <div class="linea-divisoria-partido"></div>
-      <p class="goles"><span>39.000  &nbsp;</span> Goles en contra</p>
-
+      <p class="goles"><span><?php echo $gTexto[5]; ?>  &nbsp;</span> Goles en contra</p>
+	</div>
+	
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<p>(*) Faltan los campeonatos de 1912 y el 1919</p>
+	</div>
 
     </div>
 
@@ -73,24 +81,29 @@
   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 first-right-box" hid="1">
     <h2>Historial</h2>
 
-    <?php $var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales'];
+    <?php //$var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales']; ?>
+	
+	
 
-    for($i=0; $i<3; $i++){?>
-
+    
+		<?php foreach($totales as $total){ 
+		$texto= explode("/",$total["texto"]);
+		?>
       <div class="" style="background-color:black">
-
-      <p class="title-line-bg"><?php echo $var[$i] ?></p>
+		
+      <p class="title-line-bg"><?php echo $total["titulo"]; ?></p>
           <table style="width:100%;">
             <tr class="first-row">
               <th></th>
-              <th>Partidos jugados <br> <span>1049</span></th>
-              <th>Ganados<br>  <span>1049</span></th>
-              <th>Empatados<br>  <span>1049</span></th>
-              <th>Perdidos<br>  <span>1049</span></th>
-              <th>Goles a favor <br>  <span>1049</span></th>
-              <th>Goles en contra<br>  <span>1049</span></th>
+              <th>Partidos jugados <br> <span class="even"><?php echo $texto[0]; ?></span></th>
+              <th>Ganados<br>  <span class="odd"><?php echo $texto[1]; ?></span></th>
+              <th>Empatados<br>  <span class="even"><?php echo $texto[2]; ?></span></th>
+              <th>Perdidos<br>  <span class="odd"><?php echo $texto[3]; ?></span></th>
+              <th>Goles a favor <br>  <span class="even"><?php echo $texto[4]; ?></span></th>
+              <th>Goles en contra<br>  <span class="odd"><?php echo $texto[5]; ?></span></th>
 
             </tr>
+			<?php if(false){ ?>
             <tr class="second-row">
               <td>Local</td>
               <td>148</td>
@@ -109,12 +122,12 @@
               <td>148</td>
               <td>50</td>
             </tr>
+			<?php } ?>
           </table>
 
         </div>
-
-    <?php } ?>
-
+		<?php } ?>
+    
 
 
 
@@ -133,6 +146,8 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
 
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+		<div style="width:100%;text-align:center;">
+		<div class="escudito"></div></div>
 		<div class="second-interior">
         <p><?php echo $destacado->nombre." ".$destacado->apellido; ?></p>
         <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $destacado->id; ?>"><button type="butto n" name="button">Ver Ficha</button></a>
@@ -173,7 +188,7 @@
       <a href="http://localhost/ferropedia/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
-        <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
+        <div class="imagen-jugador-verde rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono_jugador_grande.svg);">
 
           <label>+ Jugadores</label>
         </div>
@@ -183,7 +198,7 @@
 		<?php
 		$destacadoId= $destacado->id;
 		$criteria = new CDbCriteria;
-$criteria->limit = 2;
+$criteria->limit = 5;
 $criteria->condition = "id != $destacadoId";
 $criteria->order = 'RAND()';
 $criteria->select = "*";
@@ -197,11 +212,11 @@ $criteria->select = "*";
 	  <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
-        <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
+        <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
 
 
-          <div class="capa-violeta"></div>
+          <div class="capa-verde"></div>
             <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?></label>
         </div>
 		</div>
@@ -213,7 +228,7 @@ $criteria->select = "*";
       <!-- dt -->
 
 
-
+	<?php if(false){ ?>
       <?php for($i=0; $i<2; $i++){ ?>
 
 
@@ -240,6 +255,7 @@ $criteria->select = "*";
 		</div>
       </div>
     </a>
+	<?php } ?>
 
     </div>
   </div>

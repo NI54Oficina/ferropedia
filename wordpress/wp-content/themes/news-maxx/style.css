@@ -5707,9 +5707,9 @@ body {
     /*border-left: 1px solid #d8d8d8;
     border-right: 1px solid #d8d8d8;*/
     /*padding: 15px 20px;*/
-	background-color:transparent;
+	/*background-color:transparent;*/
     /*background: url(images/background/dot-1.jpg) repeat-y 922px 0; */
-	/*background-color:#20201f;*/
+	background-color:#20201f;
 
   }
 
@@ -5717,9 +5717,14 @@ body {
 	padding:60px;
   }
 
- .main-section .wrapper.home {
+ .main-content .wrapper.home {
 	background:none;
+	
 }
+	.home .main-col {
+		padding:0;
+	}
+
 .main-section .wrapper > .col-lg-12{padding-left:0;padding-right:0;}
 .main-section .wrapper .main-col {
     /*width: 902px;*/
@@ -7018,7 +7023,7 @@ Contact page
 	.entry-thumb{
 		width:100%;
 		height:340px;
-		background-color:red;
+		background-color:#8f8f8f;
 	}
 .main-section .widget .widget-title {
   margin: 0 !important;
@@ -9049,7 +9054,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
       .first-right-box .title-line-bg{
         background-color: black;
-        background-image: repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px );
+        background-image: repeating-linear-gradient( -45deg, #191919, #191919 2px, #000000 4px, #000000 8px );
         padding:8px 0 8px 0;
         margin-bottom: 0;
       }
@@ -9082,7 +9087,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 }
 /*segundo bloque home*/
 .bloque{
-    padding: 7em 0;
+    padding: 40px 60px;
 }
 .second-box{
 
@@ -9111,6 +9116,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           font-family: 'Condensed-bold-italic';
           font-size: 1.6em;
           padding: 20px 0;
+		  padding-top:10px;
         }
 
         .second-box-left .box-left button{
@@ -9615,7 +9621,7 @@ padding: 0 35px;
   .label-name-page .header-text-content{
     font-family: 'Roboto-regular';
     padding: 0 20%;
-    background-image: url(img/header-jugadores.png);
+    background-image: url(img/header-madera.jpg);
     background-repeat: repeat;
     background-position: center;
     background-size: auto 100%;
@@ -9709,7 +9715,7 @@ padding: 0 35px;
 		height:50px;
 	}
 
-    .jugadores-content .jugadores-muchosjugadores .jugadores-j span{
+    .jugadores-content .jugadores-muchosjugadores .jugadores-j span,.escudito{
       background-image: url(img/banderin.svg);
       background-size:auto 80%;
       background-position: center;
@@ -9720,7 +9726,16 @@ padding: 0 35px;
       left: 0;
       right: 0;
       margin-top: -30px;
+	  min-height:30px;
+	  min-width:30px;
     }
+	
+	.escudito{
+		width:45px;
+		height:45px;
+		display:inline-block;
+		position:initial;
+	}
 
     .min-height-upper-container{
       /*max-height: 500px;*/

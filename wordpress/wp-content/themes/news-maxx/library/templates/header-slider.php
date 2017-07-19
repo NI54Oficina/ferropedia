@@ -139,6 +139,8 @@
 
 			<div id="logo-container2"></div>
 			<div id="logo-container" ></div>
+			<div style="background-image: url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/logo-laferropedia.png);position:absolute;z-index:1000;width:170px;height:170px;background-repeat:no-repeat;top:10px;background-size:100% auto;left:135px;"></div>
+			
 
 
             <div class="left-box" style="display:none;">
@@ -152,9 +154,9 @@
             </div>
 			<style>
 
-      #logo-container{
+      /*#logo-container{
           background-image: url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/logo-laferropedia.png);
-      }
+      }*/
 			#logo-container:after{border-image:none;
 			border-style:solid;
 			border-width:  210px 175px 0 175px;
