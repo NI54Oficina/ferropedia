@@ -32,7 +32,7 @@ $(window).on('load', function(){
 
 
 $(window).on('resize', function(){
-	
+
    _square();
 })
 
@@ -53,6 +53,7 @@ function _openmodal(){
 
     $('.modal-gallery .info-sector .title').html(element.title);
     $('.modal-gallery .info-sector .volanta').html(element.volanta);
+    $('.modal-gallery .info-sector .content').empty();
     $('.modal-gallery .info-sector .content').append(element.content);
     $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
     $('.modal-gallery .info-sector title').html(element.title);
@@ -93,6 +94,7 @@ function _openmodal(){
           element = ListElements[indx];
           $('.modal-gallery .info-sector .title').html(element.title);
           $('.modal-gallery .info-sector .volanta').html(element.volanta);
+          $('.modal-gallery .info-sector .content').empty();
           $('.modal-gallery .info-sector .content').append(element.content);
           $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
           $('.modal-gallery .info-sector title').html(element.title);
@@ -205,7 +207,7 @@ function slider(padreMenu,padreContenedor ){
 
 
 function gallerie_swipe(){
-	
+
 
   var initPhotoSwipeFromDOM = function(gallerySelector) {
 
