@@ -61,6 +61,7 @@ echo  $content ;
       background:  rgba(0,0,0,.5);
       position: absolute;
       top:0;
+      left: 0;
       color: white;
       text-align: center;
       padding-top: 45%;
