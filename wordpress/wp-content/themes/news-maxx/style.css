@@ -9439,6 +9439,7 @@ padding: 0 35px;
     color:white;
     padding:0;
     height: 250px;
+	overflow:hidden;
   }
 
   .six-container-left .title-container p{
@@ -9887,11 +9888,12 @@ padding: 0 35px;
 
   }
     .sector-cancha-float{
-      z-index: 10;
+      z-index: 12;
       position: absolute;
       /*width: 86%;*/
 	  width:100%;
       background-color: #b13c93;
+	  opacity:0.7;
       height: 100px;
       bottom:0;
       top:0;
@@ -9901,7 +9903,7 @@ padding: 0 35px;
 	.cancha{
 		position:relative;
 		z-index:11;
-		background-image: url(img/cancha-transparente-01.svg);
+		background-image: url(img/cancha-1.png);
 		background-size:100% auto;
 		width:100%;
 		height:100%;
@@ -9911,21 +9913,21 @@ padding: 0 35px;
 	}
 
 	.cancha-delantero{
-
-		top:0;
+		background-image: url(img/cancha-delantero.png);
+		/*top:0;*/
 	}
 	.cancha-mediocampista{
+		background-image: url(img/cancha-mediocampista.png);
 
-
-		top:30%;
+		/*top:30%;*/
 	}
 	.cancha-defensor{
-
-		top:50%;
+		background-image: url(img/cancha-defensor.png);
+		/*top:80%;*/
 	}
 	.cancha-arquero{
-
-		top:65%;
+		background-image: url(img/cancha-arquero.png);
+		/*top:65%;*/
 	}
 
 	.contenido-interno-tecnica{

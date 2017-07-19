@@ -27,13 +27,13 @@
 			
 			<channel>
 				<title>Ferropedia</title>
-				<link>http://localhost/ferropedia</link>
+				<link>http://ferro.testni54.com</link>
 				<description>Otro sitio realizado con WordPress</description>
 				<pubDate>Wed, 19 Jul 2017 13:26:52 +0000</pubDate>
 				<language>es-ES</language>
 				<wp:wxr_version>1.2</wp:wxr_version>
-				<wp:base_site_url>http://localhost/ferropedia</wp:base_site_url>
-				<wp:base_blog_url>http://localhost/ferropedia</wp:base_blog_url>
+				<wp:base_site_url>http://ferro.testni54.com</wp:base_site_url>
+				<wp:base_blog_url>http://ferro.testni54.com</wp:base_blog_url>
 							<item>
 										<title>header-museo-10</title>
 					<link></link>
@@ -55,7 +55,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/05/header-museo-10.png</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/05/header-museo-10.png</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/05/header-museo-10.png]]></wp:meta_value>
@@ -87,7 +87,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/05/Entrada-anverso.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/05/Entrada-anverso.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/05/Entrada-anverso.jpg]]></wp:meta_value>
@@ -119,7 +119,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/05/Citación-Dellacasa.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/05/Citación-Dellacasa.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/05/Citación-Dellacasa.jpg]]></wp:meta_value>
@@ -151,7 +151,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/Gualco-a-Ferro-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/Gualco-a-Ferro-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/Gualco-a-Ferro-1.jpg]]></wp:meta_value>
@@ -183,7 +183,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/album.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/album.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/album.jpg]]></wp:meta_value>
@@ -215,7 +215,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/Partitura-El-Expreso-del-Oeste-2.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/Partitura-El-Expreso-del-Oeste-2.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/Partitura-El-Expreso-del-Oeste-2.jpg]]></wp:meta_value>
@@ -247,7 +247,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/FCO-Inauguracion-Platea-de-Cemento-14-agosto-19714-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/FCO-Inauguracion-Platea-de-Cemento-14-agosto-19714-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/FCO-Inauguracion-Platea-de-Cemento-14-agosto-19714-1.jpg]]></wp:meta_value>
@@ -279,7 +279,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/Entrada-último-partido-en-Primera-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/Entrada-último-partido-en-Primera-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/Entrada-último-partido-en-Primera-1.jpg]]></wp:meta_value>
@@ -311,7 +311,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/03/Demaro-y-Griguol-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/03/Demaro-y-Griguol-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/03/Demaro-y-Griguol-1.jpg]]></wp:meta_value>
@@ -344,7 +344,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/04/Rodrigues-Neto.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/04/Rodrigues-Neto.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/04/Rodrigues-Neto.jpg]]></wp:meta_value>
@@ -376,7 +376,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/crisis-identidad.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/crisis-identidad.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/crisis-identidad.jpg]]></wp:meta_value>
@@ -408,7 +408,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/arcadio.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/arcadio.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/arcadio.jpg]]></wp:meta_value>
@@ -440,7 +440,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/1Mudo-1967-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/1Mudo-1967-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/1Mudo-1967-1.jpg]]></wp:meta_value>
@@ -472,7 +472,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/2Mudo-19720402-Ferro-Colon-2-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/2Mudo-19720402-Ferro-Colon-2-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/2Mudo-19720402-Ferro-Colon-2-LFP-1.jpg]]></wp:meta_value>
@@ -504,7 +504,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/3Mudo-19640524-Ferro-Huracan-26-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/3Mudo-19640524-Ferro-Huracan-26-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/3Mudo-19640524-Ferro-Huracan-26-LFP-1.jpg]]></wp:meta_value>
@@ -536,7 +536,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/4Mudo-19940724-Ferro-Boca-41-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/4Mudo-19940724-Ferro-Boca-41-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/4Mudo-19940724-Ferro-Boca-41-LFP-1.jpg]]></wp:meta_value>
@@ -568,7 +568,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/5Mudo19670514-Independiente-Ferro-Preliminar-26-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/5Mudo19670514-Independiente-Ferro-Preliminar-26-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/5Mudo19670514-Independiente-Ferro-Preliminar-26-LFP-1.jpg]]></wp:meta_value>
@@ -600,7 +600,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/6Mudo-19670716-Ferro-Chacarita-Jrs-23-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/6Mudo-19670716-Ferro-Chacarita-Jrs-23-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/6Mudo-19670716-Ferro-Chacarita-Jrs-23-LFP-1.jpg]]></wp:meta_value>
@@ -632,7 +632,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/03/header_jugadores.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/03/header_jugadores.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/03/header_jugadores.jpg]]></wp:meta_value>
@@ -664,7 +664,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/05/header_museo.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/05/header_museo.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/05/header_museo.jpg]]></wp:meta_value>
@@ -696,7 +696,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/7Mudo-19780205-Deportivo-Italiano-Ferro-en-color-10-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/7Mudo-19780205-Deportivo-Italiano-Ferro-en-color-10-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/7Mudo-19780205-Deportivo-Italiano-Ferro-en-color-10-1.jpg]]></wp:meta_value>
@@ -728,7 +728,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/8Mudo-19670521-Velez-Ferro-11-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/8Mudo-19670521-Velez-Ferro-11-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/8Mudo-19670521-Velez-Ferro-11-LFP-1.jpg]]></wp:meta_value>
@@ -760,7 +760,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/9Mudo-20000303-Racing-Ferro-35-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/9Mudo-20000303-Racing-Ferro-35-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/9Mudo-20000303-Racing-Ferro-35-LFP-1.jpg]]></wp:meta_value>
@@ -792,7 +792,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/10Mudo-19670507-Ferro-River-Plate-18-LFP-1.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/10Mudo-19670507-Ferro-River-Plate-18-LFP-1.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/10Mudo-19670507-Ferro-River-Plate-18-LFP-1.jpg]]></wp:meta_value>
@@ -824,7 +824,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/05/header_mudo.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/05/header_mudo.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/05/header_mudo.jpg]]></wp:meta_value>
@@ -856,7 +856,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/495a5d8faeee6_450x0.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/495a5d8faeee6_450x0.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/495a5d8faeee6_450x0.jpg]]></wp:meta_value>
@@ -889,7 +889,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/1962-Abono-platea-I.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/1962-Abono-platea-I.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/1962-Abono-platea-I.jpg]]></wp:meta_value>
@@ -921,7 +921,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/LFP-Cuna.-Ilustración-Boca-Ferro-1939.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/LFP-Cuna.-Ilustración-Boca-Ferro-1939.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/LFP-Cuna.-Ilustración-Boca-Ferro-1939.jpg]]></wp:meta_value>
@@ -953,7 +953,7 @@
 					<wp:post_type>attachment</wp:post_type>
 					<wp:post_password></wp:post_password>
 					<wp:is_sticky>0</wp:is_sticky>
-								<wp:attachment_url>http://localhost/ferropedia/wordpress/wp-content/uploads/2017/07/19631207-Ferro-Sarmiento-7-LFP.jpg</wp:attachment_url>
+								<wp:attachment_url>http://ferro.testni54.com/wordpress/wp-content/uploads/2017/07/19631207-Ferro-Sarmiento-7-LFP.jpg</wp:attachment_url>
 														<wp:postmeta>
 						<wp:meta_key>_wp_attached_file</wp:meta_key>
 						<wp:meta_value><![CDATA[2017/07/19631207-Ferro-Sarmiento-7-LFP.jpg]]></wp:meta_value>

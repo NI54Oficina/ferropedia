@@ -90,10 +90,10 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box-ficha-tecnica">
 
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;padding-top:80px;">
 
-          <div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>
-		  <div class="cancha">
+          <!--<div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>!-->
+		  <div class="cancha cancha-<?php echo $model->puesto; ?>">
 
 		  </div>
 
