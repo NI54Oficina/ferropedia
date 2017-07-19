@@ -1,9 +1,9 @@
 
 <?php
-  get_header();
-  // get_template_part( 'library/templates/header', 'links' );
-  // get_template_part( 'library/templates/header', 'extra' );
-  //      get_template_part( 'library/templates/header', 'menu' );
+  // get_header();
+  get_template_part( 'library/templates/header', 'links' );
+  get_template_part( 'library/templates/header', 'extra' );
+       get_template_part( 'library/templates/header', 'menu' );
 
 global $kopa_setting;
 // if ( is_page(get_the_ID()) && have_posts() ) {
@@ -60,7 +60,15 @@ global $kopa_setting;
 
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 body-quienessomos">
-          <?php the_content(); ?>
+        <?php
+
+  $post_id_5369 = get_post(get_the_ID());
+
+  $content = $post_id_5369->post_content;
+  $content = apply_filters('the_content', $content);
+  $content = str_replace(']]>', ']]>', $content);
+  echo  $content ;
+  ?>
       </div>
 
   </div>

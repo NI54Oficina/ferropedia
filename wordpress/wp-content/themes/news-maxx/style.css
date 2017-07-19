@@ -5722,7 +5722,7 @@ body {
 
  .main-content .wrapper.home {
 	background:none;
-	
+
 }
 	.home .main-col {
 		padding:0;
@@ -7025,7 +7025,7 @@ Contact page
 
 	.entry-thumb{
 		width:100%;
-		height:340px;
+		/*height:340px;*/
 		background-color:#8f8f8f;
 	}
 .main-section .widget .widget-title {
@@ -9732,7 +9732,7 @@ padding: 0 35px;
 	  min-height:30px;
 	  min-width:30px;
     }
-	
+
 	.escudito{
 		width:45px;
 		height:45px;

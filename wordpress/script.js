@@ -53,8 +53,8 @@ function _openmodal(){
 
     $('.modal-gallery .info-sector .title').html(element.title);
     $('.modal-gallery .info-sector .volanta').html(element.volanta);
-    $('.modal-gallery .info-sector .content').empty();
-    $('.modal-gallery .info-sector .content').append(element.content);
+    // $('.modal-gallery .info-sector .content').empty();
+    $('.modal-gallery .info-sector .content').html(element.content);
     $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
     $('.modal-gallery .info-sector title').html(element.title);
     $('.modal-gallery .img-sector img').attr('src',  element.images[cursor]);
@@ -94,8 +94,8 @@ function _openmodal(){
           element = ListElements[indx];
           $('.modal-gallery .info-sector .title').html(element.title);
           $('.modal-gallery .info-sector .volanta').html(element.volanta);
-          $('.modal-gallery .info-sector .content').empty();
-          $('.modal-gallery .info-sector .content').append(element.content);
+
+          $('.modal-gallery .info-sector .content').html(element.content);
           $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
           $('.modal-gallery .info-sector title').html(element.title);
           $('.modal-gallery .img-sector img').attr('src',  element.images[0]);
@@ -111,7 +111,7 @@ function _openmodal(){
           element = ListElements[indx];
           $('.modal-gallery .info-sector .title').html(element.title);
           $('.modal-gallery .info-sector .volanta').html(element.volanta);
-          $('.modal-gallery .info-sector .content').append(element.content);
+          $('.modal-gallery .info-sector .content').html(element.content);
           $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
           $('.modal-gallery .info-sector title').html(element.title);
           $('.modal-gallery .img-sector img').attr('src',  element.images[0]);

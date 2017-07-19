@@ -43,7 +43,9 @@ get_template_part( 'library/templates/header', 'extra' );
 
 
    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <?php echo do_shortcode("[custom-twitter-feeds]"); ?>
+      <?php //echo do_shortcode("[custom-twitter-feeds]"); ?>
+      <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
+
    </div>
 
     <div class="clear"></div>
