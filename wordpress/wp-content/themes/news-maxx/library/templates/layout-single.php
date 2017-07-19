@@ -197,7 +197,7 @@
             }?>
         </div>
 
-        <p class="subtitulo">Texto que no se de donde viene- PREGUNTAR</p>
+        <p class="subtitulo">Volanta</p>
 
         <h1><?php the_title_attribute(); ?></h1>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">

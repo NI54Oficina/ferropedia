@@ -35,7 +35,7 @@
                 <li title="Jugadores" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
                 <li title="Museo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
                 <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""></a></li>
-                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mundo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
+                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mudo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
                 <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li> -->
               </ul>
 
@@ -162,7 +162,7 @@
                     <!-- <a href="<?php echo home_url(); ?>">  <li>DT'S</li></a> -->
                     <a href="<?php echo home_url(); ?>/category/cuna-cajon/">  <li>DE LA CUNA HASTA EL CAJÓN</li></a>
                     <a href="<?php echo home_url(); ?>/museo">  <li>MUSEO</li></a>
-                    <a href="<?php echo home_url(); ?>/rincon-mundo">  <li>EL RINCÓN DEL MUDO</li></a>
+                    <a href="<?php echo home_url(); ?>/rincon-mudo">  <li>EL RINCÓN DEL MUDO</li></a>
                     <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>EQUIPO LA FERROPEDIA</li></a>
                   </ul>
                 </nav>

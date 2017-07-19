@@ -160,8 +160,9 @@ $new =trim($content_parts['main']);
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery">
 
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery square">
-            <?php  echo the_post_thumbnail('full' ); ?>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery square" style="background-image:url(<?php  echo get_the_post_thumbnail_url($post->id,'medium' ); ?>);background-position:center;background-size:cover;">
+            <?php  //echo the_post_thumbnail('full' ); ?>
+            
 
            <span> Ver</span>
         </div>

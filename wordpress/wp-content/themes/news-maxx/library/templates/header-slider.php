@@ -9,13 +9,14 @@
 
                     <div class="item">
                         <article class="entry-item">
-                          <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_mudo.jpg);background-size:100% auto; ">
+                          <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/slider-home-efemeride.jpg);background-size:100% auto; ">
                             <!--<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_mudo.jpg" alt="Haute Couture fact file bibendum">!-->
 							</div>
 
                             <div class="flex-caption">
+								<h5 style="color:white;">Efemérides Verdolagas</h5>
                                 <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white ">NACÍA CARLOS TIMOTEO GRIGUOL</h3>
-                                <p style="font-family:'Roboto-regular'; padding-top:50px;">Ex futbolista y director técnico argentino.  Nació en Las Palmas, Córdoba el 4 de septiembre de 1934.
+                                <p style="font-family:'Roboto-regular'; padding-top:10px;color:white;">Ex futbolista y director técnico argentino.  Nació en Las Palmas, Córdoba el 4 de septiembre de 1934.
                                   Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
                                     <!-- <span class="arrow-wrapper">
                                         <span class="arrow-left"></span>
@@ -29,18 +30,13 @@
 
 				  <div class="item">
                         <article class="entry-item">
-                          <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_jugadores.jpg);background-size:auto 100%; ">
+                          <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/slider-home-general.jpg);background-size:100% auto;background-position:center; ">
                             <!--<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_mudo.jpg" alt="Haute Couture fact file bibendum">!-->
 							</div>
 
                             <div class="flex-caption">
-                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white ">NACÍA CARLOS TIMOTEO GRIGUOL</h3>
-                                <p style="font-family:'Roboto-regular'; padding-top:50px;">Ex futbolista y director técnico argentino.  Nació en Las Palmas, Córdoba el 4 de septiembre de 1934.
-                                  Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
-                                    <!-- <span class="arrow-wrapper">
-                                        <span class="arrow-left"></span>
-                                        <span class="arrow-right"></span>
-                                    </span> -->
+                                <h5 style="color:white;">LA FERROPEDIA</h5>
+                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white; padding-bottom:30px;">¡Bienvenido!</h3>
                             </div>
 
                         </article>
@@ -139,7 +135,7 @@
 
 			<div id="logo-container2"></div>
 			<div id="logo-container" ></div>
-			<div style="background-image: url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/logo-laferropedia.png);position:absolute;z-index:1000;width:170px;height:170px;background-repeat:no-repeat;top:10px;background-size:100% auto;left:135px;"></div>
+			<div style="background-image: url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/logo-laferropedia.png);position:absolute;z-index:1000;width:150px;height:170px;background-repeat:no-repeat;top:10px;background-size:100% auto;left:145px;"></div>
 			
 
 

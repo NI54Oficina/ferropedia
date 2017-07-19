@@ -45,11 +45,11 @@ global $kopa_setting;
 
       </div>
 
-      <div class="wrapper clearfix">
+      <div class="wrapper clearfix" style="padding-top:0;">
 	  <?php if(false){ ?>
 		<p class="ver-dts" style="position:absolute;right:60px;">Ver Dt's</p>
 	<?php } ?>
-        <div class="menu-2 menu-dinamico">
+        <div class="menu-2 menu-dinamico" style="padding-top:30px; padding-bottom:40px;">
           <nav class="menu-jugadores">
 			<div><p class="selected">Arqueros</p></div>
             <div><p>Defensores</p></div>
@@ -159,7 +159,7 @@ global $kopa_setting;
 
                 <p>Busqueda avanzada</p>
               </div>
-              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >
 
 
               <?php for($i=0; $i<27; $i++){?>
@@ -178,7 +178,7 @@ global $kopa_setting;
 
 		  <?php foreach($puestos as $puesto){ ?>
 
-          <div class="jugadores-muchosjugadores contenido-dinamico col-lg-7 col-md-7 col-sm-7 col-xs-12">
+          <div class="jugadores-muchosjugadores contenido-dinamico col-lg-7 col-md-7 col-sm-7 col-xs-12" >
 
             <div class="min-height-upper-container" hid="1">
 
@@ -208,7 +208,7 @@ global $kopa_setting;
             </div>
 
 
-            <div class="jugadores-container-busqueda">
+            <div class="jugadores-container-busqueda" >
               <div class="label-busqueda">
 
                 <select class="menu-busqueda" name="">
@@ -227,7 +227,7 @@ global $kopa_setting;
 
                 <p>Busqueda avanzada</p>
               </div>
-              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="margin-top:20px;padding-left:0;padding-right:0;">
 
 				<?php $even=true;
 						$auxE=0;

@@ -5124,7 +5124,7 @@ h5 {
 
 h6 {
     font-size: 14px;
-    line-height: 18px; }
+    line-height: 28px; }
 
 a {
     color: #1b1b1b;
@@ -5713,17 +5713,17 @@ body {
 
   }
   .trio-museo .page-content-area,.trio-rincon-mudo .page-content-area{
-	background-color:white;
+	background-color:transparent;
   }
 
   .page-template-template-ficha-general .page-content-area .wrapper{
 	padding:60px;
   }
+  
 
- .main-content .wrapper.home {
-	background:none;
-
-}
+	.main-section .wrapper.home {
+	background-color:transparent;
+	}
 	.home .main-col {
 		padding:0;
 	}
@@ -5732,6 +5732,9 @@ body {
 .main-section .wrapper .main-col {
     /*width: 902px;*/
     /*padding-right: 20px;*/ }
+	
+	.trio-cuna-cajon .wrapper .main-col,.trio-rincon-mudo .wrapper .main-col{padding:50px;}
+	
 .main-section .wrapper .sidebar {
     width: 287px;
     padding-left: 20px; }
@@ -7022,12 +7025,17 @@ Contact page
     .owl-wrapper-outer{
       /*padding-left: 5%;*/
     }
-
+	
 	.entry-thumb{
 		width:100%;
 		/*height:340px;*/
 		background-color:#8f8f8f;
 	}
+	
+	.kopa-home-slider .entry-thumb{
+	height:340px;
+	}
+	
 .main-section .widget .widget-title {
   margin: 0 !important;
     text-transform: uppercase;
@@ -7091,17 +7099,21 @@ Kopa Home Slider Widget
     position: relative; }
 
 .kopa-home-slider .flex-caption {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     right: 59px;
-    bottom: 0;
+    bottom: 5px;
     padding: 20px 40px 5px;
     font-size: 14px;
     color: #5e5e5e;
     width: 540px; }
+	
 .kopa-home-slider .flex-caption .entry-title {
-    font-size: 23px;
-    margin: 0 0 5px; }
+    font-size: 28px;
+    margin: 0 0 5px; 
+}
+	
+	
 .kopa-home-slider .flex-caption .entry-title a {
     color: #292929; }
 .kopa-home-slider .flex-caption .entry-title a:hover {
@@ -7353,11 +7365,14 @@ Nothumb Widget
     margin: 0;
     max-height: 36px;
     overflow: hidden; }
-
+.kopa-nothumb-carousel-widget .entry-item .entry-content h6.entry-title {
+	line-height:20px;
+}
 .kopa-nothumb-carousel-widget .entry-item .entry-content .entry-title a{
   font-family: "Roboto-regular";
   font-weight: 300;
   color:white;
+  
 }
 .stripe-box .wrapper {
     padding-right: 250px;
@@ -7782,7 +7797,7 @@ Breaking News
 .kopa-home-4 .sb-search,
 .kopa-subpage .sb-search {
     height: 43px;
-    min-width: 43px; }
+    min-width: 43px;}
 
 .kopa-home-2 .sb-search input[type="text"],
 .kopa-home-3 .sb-search input[type="text"],
@@ -7791,7 +7806,17 @@ Breaking News
     height: 43px;
     margin: 0;
     border-left: none;
+	
   }
+  
+  .sb-search.sb-search-open input{
+	background-color:white;
+	width:200px;
+	margin-left:50px;
+	margin-right:40px !important;
+  }
+  
+  
 
 .kopa-home-2 .sb-icon-search,
 .kopa-home-2 .sb-search-submit,
@@ -8781,7 +8806,7 @@ body.home{
 }
 
 body{
-    background-color: #000;
+    background-color: #20201f;
 }
 
 body.post-template-default.single.single-post, body.archive.tag, body.seach, body.page-template-template-galeria, body.category-cuna-cajon{
@@ -9388,6 +9413,7 @@ padding: 0 35px;
   font-family: 'Condensed-bold-italic';
   font-size: 2em;
   padding-top: 2em;
+  line-height:28px;
 }
 
 .fourth-box-left .fourth-container .info-date{
@@ -9459,7 +9485,9 @@ padding: 0 35px;
   .six-container-left .title-container > p:first-child{
     font-family: 'Condensed-bold-italic';
     font-size: 2em;
-    padding-top: 2em;
+    padding-top: 20px;
+	line-height: 28px;
+	
   }
 
   .six-container-left .title-container > p:last-child{
@@ -9774,6 +9802,7 @@ padding: 0 35px;
       font-family: 'Condensed-bold-italic';
       font-size: 1.3em;
 	  margin-bottom:10px;
+	  margin-top:30px;
     }
 
 	.menu-interno{
@@ -9880,14 +9909,25 @@ padding: 0 35px;
     }
 	.jugadores-container-busqueda .left-side{
       padding-right:25px;
+	  padding-left:0;
     }
 	.jugadores-container-busqueda .right-side{
       padding-left:25px;
+	  padding-right:0;
     }
 
     .page-content-area{
       padding-bottom: 15%;
     }
+	
+	.trio-museo .page-content-area img{
+		padding-bottom:35px;
+	}
+	
+	.trio-rincon-mudo .page-content-area [src='http://ferro.testni54.com/wordpress/wp-content/uploads/2017/05/mudo_camara-2.png']{
+		width:100%;
+		max-width:500px;
+	}
 
   /*pantalla de jugadores*/
 

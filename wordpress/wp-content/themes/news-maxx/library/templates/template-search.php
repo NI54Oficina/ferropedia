@@ -19,15 +19,28 @@ get_template_part( 'library/templates/header', 'extra' );
   $cat = get_category( $c );
 
   if($cat->slug =="cuna-cajon"){?>
+	
+	<div class="label-name-page">
+        <?php echo get_the_post_thumbnail(21);   ?>
+		<div style="padding:0 60px;">
+		</div>
 
-    <div class="" style="height:400px;">
+      </div>
+	 <!-- para seo !-->
+	<h1 style="display:none;">De la cuna esta el cajon</h1>
+	<div style="width:100%;min-height:100px;background-image:url('<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/tablon_cuna.jpg');background-size:auto 100%;">
+	<p style="font-size:1.2em;color:white; padding:50px 200px; font-family:'Roboto-Regular';text-align:center;"><?php echo $cat->description ?></p>
+    </div>
+	
+	<?php if(false){ ?>
+	<div class="" style="height:400px;">
 
     </div>
-
     <div class="" style="background-color:black; padding: 0 30px; position:relative">
       <div class="" style="position:absolute; bottom:70%; height:150px; width:90%; left:0; right:0; margin:auto;font-family:'Condensed-bold-italic';padding-top:50px; padding-left:50px;color:white; font-size:3em; background-image:url('<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/tablon.png');"> <?php echo $cat->name ?></div>
       <p style="font-size:1.2em;color:white; padding:50px 20px; font-family:'Roboto-Regular'"><?php echo $cat->description ?></p>
     </div>
+	<?php } ?>
 
   <?php  }  ?>
 
