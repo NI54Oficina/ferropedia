@@ -7377,7 +7377,9 @@ Nothumb Widget
 .stripe-box .wrapper {
     padding-right: 250px;
     position: relative;
-    background-color: transparent }
+    background-color: transparent;
+	overflow:hidden;
+	}
 .stripe-box .wrapper .left-color {
     background-color: transparent;
     position: absolute;
@@ -7407,12 +7409,18 @@ Nothumb Widget
   font-size: 1.4em;
   font-family: 'Condensed-bold-italic';
   text-align: center;
+  display:inline-block;
+  width:140%;
+  position:relative;
+  left:-40%;
 }
 
 .weather-widget-wrapper .widget p{
   color:white;
   font-family: 'Condensed-bold-italic';
   text-align: center;
+  position:relative;
+  left:-20%;
 }
 
 .weather-widget-wrapper .widget p span{
@@ -7540,7 +7548,7 @@ Weather Widget
     position: absolute;
     z-index: 1;
     top: 0px;
-    left: -103px;
+    left: -125px;
     /*border-top: 165px solid rgba(65,115,98,0.8);*/
     border-top: 165px solid rgba(65,115,98,1);
     border-bottom: 20px solid transparent;
@@ -7555,11 +7563,11 @@ Weather Widget
 .weather-widget-wrapper .triangle-1st {
     position: absolute;
     top: 0px;
-    left: -128px;
-    border-top: 165px solid #006443;
+    left: -150px;
+    border-top: 190px solid #006443;
     border-bottom: 20px solid transparent;
     border-right: 0px solid transparent;
-    border-left: 125px solid transparent;
+    border-left: 150px solid transparent;
     display: block;
     height: 0;
     width: 0;
@@ -7576,7 +7584,7 @@ Weather Widget
 
 .widget_awesomeweatherwidget {
     z-index: 1;
-    padding-right: 15%;
+    /*padding-right: 15%;*/
     position: absolute;
     right: 0;
     top: 0;
