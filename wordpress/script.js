@@ -58,28 +58,43 @@ function _openmodal(){
     $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
     $('.modal-gallery .info-sector title').html(element.title);
     $('.modal-gallery .img-sector img').attr('src',  element.images[cursor]);
+    $('.modal-gallery .img-sector .prev-image').attr('id',  indx);
+    $('.modal-gallery .img-sector .next-image').attr('id',  indx);
 
 
     $('.next-image').on("click", function(){
-      if(cursor < element.images.length){
+
+        var elem = $(this).attr('id');
+        console.log(elem);
+        console.log(ListElements[elem].images);
+      if(cursor < ListElements[elem].images.length-1){
+
         cursor++;
+        console.log(cursor);
         a=cursor;
         a++;
         $('.modal-gallery .img-sector img').fadeOut();
         $('.modal-gallery .img-sector .nro-image').html(a);
-        $('.modal-gallery .img-sector img').attr('src', element.images[cursor]);
+        $('.modal-gallery .img-sector img').attr('src', ListElements[elem].images[cursor]);
         $('.modal-gallery .img-sector img').fadeIn();
       }
 
     })
 
     $('.prev-image').on("click", function(){
+
+      var elem = $(this).attr('id');
+      console.log(elem);
+      console.log(ListElements[elem].images);
+
       if(cursor>0){
+
         cursor--;
+        console.log(cursor);
         a=cursor;
         a++;
         $('.modal-gallery .img-sector img').fadeOut();
-        $('.modal-gallery .img-sector img').attr('src', element.images[cursor]);
+        $('.modal-gallery .img-sector img').attr('src', ListElements[elem].images[cursor]);
         $('.modal-gallery .img-sector .nro-image').text(a);
         $('.modal-gallery .img-sector img').fadeIn();
 
@@ -88,6 +103,7 @@ function _openmodal(){
 
 
       $('.prev-post').on("click", function(){
+        cursor=0;
         if(indx > 0){
           indx--;
 
@@ -99,11 +115,14 @@ function _openmodal(){
           $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
           $('.modal-gallery .info-sector title').html(element.title);
           $('.modal-gallery .img-sector img').attr('src',  element.images[0]);
+          $('.modal-gallery .img-sector .prev-image').attr('id',  indx);
+          $('.modal-gallery .img-sector .next-image').attr('id',  indx);
 
           }
         })
 
       $('.next-post').on("click", function(){
+        cursor=0;
         if(indx < ListElements.length-1 ){
           indx++;
           //mostrar los siguientes articulos
@@ -115,6 +134,8 @@ function _openmodal(){
           $('.modal-gallery .info-sector .notas').html(element.category+" / "+element.notes);
           $('.modal-gallery .info-sector title').html(element.title);
           $('.modal-gallery .img-sector img').attr('src',  element.images[0]);
+          $('.modal-gallery .img-sector .prev-image').attr('id',  indx);
+          $('.modal-gallery .img-sector .next-image').attr('id',  indx);
 
           }
         })
