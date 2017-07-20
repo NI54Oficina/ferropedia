@@ -150,7 +150,7 @@
 		<div class="escudito"></div></div>
 		<div class="second-interior">
         <p><?php echo $destacado->nombre." ".$destacado->apellido; ?></p>
-        <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $destacado->id; ?>"><button type="butto n" name="button">Ver Ficha</button></a>
+        <a href="<?php echo home_url(); ?>/id<?php echo $destacado->id; ?>"><button type="butto n" name="button">Ver Ficha</button></a>
 		</div>
       </div>
 
@@ -209,7 +209,7 @@ $criteria->select = "*";
       <?php foreach($jugadores as $jugador){
 
 	  ?>
-	  <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+	  <a href="<?php echo home_url(); ?>/id<?php echo $jugador->id; ?>">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">

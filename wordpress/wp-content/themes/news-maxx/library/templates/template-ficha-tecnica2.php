@@ -2,6 +2,25 @@
 $model= $GLOBALS["jugador"];
 ?>
 <?php
+$aux=$_SERVER[REQUEST_URI];
+$aux= substr($aux,strpos($aux,"id"));
+if(strpos($aux,"/")){
+$aux= substr($aux,2,strpos($aux,"/")-2);
+
+}else if(strpos($aux,"?")){
+	$aux= substr($aux,2,strpos($aux,"?")-2);
+	
+}else if(strpos($aux,"#")){
+	$aux= substr($aux,2,strpos($aux,"#")-2);
+}else{
+	$aux= substr($aux,2);
+}
+if(!isset($model)){
+	$model= Jugador::model()->findByPk($aux);
+	
+}
+
+
 // get_header();
 
  get_template_part( 'library/templates/header', 'links' );
@@ -39,9 +58,10 @@ $debut=str_replace("(","<br>(",$debut);
 $ultimo= explode(";",$ultimo);
 $ultimo=str_replace("(","<br>(",$ultimo);
 
+
+
  ?>
 
-<?php ?>
 
 <!-- <div id="main-content"> -->
 

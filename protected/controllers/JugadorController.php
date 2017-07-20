@@ -103,7 +103,7 @@ class JugadorController extends Controller
 	}
 	
 	public function actionListar(){
-		$puestos= array();
+		/*$puestos= array();
 			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"arquero")));
 			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"defensor")));
 			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista")));
@@ -111,7 +111,31 @@ class JugadorController extends Controller
 		$this->layout='jugador';
 		$this->render('listar',array("model"=>$puestos
 			
-		));
+		));*/
+		set_time_limit (100000);
+		$jugadores= Jugador::model()->findAll();
+		foreach($jugadores as $jugador){
+			
+			$the_slug = 'id'.$jugador->id;
+			$queried_post = get_page_by_path($the_slug,OBJECT,'post');
+			
+			if( $queried_post === NULL) {
+				wp_insert_post(array(
+					"post_title"=>$jugador->nombre." ".$jugador->apellido,
+					"post_name"=>"id".$jugador->id,
+					"post_status" => "publish",
+					"post_category"=>array(get_cat_ID( 'jugador' )),
+					"meta_input"=>array(
+						"_wp_page_template" => "template-ficha-tecnica.php"
+						)
+				));
+
+			}else{
+				$queried_post = get_page_by_path($the_slug,OBJECT,'post');
+				echo "tiene post";
+			}
+			echo "<br>";
+		}
 	}
 
 	/**
@@ -121,15 +145,29 @@ class JugadorController extends Controller
 	public function actionCreate()
 	{
 		$model=new Jugador;
-
+		
+		
+		
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Jugador']))
 		{
 			$model->attributes=$_POST['Jugador'];
-			if($model->save())
+			if($model->save()){
+				wp_insert_post(array(
+					"post_title"=>$model->nombre." ".$model->apellido,
+					"post_name"=>"id".$model->id,
+					"post_category"=>array(get_cat_ID( 'jugador' )),
+					"meta_input"=>array(
+						"_wp_page_template" => "template-ficha-tecnica.php"
+						)
+				));
+
+				
 				$this->redirect(array('view','id'=>$model->id));
+				
+			}
 		}
 
 		$this->render('create',array(
