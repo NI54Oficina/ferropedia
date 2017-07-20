@@ -137,6 +137,8 @@ $new =trim($content_parts['main']);
 
       innerImgs=[];
 
+      innerImgs.push("<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>");
+
       <?php  $galleries = get_post_galleries_images( $post );
               $gal=$galleries[0];
 
@@ -150,6 +152,8 @@ $new =trim($content_parts['main']);
 
       <?php  }} ?>
 
+
+
       object['images']=innerImgs;
 
       ListElements.push(object);
@@ -162,7 +166,7 @@ $new =trim($content_parts['main']);
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery square" style="background-image:url(<?php  echo get_the_post_thumbnail_url($post->id,'medium' ); ?>);background-position:center;background-size:cover;">
             <?php  //echo the_post_thumbnail('full' ); ?>
-            
+
 
            <span> Ver</span>
         </div>
@@ -212,11 +216,13 @@ $new =trim($content_parts['main']);
     }
 
     .img-sector img{
-      width: 80%;
+      width: 100%;
+      height: auto;
       box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50);
       border-style: double;
       border-width: 4px;
       border-color: #c3c3c3;
+      padding:0 !important;
     }
 
     .info-sector .volanta, .info-sector .content{
@@ -238,23 +244,25 @@ $new =trim($content_parts['main']);
     .modal-gallery span{
       position: absolute;
       right: 0;
-      top:0
-      /*right:5%;
-      top:15%;*/
+      top:0;
+      padding: 30px;
+      font-size: 25px;
     }
   </style>
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-gallery">
 
     <span id="close-modal">X</span>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector">
-      <img src="" alt=""><br>
-      <div class="" style="position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 70%;
-    padding: 20px 0;">
-          <p class="prev-image">&lt; Foto anterior</p> <p class="nro-image">1</p> <p class="next-image">Siguiente foto &gt;</p>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector" style="padding:0 60px;">
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="overflow-y:hidden; text-align:center;max-height:350px;" >
+        <img src="" alt=""><br>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 20px 0; text-align:center">
+        <div style="position:absolute; left:0; right:0; margin:auto">
+            <p class="prev-image">&lt; Foto anterior</p> <p class="nro-image">1</p> <p class="next-image">Siguiente foto &gt;</p>
+        </div>
+
       </div>
 
     </div>

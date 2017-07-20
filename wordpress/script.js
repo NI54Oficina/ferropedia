@@ -127,6 +127,12 @@ function _openmodal(){
 
   $("#close-modal").on("click", function(){
     $('.modal-gallery').fadeOut();
+    $('.modal-gallery .info-sector .title').html('');
+    $('.modal-gallery .info-sector .volanta').html('');
+    $('.modal-gallery .info-sector .content').html('');
+    $('.modal-gallery .info-sector .notas').html('');
+    $('.modal-gallery .info-sector title').html('');
+    $('.modal-gallery .img-sector img').attr('src',  '');
   })
 
 

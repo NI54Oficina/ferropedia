@@ -5719,7 +5719,7 @@ body {
   .page-template-template-ficha-general .page-content-area .wrapper{
 	padding:60px;
   }
-  
+
 
 	.main-section .wrapper.home {
 	background-color:transparent;
@@ -5732,9 +5732,9 @@ body {
 .main-section .wrapper .main-col {
     /*width: 902px;*/
     /*padding-right: 20px;*/ }
-	
+
 	.trio-cuna-cajon .wrapper .main-col,.trio-rincon-mudo .wrapper .main-col{padding:50px;}
-	
+
 .main-section .wrapper .sidebar {
     width: 287px;
     padding-left: 20px; }
@@ -7023,19 +7023,19 @@ Contact page
    }
 
     .owl-wrapper-outer{
-      /*padding-left: 5%;*/
+      padding-left: 5%;
     }
-	
+
 	.entry-thumb{
 		width:100%;
 		/*height:340px;*/
 		background-color:#8f8f8f;
 	}
-	
+
 	.kopa-home-slider .entry-thumb{
 	height:340px;
 	}
-	
+
 .main-section .widget .widget-title {
   margin: 0 !important;
     text-transform: uppercase;
@@ -7107,13 +7107,13 @@ Kopa Home Slider Widget
     font-size: 14px;
     color: #5e5e5e;
     width: 540px; }
-	
+
 .kopa-home-slider .flex-caption .entry-title {
     font-size: 28px;
-    margin: 0 0 5px; 
+    margin: 0 0 5px;
 }
-	
-	
+
+
 .kopa-home-slider .flex-caption .entry-title a {
     color: #292929; }
 .kopa-home-slider .flex-caption .entry-title a:hover {
@@ -7372,7 +7372,7 @@ Nothumb Widget
   font-family: "Roboto-regular";
   font-weight: 300;
   color:white;
-  
+
 }
 .stripe-box .wrapper {
     padding-right: 250px;
@@ -7806,17 +7806,17 @@ Breaking News
     height: 43px;
     margin: 0;
     border-left: none;
-	
+
   }
-  
+
   .sb-search.sb-search-open input{
 	background-color:white;
 	width:200px;
 	margin-left:50px;
 	margin-right:40px !important;
   }
-  
-  
+
+
 
 .kopa-home-2 .sb-icon-search,
 .kopa-home-2 .sb-search-submit,
@@ -9487,7 +9487,7 @@ padding: 0 35px;
     font-size: 2em;
     padding-top: 20px;
 	line-height: 28px;
-	
+
   }
 
   .six-container-left .title-container > p:last-child{
@@ -9861,7 +9861,7 @@ padding: 0 35px;
       background-color: #0c0c0c;
 	  padding-bottom:10px;
     }
-	
+
 	.jugadores-container-busqueda{
 	padding:5px;
 		background-color:black;
@@ -9919,11 +9919,11 @@ padding: 0 35px;
     .page-content-area{
       padding-bottom: 15%;
     }
-	
+
 	.trio-museo .page-content-area img{
 		padding-bottom:35px;
 	}
-	
+
 	.trio-rincon-mudo .page-content-area [src='http://ferro.testni54.com/wordpress/wp-content/uploads/2017/05/mudo_camara-2.png']{
 		width:100%;
 		max-width:500px;
@@ -10021,7 +10021,7 @@ padding: 0 35px;
 		background-position:center;
 		background-repeat:no-repeat;
 		background-size:cover;
-		
+
 	}
 
 	.compartir-jugador {
