@@ -163,7 +163,7 @@
                     <a href="<?php echo home_url(); ?>/category/cuna-cajon/">  <li>DE LA CUNA HASTA EL CAJÓN</li></a>
                     <a href="<?php echo home_url(); ?>/museo">  <li>MUSEO</li></a>
                     <a href="<?php echo home_url(); ?>/rincon-mudo">  <li>EL RINCÓN DEL MUDO</li></a>
-                    <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>EQUIPO LA FERROPEDIA</li></a>
+                    <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>SOBRE LA FERROPEDIA</li></a>
                   </ul>
                 </nav>
         <!-- search box -->

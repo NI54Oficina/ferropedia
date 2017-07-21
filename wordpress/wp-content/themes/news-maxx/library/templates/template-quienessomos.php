@@ -16,6 +16,27 @@ global $kopa_setting;
 
   <p style="background-color:white; color:#006443; width:100%; border-bottom:4px solid #006443; font-size:2em; padding:10px; font-family: 'Condensed-bold-italic';">Ferropedistas</p>
 
+  <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 container-post-ferropedistas" style="padding-bottom:50px;">
+    <?php
+        $categories = get_the_category();
+        $category_id= $categories[0]->cat_ID;
+
+        $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id ) );
+
+
+          foreach($posts as $post){?>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 square" style="text-align:center; padding:20px;">
+              <div class="" style="height:100%; border:1px solid white; ">
+                  <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" alt="">
+              </div>
+              <p style="margin-top:20px;color:white; font-family:'Condensed-bold-italic'; font-size:2em;"><?php $title= the_title_attribute(array("echo" => 0));
+                $t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></p>
+                <p  style="color:#7b7b7b; font-family:'Condensed-bold-italic'; font-size:1.3em;"><?php echo get_field('volanta') ?></p>
+            </div>
+
+      <?php }  wp_reset_postdata();   ?>
+  </div>
+
   <style>
 
     .body-quienessomos{
