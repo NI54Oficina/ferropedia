@@ -221,6 +221,7 @@ class JugadorController extends Controller
 						  "post_title"=>$model->nombre." ".$model->apellido,
 							"post_name"=>"jugador-".$model->id,
 							"post_status" => "publish",
+							"post_type"=>"jugador",
 							"post_category"=>array(get_cat_ID( 'jugador' ))
 					  );
 					  wp_update_post( $my_post );

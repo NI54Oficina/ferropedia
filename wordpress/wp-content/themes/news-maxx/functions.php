@@ -68,3 +68,45 @@ function wpse34528_add_page_cats()
 {
     register_taxonomy_for_object_type( 'category', 'page' );
 }
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  $labels = array(
+        'name' => _x( 'Jugador', 'post type general name' ),
+        'singular_name' => _x( 'Libro', 'post type singular name' ),
+        'add_new' => _x( 'Añadir nuevo', 'book' ),
+        'add_new_item' => __( 'Añadir nuevo Libro' ),
+        'edit_item' => __( 'Editar Libro' ),
+        'new_item' => __( 'Nuevo Libro' ),
+        'view_item' => __( 'Ver Libro' ),
+        'search_items' => __( 'Buscar Libros' ),
+        'not_found' =>  __( 'No se han encontrado Libros' ),
+        'not_found_in_trash' => __( 'No se han encontrado Libros en la papelera' ),
+        'parent_item_colon' => ''
+    );
+ 
+    // Creamos un array para $args
+    $args = array( 'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => false,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => null,
+		"show_in_nav_menus"=>false,
+		"show_in_menu"=>false,
+		"show_in_admin_bar"=>false,
+		
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+    );
+ 
+    register_post_type( 'jugador', $args );
+}
+
+add_action( 'admin_init', 'wpse_55202_do_terms_exclusion' );
+
+function wpse_55202_do_terms_exclusion() { if( current_user_can('administrator') ) add_filter( 'list_terms_exclusions', 'wpse_55202_list_terms_exclusions', 10, 2 ); }
+
+function wpse_55202_list_terms_exclusions($exclusions,$args) { return $exclusions . " AND ( t.term_id <> 69 ) AND ( t.term_id <> 70 )"; }
