@@ -116,13 +116,13 @@ class JugadorController extends Controller
 		$jugadores= Jugador::model()->findAll();
 		foreach($jugadores as $jugador){
 			
-			$the_slug = 'id'.$jugador->id;
+			$the_slug = 'jugador-'.$jugador->id;
 			$queried_post = get_page_by_path($the_slug,OBJECT,'post');
 			
 			if( $queried_post === NULL) {
 				wp_insert_post(array(
 					"post_title"=>$jugador->nombre." ".$jugador->apellido,
-					"post_name"=>"id".$jugador->id,
+					"post_name"=>"jugador-".$jugador->id,
 					"post_status" => "publish",
 					"post_category"=>array(get_cat_ID( 'jugador' )),
 					"meta_input"=>array(
@@ -131,8 +131,16 @@ class JugadorController extends Controller
 				));
 
 			}else{
-				$queried_post = get_page_by_path($the_slug,OBJECT,'post');
-				echo "tiene post";
+				echo "entra?";
+				 $my_post = array(
+				  'ID'           => $queried_post->ID,
+				  "post_title"=>$jugador->nombre." ".$jugador->apellido,
+					"post_name"=>"jugador-".$jugador->id,
+					"post_status" => "publish",
+					"post_category"=>array(get_cat_ID( 'jugador' ))
+			  );
+			  wp_update_post( $my_post );
+			  update_post_meta( $queried_post->ID, '_wp_page_template', 'template-ficha-tecnica.php' );
 			}
 			echo "<br>";
 		}
@@ -190,8 +198,39 @@ class JugadorController extends Controller
 		if(isset($_POST['Jugador']))
 		{
 			$model->attributes=$_POST['Jugador'];
-			if($model->save())
+			if($model->save()){
+				
+				$the_slug = 'jugador-'.$model->id;
+				$queried_post = get_page_by_path($the_slug,OBJECT,'post');
+				
+				if( $queried_post === NULL) {
+					wp_insert_post(array(
+						"post_title"=>$model->nombre." ".$model->apellido,
+						"post_name"=>"jugador-".$model->id,
+						"post_status" => "publish",
+						"post_category"=>array(get_cat_ID( 'jugador' )),
+						"meta_input"=>array(
+							"_wp_page_template" => "template-ficha-tecnica.php"
+							)
+					));
+
+				}else{
+					
+					 $my_post = array(
+						  'ID'           => $queried_post->ID,
+						  "post_title"=>$model->nombre." ".$model->apellido,
+							"post_name"=>"jugador-".$model->id,
+							"post_status" => "publish",
+							"post_category"=>array(get_cat_ID( 'jugador' ))
+					  );
+					  wp_update_post( $my_post );
+					  update_post_meta( $queried_post->ID, '_wp_page_template', 'template-ficha-tecnica.php' );
+				}
+				
+				
+
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('update',array(

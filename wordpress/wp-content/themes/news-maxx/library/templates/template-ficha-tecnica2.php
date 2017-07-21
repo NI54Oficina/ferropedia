@@ -3,17 +3,17 @@ $model= $GLOBALS["jugador"];
 ?>
 <?php
 $aux=$_SERVER[REQUEST_URI];
-$aux= substr($aux,strpos($aux,"id"));
+$aux= substr($aux,strpos($aux,"jugador-"));
 if(strpos($aux,"/")){
-$aux= substr($aux,2,strpos($aux,"/")-2);
+$aux= substr($aux,strpos($aux,"-")+1,strpos($aux,"/")-2);
 
 }else if(strpos($aux,"?")){
-	$aux= substr($aux,2,strpos($aux,"?")-2);
+	$aux= substr($aux,strpos($aux,"-")+1,strpos($aux,"?")-2);
 	
 }else if(strpos($aux,"#")){
-	$aux= substr($aux,2,strpos($aux,"#")-2);
+	$aux= substr($aux,strpos($aux,"-")+1,strpos($aux,"#")-2);
 }else{
-	$aux= substr($aux,2);
+	$aux= substr($aux,strpos($aux,"-")+1);
 }
 if(!isset($model)){
 	$model= Jugador::model()->findByPk($aux);

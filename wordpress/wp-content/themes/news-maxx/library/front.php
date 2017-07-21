@@ -941,9 +941,9 @@ function kopa_the_headline()
         $cats = implode(',', $cats);
 
         if( !empty($cats) ){
-            $posts = new WP_Query('cat='.$cats.'&posts_per_page='.$limit);
+            $posts = new WP_Query('cat='.$cats.'&posts_per_page='.$limit."&category__not_in=".get_cat_ID( 'jugador' ));
         }else{
-            $posts = new WP_Query( 'posts_per_page='.$limit);
+            $posts = new WP_Query( 'posts_per_page='.$limit."&category__not_in=".get_cat_ID( 'jugador' ));
         }
         ?>
             <div class="kp-headline-wrapper clearfix">
@@ -1000,6 +1000,7 @@ function kopa_the_topnew()
         if ( $tax_query ) {
             $args['tax_query'] = $tax_query;
         }
+		$args["category__not_in"]=array( get_cat_ID( 'jugador' ));
         $posts = new WP_Query( $args );
         $index = 1;
         ?>
@@ -1007,6 +1008,7 @@ function kopa_the_topnew()
     <div class="widget kopa-nothumb-carousel-widget loading">
         <h4 class="widget-title"><?php echo $title; ?></h4>
         <div class="owl-carousel kopa-nothumb-carousel loading">
+			<?php //$query = new WP_Query( array( 'category__not_in' => array( get_cat_ID( 'jugador' ) ) ) ); ?>
             <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
                 <div class="item">
                     <article class="entry-item clearfix">
