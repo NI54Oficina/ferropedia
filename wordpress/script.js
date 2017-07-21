@@ -108,6 +108,7 @@ function _openmodal(){
           indx--;
 
           element = ListElements[indx];
+          $('.modal-gallery .img-sector .nro-image').text('1');
           $('.modal-gallery .info-sector .title').html(element.title);
           $('.modal-gallery .info-sector .volanta').html(element.volanta);
 
@@ -128,6 +129,7 @@ function _openmodal(){
           //mostrar los siguientes articulos
 
           element = ListElements[indx];
+          $('.modal-gallery .img-sector .nro-image').text('1');
           $('.modal-gallery .info-sector .title').html(element.title);
           $('.modal-gallery .info-sector .volanta').html(element.volanta);
           $('.modal-gallery .info-sector .content').html(element.content);
@@ -154,6 +156,8 @@ function _openmodal(){
     $('.modal-gallery .info-sector .notas').html('');
     $('.modal-gallery .info-sector title').html('');
     $('.modal-gallery .img-sector img').attr('src',  '');
+    $('.modal-gallery .img-sector img').attr('src',  '');
+    $('.modal-gallery .img-sector .nro-image').text('');
   })
 
 
