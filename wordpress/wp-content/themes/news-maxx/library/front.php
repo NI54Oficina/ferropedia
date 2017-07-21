@@ -940,11 +940,33 @@ function kopa_the_headline()
         $cats = (array)get_option('kopa_theme_options_headline_cats');
         $cats = implode(',', $cats);
 
-        if( !empty($cats) ){
+        /*if( !empty($cats) ){
             $posts = new WP_Query('cat='.$cats.'&posts_per_page='.$limit."&category__not_in=".get_cat_ID( 'jugador' ));
         }else{
             $posts = new WP_Query( 'posts_per_page='.$limit."&category__not_in=".get_cat_ID( 'jugador' ));
+        }*/
+		
+		 $title = get_option('kopa_theme_options_topnew_title', __('Últimas actualizaciones', 'newsmaxx'));
+		
+        
+        $args = array(
+            'posts_per_page'      => $limit
+        );
+        $tax_query = array();
+        if ( $cats ) {
+            $tax_query[] = array(
+                'taxonomy' => 'category',
+                'field'    => 'id',
+                'terms'    => $cats
+            );
         }
+        if ( $tax_query ) {
+            $args['tax_query'] = $tax_query;
+        }
+		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'ferropedistas' ));
+        $posts = new WP_Query( $args );
+        $index = 1;
+		
         ?>
             <div class="kp-headline-wrapper clearfix">
                 <span class="kp-headline-title"><?php echo $prefix; ?></span>
@@ -1000,7 +1022,7 @@ function kopa_the_topnew()
         if ( $tax_query ) {
             $args['tax_query'] = $tax_query;
         }
-		$args["category__not_in"]=array( get_cat_ID( 'jugador' ));
+		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'ferropedistas' ));
         $posts = new WP_Query( $args );
         $index = 1;
         ?>
