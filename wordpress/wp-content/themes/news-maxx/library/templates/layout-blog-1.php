@@ -32,7 +32,7 @@
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 first-left-box" >
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-left-box-inner" hid="1" >
-		<?php $totales= DataExtra::model()->findAllByAttributes(array("model"=>"General","modelId"=>1)); 
+		<?php $totales= DataExtra::model()->findAllByAttributes(array("model"=>"General","modelId"=>1));
 		$general= array_shift($totales);
 		$gTexto= explode('/',$general["texto"]);
 	?>
@@ -51,7 +51,7 @@
         <p class="puntos-partido"><?php echo $gTexto[1]; ?></p>
        <?php if(false){ ?> <p class="level-partido"> L 609 &nbsp;&nbsp;<span> V 313</span></p><?php } ?>
       </div>
-		
+
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <p class="tipo-partido">PARTIDOS EMPATADOS</p>
         <p class="puntos-partido"><?php echo $gTexto[2]; ?></p>
@@ -68,7 +68,7 @@
       <div class="linea-divisoria-partido"></div>
       <p class="goles"><span><?php echo $gTexto[5]; ?>  &nbsp;</span> Goles en contra</p>
 	</div>
-	
+
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<p>(*) Faltan los campeonatos de 1912 y el 1919</p>
 	</div>
@@ -82,15 +82,15 @@
     <h2>Historial</h2>
 
     <?php //$var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales']; ?>
-	
-	
 
-    
-		<?php foreach($totales as $total){ 
+
+
+
+		<?php foreach($totales as $total){
 		$texto= explode("/",$total["texto"]);
 		?>
       <div class="" style="background-color:black">
-		
+
       <p class="title-line-bg"><?php echo $total["titulo"]; ?></p>
           <table style="width:100%;">
             <tr class="first-row">
@@ -127,7 +127,7 @@
 
         </div>
 		<?php } ?>
-    
+
 
 
 
@@ -496,10 +496,44 @@ $criteria->select = "*";
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right ultimos-comentarios-widget" style="overflow:hidden;">
-		<!-- <div style="width:100%;height:400px; background-color:#a43c93;"><h3 style="color:white;text-align:center;margin-top:0;padding-top:10px;">Ultimos comentarios <br><span style="font-size:8px;">(placeholder)</span></div> -->
+		<div style="width:100%; background-color:#a43c93;">
+      <h3 style="color:white;text-align:center;margin-top:0;padding-top:15px; font-family:'Condensed-bold-italic'">ÚLTIMOS COMENTARIOS</h3>
+
+
         <?php// get_recent_comments(); ?>
 
-      <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/comentarios-demo.png" alt="">
+        <?php
+
+        $posts= get_posts( array('numberposts' =>-1 , "post_type"=>"post") );
+        $count =0;
+
+        foreach ($posts as $post) {
+
+            if($count < 3){
+
+            $comments = get_comments(array('post_id' => $post->ID,  ));
+
+            if($comments[0]->comment_content!= ''){?>
+
+              <div class=""style=" border-bottom: 1px solid black; padding: 20px 30px 20px 30px">
+
+
+
+              <p style="text-align:left; font-family:'Roboto-bold'; color:white"><?php echo $comments[0]->comment_author;  ?>
+                <span style="color:rgba(255,255,255,.4); float:right;font-family:'Roboto-regular'"><?php echo $comments[0]->comment_date; ?></span>
+              </p>
+              <p style="text-align:left; font-family:'Roboto-regular'; color:white" ><?php echo $comments[0]->comment_content; ?></p>
+
+              </div>
+             <?php $count ++; }
+
+
+          }
+        } wp_reset_postdata();
+
+        ?>
+        </div>
+      <!-- <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/comentarios-demo.png" alt=""> -->
 
 
     </div>
