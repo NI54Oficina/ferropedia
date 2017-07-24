@@ -110,6 +110,7 @@ global $kopa_setting;
     background-color: rgba(255,255,255,.9);
     height: 100%;
     width: 100%;
+    padding: 50px;
   }
 
 </style>
@@ -117,5 +118,16 @@ global $kopa_setting;
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-ferropedistas">
 
+  <span>X</span>
+
+  <div class="">
+    <img src="" alt="">
+  </div>
+
+  <div class="">
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
 
 </div>

@@ -278,7 +278,7 @@ $criteria->select = "*";
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
-      <h3> El rincón del Mudo</h3>
+      <h3>EL RINCÓN DEL MUDO</h3>
       <h2><?php the_title_attribute($posts[0]->ID ); ?></h2>
       <p>
         <?php // Fetch post content
