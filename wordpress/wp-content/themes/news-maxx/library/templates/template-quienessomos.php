@@ -113,6 +113,28 @@ global $kopa_setting;
     padding: 50px;
   }
 
+  .modal-ferropedistas span{
+    color: black;
+    font-size: 3em;
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+
+  .modal-ferropedistas .img-ferropedista, .modal-ferropedistas .info-ferropedista{
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .modal-ferropedistas .img-ferropedista img{
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-ferropedistas .info-ferropedista  {
+    padding: 20px;
+  }
+
 </style>
 
 
@@ -120,14 +142,15 @@ global $kopa_setting;
 
   <span>X</span>
 
-  <div class="">
-    <img src="" alt="">
+  <div class="img-ferropedista square col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-10.png" alt="">
   </div>
 
-  <div class="">
-    <p></p>
-    <p></p>
-    <p></p>
+  <div class="info-ferropedista col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <p class="nombre-ferropedista">Pablo<span> Abiad</span></p>
+    <p class="status-ferropedista">El mejor ferropedista</p>
+    <p class="texto-ferropedista">Un texto sobre el ferropedista bleble
+    mucha informacion ble ble ble .</p>
   </div>
 
 </div>
