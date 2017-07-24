@@ -94,5 +94,28 @@ global $kopa_setting;
 
   </div>
 
+
+
 </div>
+
+
 <?php get_footer();?>
+
+<style media="screen">
+
+  .modal-ferropedistas{
+    position: fixed;
+    top:0;
+    lef:0;
+    background-color: rgba(255,255,255,.9);
+    height: 100%;
+    width: 100%;
+  }
+
+</style>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-ferropedistas">
+
+
+</div>

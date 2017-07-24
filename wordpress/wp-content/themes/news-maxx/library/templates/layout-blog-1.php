@@ -38,7 +38,7 @@
 	?>
 
       <h2>Totales<span style="color:#8f8f8f">*</span></h2>
-      <p>Última actualización: 24 de abril a las 19.00pm</p>
+      <!-- <p>Última actualización: 24 de abril a las 19.00pm</p> -->
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:30px;">
         <p class="tipo-partido">PARTIDOS JUGADOS</p>

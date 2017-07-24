@@ -8808,6 +8808,10 @@ Kopa Contact Info Widget
     src: url(fonts/Roboto-Bold.ttf);
 }
 
+#open-menu{
+  cursor:pointer;
+}
+
 body.home{
 
   background-image: url("img/tile_home.png");
@@ -8952,7 +8956,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
           font-family: "Condensed-bold-italic";
           font-size: 3em;
           color:white;
-          margin-bottom:5px;
+          margin-bottom:30px;
         }
 
 		.second-box.bloque{
