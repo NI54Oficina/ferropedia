@@ -17,6 +17,7 @@ yii
 wordpress/wp-admin
 wordpress/wp-includes
 wordpress/wp-content/upgrade
+wordpress/wp-content/uploads
 protected/runtime
 
 (?i)**application.log
