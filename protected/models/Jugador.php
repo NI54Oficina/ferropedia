@@ -1,4 +1,4 @@
-	<?php
+<?php
 
 /**
  * This is the model class for table "tbl_jugador".
@@ -40,7 +40,7 @@ class Jugador extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, nacimiento, puesto', 'required'),
+			array('nombre, nacimiento, puesto', 'required'),
 			array('nombre, apellido, nacimiento, ciudad_natal, detalle_puesto', 'length', 'max'=>300),
 			array('defuncion', 'safe'),
 			array('puesto', 'length', 'max'=>100),

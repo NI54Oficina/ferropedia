@@ -32,7 +32,7 @@ class DataExtraController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update',"resultados","proximo"),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -55,6 +55,8 @@ class DataExtraController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+	
+	
 
 	/**
 	 * Creates a new model.
@@ -110,6 +112,118 @@ class DataExtraController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+		));
+	}
+	
+	
+	public function actionProximo()
+	{
+		$model= DataExtra::model()->findByAttributes(array("titulo"=>"ProximoPartido"));
+
+		$guardado="no";
+		if(isset($_POST['DataExtra']))
+		{
+			$texto="";
+			foreach($_POST["DataExtra"] as $d){
+				$texto.=$d.";";
+			}
+			$model->texto=$texto;
+			if($model->save()){
+				$guardado="si";
+				//agregar textito que confirme el guardado
+			}
+				//$this->redirect(array('view','id'=>$model->id));
+		}
+
+		$this->render('proximo',array(
+			'model'=>$model,"guardado"=>$guardado
+		));
+	}
+	
+	public function actionResultados()
+	{
+		$model= DataExtra::model()->findByAttributes(array("titulo"=>"Total"));
+		$primera= DataExtra::model()->findByAttributes(array("titulo"=>"Primera División"));
+		$ascenso= DataExtra::model()->findByPk(1970);
+		$local= DataExtra::model()->findByAttributes(array("titulo"=>'Copas Locales'));
+		$internacional= DataExtra::model()->findByAttributes(array("titulo"=>'Copas Internacionales'));
+
+		$guardado="no";
+		if(isset($_POST['Totales']))
+		{
+			$texto="";
+			foreach($_POST["Totales"] as $d){
+				$texto.=$d."/";
+			}
+			$model->texto=$texto;
+			if($model->save()){
+				$guardado="si";
+				//agregar textito que confirme el guardado
+			}
+				//$this->redirect(array('view','id'=>$model->id));
+		}
+		
+		if(isset($_POST['Primera']))
+		{
+			$texto="";
+			foreach($_POST["Primera"] as $d){
+				$texto.=$d."/";
+			}
+			$primera->texto=$texto;
+			if($primera->save()){
+				$guardado="si";
+				
+			}
+		}
+		
+		if(isset($_POST['Ascenso']))
+		{
+			$texto="";
+			foreach($_POST["Ascenso"] as $d){
+				$texto.=$d."/";
+			}
+			$ascenso->texto=$texto;
+			if($ascenso->save()){
+				$guardado="si";
+				
+			}
+		}
+		
+		if(isset($_POST['Local']))
+		{
+			$texto="";
+			foreach($_POST["Local"] as $d){
+				$texto.=$d."/";
+			}
+			$local->texto=$texto;
+			if($local->save()){
+				$guardado="si";
+				
+			}
+		}
+		
+		if(isset($_POST['Internacional']))
+		{
+			$texto="";
+			foreach($_POST["Internacional"] as $d){
+				$texto.=$d."/";
+			}
+			$internacional->texto=$texto;
+			if($internacional->save()){
+				$guardado="si";
+				
+			}
+		}
+		
+		
+
+		$this->render('resultados',array(
+			'model'=>$model,
+			"primera"=>$primera,
+			"ascenso"=>$ascenso,
+			"local"=>$local,
+			"internacional"=>$internacional,
+			"guardado"=>$guardado
 		));
 	}
 

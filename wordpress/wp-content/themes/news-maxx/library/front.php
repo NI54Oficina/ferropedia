@@ -1091,11 +1091,15 @@ function kopa_the_topnew()
                         <span class="triangle-1st"></span>
                         <span class="triangle-2nd"></span>
                         <div class="widget widget_awesomeweatherwidget masonry-brick">
-
-                          <h1>Próximo Rival (L)</h1>
-                          <p>Juventud Unida <br>
-                            Gualeguaychu <br>
-                          <span>Domingo 23</span></p>
+							<?php 
+							$proxPartido= DataExtra::model()->findByAttributes(array("titulo"=>"ProximoPartido"));
+							$proxPartido= explode(";",$proxPartido->texto);
+							
+							?>
+                          <h1><?php echo $proxPartido[0]; ?></h1>
+                          <p><?php echo $proxPartido[1]; ?><br>
+                            <?php echo $proxPartido[2]; ?><br>
+                          <span><?php echo $proxPartido[3]; ?></span></p>
                             <!-- <div class="awesome-weather-wrap awecf custom awe_with_stats awe_wide" id="awesome-weather-vietnam"> -->
 
                                 <!-- <div class="awesome-weather-header">VietNam</div> -->
