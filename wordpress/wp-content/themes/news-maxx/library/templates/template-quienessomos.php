@@ -17,6 +17,13 @@ global $kopa_setting;
   <p style="background-color:white; color:#006443; width:100%; border-bottom:4px solid #006443; font-size:2em; padding:10px; font-family: 'Condensed-bold-italic';">Ferropedistas</p>
 
   <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 container-post-ferropedistas" style="padding-bottom:50px;">
+
+    <script>
+
+      ListFerropedistas=[];
+
+    </script>
+
     <?php
         $categories = get_the_category();
         $category_id= $categories[0]->cat_ID;
@@ -24,8 +31,22 @@ global $kopa_setting;
         $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id ) );
 
 
-          foreach($posts as $post){?>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 square" style="text-align:center; padding:20px;">
+          foreach($posts as $post){  ?>
+
+
+            <script>
+
+                object={};
+
+                object['nombre']="<?php echo $post->post_title ?>";
+                object['status']='<?php echo get_field('volanta') ?>';
+                object['texto'] ='<?php echo  $post->post_content ?>';
+
+                ListFerropedistas.push(object);
+
+            </script>
+
+            <div class="element-f col-lg-4 col-md-4 col-sm-6 col-xs-12 square" style="text-align:center; padding:20px;">
               <div class="" style="height:100%; border:1px solid white; ">
                   <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" alt="">
               </div>
@@ -129,7 +150,7 @@ global $kopa_setting;
 
   .modal-ferropedistas .img-ferropedista, .modal-ferropedistas .info-ferropedista{
     padding: 50px !important;
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
 
   .modal-ferropedistas .img-ferropedista img{
@@ -164,7 +185,7 @@ global $kopa_setting;
 </style>
 
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-ferropedistas">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-ferropedistas" style="display:none">
 
   <span class="span">X</span>
 
@@ -180,3 +201,35 @@ global $kopa_setting;
   </div>
 
 </div>
+
+
+<script>
+
+$(document).ready( function(){ _modalf()});
+
+function _modalf(){
+
+  console.log("Asdasd");
+
+  $(".element-f").on('click', function(){
+
+       var new_url= $(this).find('img').attr('src');
+
+       var id=$(".container-post-ferropedistas .element-f").index(this);
+
+      console.log(new_url);
+
+      $(".img-ferropedista img").attr('src', new_url);
+      $(".info-ferropedista .nombre-ferropedista").html(ListFerropedistas[id].nombre);
+      $(".info-ferropedista .status-ferropedista").html(ListFerropedistas[id].status);
+      $(".info-ferropedista .texto-ferropedista").html(ListFerropedistas[id].texto);
+
+      $(".modal-ferropedistas").fadeIn();
+
+      $(".span").on('click', function(){
+        $(".modal-ferropedistas").fadeOut();
+      })
+  })
+}
+
+</script>

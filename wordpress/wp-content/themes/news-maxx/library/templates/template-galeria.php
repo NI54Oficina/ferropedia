@@ -94,9 +94,13 @@ echo  $content ;
    $category_id= $categories[0]->cat_ID;
 
     $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id ) );
-
+    // echo 'asdasd';
   foreach($posts as $post){
+
+    // echo var_dump()post;
     ?>
+
+
 
     <script>
 
@@ -115,21 +119,23 @@ $new =trim($content_parts['main']);
 //echo $new;
 
 ?>
-  object['content']='El partido Alemania Federal-Austria del Mundial de España fue escandaloso:como a los dos les convenía empatar para avanzar a la siguiente ronda, jugaron a pasarse la pelota toda la tarde hasta asegurase el 0 a 0 y dejar afuera a Argelia. Cinco semanas después, en Parque de los Patricios, el árbitro Juan Carlos Demaro creyó ver una situación parecida entre los jugadores de Ferro y lo resolvió como si la AFA le hubiera conferido poderes sobre terrenales: dio un insólito tiro libre por “acción antideportiva y desleal”.'
-  <?php $post_id_5369 = get_post(get_the_ID());
 
-  $content = $post_id_5369->post_content;
-  // $content = apply_filters('the_content', $content);
-  $content = str_replace(']]>', ']]>', $content);
-  // $content = explode(' ', $content);
-  // $content = explode(":<!--more-->", $content);
-  // $content = explode(' ', $content[0]);
-  // foreach($content as $con){
-  //   echo $con.' ';
-  // }
+  object['content']="<?php echo $post->post_content ?>";
 
-  //print($content);
-  ?> ;
+  // <?php $post_id_5369 = get_post(get_the_ID());
+  //
+  // $content = $post_id_5369->post_content;
+  // // $content = apply_filters('the_content', $content);
+  // $content = str_replace(']]>', ']]>', $content);
+  // // $content = explode(' ', $content);
+  // // $content = explode(":<!--more-->", $content);
+  // // $content = explode(' ', $content[0]);
+  // // foreach($content as $con){
+  // //   echo $con.' ';
+  // // }
+  //
+  // //print($content);
+  // ?> ;
 
       object['volanta']='<?php echo get_field('volanta')?>';
       object['category']='<?php the_title(); ?>';
