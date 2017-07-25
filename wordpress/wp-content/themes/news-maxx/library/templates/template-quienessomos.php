@@ -113,16 +113,22 @@ global $kopa_setting;
     padding: 50px;
   }
 
-  .modal-ferropedistas span{
+  .modal-ferropedistas .span{
     color: black;
-    font-size: 3em;
+    font-size: 2em;
     position: absolute;
     right: 0;
     top:0;
+    padding: 30px;
+    user-select: none;
+  }
+
+  .modal-ferropedistas .span:hover{
+    cursor: pointer;
   }
 
   .modal-ferropedistas .img-ferropedista, .modal-ferropedistas .info-ferropedista{
-    padding: 20px;
+    padding: 50px !important;
     overflow: hidden;
   }
 
@@ -132,15 +138,35 @@ global $kopa_setting;
   }
 
   .modal-ferropedistas .info-ferropedista  {
-    padding: 20px;
+    color:black;
   }
+
+  .info-ferropedista .nombre-ferropedista{
+    font-family: 'Condensed-bold-italic';
+    font-size: 2.2em;
+  }
+
+  .info-ferropedista .nombre-ferropedista span{
+    color:#00B643;
+  }
+
+  .info-ferropedista .status-ferropedista{
+    font-family: 'Condensed-bold-italic';
+    font-size: 1.2em;
+    padding: 20px 0 40px 0;
+  }
+
+  .info-ferropedista .texto-ferropedista{
+    font-family: 'Roboto-regular';
+  }
+
 
 </style>
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-ferropedistas">
 
-  <span>X</span>
+  <span class="span">X</span>
 
   <div class="img-ferropedista square col-lg-6 col-md-6 col-sm-6 col-xs-12">
     <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-10.png" alt="">
