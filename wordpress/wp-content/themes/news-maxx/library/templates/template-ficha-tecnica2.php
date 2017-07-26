@@ -113,7 +113,6 @@ $ultimo=str_replace("(","<br>(",$ultimo);
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box-ficha-tecnica">
 
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;padding-top:90px;">
-
           <!--<div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>!-->
 		  <div class="cancha cancha-<?php echo $model->puesto; ?>">
 
@@ -218,6 +217,14 @@ $ultimo=str_replace("(","<br>(",$ultimo);
          -->
         </div>
 		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:40px;">
+		<?php echo do_shortcode("[rate2]") ?>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<?php echo do_shortcode("[rate]") ?>
+		</div>
+		        
+		</div>
+		
 		<?php if(false){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
           <h2>Campañas del jugador</h2>
