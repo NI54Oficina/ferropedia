@@ -13,6 +13,8 @@ $(document).ready( function(){
   //_openmodal();
   //menu();
 
+  copy_size();
+
 });
 
 
@@ -26,6 +28,7 @@ $(window).on('load', function(){
   gallerie_swipe();
   _openmodal();
   menu();
+  copy_size();
 
 });
 
@@ -34,6 +37,7 @@ $(window).on('load', function(){
 $(window).on('resize', function(){
 
    _square();
+   copy_size();
 })
 
 
@@ -500,4 +504,21 @@ function menu(){
     // $(".menu-despegable").fadeOut();
     $(".menu-despegable").removeClass( "menu-despegable-active" );
   })
+}
+
+function copy_size(){
+
+  $(".img-g-j").each(function() {
+
+  var w=   $( this ).width();
+  var h=   $( this ).height();
+
+    $( this ).siblings(".cover-green-gallery").css("width", w+'px').css("height", h+'px');
+});
+
+  // console.log(w+"  "+h);
+  //
+  // $(".cover-green-gallery").css("width", w+'px');
+  // $(".cover-green-gallery").css("height", h+'px');
+
 }

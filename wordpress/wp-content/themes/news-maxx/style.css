@@ -52,7 +52,6 @@ article,
 aside,
 details,
 figcaption,
-figure,
 footer,
 header,
 hgroup,
@@ -5130,7 +5129,7 @@ a {
     color: #1b1b1b;
     text-decoration: none !important;
     outline: none !important; }
-a:hover, a:active {
+ a:active {
     color: #e03d3d;
     text-decoration: none; }
 a:focus {
@@ -5203,7 +5202,7 @@ ol li > ul > li {
 
 .red-btn {
     background: #e03d3d; }
-.red-btn:hover {
+.red-btn:figure {
     background: #222222; }
 .red-btn span {
     color: white;
@@ -6375,8 +6374,8 @@ Categories page
 .entry-list > ul > li .entry-item .entry-thumb {
     float: left;
     margin-right: 20px;
-    max-width: 265px; 
-	
+    max-width: 265px;
+
 	}
 .entry-list > ul > li .entry-item .entry-content {
     padding-top: 15px;
