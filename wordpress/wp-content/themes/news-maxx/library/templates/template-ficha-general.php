@@ -38,7 +38,7 @@ global $kopa_setting;
         <?php the_post_thumbnail( 'full' );   ?>
 		<div style="padding:0 60px;">
         <div class="header-text-content">
-          <h1>Los jugadores</h1>
+          <h1><?php the_title(); ?></h1>
           <?php //the_content(); ?>
         </div>
 		</div>

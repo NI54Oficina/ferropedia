@@ -12,11 +12,27 @@ global $kopa_setting;
 
 <div id="main-content">
 <section class="main-section">
-<div id="page-<?php the_ID(); ?>" class="page-content-area clearfix" style="padding:50px 100px;">
+<div id="page-<?php the_ID(); ?>" class="page-content-area clearfix" >
 
-  <p style="background-color:white; color:#006443; width:100%; border-bottom:4px solid #006443; font-size:2em; padding:10px; font-family: 'Condensed-bold-italic';">Ferropedistas</p>
 
-  <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 container-post-ferropedistas" style="padding-bottom:50px;">
+  <div class="label-name-page">
+    <?php the_post_thumbnail( 'full' );   ?>
+<div style="padding:0 60px;">
+    <div class="header-text-content">
+      <h1><?php the_title(); ?></h1>
+      <?php //the_content(); ?>
+    </div>
+</div>
+
+  </div>
+
+<div class="" style="padding-left:100px; padding-right:100px;">
+
+
+  <p style=" background-color:white; color:#006443; width:100%; border-bottom:4px solid #006443; font-size:2em; padding:10px; font-family: 'Condensed-bold-italic';">Ferropedistas</p>
+</div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 container-post-ferropedistas" style="padding:50px 100px; margin-bottom:100px;">
 
     <script>
 

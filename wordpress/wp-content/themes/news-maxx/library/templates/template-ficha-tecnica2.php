@@ -67,6 +67,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
     <div class="widget-area-1">
 
+
 <div class="prueba-bg">
 
 
@@ -104,6 +105,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
 
 <div id="page-<?php the_ID(); ?>" class="page-content-area clearfix">
+
 
 
   <div class="wrapper clearfix">
