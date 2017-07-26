@@ -120,6 +120,7 @@
     .custom-post-template .post-content-text{
       color:#5c585d;
       font-family: 'Roboto-regular';
+	  font-size:1.2em;
     }
 
     .custom-post-template .post-left-colum > div{

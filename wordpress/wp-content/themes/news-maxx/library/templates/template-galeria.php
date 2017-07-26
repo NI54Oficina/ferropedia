@@ -21,12 +21,12 @@ global $kopa_setting;
 
   </div>
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); min-height:400px;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); min-height:400px;padding-bottom:50px;">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height:400px;">
         <img src="<?php echo get_field('foto_portada') ?>" style="position:absolute; bottom:0" alt="">
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:20px;">
-      <h1 style="border-bottom:2px solid black;font-size:48px; line-height:60px;"><?php $title= the_title_attribute(array("echo" => 0));
+      <h1 style="border-bottom:2px solid black;font-size:48px; line-height:50px;padding-bottom:10px;"><?php $title= the_title_attribute(array("echo" => 0));
         $t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></h1>
       <div style="font-size:15px;color:black; font-family='Roboto-Regular'"><?php
 
@@ -81,7 +81,7 @@ echo  $content ;
     }
     </style>
 
-  <h1>Galeria de Imágenes</h1>
+  
 
   <script>
   //  imgPerObject={};

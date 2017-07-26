@@ -6375,7 +6375,9 @@ Categories page
 .entry-list > ul > li .entry-item .entry-thumb {
     float: left;
     margin-right: 20px;
-    max-width: 265px; }
+    max-width: 265px; 
+	
+	}
 .entry-list > ul > li .entry-item .entry-content {
     padding-top: 15px;
     padding-right: 20px; }
@@ -7421,10 +7423,12 @@ Nothumb Widget
   text-align: center;
   position:relative;
   left:-20%;
+  font-size:15px;
 }
 
 .weather-widget-wrapper .widget p span{
   font-family: 'Condensed-italic';
+  font-size:13px;
 
 }
 .kopa-home-4 .stripe-box .social-links-container,
@@ -9813,7 +9817,7 @@ padding: 0 35px;
       color: white;
       text-align: center;
       font-family: 'Condensed-bold-italic';
-      font-size: 1.3em;
+      font-size: 21px;
 	  margin-bottom:10px;
 	  margin-top:30px;
     }
@@ -9836,6 +9840,10 @@ padding: 0 35px;
       text-align: center;
       width: 32%;
       text-align: center;
+	  background-color:black;
+	  line-height:13px;
+	  font-size:14px;
+	  padding:10px;
     }
 
     .menu-dinamico nav p:hover{
@@ -9861,19 +9869,25 @@ padding: 0 35px;
       background-color: #00b643;
     }
     .jugadores-content .jugadores-cancha p{
-      font-family: 'Condensed-bold-italic';
+      font-family: 'Condensed-italic';
       color:white;
-      padding: 5px 10px;
+      padding: 5px 20px;
+	  font-size:16px;
+	  border-bottom: 2px solid #20201f;
     }
 
     .jugadores-content .jugadores-cancha span{
       color:#00b643;
+	  margin-right:10px;
     }
 
     .jugadores-content .jugadores-container-ranking{
-      background-color: #0c0c0c;
+      background-color: #0d0d0d;
 	  padding-bottom:10px;
     }
+	.jugadores-content .jugadores-container-ranking .contenido-1{
+		padding-left:0;
+	}
 
 	.jugadores-container-busqueda{
 	padding:5px;
@@ -9918,7 +9932,7 @@ padding: 0 35px;
     }
 
     .jugadores-container-busqueda .resultado.even{
-      background-color: rgba(0,100,67,1);
+      background-color: #292929;
     }
 	.jugadores-container-busqueda .left-side{
       padding-right:25px;
