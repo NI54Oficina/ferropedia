@@ -77,7 +77,7 @@
 </div>
 
 <div class="wrapper clearfix">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-post-template">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-post-template main-section trio-cuna-cajon">
 
   <style media="screen">
     .custom-post-template .nombre-categoria{
