@@ -274,7 +274,7 @@ $criteria->select = "*";
 <a href="<?php the_permalink($posts[0]->ID ); ?>" style="display:block;width:100%;height:500px;">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);" >
 		<h4 style="color:white;"> </h4>
-      <div class="triangulo-verde"></div>
+      <!-- <div class="triangulo-verde"></div> -->
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
@@ -321,7 +321,7 @@ $criteria->select = "*";
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" >
 				<div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($posts_cuna[0]->ID, 'full'); ?>);"></div>
                 <?php //echo the_post_thumbnail( 'thumbnail' );?>
-                <div class="triangulo-verde"></div>
+                <!-- <div class="triangulo-verde"></div> -->
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
@@ -471,7 +471,7 @@ $criteria->select = "*";
 
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
           <div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);"></div>
-            <div class="triangulo-verde"></div>
+            <!-- <div class="triangulo-verde"></div> -->
           </div>
 
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
