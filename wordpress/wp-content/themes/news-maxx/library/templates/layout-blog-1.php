@@ -326,7 +326,8 @@ $criteria->select = "*";
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-                <p><?php echo $posts_cuna[0]->post_title; ?></p>
+				<p class="volanta"><?php echo get_field("volanta",$posts_cuna[0]->ID); ?></p>
+                <h6><?php echo $posts_cuna[0]->post_title; ?></h6>
 
                 <p><?php // Fetch post content
                       $content = get_post_field( 'post_content',$posts_cuna[0]->ID );

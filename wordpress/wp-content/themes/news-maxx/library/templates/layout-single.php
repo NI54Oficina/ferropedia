@@ -40,8 +40,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	
   <?php
+  get_template_part( 'library/templates/header', 'links' );
+ get_template_part( 'library/templates/header', 'extra' );
     // get_header();
     get_template_part( 'library/templates/header', 'menu' );
     global $kopa_setting;
@@ -197,7 +199,7 @@
             }?>
         </div>
 
-        <p class="subtitulo">Volanta</p>
+        <p class="subtitulo"><?php echo get_field("volanta"); ?></p>
 
         <h1><?php the_title_attribute(); ?></h1>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">

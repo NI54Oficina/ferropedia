@@ -730,7 +730,20 @@ jQuery(document).ready(function() {
         var target = jQuery(e.target);
         //sb-search-submit
         if(target.is('.sb-icon-search') || target.is('.sb-search-submit')){
-            jQuery('#sb-search').addClass('sb-search-open');
+			if(jQuery('#sb-search').hasClass("sb-search-open")){
+				if(jQuery(".sb-search-input").val()!=""){
+					jQuery('#sb-search form').submit();
+				}else{
+					jQuery('#sb-search').removeClass('sb-search-open');
+				}
+				
+			}else{
+				jQuery('#sb-search').addClass('sb-search-open');
+				jQuery(".sb-search-input").focus();
+			}
+            
+			
+			 
         }else{
             if (target.is('.sb-search-input')){
 

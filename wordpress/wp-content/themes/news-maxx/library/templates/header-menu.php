@@ -158,11 +158,11 @@
                   <p>Menú</p>
                   <ul>
                     <a href="<?php echo home_url(); ?>"><li>INICIO</li></a>
-                    <a href="<?php echo home_url(); ?>/ficha-jugador/"><li>JUGADORES</li></a>
+                    <a href="<?php echo home_url(); ?>/ficha-jugador/"><li>JUGADORES Y DT'S</li></a>
                     <!-- <a href="<?php echo home_url(); ?>">  <li>DT'S</li></a> -->
-                    <a href="<?php echo home_url(); ?>/category/cuna-cajon/">  <li>DE LA CUNA HASTA EL CAJÓN</li></a>
+                    <a href="<?php echo home_url(); ?>/category/cuna-cajon/">  <li>DE LA CUNA HASTA EL CAJON</li></a>
                     <a href="<?php echo home_url(); ?>/museo">  <li>MUSEO</li></a>
-                    <a href="<?php echo home_url(); ?>/rincon-mudo">  <li>EL RINCÓN DEL MUDO</li></a>
+                    <a href="<?php echo home_url(); ?>/rincon-mudo">  <li>EL RINCON DEL MUDO</li></a>
                     <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>SOBRE LA FERROPEDIA</li></a>
                   </ul>
                 </nav>

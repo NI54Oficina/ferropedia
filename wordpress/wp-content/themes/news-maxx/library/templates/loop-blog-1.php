@@ -9,14 +9,17 @@
         <li>
             <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
                 <?php if ( has_post_thumbnail()) : ?>
-                    <div class="entry-thumb">
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php kopa_the_image(get_the_ID(), get_the_title(), 265, 215); ?></a>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <div class="entry-thumb" style="background-image:url(<?php echo the_post_thumbnail_url("medium"); ?>);">
+                        <?php //kopa_the_image(get_the_ID(), get_the_title(), 265, 215); ?>
                     </div>
+					</a>
                 <?php endif; ?>
                 <!-- entry-thumb -->
 
                 <div class="entry-content">
                     <header>
+						<p><?php echo get_field("volanta"); ?></p>
                         <h6 class="entry-title" itemscope="" itemtype="http://schema.org/Event">
                             <a itemprop="name" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                         </h6>
