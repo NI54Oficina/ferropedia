@@ -169,6 +169,12 @@ class Jugador extends CActiveRecord
 		foreach(Gol::model()->findAll('jugador = '.$this->id) as $gol){
 			$gol->delete();
 		}
+		$the_slug = 'jugador-'.$this->id;
+		$queried_post = get_page_by_path($the_slug,OBJECT,'post');
+		if( $queried_post === NULL) {
+		}else{
+			wp_delete_post($queried_post->ID);
+		}
 		
 		return true;
     }
