@@ -1,6 +1,13 @@
+<script>
+
+ urlBase="<?php echo home_url() ?>";
+</script>
 
 <?php
   // get_header();
+
+
+
 
   get_template_part( 'library/templates/header', 'links' );
 	  get_template_part( 'library/templates/header', 'extra' );
@@ -81,7 +88,7 @@ echo  $content ;
     }
     </style>
 
-  
+
 
   <script>
   //  imgPerObject={};
@@ -93,7 +100,7 @@ echo  $content ;
   $categories = get_the_category();
    $category_id= $categories[0]->cat_ID;
 
-    $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id ) );
+    $posts= get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id , 'orderby'  => 'post_date', 'order'    => 'DESC') );
     // echo 'asdasd';
   foreach($posts as $post){
 
@@ -102,7 +109,7 @@ echo  $content ;
 
 
 
-    <script>
+    <!-- <script>
 
     //Arreglar esta parte con las cosas q corresponden
       object={};
@@ -120,7 +127,7 @@ $new =trim($content_parts['main']);
 
 ?>
 
-  object['content']="<?php echo $post->post_content ?>";
+  object['content']="hola";
 
   // <?php $post_id_5369 = get_post(get_the_ID());
   //
@@ -164,10 +171,10 @@ $new =trim($content_parts['main']);
 
       ListElements.push(object);
 
-    </script>
+    </script> -->
 
       <!-- <a href="<?php the_permalink();?>"> -->
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery get-post" id-post="<?php the_ID();?>">
 
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery square" style="background-image:url(<?php  echo get_the_post_thumbnail_url($post->id,'medium' ); ?>);background-position:center;background-size:cover;">
@@ -211,7 +218,7 @@ $new =trim($content_parts['main']);
       padding: 5px 10px;
     }
 
-    .img-sector p:hover, .info-sector .buttons:hover,.modal-gallery span:hover{
+    .img-sector p:hover, .info-sector .buttons:hover,.modal-gallery .span:hover, .get-post-not{
       cursor: pointer;
       opacity: .5;
       transition: all .5s;
@@ -220,6 +227,8 @@ $new =trim($content_parts['main']);
     .img-sector .nro-image{
       color: #a43c93;
     }
+
+
 
     .img-sector img{
       width: 100%;
@@ -247,7 +256,7 @@ $new =trim($content_parts['main']);
       color: #00b643;
     }
 
-    .modal-gallery span{
+    .modal-gallery .span{
       position: absolute;
       right: 0;
       top:0;
@@ -257,33 +266,11 @@ $new =trim($content_parts['main']);
   </style>
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-gallery">
 
-    <span id="close-modal">X</span>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector" style="padding:0 60px;">
 
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="overflow-y:hidden; text-align:center;max-height:350px;" >
-        <img src="" alt=""><br>
-      </div>
 
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 20px 0; text-align:center">
-        <div style="position:absolute; left:0; right:0; margin:auto">
-            <p class="prev-image">&lt; Foto anterior</p> <p class="nro-image">1</p> <p class="next-image">Siguiente foto &gt;</p>
-        </div>
-
-      </div>
-
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 info-sector">
-      <p class="volanta"></p>
-      <h1 class="title"></h1>
-      <p class="notas"></p>
-      <p class="content">
-      </p>
-      <p  class="buttons prev-post">Entrada anterior</p>|<p  class="buttons next-post">Siguiente entrada</p>
-    </div>
   </div>
 
 </div>
-
 
 
 <?php //} // endwhile

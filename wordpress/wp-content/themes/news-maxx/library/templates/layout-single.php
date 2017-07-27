@@ -283,16 +283,16 @@
 
 
           <?php if(strlen(get_field('fuente'))!=0){ ?>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px;background-color:#eff0ef;box-shadow: 0px 2px 5px 3px rgba(173,173,173,1);">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#eff0ef;box-shadow: 0px 2px 5px 3px rgba(173,173,173,1);">
 
 
           <div class="fuente">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <img  src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-verde.svg" alt="">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="padding:0;">
+                <img style="max-width:35px;" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-verde.svg" alt="">
             </div>
 
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-              <p style="font-size:0.8em;color:#888888;margin:0;">Fuente</p>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding:0;">
+              <p style="font-size:0.8em;color:#888888;margin:0; font-family:'Roboto-bold';">Fuente</p>
               <p style="font-size:0.8em; color:#888888"><?php echo get_field('fuente'); ?></p>
             </div>
 

@@ -14,7 +14,7 @@ $(document).ready( function(){
   //menu();
 
   copy_size();
-
+  get_post();close_modal();
 });
 
 
@@ -24,9 +24,10 @@ $(window).on('load', function(){
 	slider('.jugadores-container-ranking','.contenido-1' );
   slider('.menu-2','.jugadores-muchosjugadores' );
   slider('.menu-anios','.cuerpo-tabla' );
+  slider('.img-sector-padre', "nada");
   _square();
   gallerie_swipe();
-  _openmodal();
+  // _openmodal();
   menu();
   copy_size();
 
@@ -236,6 +237,30 @@ function slider(padreMenu,padreContenedor ){
 
       cycleItems();
     });
+
+
+
+    $(padreContenedor+'.next').click(function() {
+
+	currentIndex += 1;
+
+  if (currentIndex > itemAmt - 1) {
+
+    currentIndex = 0;
+
+  }
+  cycleItems();
+});
+
+$(padreContenedor+'.prev').click(function() {
+
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+
+    currentIndex = itemAmt - 1;
+  }
+  cycleItems();
+});
 
 
 }
@@ -522,3 +547,37 @@ function copy_size(){
   // $(".cover-green-gallery").css("height", h+'px');
 
 }
+
+function get_post(){
+
+
+
+  $("body").on("click", ".get-post", function(){
+
+    $('.modal-gallery').empty();
+    console.log("asdasd");
+
+  	 id_post=$(this).attr('id-post');
+
+  	$.post( urlBase+'/ajax/',{id:id_post},function(data){
+
+    $('.modal-gallery').append(data);
+
+    $('.modal-gallery').fadeIn();
+
+
+  });
+
+});
+
+
+}
+
+
+function close_modal(){
+  $("body").on("click", "#close-modal",function(){
+    $('.modal-gallery').empty();
+    $('.modal-gallery').fadeOut();
+
+  })
+};

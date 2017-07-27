@@ -64,7 +64,7 @@ $footer_sidebar[3] = ($kopa_setting) ? $sidebars[$kopa_position[($total-1)]] : '
       <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
 
-        <p id="copyright">© 2013 - 2017 FERROPEDIA • LEGALES</p>
+        <p id="copyright">©2017 FERROPEDIA • LEGALES</p>
 <!--
     <div class="wrapper">
 

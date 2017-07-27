@@ -78,6 +78,7 @@
 
   </div>
 
+
   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 first-right-box" hid="1">
     <h2>Historial</h2>
 
@@ -439,7 +440,7 @@ $criteria->select = "*";
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title fourth-box-left">
 
-    <h2>Museo</h2>
+    <h2>Museo de la Emoción Verdolaga</h2>
 
     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
@@ -603,6 +604,8 @@ $criteria->select = "*";
 <div class="clear"></div>
 
 </div>
+
+
 
 
 <?php get_footer();?>
