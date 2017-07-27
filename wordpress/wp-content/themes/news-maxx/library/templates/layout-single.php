@@ -54,7 +54,6 @@
 
     <div class="wrapper">
 
-
         <?php kopa_the_topnew(); ?>
         <!-- top new -->
 
@@ -323,15 +322,31 @@
 
               <?php
 
-              $args = array( 'numberposts' => '4', 'post_status' => 'publish' );
+              /*$args = array( 'numberposts' => '4', 'post_status' => 'publish' );
               $recent_posts = wp_get_recent_posts( $args );
 
-              $nro=1;
+             */
+			   $nro=1;
+			  $query = new WP_Query( array(
+					'meta_key' => 'wpb_post_views_count',
+					'orderby' => 'meta_value_num',
+					'posts_per_page' => 4,
+					"category_name"=> "cuna-cajon"
+				) );
+				
 
-              foreach( $recent_posts as $recent ){
+				if ( $query->have_posts() ) {
+					// The 2nd Loop
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						
+
+
+
+           
                 $post_categories = wp_get_post_categories( $recent["ID"]);
                 $date= get_the_date();?>
-                <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr($recent["post_title"])?>">
+                <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr(the_title())?>">
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bloque-widget">
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -339,7 +354,7 @@
                   </div>
                   <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                     <p><?php   echo $date ?></p>
-                    <p><?php echo $recent["post_title"]  ?></p>
+                    <p><?php echo the_title();  ?></p>
                   </div>
                 </div>
 
@@ -348,7 +363,13 @@
               <!-- echo $date.'<p ><a style="color:white" href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a></p>'; -->
 
 
-              <?php $nro++; } ?>
+              <?php $nro++; }
+				
+					// Restore original Post Data
+					wp_reset_postdata();
+				}
+
+			  ?>
           </div>
         </div>
 

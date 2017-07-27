@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) )
 $current_rating = apply_filters( 'post_ratings_current_rating', sprintf( '%.2F / %d', $rating, $max_rating ), $rating, $max_rating );
 ?>
 
-<div class="post-ratings2 votos col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-dinamica" data-post="<?php the_ID(); ?>">
+<div class="post-ratings2 votos col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica" data-post="<?php the_ID(); ?>">
 	<script>
 	subTotales= new Array(
 		<?php if(isset($subTotales)){ foreach($subTotales as $sub){ ?>

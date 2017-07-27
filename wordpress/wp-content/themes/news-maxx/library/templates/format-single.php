@@ -43,7 +43,6 @@
 
     <?php the_tags( '<div class="tag-box"><strong>' . __( 'Tags: ', 'newsmaxx' ) . ' </strong>', ', ', '</div>' ); ?>
     <!-- tag box-->
-
     <?php
     $prev_post = get_previous_post();
     $next_post = get_next_post();

@@ -188,7 +188,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 contenido-interno-tecnica">
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica content-shadow" style="margin-bottom:20px;padding-left:0;padding-right:0;"><h2 >Calificación</h2></div></div>
-
+		<?php if(false){ ?>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 informacion-dinamica">
           <!--<h2>¿Qué pensas del jugador?</h2>!-->
@@ -217,9 +217,13 @@ $ultimo=str_replace("(","<br>(",$ultimo);
          -->
         </div>
 		</div>
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:40px;">
-		<?php echo do_shortcode("[rate2]") ?>
+		
+		<?php } ?>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<?php echo do_shortcode("[rate2]") ?>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
 		<?php echo do_shortcode("[rate]") ?>
 		</div>
 		        
@@ -824,7 +828,7 @@ $criteria->select = "*";
 
 		foreach($jugadores as $jugador){
 		?>
-		<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+		<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
         <div class="jugador-relacionado">
         <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
         <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?> <br> <span><?php echo $jugador["puesto"]; ?></span></label>

@@ -32,7 +32,7 @@ class DataExtraController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update',"resultados","proximo"),
+				'actions'=>array('create','update',"resultados","proximo","date"),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -54,6 +54,30 @@ class DataExtraController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+	}
+	
+	public function actionDate(){
+		//echo "poyo";
+		$args = array(
+			'date_query' => array(
+				array(
+					
+					'month' => 07,
+					'day'   => 27,
+				),
+			),
+			"category_name"=>"evento"
+		);
+		$query = new WP_Query( $args );
+		if ( $query->have_posts() ) {
+					// The 2nd Loop
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						echo the_title();
+						echo "<br>";
+					}
+		}
+					exit();
 	}
 	
 	

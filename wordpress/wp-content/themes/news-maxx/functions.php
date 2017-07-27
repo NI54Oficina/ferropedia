@@ -110,3 +110,36 @@ add_action( 'admin_init', 'wpse_55202_do_terms_exclusion' );
 function wpse_55202_do_terms_exclusion() { if( current_user_can('administrator') ) add_filter( 'list_terms_exclusions', 'wpse_55202_list_terms_exclusions', 10, 2 ); }
 
 function wpse_55202_list_terms_exclusions($exclusions,$args) { return $exclusions . " AND ( t.term_id <> 69 ) AND ( t.term_id <> 70 )"; }
+
+//contador views
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+function wpb_track_post_views ($post_id) {
+    if ( !is_single() ) return;
+
+    if ( empty ( $post_id) ) {
+
+        global $post;
+
+        $post_id = $post->ID;   
+
+    }
+
+    wpb_set_post_views($post_id);
+
+}
+add_action( 'wp_head', 'wpb_track_post_views');

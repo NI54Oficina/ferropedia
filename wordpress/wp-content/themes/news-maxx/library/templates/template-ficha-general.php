@@ -6,14 +6,64 @@ $puestos= array();
 			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista")));
 			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"delantero")));
 
-$criteria = new CDbCriteria;
+			
+$query = new WP_Query( array(
+    'meta_key' => 'wpb_post_views_count',
+    'orderby' => 'meta_value_num',
+    'posts_per_page' => 4,
+	"category_name"=> "jugador"
+) );
+$visitados= array();
+
+if ( $query->have_posts() ) {
+	// The 2nd Loop
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		$jId=  $query->post->post_name;
+		$jId= str_replace("jugador-","",$jId);
+		array_push($visitados,Jugador::model()->findByPk($jId));
+	}
+
+	// Restore original Post Data
+	wp_reset_postdata();
+}
+
+
+			
+/*$criteria = new CDbCriteria;
 $criteria->limit = 4;
 $criteria->order = 'RAND()';
 $criteria->select = "*";
 
-$visitados= Jugador::model()->findAll($criteria);
-$votados= Jugador::model()->findAll($criteria);
+$visitados= Jugador::model()->findAll($criteria);*/
+//$votados= Jugador::model()->findAll($criteria);
+
+$criteria = new CDbCriteria;
+$criteria->limit = 4;
+$criteria->order = 'id DESC';
+$criteria->select = "*";
+
 $ingresos= Jugador::model()->findAll($criteria);
+
+//$votados= Jugador::model()->findAll($criteria);
+$votados= array();
+$criteria = new CDbCriteria;
+$criteria->limit = 4;
+$criteria->order = 'meta_value DESC';
+$criteria->select = "*";
+$criteria->condition= "meta_key = 'votes'";
+
+$auxVotados= WpPostmeta::model()->findAll($criteria);
+
+foreach($auxVotados as $v){
+	//echo $v->meta_id;
+	//echo "<br>";
+	$jId=  get_post($v->post_id)->post_name;
+	$jId= str_replace("jugador-","",$jId);
+	array_push($votados,Jugador::model()->findByPk($jId));
+}
+
+
 
 ?>
 
@@ -89,7 +139,7 @@ global $kopa_setting;
 
                 <div class="contenido-1 contenido-dinamico">
 					<?php $auxPos=1; foreach($visitados as $jugador){ ?>
-					<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+					<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
 					<p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p></a>
 					<?php } ?>
 
@@ -97,7 +147,7 @@ global $kopa_setting;
 
                 <div class="contenido-1 contenido-dinamico">
                   <?php $auxPos=1; foreach($votados as $jugador){ ?>
-				  <a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+				  <a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
                   <p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
 				  </a>
 				  <?php } ?>
@@ -106,7 +156,7 @@ global $kopa_setting;
 
                 <div class="contenido-1 contenido-dinamico">
 					<?php $auxPos=1; foreach($ingresos as $jugador){ ?>
-					<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+					<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
 					<p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
 					</a>
 					<?php } ?>
@@ -187,7 +237,7 @@ global $kopa_setting;
             <?php
 			$auxJ=0;
 			foreach($puesto as $jugador){ ?>
-			<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+			<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
             <div class="jugadores-j">
               <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
 
@@ -236,7 +286,7 @@ global $kopa_setting;
 				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 <?php
 				if($auxE==0){echo " left-side";}else{ echo " right-side";}
 				?>">
-				<a href="<?php echo home_url(); ?>/jugador/ver/<?php echo $jugador->id; ?>">
+				<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
                 <p class=" resultado <?php
 			  /*if($even){ if($auxE==0){echo "even";}else{echo "odd";}}
 				if(!$even){ if($auxE==0){echo "odd";}else{echo "even";}}

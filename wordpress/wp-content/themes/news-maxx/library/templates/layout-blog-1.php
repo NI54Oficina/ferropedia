@@ -325,7 +325,7 @@ $criteria->select = "*";
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-                <p><?php the_title_attribute($posts_cuna[0]->ID ); ?></p>
+                <p><?php echo $posts_cuna[0]->post_title; ?></p>
 
                 <p><?php // Fetch post content
                       $content = get_post_field( 'post_content',$posts_cuna[0]->ID );
@@ -337,7 +337,7 @@ $criteria->select = "*";
                       echo $content_parts['main'].'...'; ?></p>
 
                 <div class="info-date">
-                  <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
+                  <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' , $posts_cuna[0]->ID); ?></p>
                   <p class="fecha-post-home verde"> Ver comentarios</p>
                 </div>
 
@@ -392,16 +392,24 @@ $criteria->select = "*";
     </div>
 
       <?php
+		$nro=1;
+			  $query = new WP_Query( array(
+					'meta_key' => 'wpb_post_views_count',
+					'orderby' => 'meta_value_num',
+					'posts_per_page' => 4,
+					"category_name"=> "cuna-cajon"
+				) );
+				
 
-      $args = array( 'numberposts' => '4', 'post_status' => 'publish' );
-      $recent_posts = wp_get_recent_posts( $args );
+				if ( $query->have_posts() ) {
+					// The 2nd Loop
+					while ( $query->have_posts() ) {
+						$query->the_post();
 
-      $nro=1;
-
-      foreach( $recent_posts as $recent ){
+      
         $post_categories = wp_get_post_categories( $recent["ID"]);
         $date= get_the_date();?>
-        <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr($recent["post_title"])?>">
+        <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr(the_title())?>">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bloque-widget">
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -409,7 +417,7 @@ $criteria->select = "*";
           </div>
           <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
             <p><?php   echo $date ?></p>
-            <p><?php echo $recent["post_title"]  ?></p>
+            <p><?php echo the_title();  ?></p>
           </div>
         </div>
 
@@ -418,7 +426,7 @@ $criteria->select = "*";
       <!-- echo $date.'<p ><a style="color:white" href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a></p>'; -->
 
 
-      <?php $nro++; } ?>
+				<?php $nro++; } }?>
   </div>
 
 </div>

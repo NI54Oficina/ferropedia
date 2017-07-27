@@ -6,7 +6,7 @@
         <?php get_template_part( 'library/templates/header', 'menu' ); ?>
 		<?php if(true){ ?>
           <div class="kopa-md-slider owl-carousel kopa-home-slider owl-theme" data-autoplay="true" data-slidespeed="700" style="opacity: 1; display: block;">
-
+				<?php if(false){ ?>
                     <div class="item">
                         <article class="entry-item">
                           <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/slider-home-efemeride.jpg);background-size:100% auto; ">
@@ -42,7 +42,63 @@
                         </article>
 
                     </div>
+		<?php } ?>
+				<?php 
+				$today = getdate();
+				$args = array(
+					'date_query' => array(
+						array(
+							
+							'month' => $today['mon'],
+							'day'   =>  $today['mday'],
+						),
+					),
+					"category_name"=>"evento"
+				);
+				$query = new WP_Query( $args );
+				if ( $query->have_posts() ) {
+							
+							while ( $query->have_posts() ) {
+								$query->the_post(); ?>
+					<div class="item">
+                        <article class="entry-item">
+                          <div class="entry-thumb" style="background-image:url(<?php echo the_post_thumbnail_url('full'); ?>);background-size:100% auto; ">
+                            <!--<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_mudo.jpg" alt="Haute Couture fact file bibendum">!-->
+							</div>
 
+                            <div class="flex-caption">
+								<h5 style="color:white;"><?php echo get_field("volanta"); ?></h5>
+                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white "><?php echo the_title(); ?></h3>
+                                <div style="font-family:'Roboto-regular'; padding-top:10px;color:white;"><?php the_content(); ?></div>
+                                    <!-- <span class="arrow-wrapper">
+                                        <span class="arrow-left"></span>
+                                        <span class="arrow-right"></span>
+                                    </span> -->
+                            </div>
+
+                        </article>
+
+                    </div>
+					
+					
+							<?php }
+				}else{
+				?>
+				<div class="item">
+                        <article class="entry-item">
+                          <div class="entry-thumb" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/slider-home-general.jpg);background-size:100% auto;background-position:center; ">
+                            <!--<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/header_mudo.jpg" alt="Haute Couture fact file bibendum">!-->
+							</div>
+
+                            <div class="flex-caption">
+                                <h5 style="color:white;">LA FERROPEDIA</h5>
+                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white; padding-bottom:30px;">¡Bienvenido!</h3>
+                            </div>
+
+                        </article>
+
+                    </div>
+				<?php  }	?>
 
 		</div>
 
