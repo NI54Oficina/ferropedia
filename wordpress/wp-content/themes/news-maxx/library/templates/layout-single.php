@@ -105,10 +105,11 @@
     }
 
     .custom-post-template .thumbnail-container{
-      background-color: #006443;
+      background-image: repeating-linear-gradient( -45deg,   #e4e4e4,   #e8e8e8 5px,   #dcdcdc 5px,   #dcdcdc 10px );
       position: relative;
       min-height: 500px;
       overflow: hidden;
+      border: 2px solid black;
     }
 
     .custom-post-template .thumbnail-container img{
@@ -336,6 +337,7 @@
             .container-move-entradas a > p{
               font-family: 'Condensed-bold';
               font-size: 1.2em;
+              width: auto;
             }
 
             .container-move-entradas p{

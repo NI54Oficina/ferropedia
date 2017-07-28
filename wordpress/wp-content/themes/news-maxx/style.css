@@ -9609,6 +9609,10 @@ padding: 0 35px;
 
 }
 
+.get-post:hover{
+  cursor: pointer;
+}
+
   .mas-visto-widget .title{
     color: white;
     font-size: 2em;
