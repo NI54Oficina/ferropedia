@@ -65,7 +65,7 @@ global $kopa_setting;
   <style>
 
     .body-quienessomos{
-      background-color: #006443;
+
       padding: 0;
     }
 
@@ -74,8 +74,8 @@ global $kopa_setting;
       font-family: 'Condensed-bold-italic';
       font-size: 3em;
       width: 100%;
-      padding: 10px;
-      background-color: rgba(0,182,67,.7);
+      padding: 25px;
+      background-image:  repeating-linear-gradient( -45deg, rgb(59, 175, 62), rgba(52, 195, 57, 0.75) 2px, #00b643 4px, #00b643 6px );
       border-bottom: 2px solid black;
       margin-top: 0;
     }
@@ -96,7 +96,23 @@ global $kopa_setting;
     .body-quienessomos p{
       color: white;
       font-family: 'Roboto-regular';
-      padding: 10px 50px;
+      padding: 10px 100px;
+      margin:10px 0;
+      background-color: #006443;
+      min-height: 100px;
+    }
+
+
+    .body-quienessomos span{
+      float: left;
+  font-family: Georgia;
+  font-size: 70px;
+  line-height: 60px;
+  padding-top: 4px;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-family: 'Roboto-bold';
+  border-bottom: 3px solid #00b643;
     }
 
   </style>
