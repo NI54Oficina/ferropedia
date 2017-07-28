@@ -343,7 +343,7 @@
               color: black;
               font-size: 1.4em;
               word-wrap: break-word;
-              width: 250px;
+              width: 300px;
 
             }
 
