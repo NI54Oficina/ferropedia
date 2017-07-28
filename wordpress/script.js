@@ -628,9 +628,10 @@ function get_post(){
 }
 
 function NotaCarousel(){
+	if($(".trio-cuna-cajon").length>0){
 	try{
 					console.log("entra?");
-					$("#gallery-2 br").remove(); $("#gallery-2").owlCarousel({
+					$("trio-cuna-cajon#gallery-2 br").remove(); $("#gallery-2").owlCarousel({
 						margin:50,
 						loop:true,
 						autoWidth:true,
@@ -638,6 +639,7 @@ function NotaCarousel(){
 					});
 	}catch(error)		{
 		setTimeout(function(){NotaCarousel();},300);
+	}
 	}
 }
 

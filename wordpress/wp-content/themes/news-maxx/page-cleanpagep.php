@@ -24,7 +24,7 @@
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img-sector" style="padding:0 60px;">
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-sector-padre" style="overflow-y:hidden; text-align:center;max-height:350px;" >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-sector-padre" style="text-align:center;" >
           <!-- <?php echo get_the_post_thumbnail($id );  ?><br> -->
 
           <img class="contenido-dinamico" src="<?php echo get_the_post_thumbnail_url($id );  ?>" alt="">
