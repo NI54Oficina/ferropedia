@@ -33,6 +33,7 @@
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="more-link"><span>Leer más</span></a>
                     <?php endif; ?>
                 </div>
+				
                 <!-- entry-content -->
 
             </article>

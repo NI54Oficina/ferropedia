@@ -203,6 +203,12 @@
         <p class="subtitulo"><?php echo get_field("volanta"); ?></p>
 
         <h1><?php the_title_attribute(); ?></h1>
+		<div class="bajo-titulo">
+		<p><?php echo get_the_date(); ?></p>
+		<p>&#9652;</p>
+		<p><?php $count_key = 'wpb_post_views_count';
+    $count = get_post_meta(get_the_ID(), $count_key, true); echo $count; ?></p>
+		</div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">
           <?php the_post_thumbnail(array(1000, 520)); ?>
 
@@ -456,6 +462,7 @@
 			  ?>
           </div>
         </div>
+		
 
         <div class="clear"></div>
 

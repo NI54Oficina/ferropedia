@@ -27,7 +27,7 @@ $(window).on('load', function(){
   gallerie_swipe();
   menu();
   copy_size();
-
+  NotaCarousel();
 });
 
 
@@ -627,6 +627,19 @@ function get_post(){
 
 }
 
+function NotaCarousel(){
+	try{
+					console.log("entra?");
+					$("#gallery-2 br").remove(); $("#gallery-2").owlCarousel({
+						margin:50,
+						loop:true,
+						autoWidth:true,
+						items:3
+					});
+	}catch(error)		{
+		setTimeout(function(){NotaCarousel();},300);
+	}
+}
 
 function close_modal(){
   $("body").on("click", "#close-modal",function(){

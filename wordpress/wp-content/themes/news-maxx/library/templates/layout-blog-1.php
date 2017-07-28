@@ -141,12 +141,13 @@
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
-		<h2>Con la verde</h2>
+		<h2 class="titulo-home">Con la verde</h2>
 
 		<?php $destacado= Jugador::model()->findByPk(26); ?>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
 
-        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+        
+		<div class="avatar-destacado" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
 		<div style="width:100%;text-align:center;">
 		<div class="escudito"></div></div>
 		<div class="second-interior">
@@ -213,7 +214,7 @@ $criteria->select = "*";
 	  <a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
-        <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
+        <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);">
 
 
 
@@ -311,7 +312,7 @@ $criteria->select = "*";
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
 
-    <h2>De la cuna hasta el cajón</h2>
+    <h2 class="titulo-home">De la cuna hasta el cajón</h2>
 
     <?php
     $posts_cuna= get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>4 ) );
@@ -441,7 +442,7 @@ $criteria->select = "*";
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title fourth-box-left">
 
-    <h2>Museo de la Emoción Verdolaga</h2>
+    <h2 class="titulo-home">Museo de la Emoción Verdolaga</h2>
 
     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 

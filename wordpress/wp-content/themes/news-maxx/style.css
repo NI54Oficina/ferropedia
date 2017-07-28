@@ -5737,6 +5737,14 @@ body {
 	.trio-cuna-cajon .entry-thumb{border:2px solid #00b643;box-shadow:0px 4px 8px -1px rgba(0,0,0,0.3);height:200px;overflow:hidden;background-size:cover;background-repeat:no-repeat;background-position:center;}
 
 	.trio-cuna-cajon .entry-list > ul > li .entry-item .entry-content{padding-top:0;}
+	
+	.trio-cuna-cajon #gallery-2~ul{display:none;}
+	
+	.trio-cuna-cajon #gallery-2 .gallery-item{margin:0;padding:20px;width:200px;}
+	
+	.trio-cuna-cajon .bajo-titulo p{color:#a43c93;display:inline-block;margin-right:10px;}
+	
+	.titulo-home{font-size:3em !important;}
 
 .main-section .wrapper .sidebar {
     width: 287px;
@@ -9156,9 +9164,13 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 			padding-right:50px;
 		}
 
-        .second-box-left .box-left img{
-          max-width: 100%;
+        .second-box-left .box-left .avatar-destacado{
+          width:100%;
+		  height:200px;
           border: 1px solid black;
+		  background-position:center;
+		  background-repeat:no-repeat;
+		  background-size:cover;
         }
 
         .second-box-left .box-left p{
@@ -9580,7 +9592,7 @@ padding: 0 35px;
   background-image:  url(img/tile_cesped.svg) !important;
   background-position: 100% 100%;
   background-repeat: repeat-x;
-  padding-bottom: 25%;
+  /*padding-bottom: 25%;*/
 
 }
 
@@ -10190,6 +10202,18 @@ margin-bottom:15px;
 	  font-size:18px;
 	  padding:10px;
     }
+	
+	.avatar-relacionado{
+		width:100%;height:250px;
+		background-position:center;
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	
+	.avatar-relacionado.placeholder{
+		background-size:100% auto;
+		background-position:center -50px;
+	}
 
     .jugador-relacionado label span{
       font-family: 'Condensed-italic';

@@ -166,7 +166,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:90px;padding-left:20px;padding-right:20px;">
-			<div class="jugador-principal square" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);"></div>
+			<div class="jugador-principal square" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
 			<!--<img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">!-->
 
 			<div class="compartir-jugador">
@@ -830,7 +830,7 @@ $criteria->select = "*";
 		?>
 		<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
         <div class="jugador-relacionado">
-        <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+        <div class="avatar-relacionado placeholder" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);" ></div>
         <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?> <br> <span><?php echo $jugador["puesto"]; ?></span></label>
         </div>
 		</a>

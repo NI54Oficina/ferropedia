@@ -177,7 +177,7 @@ global $kopa_setting;
 
             <?php for($i=0; $i<15 ; $i++){ ?>
             <div class="jugadores-j">
-              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg" alt="">
 
               <!-- <img src="" alt=""> -->
               <label><span><?php if(false){ ?>10<?php } ?></span>Nombre jugador</label>
@@ -239,7 +239,7 @@ global $kopa_setting;
 			foreach($puesto as $jugador){ ?>
 			<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
             <div class="jugadores-j">
-              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">
+              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg" alt="">
 
               <!-- <img src="" alt=""> -->
 			<label><span><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
