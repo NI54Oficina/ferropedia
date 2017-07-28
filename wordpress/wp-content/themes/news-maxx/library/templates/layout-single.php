@@ -40,7 +40,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
+
   <?php
   get_template_part( 'library/templates/header', 'links' );
  get_template_part( 'library/templates/header', 'extra' );
@@ -295,7 +295,7 @@
 
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding:0;">
               <p style="font-size:0.8em;color:#888888;margin:0; font-family:'Roboto-bold';">Fuente</p>
-              <p style="font-size:0.8em; color:#888888"><?php echo get_field('fuente'); ?></p>
+              <p style="font-size:0.8em; color:#888888;margin:0"><?php echo get_field('fuente'); ?></p>
             </div>
 
 
@@ -335,17 +335,17 @@
 					'posts_per_page' => 4,
 					"category_name"=> "cuna-cajon"
 				) );
-				
+
 
 				if ( $query->have_posts() ) {
 					// The 2nd Loop
 					while ( $query->have_posts() ) {
 						$query->the_post();
-						
 
 
 
-           
+
+
                 $post_categories = wp_get_post_categories( $recent["ID"]);
                 $date= get_the_date();?>
                 <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr(the_title())?>">
@@ -366,7 +366,7 @@
 
 
               <?php $nro++; }
-				
+
 					// Restore original Post Data
 					wp_reset_postdata();
 				}
