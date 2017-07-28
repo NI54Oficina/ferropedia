@@ -50,19 +50,7 @@ global $kopa_setting;
           foreach($posts as $post){  ?>
 
 
-            <script>
-
-                object={};
-
-                object['nombre']="<?php echo $post->post_title ?>";
-                object['status']='<?php echo get_field('volanta') ?>';
-                object['texto'] ='<?php echo  $post->post_content ?>';
-
-                ListFerropedistas.push(object);
-
-            </script>
-
-            <div class="element-f col-lg-4 col-md-4 col-sm-6 col-xs-12 square" style="text-align:center; padding:20px;">
+            <div class="get-post element-f col-lg-4 col-md-4 col-sm-6 col-xs-12 square" style="text-align:center; padding:20px;" id-post="<?php the_ID();?>" >
               <div class="" style="height:100%; border:1px solid white; ">
                   <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" alt="">
               </div>
@@ -201,9 +189,9 @@ global $kopa_setting;
 </style>
 
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-ferropedistas" style="display:none">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-ferropedistas modal-gallery" style="display:none">
 
-  <span class="span">X</span>
+  <!-- <span class="span">X</span>
 
   <div class="img-ferropedista square col-lg-6 col-md-6 col-sm-6 col-xs-12">
     <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-10.png" alt="">
@@ -214,38 +202,38 @@ global $kopa_setting;
     <p class="status-ferropedista">El mejor ferropedista</p>
     <p class="texto-ferropedista">Un texto sobre el ferropedista bleble
     mucha informacion ble ble ble .</p>
-  </div>
+  </div> -->
 
 </div>
 
 
 <script>
 
-$(document).ready( function(){ _modalf()});
-
-function _modalf(){
-
-  console.log("Asdasd");
-
-  $(".element-f").on('click', function(){
-
-       var new_url= $(this).find('img').attr('src');
-
-       var id=$(".container-post-ferropedistas .element-f").index(this);
-
-      console.log(new_url);
-
-      $(".img-ferropedista img").attr('src', new_url);
-      $(".info-ferropedista .nombre-ferropedista").html(ListFerropedistas[id].nombre);
-      $(".info-ferropedista .status-ferropedista").html(ListFerropedistas[id].status);
-      $(".info-ferropedista .texto-ferropedista").html(ListFerropedistas[id].texto);
-
-      $(".modal-ferropedistas").fadeIn();
-
-      $(".span").on('click', function(){
-        $(".modal-ferropedistas").fadeOut();
-      })
-  })
-}
+// $(document).ready( function(){ _modalf()});
+//
+// function _modalf(){
+//
+//   console.log("Asdasd");
+//
+//   $(".element-f").on('click', function(){
+//
+//        var new_url= $(this).find('img').attr('src');
+//
+//        var id=$(".container-post-ferropedistas .element-f").index(this);
+//
+//       console.log(new_url);
+//
+//       $(".img-ferropedista img").attr('src', new_url);
+//       $(".info-ferropedista .nombre-ferropedista").html(ListFerropedistas[id].nombre);
+//       $(".info-ferropedista .status-ferropedista").html(ListFerropedistas[id].status);
+//       $(".info-ferropedista .texto-ferropedista").html(ListFerropedistas[id].texto);
+//
+//       $(".modal-ferropedistas").fadeIn();
+//
+//       $(".span").on('click', function(){
+//         $(".modal-ferropedistas").fadeOut();
+//       })
+//   })
+// }
 
 </script>

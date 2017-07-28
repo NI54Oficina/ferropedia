@@ -1,4 +1,7 @@
+<script>
 
+ urlBase="<?php echo home_url() ?>";
+</script>
 <div class="kopa-page-header">
 
 
