@@ -36,7 +36,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 20px 0; text-align:center">
           <div style="position:absolute; left:0; right:0; margin:auto">
-              <p class="prev-image prev">&lt; Foto anterior</p> <p class="nro-image">1</p> <p class="next next-image">Siguiente foto &gt;</p>
+            <p class="button-img-post prev-image prev">&lt; Foto anterior</p>   <!-- <p class="nro-image">1</p>--> <p class="button-img-post next next-image">Siguiente foto &gt;</p> 
           </div>
 
         </div>
@@ -44,7 +44,8 @@
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 info-sector" style="overflow:hidden">
         <p class="volanta"><?php echo get_field('volanta', $id); ?></p>
-        <h1 class="title"><?php echo $mypost->post_title ?></h1>
+        <h1 class="title"><?php $title= the_title_attribute(array("post"=> $id,"echo" => 0));
+          $t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></h1>
         <!-- <p class="notas"><?php  ?></p> -->
         <p class="content" style="font-size: .8em;
     overflow: auto;

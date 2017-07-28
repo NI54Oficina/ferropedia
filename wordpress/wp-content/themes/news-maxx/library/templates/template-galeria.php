@@ -211,6 +211,9 @@ $new =trim($content_parts['main']);
       border-image: url("<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/marco_museo.png") 30 round;
     }
 
+    .img-sector-padre img{
+      display: none;
+    }
 
     .img-sector p, .info-sector .buttons{
       display: inline;
