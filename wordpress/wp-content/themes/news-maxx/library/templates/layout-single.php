@@ -307,6 +307,86 @@
 
         </div>
 
+        <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 container-move-entradas">
+            <?php
+
+            $cat = get_the_category();
+            $current_cat_id = $cat[0]->cat_ID;
+
+            $args = array(
+              'numberposts' => -1, "post_type"=>"post", 'category'=>$current_cat_id , 'orderby'  => 'post_date', 'order'    => 'DESC');
+            $posts = get_posts( $args );
+
+            $ids = array();
+            foreach ( $posts as $thepost ) {
+                $ids[] = $thepost->ID;
+            }
+
+            $thisindex = array_search( $id, $ids );
+            $previd = $ids[ $thisindex - 1 ];
+            $nextid = $ids[ $thisindex + 1 ];
+            ?>
+
+            <style >
+
+            .container-move-entradas{
+              padding: 50px 10px;
+            }
+
+            .container-move-entradas a > p{
+              font-family: 'Condensed-bold';
+              font-size: 1.2em;
+            }
+
+            .container-move-entradas p{
+              font-family: 'Condensed-bold-italic';
+              color: black;
+              font-size: 1.4em;
+              word-wrap: break-word;
+              width: 250px;
+
+            }
+
+            .container-move-entradas p span{
+              font-family: 'Roboto-regular';
+              color:#A43C93;
+              font-size: 10px;;
+            }
+
+              .siguiente-entrada{
+                float:right;
+              }
+
+              .anterior-entrada{
+                float:left;
+              }
+
+              .linea-divisoria{
+                width: 100%;
+                border:1px solid black;
+                margin:15px 0;
+              }
+
+            </style>
+
+            <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>
+
+
+            <a href="<?php echo get_permalink($nextid); ?>"><p class="siguiente-entrada">Siguiente &gt;</p></a>
+
+            <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 linea-divisoria"></div>
+
+
+            <p class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
+
+
+            <p class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
+
+
+
+
+        </div>
+
         </div>
         <!-- main-col -->
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 widget">
