@@ -5744,7 +5744,7 @@ body {
 	
 	.trio-cuna-cajon .bajo-titulo p{color:#a43c93;display:inline-block;margin-right:10px;}
 	
-	.titulo-home{font-size:3em !important;}
+	.titulo-home{font-size:3em !important; font-family:"Condensed-bold-italic";}
 
 .main-section .wrapper .sidebar {
     width: 287px;
@@ -7437,12 +7437,15 @@ Nothumb Widget
   text-align: center;
   position:relative;
   left:-20%;
-  font-size:15px;
+  font-size:25px;
+	line-height:25px;
 }
 
 .weather-widget-wrapper .widget p span{
   font-family: 'Condensed-italic';
-  font-size:13px;
+  font-size:18px;
+  margin-top:10px;
+  display:block;
 
 }
 .kopa-home-4 .stripe-box .social-links-container,
@@ -8947,6 +8950,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
 #main-menu{
   display: inline-block;
+  padding:5px;
 }
 
 .header-middle {
@@ -8984,10 +8988,11 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 
 
         .second-box h2{
-          padding:0 0 20px 0px;
+          padding:20px;
 		  border-bottom: 3px solid rgba(0,0,0,1);
 		  margin-bottom:30px;
-		  text-shadow:2px 2px black
+		  text-shadow:2px 2px black;
+		  background-color:rgba(0,0,0,0.3);
         }
 
 		.second-interior{
@@ -9300,6 +9305,20 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
   padding: 60px;
   padding-bottom:0;
 }
+
+.titulo-home{
+	background-color:rgba(0, 100, 67,0.4);
+	color:white;
+	border-bottom:5px solid black;
+	padding:15px 25px;
+	margin-top:0;
+	
+}
+
+.sub-verde{
+	color:#00b643;
+}
+
 .third-box-left{
   border: 1px solid white;
   padding: 0;
@@ -9311,6 +9330,19 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 	background-position: center;
 	background-repeat:no-repeat;
 	height:100%;
+	
+}
+
+.hover-black{
+	opacity:0.6;
+	background-color:black;
+	transition:0.5s;
+}
+
+.hover-black:hover{
+
+opacity:1;
+transition:0.5s;
 }
 
 .third-box-left >a> div{
@@ -9394,19 +9426,19 @@ p.fecha-post-home.verde{
 	padding:0;
 }
 
-.fourth-box-left h2{
+/*.fourth-box-left h2{
   color: #006443;
   background-color: white;
   border-bottom: 3px solid #006443;
-}
+}*/
 
 .six-container-left .thumb , .fourth-box-left .fourth-container  .thumb{
 	width: 100%;
 
 	padding:0;
 	margin:0;
-	background-position:top center;
-	background-size:100% auto;
+	background-position:center;
+	background-size:cover;
 	height:250px;
 }
 
@@ -9416,7 +9448,7 @@ p.fecha-post-home.verde{
 	margin:0;
 	background-position:top center;
 	background-size:100% auto;
-	height:60px;
+	height:90px;
 }
 
 .fourth-box-left .fourth-container{
@@ -9490,11 +9522,7 @@ padding: 0 35px;
 	padding:0;
   }
 
-  .six-box .six-box-left h2{
-    background-color: #006443;
-    color:white;
-    border-bottom: 3px solid black;
-  }
+  
 
   .six-container-left > div  img{
     height: 250px;
@@ -9552,6 +9580,8 @@ padding: 0 35px;
   .six-container-right .six-inner-container{
     padding: 15px 0;
   }
+  
+  .six-container-right a:last-child .six-inner-container{border-bottom:0;}
 
   .six-container-right .six-inner-container{
 	border-bottom:2px solid black;
@@ -9992,13 +10022,13 @@ padding: 0 35px;
 
   /*generales*/
 
-.box-with-title h2{
+/*.box-with-title h2{
   font-family: 'Condensed-bold-italic';
   padding: 5px 4%;
   margin-top: 0;
   font-size:24px;
   line-height:28px;
-}
+}*/
   /*generales*/
 
   /*pantalla jugadores interna*/
@@ -10414,6 +10444,10 @@ margin-bottom:15px;
 -moz-box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
 box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
 
+	}
+	
+	.top-shadow{
+		border-top: 4px solid rgba(0,0,0,0.1);
 	}
 
     .first-box-ficha-tecnica{

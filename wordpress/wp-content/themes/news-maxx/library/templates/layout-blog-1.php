@@ -141,10 +141,10 @@
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
-		<h2 class="titulo-home">Con la verde</h2>
+		<h2 class="titulo-home">Con la <span class="sub-verde">Verde</span></h2>
 
 		<?php $destacado= Jugador::model()->findByPk(26); ?>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left" style="padding:0 15px;">
 
         
 		<div class="avatar-destacado" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
@@ -266,7 +266,12 @@ $criteria->select = "*";
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-box bloque">
 
-  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 third-box-left" style="overflow:hidden;">
+<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
+
+<h2 class="titulo-home">El rincón <span class="sub-verde">del mudo</span></h2>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-box-left" style="overflow:hidden;">
+  
 
     <?php    $posts= get_posts( array('numberposts' => 1, "post_type"=>"post", 'category'=>2 ) );
 
@@ -274,13 +279,13 @@ $criteria->select = "*";
     foreach($posts as $post){
     ?>
 <a href="<?php the_permalink($posts[0]->ID ); ?>" style="display:block;width:100%;height:500px;">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);" >
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left hover-black " style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);" >
 		<h4 style="color:white;"> </h4>
       <!-- <div class="triangulo-verde"></div> -->
     </div>
+	
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
-      <h3>EL RINCÓN DEL MUDO</h3>
       <h2><?php the_title_attribute($posts[0]->ID ); ?></h2>
       <p>
         <?php // Fetch post content
@@ -300,34 +305,38 @@ $criteria->select = "*";
 
   </div>
 
-  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
+  
+
+</div>
+<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
       <?php // echo do_shortcode("[custom-twitter-feeds]"); ?>
     <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
   </div>
-
 </div>
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-box bloque">
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
-
-    <h2 class="titulo-home">De la cuna hasta el cajón</h2>
+	
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h2 class="titulo-home">De la cuna <span class="sub-verde">hasta el cajón</span></h2>
+	</div>
 
     <?php
-    $posts_cuna= get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>4 ) );
+    $posts_cuna= get_posts( array('numberposts' => 5, "post_type"=>"post", 'category'=>4 ) );
 ?>
     <a href="<?php the_permalink($posts_cuna[0]->ID ); ?>">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-left">
-
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-left ">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding content-shadow">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" >
-				<div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($posts_cuna[0]->ID, 'full'); ?>);"></div>
+				<div class="thumb hover-black " style="background-image:url(<?php echo get_the_post_thumbnail_url($posts_cuna[0]->ID, 'full'); ?>);"></div>
                 <?php //echo the_post_thumbnail( 'thumbnail' );?>
                 <!-- <div class="triangulo-verde"></div> -->
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
-				<p class="volanta"><?php echo get_field("volanta",$posts_cuna[0]->ID); ?></p>
+				<p class="volanta top-shadow"><?php echo get_field("volanta",$posts_cuna[0]->ID); ?></p>
                 <h6><?php echo $posts_cuna[0]->post_title; ?></h6>
 
                 <p><?php // Fetch post content
@@ -345,14 +354,14 @@ $criteria->select = "*";
                 </div>
 
               </div>
-
+				</div>
             </div>
         </a>
 
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 six-container-right">
-
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
       <?php
       //CATEGORIA 4  = DE LA CUNA HASTA EL CAJON
@@ -371,8 +380,8 @@ $criteria->select = "*";
          <a href="<?php the_permalink($post->ID ); ?>">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-inner-container">
 
-		<div class="col-lg-3 col-md-3 mini-thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>);"></div>
-        <p class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><?php the_title_attribute($post->ID ); ?> <br>  <span> <?php echo  get_the_date( 'l F j, Y' ) ?></span></p>
+		<div class="col-lg-4 col-md-4 mini-thumb hover-black" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>);"></div>
+        <p class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><?php the_title_attribute($post->ID ); ?> <br>  <span> <?php echo  get_the_date( 'l F j, Y' ) ?></span></p>
 
       </div></a>
 
@@ -387,6 +396,7 @@ $criteria->select = "*";
 
 
 
+	</div>
   </div>
 
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 six-box-right mas-visto-widget">
@@ -399,7 +409,7 @@ $criteria->select = "*";
 			  $query = new WP_Query( array(
 					'meta_key' => 'wpb_post_views_count',
 					'orderby' => 'meta_value_num',
-					'posts_per_page' => 4,
+					'posts_per_page' => 3,
 					"category_name"=> "cuna-cajon"
 				) );
 				
@@ -442,7 +452,7 @@ $criteria->select = "*";
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title fourth-box-left">
 
-    <h2 class="titulo-home">Museo de la Emoción Verdolaga</h2>
+    <h2 class="titulo-home">Museo de la <span class="sub-verde">Emoción Verdolaga</span></h2>
 
     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
@@ -479,9 +489,9 @@ $criteria->select = "*";
 
         <a href="<?php the_permalink($post->ID ); ?>">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
-
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding content-shadow">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-          <div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);"></div>
+          <div class="thumb hover-black" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);"></div>
             <!-- <div class="triangulo-verde"></div> -->
           </div>
 
@@ -496,6 +506,7 @@ $criteria->select = "*";
             </div>
           </div>
 
+        </div>
         </div>
 
         </a>
