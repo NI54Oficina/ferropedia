@@ -34,12 +34,6 @@ global $kopa_setting;
 
   <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 container-post-ferropedistas" style="padding:50px 100px; margin-bottom:100px;">
 
-    <script>
-
-      ListFerropedistas=[];
-
-    </script>
-
     <?php
         $categories = get_the_category();
         $category_id= $categories[0]->cat_ID;

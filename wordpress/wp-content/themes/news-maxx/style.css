@@ -5737,13 +5737,13 @@ body {
 	.trio-cuna-cajon .entry-thumb{border:2px solid #00b643;box-shadow:0px 4px 8px -1px rgba(0,0,0,0.3);height:200px;overflow:hidden;background-size:cover;background-repeat:no-repeat;background-position:center;}
 
 	.trio-cuna-cajon .entry-list > ul > li .entry-item .entry-content{padding-top:0;}
-	
+
 	.trio-cuna-cajon #gallery-2~ul{display:none;}
-	
+
 	.trio-cuna-cajon #gallery-2 .gallery-item{margin:0;padding:20px;width:200px;}
-	
+
 	.trio-cuna-cajon .bajo-titulo p{color:#a43c93;display:inline-block;margin-right:10px;}
-	
+
 	.titulo-home{font-size:3em !important;}
 
 .main-section .wrapper .sidebar {
@@ -8944,6 +8944,9 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
     margin:0 15px;
 }
 
+.links-sociales li{
+  list-style: none;
+}
 
 #main-menu{
   display: inline-block;
@@ -10147,6 +10150,8 @@ padding: 0 35px;
 		display:inline-block;
 		color:white;
 	}
+
+
 	.compartir-jugador .links-sociales i{
 		margin:5px;
 	}
@@ -10203,14 +10208,14 @@ margin-bottom:15px;
 	  font-size:18px;
 	  padding:10px;
     }
-	
+
 	.avatar-relacionado{
 		width:100%;height:250px;
 		background-position:center;
 		background-size:cover;
 		background-repeat:no-repeat;
 	}
-	
+
 	.avatar-relacionado.placeholder{
 		background-size:100% auto;
 		background-position:center -50px;
