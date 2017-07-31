@@ -78,9 +78,9 @@
                 <!-- mobile-menu-wrapper -->
 
                 <div class="links-sociales" style="display:inline-flex">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                  <li> <i class="fa fa-facebook" aria-hidden="true"></i></li>
+                  <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                  <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
                 </div>
 
                 <?php get_search_form(); ?>

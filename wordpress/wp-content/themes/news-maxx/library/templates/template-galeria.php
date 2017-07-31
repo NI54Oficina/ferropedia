@@ -233,7 +233,7 @@ $new =trim($content_parts['main']);
     .img-sector img{
       max-width: 100%;
       height: auto;
-	  max-height:100%;
+	  max-height:400px;
       box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50);
       border-style: double;
       border-width: 4px;
