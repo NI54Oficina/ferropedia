@@ -110,10 +110,11 @@
       min-height: 500px;
       overflow: hidden;
       border: 2px solid black;
+	  text-align:center;
     }
 
     .custom-post-template .thumbnail-container img{
-      position: absolute;
+      /*position: absolute;*/
       left: 0;
       right: 0;
       margin:auto;
@@ -178,7 +179,30 @@
       font-family: 'Condensed-bold-italic';
       font-size: 1.1em;
     }
+	
+	.gallery-caption{
+		width:100%; background-color:black;color:white;		
+		padding:10px;
+		margin-top:5px;
+	}
+	.owl-wrapper-outer{
+		padding-left:0;		
+	}
+	
+	.owl-carousel .owl-wrapper {
+  display: table !important;
+}
+.owl-carousel .owl-item {
+  display: table-cell;
+  float: none;
+  vertical-align: center;
+  padding-bottom:20px;
+}
 
+.gallery-caption{position:absolute;bottom:-20px;}
+.gallery-item{margin:0;}
+
+.gallery-icon{padding-bottom:20px;padding-top:10px;}
 
   </style>
 
@@ -213,11 +237,10 @@
           <?php the_post_thumbnail(array(1000, 520)); ?>
 
         </div>
-
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-title">
           <p>  <?php echo get_post(get_post_thumbnail_id())->post_excerpt;   ?>  </p>
         </div>
-
+		
 
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-left-colum">
@@ -374,7 +397,9 @@
                 border:1px solid black;
                 margin:15px 0;
               }
-
+				.owl-theme .owl-controls{
+					padding-bottom:40px;					
+				}
             </style>
 
             <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>
