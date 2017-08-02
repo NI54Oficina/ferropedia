@@ -24,7 +24,8 @@ function poyo(){
 	
 }
 function dataFerroTest(){
-	$secciones= ["jugador","partido","campeonato","club","categoria"];
+	//$secciones= ["jugador","partido","campeonato","club","categoria"];
+	$secciones= ["jugador"];
 	foreach($secciones as $seccion){
 		?>
 		<h3 style="text-transform:capitalize"><?php echo $seccion; ?></h3>
@@ -33,6 +34,12 @@ function dataFerroTest(){
 		<hr>
 		<?php
 	}
+	?>
+	<h3>Datos Especiales</h3>
+		<a href="<?php echo home_url().'/'."dataExtra".'/proximo'; ?>" >Editar Próximo Partido</a>
+		<a href="<?php echo home_url().'/'."dataExtra".'/resultados'; ?>" >Editar Estadísticas totales</a>
+		<hr>
+	<?php
 }
 
 add_action('admin_menu', 'poyo');

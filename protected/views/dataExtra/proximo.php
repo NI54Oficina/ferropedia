@@ -23,7 +23,6 @@ $texto= explode(";", $model->texto);
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		
 		<input name="DataExtra[linea1]" class="form-control"  value="<?php echo $texto[0]; ?>"/>
 	</div>
 	

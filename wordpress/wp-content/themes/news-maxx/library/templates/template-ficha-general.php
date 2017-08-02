@@ -86,7 +86,7 @@ global $kopa_setting;
 
       <div class="label-name-page">
         <?php the_post_thumbnail( 'full' );   ?>
-		<div style="padding:0 60px;">
+		<div style="/*padding:0 60px;*/">
         <div class="header-text-content">
           <h1><?php the_title(); ?></h1>
           <?php //the_content(); ?>
@@ -239,7 +239,12 @@ global $kopa_setting;
 			foreach($puesto as $jugador){ ?>
 			<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
             <div class="jugadores-j">
-              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg" alt="">
+				<?php if($jugador->avatar){ ?>
+				<img src="<?php 
+				echo  Yii::app()->request->baseUrl."/".$jugador->avatar[0]->imagen_data()["url"]; ?>" alt="">
+				<?php }else{ ?>
+				<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg" alt="">
+				<?php } ?>
 
               <!-- <img src="" alt=""> -->
 			<label><span><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>

@@ -18,7 +18,8 @@ get_template_part('library/templates/header', $kopa_header);
 <div style="padding:10px;" id="nav-admin">
 <?php if(is_user_logged_in()){ ?>
 <?php
-$secciones= ["jugador","partido","campeonato","club","categoria"];
+//$secciones= ["jugador","partido","campeonato","club","categoria"];
+$secciones= ["jugador"];
 	foreach($secciones as $seccion){
 		?>
 		<div style="display:inline-block;width:200px;" class="btn-nav">
@@ -30,7 +31,17 @@ $secciones= ["jugador","partido","campeonato","club","categoria"];
 		<?php
 	}
 	?>
+<div style="display:inline-block;width:200px;" class="btn-nav">
+		<h3>Datos Especiales</h3>
+		<a href="<?php echo home_url().'/'."dataExtra".'/proximo'; ?>" >Editar Próximo Partido</a>
+		<a href="<?php echo home_url().'/'."dataExtra".'/resultados'; ?>" >Editar Estadísticas totales</a>
+		<hr>
 </div>
+<a href="<?php echo home_url().'/'."admin"; ?>" >Volver al panel de Wordpress</a>
+</div>
+
+
+
 	<?php } ?>
 <div class="content-admin">
 	<?php
@@ -63,6 +74,7 @@ $secciones= ["jugador","partido","campeonato","club","categoria"];
 .form_date{margin-bottom:10px;}
 .content-admin .form{max-width:600px;}
 .extra-data{width:100%;}
+#sidebar{display:none;}
 </style>
 
 <?php get_footer(); ?>

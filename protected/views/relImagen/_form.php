@@ -34,11 +34,21 @@
                 });
             },
 			success: function(data,response){
+				response= JSON.parse(response);
 				console.log(response);
 				console.log(data);
 
 				//$("#dropzone-example").hide();
-				jQuery("#imagen-finish").append("<h1 class='response'>ImagenCargada: " +response+"</h1>");
+				jQuery("#imagen-finish").append("<h1 class='response'>ImagenCargada: " +response['nombre']+"</h1>");
+				if(jQuery("#imagenes").length>0){
+					jQuery("#imagenes").append('<div style="display:inline-block;">\
+					<img style="max-width:200px;"src="<?php echo  Yii::app()->request->baseUrl."/";?>'+response['url']+'" />\
+					<br>\
+					<button type="button" class="assign-avatar" image-id="'+response['id']+'" style="color:white;" >Asignar como avatar</button><br>\
+					<a href="<?php echo Yii::app()->request->baseUrl; ?>/relImagenJugador/delete/'+response['id']+'" class="confirmation">Quitar relación</a> / \
+					<a href="<?php echo Yii::app()->request->baseUrl; ?>/imagen/delete/'+response['imagenId']+'" class="confirmation">Borrar</a> \
+					</div>');
+				}
 			}
 	});
 </script>

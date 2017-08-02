@@ -61,6 +61,9 @@ global $kopa_setting;
     .body-quienessomos{
 
       padding: 0;
+	  max-width:800px;
+	  float:initial;
+	  margin:auto;
     }
 
     .body-quienessomos h1{
@@ -87,34 +90,89 @@ global $kopa_setting;
 
     }
 
-    .body-quienessomos p{
+    
+	
+	.body-quienessomos li{
       color: white;
       font-family: 'Roboto-regular';
-      padding: 10px 100px;
+      padding: 30px 100px;
       margin:10px 0;
       background-color: #006443;
       min-height: 100px;
+	  font-size:14px;
+	  list-style:none;
+	  min-height:140px;
     }
+	
+	.body-quienessomos ol{
+		padding-left:0;
+	}
+	
+	.body-quienessomos ol li::before{
+		color:#55c792;
+		display:block;
+		
+		position:absolute;
+		left:40px;
+		
+		font-family: Georgia;
+		font-size: 70px;
+		line-height: 60px;
+		padding-top: 4px;
+		
+		font-family: 'Roboto-bold';
+		border-bottom: 3px solid #55c792;
+		
+	}
+	
+	.body-quienessomos ol li:nth-child(1)::before{content:"01";}
+	.body-quienessomos ol li:nth-child(2)::before{content:"02";}
+	.body-quienessomos ol li:nth-child(3)::before{content:"03";}
+	.body-quienessomos ol li:nth-child(4)::before{content:"04";}
+	.body-quienessomos ol li:nth-child(5)::before{content:"05";}
+	.body-quienessomos ol li:nth-child(6)::before{content:"06";}
+	.body-quienessomos ol li:nth-child(7)::before{content:"07";}
+	.body-quienessomos ol li:nth-child(8)::before{content:"08";}
+	.body-quienessomos ol li:nth-child(9)::before{content:"09";}
+	.body-quienessomos ol li:nth-child(10)::before{content:"10";}
+	.body-quienessomos ol li:nth-child(11)::before{content:"11";}
+	.body-quienessomos ol li:nth-child(12)::before{content:"12";}
+	.body-quienessomos ol li:nth-child(13)::before{content:"13";}
+	.body-quienessomos ol li:nth-child(14)::before{content:"14";}
+	.body-quienessomos ol li:nth-child(15)::before{content:"15";}
+	.body-quienessomos ol li:nth-child(16)::before{content:"16";}
+	.body-quienessomos ol li:nth-child(17)::before{content:"17";}
+	.body-quienessomos ol li:nth-child(18)::before{content:"18";}
+	.body-quienessomos ol li:nth-child(19)::before{content:"19";}
+	.body-quienessomos ol li:nth-child(20)::before{content:"20";}
+	.body-quienessomos ol li:nth-child(21)::before{content:"21";}
+	.body-quienessomos ol li:nth-child(22)::before{content:"22";}
+	.body-quienessomos ol li:nth-child(23)::before{content:"23";}
+	.body-quienessomos ol li:nth-child(24)::before{content:"24";}
+	.body-quienessomos ol li:nth-child(25)::before{content:"25";}
+	.body-quienessomos ol li:nth-child(26)::before{content:"26";}
+	.body-quienessomos ol li:nth-child(27)::before{content:"27";}
+	.body-quienessomos ol li:nth-child(28)::before{content:"28";}
+	.body-quienessomos ol li:nth-child(29)::before{content:"29";}
+	.body-quienessomos ol li:nth-child(30)::before{content:"30";}
+	
 
 
-    .body-quienessomos span{
-      float: left;
-  font-family: Georgia;
-  font-size: 70px;
-  line-height: 60px;
-  padding-top: 4px;
-  margin-right: 20px;
-  margin-left: 10px;
-  font-family: 'Roboto-bold';
-  border-bottom: 3px solid #00b643;
+    .body-quienessomos ol li{
+		padding-left:160px;
     }
+	
+	.page-content-area{
+		padding-bottom:0;
+	}
+	
 
   </style>
 
-  <div class="" style="padding:50px 100px;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:50px 100px; background-image:url(<?php echo get_template_directory_uri(); ?>/img/tile_home.png);">
 
 
-
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 body-quienessomos">
         <?php
 
@@ -125,6 +183,7 @@ global $kopa_setting;
   $content = str_replace(']]>', ']]>', $content);
   echo  $content ;
   ?>
+      </div>
       </div>
 
   </div>

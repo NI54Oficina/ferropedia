@@ -35,10 +35,10 @@
             <div class="wrapper clearfix">
               <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:29%;">
 
-                <li title="Jugadores" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""></a></li>
-                <li title="Museo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""></a></li>
-                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""></a></li>
-                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mudo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li>
+                <li title="Jugadores" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""><p>Con la verde</p></a></li>
+                <li title="Museo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""><p>Museo</p></a></li>
+                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""><p>De la Cuna hasta el Cajón</p></a></li>
+                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mudo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""><p>Rincón del Mudo</p></a></li>
                 <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li> -->
               </ul>
 

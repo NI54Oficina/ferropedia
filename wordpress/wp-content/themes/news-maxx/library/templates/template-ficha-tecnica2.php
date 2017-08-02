@@ -150,7 +150,9 @@ $ultimo=str_replace("(","<br>(",$ultimo);
             <p>Último partido</p>
           </div>
 
+		  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px 10px;background-color:rgba(32, 32, 31,0.5)">
+			
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento" style="border-right: 2px solid rgba(255,255,255,0.4)">
             <p><span>Fecha y lugar de nacimiento</span><br>
               <?php echo $model->nacimiento; ?> <?php if(isset($model->ciudad_natal)&&$model->ciudad_natal!=""){ ?>| <?php echo $model->ciudad_natal;  }?>
@@ -163,10 +165,16 @@ $ultimo=str_replace("(","<br>(",$ultimo);
             </p>
           </div>
 		  </div>
+		  </div>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:90px;padding-left:20px;padding-right:20px;">
+			<?php if($model->avatar){ ?>
+			<div class="jugador-principal square" style="background-image:url(<?php 
+echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>);"></div>
+			<?php }else{ ?>
 			<div class="jugador-principal square" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
+			<?php } ?>
 			<!--<img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">!-->
 
 			<div class="compartir-jugador">
@@ -181,7 +189,12 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
         </div>
     </div>
-
+	<?php
+	if(is_user_logged_in()){ ?>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;height:0;position:relative;top:-115px;">
+	<a href="<?php echo home_url(); ?>/jugador/<?php echo $model->id; ?>"><h4 style="color:white;padding:20px;background-color:#a43c93;display:inline-block;">Editar jugador</h4></a>
+	</div>
+	<?php } ?>
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-box-ficha-tecnica" >
 
@@ -384,12 +397,14 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 		</div>
 		<?php } ?>
 
-
+		<?php if(false){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-video ">
           <h2>Video</h2>
           <iframe src="https://www.youtube.com/embed/LoETC4jtASI" frameborder="0" allowfullscreen></iframe>
         </div>
-
+		<?php } ?>
+		
+		<?php if($model->imagenes){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-galeria contenido-interno-tecnica">
           <h2>Galería de fotos</h2>
 
@@ -422,18 +437,20 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 					<!-- photoswipe -->
 
 					<div class="row">
-			      <div id="demo-test-gallery" class="demo-gallery" data-pswp-uid="1">
+			      <div id="demo-test-gallery" class="demo-gallery col-lg-12 col-md-12 col-sm-12 col-xs-12" data-pswp-uid="1">
 
-							<?php for($i=0; $i<5; $i++){   ?>
+							<?php for($i=0; $i<count($model->imagenes); $i++){   ?>
+							
 
+								<div style="padding:0 2.5px 5px 2.5px;" class="<?php	if($i==0){ echo "col-lg-6 col-md-6 col-sm-6 col-xs-6 square"; }else{ echo "col-lg-3 col-md-3 col-sm-3 col-xs-3 square";} ?> container-img-gallery">
+			        <a href="<?php echo home_url(); ?>/<?php echo $model->imagenes[$i]->imagen_data['url']; ?>" data-size="1600x1600" data-med="<?php echo home_url(); ?>/<?php echo $model->imagenes[$i]->imagen_data['url']; ?>" data-med-size="1024x1024" data-author="Nombre autor" class="demo-gallery__img--main">
 
-								<div style="padding:0 2.5px 5px 2.5px;" class="<?php	if($i==0){ echo "col-lg-6 col-md-6 col-sm-6 col-xs-6"; }else{ echo "col-lg-3 col-md-3 col-sm-3 col-xs-3";} ?> container-img-gallery">
-			        <a href="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-01.png" data-size="1600x1600" data-med="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-01.png" data-med-size="1024x1024" data-author="Nombre autor" class="demo-gallery__img--main">
-
-									<img class="img-g-j" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo-01.png" alt="">
+									<!--<img class="img-g-j" src="<?php echo home_url(); ?>/<?php echo $model->imagenes[$i]->imagen_data['url']; ?>" alt="">!-->
+									<div class="thumb-gallery-jugador" style="background-image:url(<?php echo home_url(); ?>/<?php echo $model->imagenes[$i]->imagen_data['url']; ?>);"></div>
 				          <!-- <figure>Descripcion de imagen</figure> -->
 
-									<?php	if($i!=0){ echo "<div class='cover-green-gallery'></div>"; } ?>
+									<?php	//if($i!=0){ echo "<div class='cover-green-gallery'></div>"; } ?>
+									<?php	echo "<div class='cover-green-gallery'></div>"; ?>
 			        </a>
 
 							</div>
@@ -450,7 +467,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
 			    </div>
 
-
+		<?php } ?>
 		    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 		        <div class="pswp__bg"></div>
 
@@ -812,7 +829,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 columna-relacionados">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 columna-relacionados" style="text-align:center;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;float:initial;max-width:250px;">
         <h2>JUGADORES RELACIONADOS</h2>
 
         <?php
@@ -830,11 +848,17 @@ $criteria->select = "*";
 		?>
 		<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
         <div class="jugador-relacionado">
+		<?php if($jugador->avatar){ ?>
+		<div class="avatar-relacionado" style="background-image:url(<?php 
+echo  Yii::app()->request->baseUrl."/".$jugador->avatar[0]->imagen_data()["url"]; ?>);" ></div>
+		<?php }else{ ?>
         <div class="avatar-relacionado placeholder" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);" ></div>
+		<?php } ?>
         <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?> <br> <span><?php echo $jugador["puesto"]; ?></span></label>
         </div>
 		</a>
         <?php } ?>
+        </div>
         </div>
 
 

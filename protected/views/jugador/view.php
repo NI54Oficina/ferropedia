@@ -16,12 +16,11 @@ $this->menu=array(
 );
 ?>
 
-<h1>Jugador</h1> <?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/jugador/update/<?php echo $model->id; ?>">Editar</a><br><br><?php } ?>
+<h1>Jugador</h1> <?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/jugador/update/<?php echo $model->id; ?>">Editar</a> / <a href="<?php echo Yii::app()->request->baseUrl; ?>/jugador-<?php echo $model->id; ?>">Ver en Ferropedia</a><br><br><?php } ?>
 <?php if(isset($model->avatar[0])){ ?>
 <img src="<?php 
 echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>" style="max-width:200px;" />
 <?php } ?>
-
 <p><strong>Nombre:</strong> <?php echo $model->nombre; ?></p>
 <p><strong>Apellido:</strong> <?php echo $model->apellido; ?></p>
 <p><strong>Nacimiento:</strong> <?php echo $model->nacimiento; ?></p>
@@ -59,7 +58,7 @@ foreach($campeonatos as $key=>$value){ ?>
 <?php if(count($model->data())>0|| is_user_logged_in()){ ?>
 <h4>Data adicional</h4>
 <ul>
-<?php foreach($model->data as $data){ ?>
+<?php foreach($model->data as $data){ if($data->titulo=="Torneo"){continue;}?>
 	<li>
 	<strong><?php echo $data->titulo; ?></strong>
 	<p><?php echo $data->texto; ?></p> <?php if(is_user_logged_in()){ ?>
@@ -80,6 +79,7 @@ foreach($campeonatos as $key=>$value){ ?>
 <hr>
 
 
+<?php if(false){ ?>
 <form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/relImagen/create" method="post" target="_blank">
 
   <input type="hidden" name="modelId"  value="<?php echo $model->id; ?>" />
@@ -87,9 +87,12 @@ foreach($campeonatos as $key=>$value){ ?>
   <button style="color:white;">Agregar Imagen</button>
 </form>
 <?php } ?>
+<?php } ?>
 
+<div id="imagenes">
 <?php if(count($model->imagenes)>0){ ?>
 <h3>Imagenes</h3>
+
 <?php 
 foreach($model->imagenes as $imagen){
 	?> 
@@ -107,6 +110,7 @@ foreach($model->imagenes as $imagen){
 	<?php
 } }
 ?>
+</div>
 <?php if(is_user_logged_in()){ ?>
 <script>
 jQuery("body").on("click",".assign-avatar",function(){
@@ -124,5 +128,9 @@ jQuery("body").on("click",".assign-avatar",function(){
 
 <?php } 
 ?>
+<?php $auxM=array( "model"=>"Jugador","modelId"=>$model->id ); ?>
+<?php echo $this->renderPartial('../relImagen/_form', array('model'=>$auxM)); ?>
+
+
 </div>
 </div>

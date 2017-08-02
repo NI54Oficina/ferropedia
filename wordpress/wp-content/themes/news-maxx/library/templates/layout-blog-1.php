@@ -293,9 +293,13 @@ $criteria->select = "*";
 
               // Get content parts
               $content_parts = get_extended( $content );
-
+				
+			$main=$content_parts['main'];
+			$main= substr($main,0,300);
+			$main= substr($main,0,strrpos($main," "));
+			
               // Output part before <!--more--> tag
-              echo $content_parts['main'].'...'; ?>
+             echo $main.'...'; ?>
     </p>
 
       <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
@@ -337,16 +341,23 @@ $criteria->select = "*";
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
 				<p class="volanta top-shadow"><?php echo get_field("volanta",$posts_cuna[0]->ID); ?></p>
+				<div style="padding:0 25px;">
+				<hr>
+				</div>
                 <h6><?php echo $posts_cuna[0]->post_title; ?></h6>
-
-                <p><?php // Fetch post content
+				
+                <p class="bajada"><?php // Fetch post content
                       $content = get_post_field( 'post_content',$posts_cuna[0]->ID );
 
                       // Get content parts
                       $content_parts = get_extended( $content );
 
-                      // Output part before <!--more--> tag
-                      echo $content_parts['main'].'...'; ?></p>
+                      $main=$content_parts['main'];
+			$main= substr($main,0,140);
+			$main= substr($main,0,strrpos($main," "));
+			
+              // Output part before <!--more--> tag
+             echo $main.'...'; ?></p>
 
                 <div class="info-date">
                   <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' , $posts_cuna[0]->ID); ?></p>
@@ -494,11 +505,13 @@ $criteria->select = "*";
           <div class="thumb hover-black" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);"></div>
             <!-- <div class="triangulo-verde"></div> -->
           </div>
-
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container">
+		
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container top-shadow">
+		  
+		  <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-verde.svg" alt="">
             <p><?php the_title_attribute($post->ID ); ?></p>
 
-            <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-verde.svg" alt="">
+            
 
             <div class="info-date">
               <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>

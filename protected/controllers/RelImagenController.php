@@ -241,8 +241,13 @@ class RelImagenController extends Controller
 				$rel->modelId= $_POST["modelId"];
 				$rel->destacada= 0;
 				$rel->save();
-				
-				echo $nombre.$formato;
+				$response= array(
+				"nombre"=>$nombre.$formato,
+				"id"=>$rel->id,
+				"imagenId"=>$imagen->id,
+				"url"=>$imagen->url
+				);
+				echo json_encode($response);
 			}else{
 				echo "0";
 			}

@@ -5956,6 +5956,14 @@ body {
     /*border-left: 1px solid rgba(255, 255, 255, 0.2);*/
     line-height: 1;
     position: relative; }
+.main-menu > li p{
+	display:inline-block; font-family:'Roboto-regular';
+	text-transform:initial;
+	position:relative;
+	font-size:13px;
+	top:2px;
+	left:5px;
+}
 .main-menu > li:first-child {
     margin: 0;
     padding: 0;
@@ -7438,7 +7446,7 @@ Nothumb Widget
   text-align: center;
   position:relative;
   left:-20%;
-  font-size:25px;
+  font-size:21px;
 	line-height:25px;
 }
 
@@ -9326,7 +9334,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 .third-box-left{
   border: 1px solid white;
   padding: 0;
-  max-height: 500px;
+  max-height: 400px;
 }
 
 .third-box-left .box-left{
@@ -9391,12 +9399,13 @@ transition:0.5s;
 .third-box-left .box-right h2{
   font-family: 'Condensed-bold-italic';
   color: white;
-  font-size: 4em;
+  font-size: 30px;
   line-height: 1.2em;
 }
 
 .third-box-left .box-right p{
   color: white;
+  font-size:15px;
   font-family: 'Roboto-regular';
 }
 
@@ -9466,25 +9475,26 @@ padding: 0 35px;
 .fourth-box-left .fourth-container .title-container >img{
   max-height: 25px;
   left:0;
-  position:absolute;
-  bottom:50px;
+  /*position:absolute;
+  bottom:50px;*/
+  margin-top:20px;
 }
 
 .fourth-box-left .fourth-container .title-container{
-  background-color: white;
-  color: black;
+  background-color: rgba(0, 100, 67,0.5);
+  color: white;
   min-height:200px;
   height: auto;
-  padding: 0 20px;
+  padding: 0 40px;
   padding-bottom:20px;
 }
 
 .fourth-box-left .fourth-container .title-container > p{
   text-align: center;
   font-family: 'Condensed-bold-italic';
-  font-size: 2em;
-  padding-top: 2em;
-  line-height:28px;
+  font-size: 24px;
+  padding-top: 26px;
+  line-height:30px;
 }
 
 .fourth-box-left .fourth-container .info-date{
@@ -9537,10 +9547,11 @@ padding: 0 35px;
   }
 
   .six-container-left .title-container{
-    background-color: #006443;
+    background-color: rgba(0, 100, 67,0.5);
     color:white;
     padding:0;
-    height: 250px;
+    min-height: 250px;
+	padding-bottom:80px;
 	overflow:hidden;
   }
 
@@ -9548,14 +9559,19 @@ padding: 0 35px;
     text-align: left;
     padding: 10px 25px;
     margin-bottom: 0;
+	font-size:14px;
   }
   .six-container-left .title-container > p.volanta{
 	margin:0;padding-bottom:5;
-	background:rgba(0,0,0,0.2);
+	/*background:rgba(0,0,0,0.2);*/
+	
+  }
+  .six-container-left .title-container > p.bajada{
+	color:#55c792;
   }
   .six-container-left .title-container > h6{
     font-family: 'Condensed-bold-italic';
-    font-size: 2em;
+    font-size: 23px;
     padding-top: 20px;
 	line-height: 28px;
 	color:white;
@@ -9564,6 +9580,11 @@ padding: 0 35px;
 	text-align:left;
 	margin-top:0;
 	padding-top:5px;
+	
+  }
+  
+  .six-container-left .title-container hr{
+	width:100%; margin:auto; margin-top:0px; margin-bottom:5px; border-color:rgba(0,0,0,0.3); border-width:2px;
   }
 
   .six-container-left .title-container > p:last-child{
@@ -9578,7 +9599,7 @@ padding: 0 35px;
     bottom:0;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 7px;
   }
 
   .six-container-right .six-inner-container{
@@ -9744,6 +9765,7 @@ padding: 0 35px;
 	top:-50px;
 	width:100%;
 	margin:auto;
+	padding-left:60px;
   }
   .label-name-page  h1{
   text-align:left;
@@ -9780,7 +9802,7 @@ padding: 0 35px;
      }
 
    nav.menu-jugadores div{
-	width: 200px;
+	width: 150px;
 	  max-width:20%;
 	  display:inline-block;
 
@@ -9854,6 +9876,7 @@ padding: 0 35px;
     .min-height-upper-container{
       /*max-height: 500px;*/
       position: relative;
+	  text-align:center;
     }
 
     .min-height-upper-container > img{
@@ -9885,7 +9908,7 @@ padding: 0 35px;
       font-family: 'Condensed-bold-italic';
       font-size: 21px;
 	  margin-bottom:10px;
-	  margin-top:30px;
+	  margin-top:60px;
     }
 
 	.menu-interno{
@@ -9958,6 +9981,7 @@ padding: 0 35px;
 	.jugadores-container-busqueda{
 	padding:5px;
 		background-color:black;
+		margin-top:30px;
 	}
 
     .jugadores-container-busqueda .menu-busqueda{
@@ -10088,6 +10112,7 @@ padding: 0 35px;
 
 	.contenido-interno-tecnica{
 		padding:60px;
+		padding-top:30px;
 	}
 
     .contenido-interno-tecnica h2{
@@ -10203,14 +10228,35 @@ padding: 0 35px;
 	.tecnica-galeria{
 		padding:15px;
 	}
-
+	
+	.tecnica-galeria .container-img-gallery{
+		overflow:hidden;
+	}
+	.tecnica-galeria .container-img-gallery a{
+		display:inline-block;
+		width:100%;
+		height:100%;
+	}
+	
+	.tecnica-galeria .container-img-gallery a{
+		text-align:center;
+	}
+	
+	.tecnica-galeria .container-img-gallery a .cover-green-gallery{
+		width:100% !important;
+		height:100% !important;
+	}
+	.thumb-gallery-jugador{
+		width:100%; height:100%; background-repeat:no-repeat; background-position:center; /*background-size:cover;*/
+	}
+	
 	.tecnica-detalle,.tecnica-video,.tecnica-galeria{
 		margin-top:35px;
 	}
 
 
 	.tecnica-detalle h2, .tecnica-galeria h2,.tecnica-video h2{
-		font-size:33px;
+		font-size:25px;
 		padding:10px 25px;
 		-webkit-box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
@@ -10231,7 +10277,7 @@ margin-bottom:15px;
       background-color: #006443;
       color:white;
       text-align: center;
-      position: absolute;
+      /*position: absolute;*/
       bottom: 0;
       width: 100%;
       margin: 0;
@@ -10239,17 +10285,21 @@ margin-bottom:15px;
 	  font-size:18px;
 	  padding:10px;
     }
+	
+	.jugador-relacionado
+	{width:100%;}
 
 	.avatar-relacionado{
-		width:100%;height:250px;
+		width:100%;
 		background-position:center;
 		background-size:cover;
 		background-repeat:no-repeat;
+		height:160px;
 	}
 
 	.avatar-relacionado.placeholder{
 		background-size:100% auto;
-		background-position:center -50px;
+		background-position:center;
 	}
 
     .jugador-relacionado label span{
@@ -10272,6 +10322,10 @@ margin-bottom:15px;
       font-size: 1.2em;
       padding: 10px 0;
     }
+	
+	.informacion-tecnica{
+		padding-left:25px;
+	}
 
     .informacion-tecnica h1{
       font-family: 'Condensed-bold-italic';
@@ -10453,7 +10507,7 @@ box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
 	}
 	
 	.top-shadow{
-		border-top: 4px solid rgba(0,0,0,0.1);
+		border-top: 4px solid rgba(0,0,0,0.4);
 	}
 
     .first-box-ficha-tecnica{
