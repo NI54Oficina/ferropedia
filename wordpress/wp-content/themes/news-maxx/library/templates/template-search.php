@@ -22,32 +22,27 @@ get_template_part( 'library/templates/header', 'extra' );
 	
 	<div class="label-name-page">
         <?php echo get_the_post_thumbnail(21);   ?>
-		<div style="padding:0 60px;">
-		</div>
-
-      </div>
+		
+    
 	 <!-- para seo !-->
-	<h1 style="display:none;">De la cuna esta el cajon</h1>
-	<div style="width:100%;min-height:100px;background-image:url('<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/tablon_cuna.jpg');background-size:auto 100%;">
-	<p style="font-size:1.2em;color:white; padding:50px 200px; font-family:'Roboto-Regular';text-align:center;"><?php echo $cat->description ?></p>
+	  <div class="header-text-content" style="padding:0 60px;height:0;padding-left:30px;">
+	<h1 >De la cuna <span class="sub-verde">hasta el cajón</span></h1>
+	</div>
+	<div class="bajada-cuna">
+	<p ><?php echo $cat->description ?></p>
     </div>
+    </div>
+    
 	
-	<?php if(false){ ?>
-	<div class="" style="height:400px;">
-
-    </div>
-    <div class="" style="background-color:black; padding: 0 30px; position:relative">
-      <div class="" style="position:absolute; bottom:70%; height:150px; width:90%; left:0; right:0; margin:auto;font-family:'Condensed-bold-italic';padding-top:50px; padding-left:50px;color:white; font-size:3em; background-image:url('<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/tablon.png');"> <?php echo $cat->name ?></div>
-      <p style="font-size:1.2em;color:white; padding:50px 20px; font-family:'Roboto-Regular'"><?php echo $cat->description ?></p>
-    </div>
-	<?php } ?>
+	
 
   <?php  }  ?>
 
-
+<hr>
 
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-search">
+	
 
 
     <section class="col-lg-9 col-md-9 col-sm-12 col-xs-12 entry-list">

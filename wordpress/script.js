@@ -18,7 +18,7 @@ $(window).on('load', function(){
 	ResetHeight();
 	SameHeight();
 	slider('.jugadores-container-ranking','.contenido-1' );
-  slider('.menu-2','.jugadores-muchosjugadores' );
+  slider2('.menu-2','.jugadores-grillas' );
   slider('.menu-anios','.cuerpo-tabla' );
   // slider_get_post();
 
@@ -28,6 +28,7 @@ $(window).on('load', function(){
   menu();
   copy_size();
   NotaCarousel();
+  sortJugadores();
 });
 
 
@@ -214,6 +215,7 @@ function slider(padreMenu,padreContenedor ){
   //if(padreMenu==null && padreContenedor==null){padreMenu=''; padreContenedor='';}
 
     var index=0;
+	
     $(padreContenedor+'.contenido-dinamico').eq(0).fadeIn();
     var currentIndex = 0,
       items = $(padreContenedor+'.contenido-dinamico'),
@@ -231,7 +233,43 @@ function slider(padreMenu,padreContenedor ){
       $(padreMenu+'.menu-dinamico nav p').removeClass('selected');
       $(this).addClass('selected');
       currentIndex=$(this).index();
+	
+      cycleItems();
+    });
 
+
+
+
+}
+
+var currentTipoJugador=0;
+
+function slider2(padreMenu,padreContenedor ){
+
+  //if(padreMenu==null && padreContenedor==null){padreMenu=''; padreContenedor='';}
+
+    var index=0;
+	
+    $(padreContenedor+' .contenido-dinamico').eq(0).fadeIn();
+    currentTipoJugador = 0,
+      items = $(padreContenedor+' .contenido-dinamico'),
+      itemAmt = items.length;
+
+    function cycleItems() {
+		
+      var item = $(padreContenedor+' .contenido-dinamico').eq(currentTipoJugador);
+      items.hide();
+      item.fadeIn("slow");
+    }
+
+
+
+    $(padreMenu+'.menu-dinamico nav p').click(function() {
+      $(padreMenu+'.menu-dinamico nav p').removeClass('selected');
+      $(this).addClass('selected');
+	  console.log($(this).parent().index());
+      currentTipoJugador=$(this).parent().index();
+	
       cycleItems();
     });
 
@@ -247,14 +285,15 @@ function slider_get_post(){
 
 
       var index=0;
-      $('.img-sector-padre > img').eq(0).fadeIn();
+      $('.img-sector-padre > .contenido-dinamico').eq(0).fadeIn();
       var currentIndex = 0,
       index_post_slider=0,
-        items = $('.img-sector-padre > img'),
+        items = $('.img-sector-padre > .contenido-dinamico'),
         itemAmt = items.length;
 
         if(itemAmt==1){
           $(".button-img-post").css("opacity", "0.5").css("user-select", "none");
+          $(".button-img-post").hide();
             $(".button-img-post").removeClass('next-image prev-image');
         }
 
@@ -263,7 +302,7 @@ function slider_get_post(){
       function cycleItems() {
 
         // console.log(currentIndex);
-        var item = $('.img-sector-padre > img').eq(index_post_slider);
+        var item = $('.img-sector-padre > .contenido-dinamico').eq(index_post_slider);
         items.hide();
         item.fadeIn("slow");
 
@@ -600,6 +639,7 @@ function get_post(){
 
 
   $("body").on("click", ".get-post", function(){
+	  return;
 
     // $('.img-sector-padre img').eq(0).fadeIn();
     // // var currentIndex = 0,
@@ -628,15 +668,21 @@ function get_post(){
 }
 
 function NotaCarousel(){
-	if($(".trio-cuna-cajon").length>0){
+	if($(".trio-cuna-cajon").length>0&& $("#gallery-2 .gallery-item").length>0){
 		try{
 						console.log("entra?");
+						
+						$(".custom-post-template .thumbnail-container").hide();
 						$(".custom-post-template .thumbnail-container > img").remove();
+						$(".custom-post-template .thumbnail-container > .gallery-item").remove();
+						//$(".custom-post-template .thumbnail-container").html(" ");
 						$("#gallery-2 .gallery-item").each(function(){
 							$(this).attr("href","#");
-							$(".custom-post-template .thumbnail-container").append(this);
+							$(this).find("a").removeAttr("href");
+							$(".custom-post-template .thumbnail-container").append("<div class='gallery-item'>"+$(this).html()+"</div>");
 						});
 						$("trio-cuna-cajon#gallery-2 br").remove(); 
+						
 						$(".thumbnail-title").hide();
 						$(".custom-post-template .thumbnail-container").owlCarousel({
 							margin:0,
@@ -653,7 +699,10 @@ function NotaCarousel(){
 							  $(".owl-wrapper-outer").addClass('custom-post-template thumbnail-container');
 							}
 						});
+						$(".custom-post-template .thumbnail-container").show();
 		}catch(error)		{
+			console.log("entra error");
+			console.log(error);
 			setTimeout(function(){NotaCarousel();},300);
 		}
 	}
@@ -666,3 +715,79 @@ function close_modal(){
 
   })
 };
+
+function sortJugadores(){
+	$(".menu-busqueda").on("change",function(){
+		console.log("entra change "+this.value);
+		console.log("jugador "+currentTipoJugador);
+		var sortData;
+		var order= "asc";
+		if(this.value==2){
+			sortData="voto";
+			order="desc";
+		}
+		var auxJ=currentTipoJugador+1;
+		
+		$(".jugadores-muchosjugadores:nth-child("+auxJ+") .jugador-node").tinysort({data:sortData, order: order});
+		
+		RedrawCurrent(auxJ);
+	});
+	
+}
+
+function filterJugadores() {
+	console.log("entra");
+    var input, filter, ul, li, a, i;
+    //input = $(".label-busqueda input");
+    
+	var auxJ=currentTipoJugador+1;
+	filter = $(".jugadores-muchosjugadores:nth-child("+auxJ+") .label-busqueda input").val().toUpperCase();
+    /*ul = $(".jugadores-muchosjugadores:nth-child("+auxJ+")");
+    li = ul.getElementsByTagName("div");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }*/
+	$(".jugadores-muchosjugadores:nth-child("+auxJ+") .jugador-node").each(function(){
+		var auxT=$(this).find("p").text().toUpperCase();
+		if(auxT.indexOf(filter) > -1){
+			$(this).show();
+		}else{
+			$(this).hide();
+		}
+	});
+	RedrawCurrent(auxJ);
+}
+
+function RedrawCurrent(auxJ){
+	var auxC=0;
+	$(".jugadores-muchosjugadores:nth-child("+auxJ+") .jugador-node:visible").each(function(){
+			
+			$(this).find(".even").removeClass("even");
+			$(this).find(".odd").removeClass("odd");
+			$(this).removeClass("left-side");
+			$(this).removeClass("right-side");
+			if(auxC==0){
+				$(this).find("p").addClass("even");
+				$(this).addClass("left-side");
+			}else if(auxC==1){
+				$(this).find("p").addClass("even");
+				$(this).addClass("right-side");		
+			}else if(auxC==2){
+				$(this).find("p").addClass("odd");
+				$(this).addClass("left-side");		
+			}else if(auxC==3){
+				$(this).find("p").addClass("odd");
+				$(this).addClass("right-side");		
+			}
+			auxC++;
+			if(auxC==4){
+				auxC=0;
+			}
+		});	
+}

@@ -13,9 +13,9 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <!-- Le fav and touch icons -->
-    <?php if (get_option('kopa_theme_options_favicon_url')) { ?>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('kopa_theme_options_favicon_url'); ?>">
-    <?php } ?>
+    
+	<link rel="icon" href="<?php echo home_url(); ?>/fav-icon.png" type="image/png" sizes="16x16">
+    
     <?php if (get_option('kopa_theme_options_apple_iphone_icon_url')) { ?>
     <link rel="apple-touch-icon" sizes="57x57"
           href="<?php echo get_option('kopa_theme_options_apple_iphone_icon_url'); ?>">

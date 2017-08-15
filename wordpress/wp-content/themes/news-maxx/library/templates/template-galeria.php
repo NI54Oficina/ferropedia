@@ -57,7 +57,11 @@ echo  $content ;
     }
 
     .max-box-gallery{ padding: 30px;}
-    .box-gallery{text-align: center; overflow: hidden;  padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;}
+    .box-gallery{text-align: center; overflow: hidden;  padding: 0; border-style: double; border-width: 4px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); border-color: #c3c3c3;
+	display: table-cell;
+	  vertical-align: bottom;
+	  float:initial;
+	}
     .box-gallery span{
       opacity: 0;
       width: 100%;
@@ -71,7 +75,23 @@ echo  $content ;
       padding-top: 45%;
       font-size:4em;
       font-family: 'Condensed-bold-italic';
+	  
     }
+	
+	
+	
+	.box-gallery p{
+		display:inline-block;
+background:rgba(0,0,0,0.5);
+color:white;
+font-size:16px;
+width:100%;
+padding:10px;
+margin-bottom:0;
+	}
+	
+	
+	
 
     .box-gallery span:hover{
       opacity: 1;
@@ -170,19 +190,21 @@ $new =trim($content_parts['main']);
 
     </script> -->
 
-      <!-- <a href="<?php the_permalink();?>"> -->
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery get-post" id-post="<?php the_ID();?>">
+      <a href="<?php the_permalink();?>">
+	
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery get-post" id-post="<?php the_ID();?>" style=" display: table !important;">
 
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-gallery square" style="background-image:url(<?php  echo get_the_post_thumbnail_url($post->id,'medium' ); ?>);background-position:center;background-size:cover;">
             <?php  //echo the_post_thumbnail('full' ); ?>
 
 
-           <span> Ver</span>
+         
+		  <p><?php echo get_the_title(); ?></p>
         </div>
 
       </div>
-
+		</a>
 
      <!-- </a> -->
      <?php } wp_reset_postdata(); ?>
@@ -208,14 +230,27 @@ $new =trim($content_parts['main']);
       border-image: url("<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/marco_museo.png") 30 round;
     }
 
-    .img-sector-padre img{
+    .img-sector-padre .contenido-dinamico{
       display: none;
     }
+	
+	.img-sector-padre .contenido-dinamico p{
+			display:block;
+			position:relative;
+			top:20px;
+	}
 
     .img-sector p, .info-sector .buttons{
       display: inline;
       font-family: 'Condensed-bold';
       padding: 5px 10px;
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
     }
 
     .img-sector p:hover, .info-sector .buttons:hover,.modal-gallery .span:hover, .get-post-not{
@@ -233,7 +268,7 @@ $new =trim($content_parts['main']);
     .img-sector img{
       max-width: 100%;
       height: auto;
-	  max-height:400px;
+	  max-height:70vh;
       box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50);
       border-style: double;
       border-width: 4px;
@@ -280,7 +315,19 @@ $new =trim($content_parts['main']);
 
 
 <script>
-
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key == "Escape" || evt.key == "Esc");
+    } else {
+        isEscape = (evt.keyCode == 27);
+    }
+    if (isEscape) {
+         $('.modal-gallery').empty();
+		$('.modal-gallery').fadeOut();
+    }
+};
 </script>
 
 

@@ -35,7 +35,7 @@
 							</div>
 
                             <div class="flex-caption">
-                                <h5 style="color:white;">LA FERROPEDIA</h5>
+                                <h5 style="color:white;">LaFerropedia</h5>
                                 <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white; padding-bottom:30px;">¡Bienvenido!</h3>
                             </div>
 
@@ -50,7 +50,7 @@
 						array(
 							
 							'month' => $today['mon'],
-							'day'   =>  $today['mday'],
+							/*'day'   =>  $today['mday'],*/
 						),
 					),
 					"category_name"=>"evento"
@@ -91,7 +91,7 @@
 							</div>
 
                             <div class="flex-caption">
-                                <h5 style="color:white;">LA FERROPEDIA</h5>
+                                <h5 style="color:white;">LaFerropedia</h5>
                                 <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white; padding-bottom:30px;">¡Bienvenido!</h3>
                             </div>
 
@@ -227,7 +227,7 @@
 			border-image:none;
 			border-style:solid;
 			border-width:    300px 0 300px 250px;
-			border-color: transparent transparent transparent #006443;
+			border-color: transparent transparent transparent #006327;
 			content:"";
 			height:0;
 			margin-left:0px;position:absolute;

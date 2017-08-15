@@ -26,10 +26,12 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-sector-padre" style="text-align:center;" >
           <!-- <?php echo get_the_post_thumbnail($id );  ?><br> -->
-
+			<?php if(false){ ?>
           <img class="contenido-dinamico" src="<?php echo get_the_post_thumbnail_url($id );  ?>" alt="">
-
-          <?php  $galleries = get_post_galleries_images( $id );
+		  <p><?php echo the_post_thumbnail_caption($id); ?></p>
+			<?php } ?>
+			
+          <?php if(false){  $galleries = get_post_galleries_images( $id );
                   $gal=$galleries[0];
 
           if($gal){
@@ -37,13 +39,58 @@
           foreach ($gal as $g) {?>
 
               <img class="contenido-dinamico" src=" <?php echo $g; ?>" alt="">
+				
+          <?php  }} 
+		  }
+		  ?>
+		  
+		  <?php
+		  if(true){
+			$gallery = get_post_gallery( $id, false );
+			$args = array( 
+				'post_type'      => 'attachment', 
+				'posts_per_page' => -1, 
+				'post_status'    => 'any', 
+				'post__in'       => explode( ',', $gallery['ids'] ) 
+			); 
+			$attachments = get_posts( $args );
+			if(count($attachments)>0){
+			foreach ( $attachments as $attachment ) {
 
-          <?php  }} ?>
+				$image_alt = get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true);
+				if ( empty( $image_alt )) {
+					$image_alt = $attachment->post_title;
+				}
+				if ( empty( $image_alt )) {
+					$image_alt = $attachment->post_excerpt;
+				}
+				$image_title = $attachment->post_title;
+				$image_url = wp_get_attachment_image_src( $attachment->ID, 'full' );
+
+				?>
+				<div class="contenido-dinamico">
+				<?php 
+				echo '<img src="' . $image_url[0] . '" alt="'. $image_alt .'">' ;
+				echo '<p class="item-label">' . $image_title . '</p>';
+				?>
+				</div>
+				<?php
+			}
+			}else{
+				?>
+				<div class="contenido-dinamico">
+				 <img  src="<?php echo get_the_post_thumbnail_url($id );  ?>" alt="">
+				<p><?php echo the_post_thumbnail_caption($id); ?></p>
+				</div>
+				<?php
+			}
+
+		  }		?>
 
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 20px 0; text-align:center">
-          <div style="position:absolute; left:0; right:0; margin:auto">
+          <div style="position:fixed; margin:auto; bottom:40px; width:55%;">
             <p class="button-img-post prev-image prev">&lt; Foto anterior</p>   <!-- <p class="nro-image">1</p>--> <p class="button-img-post next next-image">Siguiente foto &gt;</p>
           </div>
 
@@ -55,7 +102,7 @@
         <h1 class="title"><?php $title= the_title_attribute(array("post"=> $id,"echo" => 0));
           $t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></h1>
         <!-- <p class="notas"><?php  ?></p> -->
-        <p class="content" style="font-size: .8em;overflow: auto;max-height: 60vh;">
+        <p class="content" style="font-size: .8em;overflow: auto;max-height: 60vh;padding-right:20px;">
           <?php
           $content = get_post_field( 'post_content', $id);
 
@@ -89,7 +136,9 @@
 
 
          ?>
+		 <div style="position:fixed;bottom:50px;right:100px;">
         <p  class="buttons prev-post get-post<?php if (  empty( $previd ) ) { echo "-not";} ?>" id-post="<?php if ( ! empty( $previd ) ) { echo $previd;} ?>">Entrada anterior</p>|<p  class="buttons next-post get-post<?php if (  empty( $nextid ) ) { echo "-not";} ?>" id-post="<?php if ( ! empty( $nextid ) ) { echo $nextid;}  ?>">Siguiente entrada</p>
+		</div>
       </div>
 
 

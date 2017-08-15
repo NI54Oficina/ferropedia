@@ -28,11 +28,11 @@ class JugadorController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"listar"),
+				'actions'=>array('index','view',"listar","deleteAll","puestos"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update',"checkDatos"),
+				'actions'=>array('create','update',"checkDatos","torneos","editTorneo"),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -145,6 +145,144 @@ class JugadorController extends Controller
 			echo "<br>";
 		}
 	}
+	
+	public function actionPuestos(){
+		set_time_limit (100000);
+		$jugadores= Jugador::model()->findAll();
+		foreach($jugadores as $jugador){
+			if($jugador->puesto==""||!isset($jugador->puesto)){
+			$jugador->puesto= $this->GetPuesto($jugador->detalle_puesto);
+			$jugador->save();
+			}
+			
+		}
+
+	}
+	
+	
+	
+	public function actionTorneos($id){
+		/*set_time_limit (100000);
+		$jugadores= Jugador::model()->findAll();
+		foreach($jugadores as $jugador){
+			$jugador->data;
+			$lastTorneo="";
+			$debut="";
+			$ultimo="";
+			$torneos=array();
+			$otros= array();
+			header('Content-Type: text/html; charset=utf-8');
+				$torneo=0;
+			
+			foreach($jugador->data as $data){
+				/*if($data["titulo"]=="Debut"){
+					//$debut =$data["texto"];
+				}else if($data["titulo"]=="Torneo"){
+					//$lastTorneo= $data["texto"];
+					$ultimo= $data;
+				}else if($data["titulo"]=="Último partido"){
+					//$ultimo= $data;
+				}else{
+					//array_push($otros,$data);
+				}*/
+				/*if($data["titulo"]=="Torneo"){
+					$lastTorneo= $data;
+					$torneo++;
+				$auxT= explode("/",$data["texto"]);
+				/*if($data["texto"]=="AÑO/Torneo/PJ/GC/"){
+					$data->delete();
+				}*/
+				//if(count($auxT)==5&& !is_numeric($auxT[2])&&strpos($data["texto"],"Total")===false){
+				//if(count($auxT)==5){
+					/*if(isset($torneos[$auxT[0]])){
+						array_push($torneos[$auxT[0]],$auxT);
+					}else{
+						$torneos[$auxT[0]]= array($auxT);
+					}*/
+					//$data["texto"]= preg_replace('/'.preg_quote("/", '/').'/',"-",$data["texto"],1);
+					//$data->save();
+					//echo $data["texto"];
+					//echo "<br>";
+					//echo "<hr>";
+					//$data["texto"]= $data["texto"]."0/";
+					//$data->save();
+				//}
+			/*	}
+			 }
+			 if($torneo==1){
+				 echo $jugador->id;
+				 echo '<br>';
+				 $auxD= new DataExtra();
+				 $auxD->model="Jugador";
+				 $auxD->modelId=$jugador->id;
+				 
+				 
+				 $auxT= substr($lastTorneo["texto"],strpos($lastTorneo['texto'],"/")+1);
+				 $auxT= substr($auxT,strpos($auxT,"/"));
+				 $auxD->texto= "Total".$auxT;
+				 $auxD->titulo= "Torneo";
+				 $auxD->save();
+			 }
+			 
+			 }
+			 /*if(strpos($ultimo["texto"],"Total")===false&&strpos($ultimo["texto"],"TOTAL")===false&&strpos($ultimo["texto"],"Totales")===false&&strpos($ultimo["texto"],"TOTALES")===false){
+				 $ultimo["texto"]= 'Texto/'.$ultimo["texto"];
+				 $ultimo->save();
+			 }*/
+		/*	 if(strpos($ultimo["texto"],"Texto")!==false){
+				  $ultimo["texto"]= str_replace("Texto","Total",$ultimo["texto"]);
+				  $ultimo->save();
+			 }
+		}*/
+		
+		$torneos= DataExtra::model()->findAllByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Torneo"));
+		$this->render('torneos',array(
+			'torneos'=>$torneos,
+		));
+	}
+	
+	public function actionEditTorneo($id)
+	{
+		$model= DataExtra::model()->findByPk($id);
+
+		$guardado="no";
+		if(isset($_POST['DataExtra']))
+		{
+			$texto="";
+			foreach($_POST["DataExtra"] as $d){
+				$texto.=$d."/";
+			}
+			$model->texto=$texto;
+			if($model->save()){
+				$guardado="si";
+				//agregar textito que confirme el guardado
+			}
+			$this->redirect(array('jugador/torneos/','id'=>$model->modelId));
+			exit();
+				//$this->redirect(array('view','id'=>$model->id));
+		}
+
+		$this->render('editTorneo',array(
+			'model'=>$model,"guardado"=>$guardado
+		));
+	}
+	
+	public function GetPuesto($detalle){
+			switch($detalle){
+				case "Centrodelantero": case "Delantero": case "Insider derecho": case "Insider derecho o izquierdo": case "Insider iquierdo": case "Insider izquierdo": case "Puntero derecho": case "Puntero derecho e izquierdo": case "Puntero izquierdo": case "Puntero derecho o izquierdo": case "Puntero derehco": case "Puntero": case "Puntero iIzquierdo": case "Puntero derecho y back izquierdo": case "Puntero Derecho": case "Puntero Izquierdo": case "Volante ofensivo / Delantero": case "Extremo izquierdo": case "Wing derecho o izquierdo": 
+				return "delantero"; break;
+				case "Half izquierdo": case "Back  derecho": case "Back derecho": case "Back central": case "Back izquierdo": case "Centre half":  case "Defensor": case "Half derecho": case "Half derecho o izquierdo": case "Back  derecho o izquierdo": case "Back derecho y centromedio":case  "Marcador central": case "Marcador de punta": case "Defensa": case "Marcador lateral": case "Defensor central": case "Defensor Lateral": case "Marcador lateral izquierdo": case "Lateral derecho": case "Half Derecho": case "Lateral izquierdo": case "Half Izquierdo": case "Marcador lateral derecho": case "back derecho": case "Back  derecho o izquierdo": case "Marcador central": case "Marcador Central": case "Back derecho o izquierdo": case "Lateral por izquierda": case "Half": case "Lateral Izquierdo": case "Back  derecho o izquierdo": case "Half y puntero derecho": case "Back": case "Marcador de Punta": case "Back y half derecho": case "Half derecho e izquierdo":  case "Half izquierdo": case "Zaguero izquerdo": case "Zaguero central":
+				return "defensor"; break;
+				case "Arquero":
+				return "arquero";break;
+				case "Centromedio": case "Entreala derecho": case "Enterala izquierdo": case "Entreala": case "Entreala izquierdo": case "Polifuncional": case "Volante": case "Volante central": case "Volante ofensivo": case "Entreala Izquierdo": case "Volante izquierdo": case "Volante derecho": case "Enganche": case "Centrodelatnero": case "Volante por izquierda": case "Volante Derecho": case "Defensor/Volante": case "Volante central o derecho": case "Mediocampista y marcador central": case "Volante Central": case "Volante Ofensivo": case "Marcador central o volante central": case "Lateral volante": case "Entreala derecha": case "Mediocampista": case "Interior izquierdo": 
+				return "mediocampista"; break;
+				
+				
+				
+			}
+			
+		}
 
 	/**
 	 * Creates a new model.
@@ -307,6 +445,14 @@ class JugadorController extends Controller
 		$auxRel->save();
 		echo "1";
 	}
+	
+	public function actionDeleteAll(){
+		set_time_limit (100000);
+		$jugadores= Jugador::model()->findAll();
+		foreach($jugadores as $jugador){
+			$jugador->delete();
+		}
+	}
 
 	/**
 	 * Performs the AJAX validation.
@@ -320,4 +466,6 @@ class JugadorController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	
 }

@@ -45,6 +45,10 @@ foreach($model->data as $data){
 			}
 		}
 		$lastTorneo= $data["texto"];
+		$lastTorneo= str_replace("Total/",'',$lastTorneo);
+		$lastTorneo= str_replace("Totales/",'',$lastTorneo);
+		$lastTorneo= str_replace("TOTALES/",'',$lastTorneo);
+		$lastTorneo= str_replace("TOTAL/",'',$lastTorneo);
 	}else if($data["titulo"]=="Último partido"){
 		$ultimo= $data["texto"];
 	}else{
@@ -134,8 +138,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
 
 		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
-            <h2><?php echo rand(1,8); ?></h2>
-            <p>Total partidos ganados</p>
+            <h2>&nbsp;<!--<?php echo rand(1,8); ?>!--></h2>
+            <p>&nbsp;<!--Total partidos ganados!--></p>
             <h3><?php if($debut[0]!=""){ echo $debut[0]; }else{ echo "---"; } ?></h3>
             <h4><?php if($debut[1]!=""){ echo "Ferro ".$debut[1]; }else{ echo "---"; } ?></h4>
             <p>Debut</p>
@@ -180,8 +184,9 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 			<div class="compartir-jugador">
 			<p style="">Compartir</p>
 			<div class="links-sociales" >
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+			
+                  <i class="fa fa-facebook" aria-hidden="true" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>','','width=500,height=400')" ></i>
+                  <i class="fa fa-twitter" aria-hidden="true" onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo get_permalink(); ?>&amp;original_referer=<?php echo get_permalink(); ?>&text=Mirá la ficha de <?php echo $model->nombre." ".$model->apellido; ?> en LaFerropedia','','width=500,height=400')"></i>
 
                 </div>
 
@@ -241,67 +246,10 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 		</div>
 		        
 		</div>
-		
-		<?php if(false){ ?>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica">
-          <h2>Campañas del jugador</h2>
-
-          <div class="menu-anios menu-dinamico">
-            <nav>
-              <p class="selected">Todos</p>
-              <p>1997</p>
-              <p>1998</p>
-              <p>1999</p>
-              <p>2000</p>
-
-          </nav>
-
-          <div class="tabla-anios-jugador">
-            <div class="titulo-tabla">
-              <div class="col-lg-2">Año</div>
-              <div class="col-lg-2">Torneo</div>
-              <div class="col-lg-2">Division</div>
-              <div class="col-lg-3">Partidos jugados</div>
-              <div class="col-lg-3">Goles convertidos</div>
-            </div>
-
-          <?php for($i=0; $i<5;$i++){ $m=28; $n=15 ?>
-
-            <div class="col-lg-12 cuerpo-tabla contenido-dinamico">
-
-              <?php for($k=0; $k<3;$k++){ ?>
-
-
-
-                <div class="col-lg-2 columna-gris">1190</div>
-                <div class="col-lg-2">Torneo</div>
-                <div class="col-lg-2 columna-gris">Division</div>
-                <div class="col-lg-3 partidos-jugados"><?php echo $m ?></div>
-                <div class="col-lg-3 goles-convertidos"><?php echo $n ?></div>
-
-            <?php  $m++; $n++;} ?>
-
-
-          </div>
-
-
-          <?php } ?>
-          </div>
-          </div>
-
-          <p class="col-lg-12 texto-fuente content-shadow">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
-              chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage
-              ham hock leberkas pork chop tongue bacon tenderloin alcatra. Kevin picanha
-              alcatra tenderloin prosciutto. Pancetta pork belly pig jerky. Filet
-              mignon beef shoulder ball tip short ribs, shankle turducken kielbasa.
-              Turducken cow pork drumstick filet mignon chuck andouille ribeye tri-tip
-              pork belly. Tenderloin ham hock venison kielbasa jowl fatback.
-          </p>
-        </div>
-		<?php } ?>
+	
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shadow" style="padding:0;" >
-			  <h2>Campañas del jugador</h2>
+			  <h2>Campañas de <?php echo $model->nombre; ?> <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
 
 			  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
 				<nav>

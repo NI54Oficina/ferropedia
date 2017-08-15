@@ -70,7 +70,7 @@
 	</div>
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	<p>(*) Faltan los campeonatos de 1912 y el 1919</p>
+	<p>* Faltan los campeonatos de 1912 y el 1919</p>
 	</div>
 
     </div>
@@ -141,7 +141,7 @@
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
-		<h2 class="titulo-home">Con la <span class="sub-verde">Verde</span></h2>
+		<a href="<?php echo home_url(); ?>/ficha-jugador"><h2 class="titulo-home">Con la <span class="sub-verde">Verde</span></h2></a>
 
 		<?php $destacado= Jugador::model()->findByPk(26); ?>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left" style="padding:0 15px;">
@@ -152,7 +152,7 @@
 		<div class="escudito"></div></div>
 		<div class="second-interior">
         <p><?php echo $destacado->nombre." ".$destacado->apellido; ?></p>
-        <a href="<?php echo home_url(); ?>/jugador-<?php echo $destacado->id; ?>"><button type="butto n" name="button">Ver Ficha</button></a>
+        <a href="<?php echo home_url(); ?>/jugador-<?php echo $destacado->id; ?>"><button type="butto n" name="button">Ficha</button></a>
 		</div>
       </div>
 
@@ -200,7 +200,7 @@
 		<?php
 		$destacadoId= $destacado->id;
 		$criteria = new CDbCriteria;
-$criteria->limit = 5;
+$criteria->limit = 2;
 $criteria->condition = "id != $destacadoId";
 $criteria->order = 'RAND()';
 $criteria->select = "*";
@@ -230,17 +230,17 @@ $criteria->select = "*";
       <!-- dt -->
 
 
-	<?php if(false){ ?>
+	<?php if(true){ ?>
       <?php for($i=0; $i<2; $i++){ ?>
 
 
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
-        <div class="imagen-jugador-verde rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
+        <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
 
 
 
-          <div class="capa-verde"></div>
+          <div class="capa-violeta"></div>
           <label>Nombre deL Dt</label>
         </div>
 		</div>
@@ -250,7 +250,7 @@ $criteria->select = "*";
       <a href="<?php echo home_url(); ?>/ficha-jugador/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
-        <div class="imagen-jugador-verde rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg);">
+        <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono_jugador_grande.svg);">
 
             <label>+ Dts</label>
         </div>
@@ -268,7 +268,7 @@ $criteria->select = "*";
 
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
 
-<h2 class="titulo-home">El rincón <span class="sub-verde">del mudo</span></h2>
+<a href="<?php echo home_url(); ?>/rincon-mudo"><h2 class="titulo-home">El rincón <span class="sub-verde">del mudo</span></h2></a>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-box-left" style="overflow:hidden;">
   
@@ -324,7 +324,7 @@ $criteria->select = "*";
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
 	
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h2 class="titulo-home">De la cuna <span class="sub-verde">hasta el cajón</span></h2>
+    <a href="<?php echo home_url(); ?>/category/cuna-cajon"><h2 class="titulo-home">De la cuna <span class="sub-verde">hasta el cajón</span></h2></a>
 	</div>
 
     <?php
@@ -463,7 +463,7 @@ $criteria->select = "*";
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title fourth-box-left">
 
-    <h2 class="titulo-home">Museo de la <span class="sub-verde">Emoción Verdolaga</span></h2>
+    <a href="<?php echo home_url(); ?>/museo"><h2 class="titulo-home">Museo de la <span class="sub-verde">Emoción Verdolaga</span></h2></a>
 
     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 

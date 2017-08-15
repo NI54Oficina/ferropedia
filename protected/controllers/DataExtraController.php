@@ -168,7 +168,7 @@ class DataExtraController extends Controller
 	{
 		$model= DataExtra::model()->findByAttributes(array("titulo"=>"Total"));
 		$primera= DataExtra::model()->findByAttributes(array("titulo"=>"Primera División"));
-		$ascenso= DataExtra::model()->findByPk(1970);
+		$ascenso= DataExtra::model()->findByAttributes(array("titulo"=>'Ascenso  <span style="color:#8f8f8f">*</span>'));
 		$local= DataExtra::model()->findByAttributes(array("titulo"=>'Copas Locales'));
 		$internacional= DataExtra::model()->findByAttributes(array("titulo"=>'Copas Internacionales'));
 

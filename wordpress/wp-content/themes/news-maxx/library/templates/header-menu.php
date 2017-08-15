@@ -35,10 +35,11 @@
             <div class="wrapper clearfix">
               <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:29%;">
 
-                <li title="Jugadores" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-ficha-jugador-blanco.svg" alt=""><p>Con la verde</p></a></li>
-                <li title="Museo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-blanco.svg" alt=""><p>Museo</p></a></li>
-                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/category/cuna-cajon//"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-blanco.svg" alt=""><p>De la Cuna hasta el Cajón</p></a></li>
-                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mudo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""><p>Rincón del Mudo</p></a></li>
+                <li title="Con la Verde" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/con-la-verde.svg" alt=""><p>Con la Verde</p></a></li>
+                <li title="Museo de la Emoción Verdolaga" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/museo.svg" alt=""><p>Museo de la Emoción Verdolaga</p></a></li>
+                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/category/cuna-cajon/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cuna-cajon.svg" alt=""><p>De la Cuna hasta el Cajón</p></a></li>
+                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mudo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/rincon.svg" alt=""><p>Rincón del Mudo</p></a></li>
+				<li title="Sobre LaFerropedia" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/sobre-ferropedia.svg" alt=""><p>Sobre LaFerropedia</p></a></li>
                 <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li> -->
               </ul>
 
@@ -77,7 +78,7 @@
                 </div>
                 <!-- mobile-menu-wrapper -->
 
-                <div class="links-sociales" style="display:inline-flex">
+                <div class="links-sociales" style="">
                   <li> <i class="fa fa-facebook" aria-hidden="true"></i></li>
                   <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
                   <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
@@ -160,13 +161,13 @@
                   <span id="close-menu">X</span>
                   <p>Menú</p>
                   <ul>
-                    <a href="<?php echo home_url(); ?>"><li>INICIO</li></a>
-                    <a href="<?php echo home_url(); ?>/ficha-jugador/"><li>JUGADORES Y DT'S</li></a>
+                    <a href="<?php echo home_url(); ?>"><li>Inicio</li></a>
+                    <a href="<?php echo home_url(); ?>/ficha-jugador/"><li>Con la Verde</li></a>
                     <!-- <a href="<?php echo home_url(); ?>">  <li>DT'S</li></a> -->
-                    <a href="<?php echo home_url(); ?>/category/cuna-cajon/">  <li>DE LA CUNA HASTA EL CAJON</li></a>
-                    <a href="<?php echo home_url(); ?>/museo">  <li>MUSEO</li></a>
-                    <a href="<?php echo home_url(); ?>/rincon-mudo">  <li>EL RINCON DEL MUDO</li></a>
-                    <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>SOBRE LA FERROPEDIA</li></a>
+                    <a href="<?php echo home_url(); ?>/category/cuna-cajon/">  <li>De la Cuna hasta el Cajón</li></a>
+                    <a href="<?php echo home_url(); ?>/museo">  <li>Museo de la Emoción Verdolaga</li></a>
+                    <a href="<?php echo home_url(); ?>/rincon-mudo">  <li>El Rincón del Mudo</li></a>
+                    <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>Sobre LaFerropedia</li></a>
                   </ul>
                 </nav>
         <!-- search box -->

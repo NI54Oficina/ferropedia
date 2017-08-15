@@ -42,7 +42,7 @@ $current_rating = apply_filters( 'post_ratings_current_rating', sprintf( '%.2F /
 		
 	</div>
 	<?php if($this->current_user_can_rate( get_the_ID() )){ ?>
-	<div class="votar"><span>¡Vota!</span><div class="rating" data-post="<?php the_ID(); ?>" data-rating="<?php echo $rating; ?>" data-readonly="<?php echo (int) ! $this->current_user_can_rate( get_the_ID() ); ?>"></div></div>
+	<div class="votar"><span>¡Votá!</span><div class="rating" data-post="<?php the_ID(); ?>" data-rating="<?php echo $rating; ?>" data-readonly="<?php echo (int) ! $this->current_user_can_rate( get_the_ID() ); ?>"></div></div>
 	<?php }else{ ?>
 	<br><br>
 	<?php } ?>

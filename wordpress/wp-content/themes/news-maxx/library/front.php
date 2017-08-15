@@ -126,6 +126,9 @@ function kopa_front_enqueue_scripts() {
         wp_enqueue_script('kopa-bootstrap', $dir . '/js/bootstrap.min.js', array(), null);
         wp_enqueue_script('kopa-custom-js', $dir . '/js/custom.js', array(), null, true);
         wp_enqueue_script('kopa-match-height', $dir . '/js/jquery.matchHeight-min.js', array(), null, true);
+        wp_enqueue_script('tiny-sort', $dir . '/js/tinysort.js', array(), null, true);
+        wp_enqueue_script('tiny-sort2', $dir . '/js/tinysort.charorder.js', array(), null, true);
+        wp_enqueue_script('tiny-sort3', $dir . '/js/jquery.tinysort.js', array(), null, true);
 
         // send localization to frontend
         wp_localize_script('kopa-custom-js', 'kopa_custom_front_localization', kopa_custom_front_localization());
@@ -938,7 +941,8 @@ function kopa_the_headline()
     if ($limit) {
         $prefix = get_option('kopa_theme_options_headline_prefix', 'DESTACADO');
         $cats = (array)get_option('kopa_theme_options_headline_cats');
-        $cats = implode(',', $cats);
+        //$cats = implode(',', $cats);
+		$cats=get_cat_ID("Destacada");
 
         /*if( !empty($cats) ){
             $posts = new WP_Query('cat='.$cats.'&posts_per_page='.$limit."&category__not_in=".get_cat_ID( 'jugador' ));
@@ -963,7 +967,7 @@ function kopa_the_headline()
         if ( $tax_query ) {
             $args['tax_query'] = $tax_query;
         }
-		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'ferropedistas' ));
+		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'Ferropedistas' ),get_cat_ID( 'Evento' ));
         $posts = new WP_Query( $args );
         $index = 1;
 		
@@ -1022,20 +1026,24 @@ function kopa_the_topnew()
         if ( $tax_query ) {
             $args['tax_query'] = $tax_query;
         }
-		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'ferropedistas' ));
+		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'Ferropedistas' ),get_cat_ID( 'Evento' ));
         $posts = new WP_Query( $args );
         $index = 1;
         ?>
 
     <div class="widget kopa-nothumb-carousel-widget loading">
-        <h4 class="widget-title"><?php echo $title; ?></h4>
+         <div class="links-sociales" style="float:left;color:#a43c93;position:absolute;padding-left:20px;">
+                  <li> <i class="fa fa-facebook" aria-hidden="true"></i></li>
+                  <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                  <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                </div><h4 class="widget-title"><?php echo $title; ?></h4>
         <div class="owl-carousel kopa-nothumb-carousel loading">
 			<?php //$query = new WP_Query( array( 'category__not_in' => array( get_cat_ID( 'jugador' ) ) ) ); ?>
             <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
                 <div class="item">
                     <article class="entry-item clearfix">
                         <div class="entry-number">
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                           <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 
                               <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/<?php
                               $post_categories = wp_get_post_categories( get_the_ID() );
@@ -1299,4 +1307,25 @@ function kopa_the_current_time(){
    $retdate .= date( 'l, j/n/Y \| g:i T', current_time( 'timestamp', 1 ));//get_the_time('l, j/n/Y \| g:i T');
    $retdate .= $gmt >= 0 ? '+'.$gmt : $gmt;
     echo '<span class="kopa-current-time pull-left">' . $retdate . '</span>';
+}
+
+add_filter( 'pre_get_posts', 'ja_search_filter' );
+/**
+ * Exclude category 7 from search results.
+ *
+ * @since ?.?.?
+ * @author Jared Atchison
+ * @link https://gist.github.com/1300302
+ *
+ * @param WP_Query $query Existing query object
+ * @return WP_Query Amended query object
+ */
+function ja_search_filter( $query ) {
+	if ( $query->is_search && !is_admin() ){
+		$query->set( 'cat',$query->get("cat").", -".get_cat_ID( 'Ferropedistas' ).", -".get_cat_ID( 'Evento' ) );
+		//echo $query->get("cat");
+		//exit();
+		//$query->category__not_in=array( get_cat_ID( 'Ferropedistas' ),get_cat_ID( 'Evento' ));
+	}
+	return $query;
 }

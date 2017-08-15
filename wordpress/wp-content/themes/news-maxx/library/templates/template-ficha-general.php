@@ -87,23 +87,24 @@ global $kopa_setting;
       <div class="label-name-page">
         <?php the_post_thumbnail( 'full' );   ?>
 		<div style="/*padding:0 60px;*/">
-        <div class="header-text-content">
-          <h1><?php the_title(); ?></h1>
+        <div class="header-text-content" style="height:0;padding:0;padding-left:30px;">
+          <h1>Con la <span class="sub-verde">Verde</span></h1>
           <?php //the_content(); ?>
         </div>
+		<div class="bajada-jugador" >
+	<p ><?php the_content(); ?></p>
+    </div>
 		</div>
 
       </div>
 
       <div class="wrapper clearfix" style="padding-top:0;">
-	  <?php if(false){ ?>
-		<p class="ver-dts" style="position:absolute;right:60px;">Ver Dt's</p>
-	<?php } ?>
-        <div class="menu-2 menu-dinamico" style="padding-top:30px; padding-bottom:40px;">
+       
+	   <div class="menu-2 menu-dinamico" style="padding-top:30px; padding-bottom:40px;">
           <nav class="menu-jugadores">
 			<div><p class="selected">Arqueros</p></div>
             <div><p>Defensores</p></div>
-            <div><p>Mediocampista</p></div>
+            <div><p>Mediocampistas</p></div>
             <div><p>Delanteros</p></div>
 
 
@@ -116,7 +117,7 @@ global $kopa_setting;
 
 
 
-        <div class="jugadores-content-one jugadores-content">
+        <div class="jugadores-content-one jugadores-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
           <div class="jugadores-cancha col-lg-5 col-md-5 col-sm-5 col-xs-12">
 
             <div class="min-height-upper-container" hid="1">
@@ -167,70 +168,12 @@ global $kopa_setting;
 
           </div>
 
-          <?php if(false){ for($m=0; $m<4; $m++){ ?>
-
-          <div class="jugadores-muchosjugadores contenido-dinamico col-lg-7 col-md-7 col-sm-7 col-xs-12">
-
-            <div class="min-height-upper-container" hid="1">
-
-
-
-            <?php for($i=0; $i<15 ; $i++){ ?>
-            <div class="jugadores-j">
-              <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg" alt="">
-
-              <!-- <img src="" alt=""> -->
-              <label><span><?php if(false){ ?>10<?php } ?></span>Nombre jugador</label>
-
-            </div>
-            <?php  } ?>
-
-
-
-            </div>
-
-
-            <div class="jugadores-container-busqueda">
-              <div class="label-busqueda">
-
-                <select class="menu-busqueda" name="">
-                  <option value="">Alfabeto</option>
-                  <option value="">Popularidad</option>
-                  <option value="">Por campeonato</option>
-
-                </select>
-                <!-- <nav class="menu-busqueda">
-                  <ul>
-                    <li></li>
-                    <li>Popularidad</li>
-                    <li>Por campeonato</li>
-                  </ul>
-                </nav> -->
-
-                <p>Busqueda avanzada</p>
-              </div>
-              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >
-
-
-              <?php for($i=0; $i<27; $i++){?>
-                <p class="col-lg-6 col-md-6 col-xs-6 col-sm-6 resultado"><span>09 </span> Nombre de juego</p>
-              <?php } ?>
-                </div>
-            </div>
-          </div>
-
-          <?php } }  ?>
-
-		  <?php
-
-
-			?>
-
+			<div class="jugadores-grillas col-lg-7 col-md-7 col-sm-7 col-xs-12">
 		  <?php foreach($puestos as $puesto){ ?>
 
-          <div class="jugadores-muchosjugadores contenido-dinamico col-lg-7 col-md-7 col-sm-7 col-xs-12" >
+          <div class="jugadores-muchosjugadores contenido-dinamico col-lg-12 col-md-12 col-sm-12 col-xs-12" >
 
-            <div class="min-height-upper-container" hid="1">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 min-height-upper-container" hid="1">
 
 
 
@@ -239,15 +182,19 @@ global $kopa_setting;
 			foreach($puesto as $jugador){ ?>
 			<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
             <div class="jugadores-j">
-				<?php if($jugador->avatar){ ?>
-				<img src="<?php 
-				echo  Yii::app()->request->baseUrl."/".$jugador->avatar[0]->imagen_data()["url"]; ?>" alt="">
-				<?php }else{ ?>
-				<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg" alt="">
-				<?php } ?>
+				<div class="image-container square" style="background-image:url(<?php 
+				if($jugador->avatar){
+				echo  Yii::app()->request->baseUrl."/".$jugador->avatar[0]->imagen_data()["url"];
+				}else{
+				echo site_url()."/wp-content/themes/news-maxx/img/avatar-jugador.svg";
+				}
+				?>);"></div>
 
               <!-- <img src="" alt=""> -->
-			<label><span><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
+			  
+			 <!-- <span class="escudito" ><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span>!-->
+			  
+			<label><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
 
             </div>
 			</a>
@@ -263,13 +210,15 @@ global $kopa_setting;
             </div>
 
 
-            <div class="jugadores-container-busqueda" >
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 jugadores-container-busqueda" >
               <div class="label-busqueda">
 
                 <select class="menu-busqueda" name="">
-                  <option value="">Alfabeto</option>
-                  <option value="">Popularidad</option>
-                  <option value="">Por campeonato</option>
+				
+                  <option value="0" disabled selected >Ordenar...</option>
+                  <option value="1">Alfabético</option>
+                  <option value="2">Popularidad</option>
+                  <!--<option value="3">Por campeonato</option>!-->
 
                 </select>
                 <!-- <nav class="menu-busqueda">
@@ -280,16 +229,32 @@ global $kopa_setting;
                   </ul>
                 </nav> -->
 
-                <p>Busqueda avanzada</p>
+                <input placeholder="Buscar" onkeyup="filterJugadores()"/>
               </div>
-              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="margin-top:20px;padding-left:0;padding-right:0;">
+              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 listado-jugadores" style="margin-top:20px;padding-left:0;padding-right:0;">
 
 				<?php $even=true;
 						$auxE=0;
 					?>
               <?php foreach($puesto as $jugador){ ?>
-				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 <?php
+				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 jugador-node <?php
 				if($auxE==0){echo " left-side";}else{ echo " right-side";}
+				?>" nombre="<?php echo $jugador->nombre." ".$jugador->apellido; ?>"  data-voto="<?php
+					$the_slug = 'jugador-'.$jugador->id;
+					$args = array(
+					  'name'        => $the_slug
+					);
+					$my_posts = get_posts($args);
+					if( $my_posts ){
+						$auxV= get_post_meta($my_posts[0]->ID,"rating",true);
+						if($auxV){
+							echo $auxV;
+						}else{
+							echo "0";
+						}
+					}else{
+						echo "0";
+					}
 				?>">
 				<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
                 <p class=" resultado <?php
@@ -315,7 +280,9 @@ global $kopa_setting;
           </div>
 
           <?php }  ?>
-        </div>
+       
+			</div>
+	   </div>
 
       </div>
 

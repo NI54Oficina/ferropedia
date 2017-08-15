@@ -57,7 +57,7 @@ $footer_sidebar[3] = ($kopa_setting) ? $sidebars[$kopa_position[($total-1)]] : '
 
 
 
-      <h1> LA FERROPEDIA <br> <span>CLUB FERRO CARRIL OESTE</span></h1>
+      <h1>LaFerropedia <br></h1>
       <p>Seguinos</p>
 
       <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>

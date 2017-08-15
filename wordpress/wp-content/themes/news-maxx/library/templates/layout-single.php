@@ -80,132 +80,7 @@
 <div class="wrapper clearfix">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-post-template main-section trio-cuna-cajon">
 
-  <style media="screen">
-    .custom-post-template .nombre-categoria{
-      color:#00b643;
-      border-bottom: 2px solid #00b643;
-      padding: 5px 0;
-      font-family: 'Roboto-regular';
-      font-size: 1.2em;
-      margin: 30px 0;
-    }
-
-    .custom-post-template .subtitulo{
-      color:#00b643;
-      font-family: 'Condensed-regular';
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
-
-    .custom-post-template h1{
-      color:black;
-      font-size: 3em;
-      font-family: 'Condensed-bold-italic';
-      margin: 20px 0 40px 0;
-    }
-
-    .custom-post-template .thumbnail-container{
-      background-image: repeating-linear-gradient( -45deg,   #e4e4e4,   #e8e8e8 5px,   #dcdcdc 5px,   #dcdcdc 10px );
-      position: relative;
-      min-height: 500px;
-      overflow: hidden;
-      border: 2px solid black;
-	  text-align:center;
-    }
-
-    .custom-post-template .thumbnail-container img{
-      /*position: absolute;*/
-      left: 0;
-      right: 0;
-      margin:auto;
-    }
-
-    .custom-post-template .post-content-text{
-      color:#5c585d;
-      font-family: 'Roboto-regular';
-	  font-size:1.2em;
-    }
-
-    .custom-post-template .post-left-colum > div{
-      padding: 20px 0;
-    }
-    .custom-post-template .post-left-colum .fuente img{
-      max-width: 30px;
-    }
-
-    .custom-post-template .post-left-colum .fuente p{
-      color:#006443;
-      font-family: 'Condensed-bold-italic';
-    }
-
-    .custom-post-template .post-left-colum p.title-left-colum{
-      border: 1px solid black;
-      padding: 10px;
-      font-family: 'Condensed-bold-italic';
-      color:black;
-      font-size: 1.2em;
-    }
-
-    .custom-post-template .post-left-colum .tags label a {
-      color:#a43c93;
-      font-size: 'Roboto-regular';
-      display: inline;
-    }
-
-    .custom-post-template .post-left-colum .related p.relacionados{
-      color:#a43c93;
-      font-size: 'Roboto-regular';
-      border-bottom: 1px solid #5c585d;
-    }
-
-      .custom-post-template .post-left-colum .related p.relacionados:last-child{
-        border: none;
-      }
-
-    .custom-post-template .post-left-colum .related p.relacionados span{
-      font-size: .8em;
-    }
-
-    .custom-post-template .widget{
-      padding: 50px 20px 0 20px;
-    }
-
-    .custom-post-template .thumbnail-title{
-      padding: 10px 0;
-    }
-
-    .custom-post-template .thumbnail-title p{
-      color:black;
-      font-family: 'Condensed-bold-italic';
-      font-size: 1.1em;
-    }
-	
-	.gallery-caption{
-		width:100%; background-color:black;color:white;		
-		padding:10px;
-		margin-top:5px;
-	}
-	.owl-wrapper-outer{
-		padding-left:0;		
-	}
-	
-	.owl-carousel .owl-wrapper {
-  display: table !important;
-}
-.owl-carousel .owl-item {
-  display: table-cell;
-  float: none;
-  vertical-align: center;
-  padding-bottom:20px;
-}
-
-.gallery-caption{position:absolute;bottom:-20px;}
-.gallery-item{margin:0;}
-
-.gallery-icon{padding-bottom:20px;padding-top:10px;}
-
-  </style>
-
+ <?php include("style-inner-slider.php"); ?>
   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
 
 
@@ -231,7 +106,7 @@
 		<p><?php echo get_the_date(); ?></p>
 		<p>&#9652;</p>
 		<p><?php $count_key = 'wpb_post_views_count';
-    $count = get_post_meta(get_the_ID(), $count_key, true); echo $count; ?></p>
+    $count = get_post_meta(get_the_ID(), $count_key, true); echo $count; ?> visitas</p>
 		</div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">
           <?php the_post_thumbnail(array(1000, 520)); ?>
@@ -305,7 +180,14 @@
 
 
           <div class="share">
-            <p  class="title-left-colum">COMPARTIR</p>
+            <div  class="title-left-colum">COMPARTIR <div class="links-sociales" style="padding:0;" >
+			
+                  <i class="fa fa-facebook" aria-hidden="true" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>','','width=500,height=400')" ></i>
+                  <i class="fa fa-twitter" aria-hidden="true" onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo wp_get_shortlink(); ?>&amp;original_referer=<?php echo wp_get_shortlink(); ?>&text=<?php echo get_the_title(); ?>','','width=500,height=400')"></i>
+
+                </div>
+                </div>
+			
 
           </div>
         </div>
@@ -315,7 +197,7 @@
 
 
           <?php if(strlen(get_field('fuente'))!=0){ ?>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#eff0ef;box-shadow: 0px 2px 5px 3px rgba(173,173,173,1);">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#eff0ef;box-shadow: 0px 2px 5px 3px rgba(173,173,173,1);margin-top:30px;">
 
 
           <div class="fuente">
@@ -324,7 +206,7 @@
             </div>
 
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding:0;">
-              <p style="font-size:0.8em;color:#888888;margin:0; font-family:'Roboto-bold';">Fuente</p>
+              <p style="font-size:0.8em;color:#888888;margin:0; font-family:'Roboto-bold';">Fuentes</p>
               <p style="font-size:0.8em; color:#888888;margin:0"><?php echo get_field('fuente'); ?></p>
             </div>
 
@@ -369,7 +251,7 @@
               width: auto;
             }
 
-            .container-move-entradas p{
+            .container-move-entradas h6{
               font-family: 'Condensed-bold-italic';
               color: black;
               font-size: 1.4em;
@@ -378,7 +260,7 @@
 
             }
 
-            .container-move-entradas p span{
+            .container-move-entradas h6 span{
               font-family: 'Roboto-regular';
               color:#A43C93;
               font-size: 10px;;
@@ -410,10 +292,10 @@
             <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 linea-divisoria"></div>
 
 
-            <p class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
+            <a href="<?php echo get_permalink($previd); ?>"><h6 class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></h6></a>
 
 
-            <p class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
+             <a href="<?php echo get_permalink($nextid); ?>"><h6 class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></h6></a>
 
 
 

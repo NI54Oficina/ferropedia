@@ -23,7 +23,14 @@
                         </h6>
                         <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i><?php echo the_time(get_option('date_format')); ?></span>
                         <span class="entry-meta pull-left">&nbsp;/&nbsp;</span>
-                        <span class="entry-author pull-left"><?php _e('By ', 'newsmaxx');?><?php the_author_posts_link(); ?></span>
+                        <span class="entry-author pull-left"><?php _e('Por ', 'newsmaxx');?><?php
+						$autor=get_field("name_author");
+						if($autor!=""){
+							echo $autor;
+						}else{
+							the_author_posts_link();
+						}
+						 ?></span>
                     </header>
                     <p><?php the_excerpt(); ?></p>
                     <?php if ( 'show' === get_option( 'kopa_theme_options_blog_readmore_status', 'show' ) ) : ?>
@@ -38,7 +45,7 @@
         </li>
         <?php endwhile; ?>
     <?php else: ?>
-        <blockquote class="kopa-blockquote-1">Nothing Found...</blockquote>
+        <blockquote class="kopa-blockquote-1">No hay resultados</blockquote>
     <?php endif; ?>
 </ul>
 <div class="pagination clearfix">
