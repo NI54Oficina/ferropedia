@@ -31,9 +31,15 @@ $secciones= ["jugador"];
 		<?php
 	}
 	?>
+	<div style="display:inline-block;width:200px;" class="btn-nav">
+	<h3 style="text-transform:capitalize">Directores Técnicos</h3>
+		<a href="<?php echo home_url().'/'."staff".'/create'; ?>" target="_blank">Crear</a>/
+		<a href="<?php echo home_url().'/'."staff".'/admin'; ?>" target="_blank">Administrar</a>
+		<hr>
+	</div>
 <div style="display:inline-block;width:200px;" class="btn-nav">
 		<h3>Datos Especiales</h3>
-		<a href="<?php echo home_url().'/'."dataExtra".'/proximo'; ?>" >Editar Próximo Partido</a>
+		<a href="<?php echo home_url().'/'."dataExtra".'/proximo'; ?>" >Editar Próximo Partido</a>/
 		<a href="<?php echo home_url().'/'."dataExtra".'/resultados'; ?>" >Editar Estadísticas totales</a>
 		<hr>
 </div>

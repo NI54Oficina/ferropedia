@@ -127,8 +127,9 @@ class StaffController extends Controller
 		
 		
 		$torneos= DataExtra::model()->findAllByAttributes(array("model"=>"Staff","modelId"=>$id,"titulo"=>"Torneo"));
+		$staff= Staff::model()->findByPk($id);
 		$this->render('torneos',array(
-			'torneos'=>$torneos,
+			'torneos'=>$torneos, "staff"=>$staff
 		));
 	}
 	

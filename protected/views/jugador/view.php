@@ -78,6 +78,8 @@ foreach($campeonatos as $key=>$value){ ?>
 </form>
 <hr>
 
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/jugador/torneos/<?php echo $model->id; ?>">Ver Campañas</a>
+
 
 <?php if(false){ ?>
 <form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/relImagen/create" method="post" target="_blank">

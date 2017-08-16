@@ -236,8 +236,9 @@ class JugadorController extends Controller
 		}*/
 		
 		$torneos= DataExtra::model()->findAllByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Torneo"));
+		$jugador= Jugador::model()->findByPk($id);
 		$this->render('torneos',array(
-			'torneos'=>$torneos,
+			'torneos'=>$torneos,"jugador"=>$jugador
 		));
 	}
 	

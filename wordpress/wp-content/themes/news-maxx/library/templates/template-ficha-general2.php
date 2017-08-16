@@ -1,17 +1,13 @@
 <?php
 //$puestos= $GLOBALS["puestos"];
-$puestos= array();
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"arquero")));
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"defensor")));
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista")));
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"delantero")));
 
+$directores= Staff::model()->findAll();
 			
 $query = new WP_Query( array(
     'meta_key' => 'wpb_post_views_count',
     'orderby' => 'meta_value_num',
     'posts_per_page' => 4,
-	"category_name"=> "jugador"
+	"category_name"=> "Director Técnico"
 ) );
 $visitados= array();
 
@@ -20,8 +16,8 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		$jId=  $query->post->post_name;
-		$jId= str_replace("jugador-","",$jId);
-		array_push($visitados,Jugador::model()->findByPk($jId));
+		$jId= str_replace("director-tecnico-","",$jId);
+		array_push($visitados,Staff::model()->findByPk($jId));
 	}
 
 	// Restore original Post Data
@@ -43,7 +39,7 @@ $criteria->limit = 4;
 $criteria->order = 'id DESC';
 $criteria->select = "*";
 
-$ingresos= Jugador::model()->findAll($criteria);
+$ingresos= Staff::model()->findAll($criteria);
 
 //$votados= Jugador::model()->findAll($criteria);
 $votados= array();
@@ -59,7 +55,7 @@ foreach($auxVotados as $v){
 	//echo $v->meta_id;
 	//echo "<br>";
 	$jId=  get_post($v->post_id)->post_name;
-	$jId= str_replace("jugador-","",$jId);
+	$jId= str_replace("directo-tecnico-","",$jId);
 	array_push($votados,Jugador::model()->findByPk($jId));
 }
 
@@ -92,7 +88,7 @@ global $kopa_setting;
           <?php //the_content(); ?>
         </div>
 		<div class="bajada-jugador" >
-	<p ><?ph the_content(); ?></p>
+	<p ><?php the_content(); ?></p>
     </div>
 		</div>
 
@@ -102,20 +98,16 @@ global $kopa_setting;
        
 	   <div class="menu-2 menu-dinamico" style="padding-top:30px; padding-bottom:40px;">
           <nav class="menu-jugadores">
-			<div><p class="selected">Arqueros</p></div>
-            <div><p>Defensores</p></div>
-            <div><p>Mediocampistas</p></div>
-            <div><p>Delanteros</p></div>
-			
-			
-			<a style="float:right;display:inline-block;padding:5px;border:solid green 1px;right:30px; top:30px;color:white;" href="<?php echo home_url(); ?>/ficha-jugador">Directores Técnicos</a>
+			<div><p class="selected">Directores Técnicos</p></div>
 
+			<a style="float:right;display:inline-block;padding:5px;border:solid green 1px;right:30px; top:30px;color:white;" href="<?php echo home_url(); ?>/ficha-jugador">Jugadores</a>
           </nav>
-
+			
+			
 
         </div>
 
-
+		
 
 
         <div class="jugadores-content-one jugadores-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
@@ -141,7 +133,7 @@ global $kopa_setting;
 
                 <div class="contenido-1 contenido-dinamico">
 					<?php $auxPos=1; foreach($visitados as $jugador){ ?>
-					<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
+					<a href="<?php echo home_url(); ?>/director-tecnico-<?php echo $jugador->id; ?>">
 					<p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p></a>
 					<?php } ?>
 
@@ -149,7 +141,7 @@ global $kopa_setting;
 
                 <div class="contenido-1 contenido-dinamico">
                   <?php $auxPos=1; foreach($votados as $jugador){ ?>
-				  <a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
+				  <a href="<?php echo home_url(); ?>/director-tecnico<?php echo $jugador->id; ?>">
                   <p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
 				  </a>
 				  <?php } ?>
@@ -158,7 +150,7 @@ global $kopa_setting;
 
                 <div class="contenido-1 contenido-dinamico">
 					<?php $auxPos=1; foreach($ingresos as $jugador){ ?>
-					<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
+					<a href="<?php echo home_url(); ?>/director-tecnico-<?php echo $jugador->id; ?>">
 					<p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
 					</a>
 					<?php } ?>
@@ -170,7 +162,7 @@ global $kopa_setting;
           </div>
 
 			<div class="jugadores-grillas col-lg-7 col-md-7 col-sm-7 col-xs-12">
-		  <?php foreach($puestos as $puesto){ ?>
+		 
 
           <div class="jugadores-muchosjugadores contenido-dinamico col-lg-12 col-md-12 col-sm-12 col-xs-12" >
 
@@ -180,8 +172,8 @@ global $kopa_setting;
 
             <?php
 			$auxJ=0;
-			foreach($puesto as $jugador){ ?>
-			<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
+			foreach($directores as $jugador){ ?>
+			<a href="<?php echo home_url(); ?>/director-tecnico-<?php echo $jugador->id; ?>">
             <div class="jugadores-j">
 				<div class="image-container square" style="background-image:url(<?php 
 				if($jugador->avatar){
@@ -237,11 +229,11 @@ global $kopa_setting;
 				<?php $even=true;
 						$auxE=0;
 					?>
-              <?php foreach($puesto as $jugador){ ?>
+              <?php foreach($directores as $jugador){ ?>
 				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 jugador-node <?php
 				if($auxE==0){echo " left-side";}else{ echo " right-side";}
 				?>" nombre="<?php echo $jugador->nombre." ".$jugador->apellido; ?>"  data-voto="<?php
-					$the_slug = 'jugador-'.$jugador->id;
+					$the_slug = 'director-tecnico-'.$jugador->id;
 					$args = array(
 					  'name'        => $the_slug
 					);
@@ -257,7 +249,7 @@ global $kopa_setting;
 						echo "0";
 					}
 				?>">
-				<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
+				<a href="<?php echo home_url(); ?>/director-tecnico-<?php echo $jugador->id; ?>">
                 <p class=" resultado <?php
 			  /*if($even){ if($auxE==0){echo "even";}else{echo "odd";}}
 				if(!$even){ if($auxE==0){echo "odd";}else{echo "even";}}
@@ -280,7 +272,7 @@ global $kopa_setting;
             </div>
           </div>
 
-          <?php }  ?>
+         
        
 			</div>
 	   </div>

@@ -206,7 +206,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 	<?php
 	if(is_user_logged_in()){ ?>
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;height:0;position:relative;top:-115px;">
-	<a href="<?php echo home_url(); ?>/jugador/<?php echo $model->id; ?>"><h4 style="color:white;padding:20px;background-color:#a43c93;display:inline-block;">Editar Director Técnico</h4></a>
+	<a href="<?php echo home_url(); ?>/staff/<?php echo $model->id; ?>"><h4 style="color:white;padding:20px;background-color:#a43c93;display:inline-block;">Editar Director Técnico</h4></a>
 	</div>
 	<?php } ?>
 

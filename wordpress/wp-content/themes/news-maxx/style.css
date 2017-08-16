@@ -5715,7 +5715,7 @@ body {
 	background-color:transparent;
   }
 
-  .page-template-template-ficha-general .page-content-area .wrapper{
+  .page-template-template-ficha-general .page-content-area .wrapper,.page-template-template-ficha-general2 .page-content-area .wrapper{
 	padding:60px;
   }
 

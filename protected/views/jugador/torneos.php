@@ -15,8 +15,8 @@
 </style>
 
 
-<h1>Administrar notas</h1>
-
+<h1>Administrar torneos de <span class="sub-verde"><?php echo $jugador->nombre." ".$jugador->apellido; ?></span></h1>
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/jugador/<?php echo $jugador->id; ?>">Volver</a>
 
 <table id="tablePais" style="width:100%;">
 <thead> <tr>

@@ -35,6 +35,10 @@ function dataFerroTest(){
 		<?php
 	}
 	?>
+	<h3 style="text-transform:capitalize">Directores Técnicos</h3>
+		<a href="<?php echo home_url().'/'."staff".'/create'; ?>" target="_blank">Crear</a>
+		<a href="<?php echo home_url().'/'."staff".'/admin'; ?>" target="_blank">Administrar</a>
+		<hr>
 	<h3>Datos Especiales</h3>
 		<a href="<?php echo home_url().'/'."dataExtra".'/proximo'; ?>" >Editar Próximo Partido</a>
 		<a href="<?php echo home_url().'/'."dataExtra".'/resultados'; ?>" >Editar Estadísticas totales</a>

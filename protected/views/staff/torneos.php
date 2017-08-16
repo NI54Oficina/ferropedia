@@ -15,15 +15,20 @@
 </style>
 
 
-<h1>Administrar notas</h1>
+<h1>Administrar torneos de <span class="sub-verde"><?php echo $staff->nombre." ".$staff->apellido; ?></span></h1>
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/staff/<?php echo $staff->id; ?>">Volver</a>
 
 
 <table id="tablePais" style="width:100%;">
 <thead> <tr>
-            <th style="min-width:50px;">Año</th>
-            <th style="min-width:50px;">Torneo</th>
-            <th style="min-width:50px;">Partidos Jugados</th>
-            <th style="min-width:50px;">Coles convertidos</th>
+            <th style="min-width:50px;">Temporada</th>
+            <th style="min-width:50px;">División</th>
+            <th style="min-width:50px;">Pj</th>
+            <th style="min-width:50px;">Pg</th>
+            <th style="min-width:50px;">Pe</th>
+            <th style="min-width:50px;">Pp</th>
+            <th style="min-width:50px;">Gf</th>
+            <th style="min-width:50px;">Gc</th>
             <th style="min-width:70px;"></th>
         </tr>
 	</thead>
@@ -38,16 +43,24 @@ foreach($torneos as $notas){
 		echo " <td>"." "."</td>";
 		echo " <td>".$dataT[1]."</td>";
 		echo " <td>".$dataT[2]."</td>";
+		echo " <td>".$dataT[3]."</td>";
+		echo " <td>".$dataT[4]."</td>";
+		echo " <td>".$dataT[5]."</td>";
+		echo " <td>".$dataT[6]."</td>";
 	}else{
 		echo " <td>".$dataT[0]."</td>";
 		echo " <td>".$dataT[1]."</td>";
 		echo " <td>".$dataT[2]."</td>";
 		echo " <td>".$dataT[3]."</td>";
+		echo " <td>".$dataT[4]."</td>";
+		echo " <td>".$dataT[5]."</td>";
+		echo " <td>".$dataT[6]."</td>";
+		echo " <td>".$dataT[7]."</td>";
 	}
 	
 	echo " <td class='btn-tablas'>";
 	
-		echo "<a href='".Yii::app()->getBaseUrl(true)."/jugador/editTorneo/".$notas->id."'><span class='glyphicon glyphicon-pencil'></span></a>";
+		echo "<a href='".Yii::app()->getBaseUrl(true)."/staff/editTorneo/".$notas->id."'><span class='glyphicon glyphicon-pencil'></span></a>";
 			
 			if(strtolower($dataT[0])!="total"){
 			echo "<p class='delete' href='".Yii::app()->getBaseUrl(true)."/dataExtra/delete/".$notas->id."'><span class='glyphicon glyphicon-trash'></span> </p>";

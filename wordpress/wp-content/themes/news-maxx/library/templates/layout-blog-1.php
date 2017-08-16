@@ -230,29 +230,40 @@ $criteria->select = "*";
       <!-- dt -->
 
 
-	<?php if(true){ ?>
-      <?php for($i=0; $i<2; $i++){ ?>
+	<?php if(true){ 
+	
+		$criteria = new CDbCriteria;
+		$criteria->limit = 2;
+		
+		$criteria->order = 'RAND()';
+		$criteria->select = "*";
 
+		$dts= Staff::model()->findAll($criteria);
+		foreach($dts as $dt){
+	?>
 
+		
+		 <a href="<?php echo home_url(); ?>/director-tecnico-<?php echo $dt->id; ?>">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
-        <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png);">
+        <div class="imagen-jugador-violeta rectangle" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);">
 
 
 
           <div class="capa-violeta"></div>
-          <label>Nombre deL Dt</label>
+          <label><?php echo $dt->nombre." ".$dt->apellido; ?></label>
         </div>
 		</div>
       </div>
+	  </a>
 
       <?php } ?>
-      <a href="<?php echo home_url(); ?>/ficha-jugador/">
+      <a href="<?php echo home_url(); ?>/director-tecnico/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono_jugador_grande.svg);">
 
-            <label>+ Dts</label>
+            <label>+ Directores Técnicos</label>
         </div>
 		</div>
       </div>
