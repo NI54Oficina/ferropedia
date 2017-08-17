@@ -114,8 +114,21 @@ class StaffController extends Controller
 		if(isset($_POST['Staff']))
 		{
 			$model->attributes=$_POST['Staff'];
-			if($model->save())
+			if($model->save()){
+				wp_insert_post(array(
+					"post_title"=>$model->nombre." ".$model->apellido,
+					"post_name"=>"director-tecnico-".$model->id,
+					"post_category"=>array(get_cat_ID( 'director-tecnico' )),
+					"meta_input"=>array(
+						"_wp_page_template" => "template-ficha-tecnica3.php"
+						)
+				));
+
+				
 				$this->redirect(array('view','id'=>$model->id));
+				
+			}
+				
 		}
 
 		$this->render('create',array(
@@ -174,8 +187,40 @@ class StaffController extends Controller
 		if(isset($_POST['Staff']))
 		{
 			$model->attributes=$_POST['Staff'];
-			if($model->save())
+			if($model->save()){
+				
+				$the_slug = 'director-tecnico-'.$model->id;
+				$queried_post = get_page_by_path($the_slug,OBJECT,'post');
+				
+				if( $queried_post === NULL) {
+					wp_insert_post(array(
+						"post_title"=>$model->nombre." ".$model->apellido,
+						"post_name"=>"director-tecnico-".$model->id,
+						"post_status" => "publish",
+						"post_category"=>array(get_cat_ID( 'director-tecnico' )),
+						"meta_input"=>array(
+							"_wp_page_template" => "template-ficha-tecnica3.php"
+							)
+					));
+
+				}else{
+					
+					 $my_post = array(
+						  'ID'           => $queried_post->ID,
+						  "post_title"=>$model->nombre." ".$model->apellido,
+							"post_name"=>"director-tecnico-".$model->id,
+							"post_status" => "publish",
+							"post_type"=>"director-tecnico",
+							"post_category"=>array(get_cat_ID( 'director-tecnico' ))
+					  );
+					  wp_update_post( $my_post );
+					  update_post_meta( $queried_post->ID, '_wp_page_template', 'template-ficha-tecnica3.php' );
+				}
+				
+				
+
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('update',array(

@@ -28,7 +28,7 @@ class JugadorController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"listar","deleteAll","puestos"),
+				'actions'=>array('index','view',"listar","deleteAll","puestos","sacarSab"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -304,7 +304,7 @@ class JugadorController extends Controller
 			if($model->save()){
 				wp_insert_post(array(
 					"post_title"=>$model->nombre." ".$model->apellido,
-					"post_name"=>"id".$model->id,
+					"post_name"=>"jugador-".$model->id,
 					"post_category"=>array(get_cat_ID( 'jugador' )),
 					"meta_input"=>array(
 						"_wp_page_template" => "template-ficha-tecnica.php"
@@ -448,6 +448,7 @@ class JugadorController extends Controller
 	}
 	
 	public function actionDeleteAll(){
+		exit();
 		set_time_limit (100000);
 		$jugadores= Jugador::model()->findAll();
 		foreach($jugadores as $jugador){
@@ -468,5 +469,19 @@ class JugadorController extends Controller
 		}
 	}
 	
-	
+	public function actionSacarSab(){
+		set_time_limit (100000);
+		$jugadores= Jugador::model()->findAll();
+		foreach($jugadores as $jugador){
+			$jugador->data;
+			foreach($jugador->data as $data){
+				if(strpos($data->titulo,"¿Sab")!==false){
+					//echo $data->titulo;
+					//echo "<br>";
+					$data->titulo= "Más sobre ".$jugador->nombre." ".$jugador->apellido;
+					$data->save();
+				}
+			}
+		}
+	}
 }

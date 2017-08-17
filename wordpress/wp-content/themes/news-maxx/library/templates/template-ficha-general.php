@@ -92,7 +92,7 @@ global $kopa_setting;
           <?php //the_content(); ?>
         </div>
 		<div class="bajada-jugador" >
-	<p ><?ph the_content(); ?></p>
+	<p ><?php the_content(); ?></p>
     </div>
 		</div>
 
@@ -108,7 +108,7 @@ global $kopa_setting;
             <div><p>Delanteros</p></div>
 			
 			
-			<a style="float:right;display:inline-block;padding:5px;border:solid green 1px;right:30px; top:30px;color:white;" href="<?php echo home_url(); ?>/ficha-jugador">Directores Técnicos</a>
+			<a style="float:right;display:inline-block;padding:5px;border:solid green 1px;right:30px; top:30px;color:white;" href="<?php echo home_url(); ?>/director-tecnico">Directores Técnicos</a>
 
           </nav>
 

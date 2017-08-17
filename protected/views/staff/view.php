@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Director Tecnico</h1> <?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/staff/update/<?php echo $model->id; ?>">Editar</a> / <a href="<?php echo Yii::app()->request->baseUrl; ?>/staff-<?php echo $model->id; ?>">Ver en Ferropedia</a><br><br><?php } ?>
+<h1>Director Tecnico</h1> <?php if(is_user_logged_in()){ ?><a href="<?php echo Yii::app()->request->baseUrl; ?>/staff/update/<?php echo $model->id; ?>">Editar</a> / <a href="<?php echo Yii::app()->request->baseUrl; ?>/director-tecnico-<?php echo $model->id; ?>">Ver en Ferropedia</a><br><br><?php } ?>
 <?php if(isset($model->avatar[0])){ ?>
 <img src="<?php 
 echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>" style="max-width:200px;" />

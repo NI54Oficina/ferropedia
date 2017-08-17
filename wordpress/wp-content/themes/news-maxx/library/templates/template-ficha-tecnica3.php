@@ -329,6 +329,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 
 			</div>
+			<?php if(false){?>
 		<p class="col-lg-12 texto-fuente content-shadow">Fuente Hank ham hock tenderloin spare ribs, meatloaf flank pork
               chop biltong. Cow short ribs corned beef, meatball landjaeger ham sausage
               ham hock leberkas pork chop tongue bacon tenderloin alcatra. Kevin picanha
@@ -337,7 +338,9 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
               Turducken cow pork drumstick filet mignon chuck andouille ribeye tri-tip
               pork belly. Tenderloin ham hock venison kielbasa jowl fatback.
           </p>
+		  <?php  } ?>
         </div>
+			
 
 
 		<?php if(false){ ?>
