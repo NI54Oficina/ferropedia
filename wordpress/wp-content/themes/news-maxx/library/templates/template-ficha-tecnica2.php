@@ -156,7 +156,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
 		  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px 10px;background-color:rgba(32, 32, 31,0.5)">
-			
+
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 info-nacimiento" style="border-right: 2px solid rgba(255,255,255,0.4)">
             <p><span>Fecha y lugar de nacimiento</span><br>
               <?php echo $model->nacimiento; ?> <?php if(isset($model->ciudad_natal)&&$model->ciudad_natal!=""){ ?>| <?php echo $model->ciudad_natal;  }?>
@@ -174,7 +174,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:90px;padding-left:20px;padding-right:20px;">
 			<?php if($model->avatar){ ?>
-			<div class="jugador-principal square" style="background-image:url(<?php 
+			<div class="jugador-principal square" style="background-image:url(<?php
 echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>);"></div>
 			<?php }else{ ?>
 			<div class="jugador-principal square" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
@@ -184,7 +184,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 			<div class="compartir-jugador">
 			<p style="">Compartir</p>
 			<div class="links-sociales" >
-			
+
                   <i class="fa fa-facebook" aria-hidden="true" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>','','width=500,height=400')" ></i>
                   <i class="fa fa-twitter" aria-hidden="true" onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo get_permalink(); ?>&amp;original_referer=<?php echo get_permalink(); ?>&text=Mirá la ficha de <?php echo $model->nombre." ".$model->apellido; ?> en LaFerropedia','','width=500,height=400')"></i>
 
@@ -235,7 +235,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
          -->
         </div>
 		</div>
-		
+
 		<?php } ?>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -244,10 +244,10 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
 		<?php echo do_shortcode("[rate]") ?>
 		</div>
-		        
+
 		</div>
-	
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
+
+		<div	 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shadow" style="padding:0;" >
 			  <h2>Campañas de <?php echo $model->nombre; ?> <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
 
@@ -325,7 +325,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
           </p>
 		  <?php } ?>
         </div>
-			
+
 
 
 		<?php if(false){ ?>
@@ -354,7 +354,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
           <iframe src="https://www.youtube.com/embed/LoETC4jtASI" frameborder="0" allowfullscreen></iframe>
         </div>
 		<?php } ?>
-		
+
 		<?php if($model->imagenes){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-galeria contenido-interno-tecnica">
           <h2>Galería de fotos</h2>
@@ -391,7 +391,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 			      <div id="demo-test-gallery" class="demo-gallery col-lg-12 col-md-12 col-sm-12 col-xs-12" data-pswp-uid="1">
 
 							<?php for($i=0; $i<count($model->imagenes); $i++){   ?>
-							
+
 
 								<div style="padding:0 2.5px 5px 2.5px;" class="<?php	if($i==0){ echo "col-lg-6 col-md-6 col-sm-6 col-xs-6 square"; }else{ echo "col-lg-3 col-md-3 col-sm-3 col-xs-3 square";} ?> container-img-gallery">
 			        <a href="<?php echo home_url(); ?>/<?php echo $model->imagenes[$i]->imagen_data['url']; ?>" data-size="1600x1600" data-med="<?php echo home_url(); ?>/<?php echo $model->imagenes[$i]->imagen_data['url']; ?>" data-med-size="1024x1024" data-author="Nombre autor" class="demo-gallery__img--main">
@@ -800,7 +800,7 @@ $criteria->select = "*";
 		<a href="<?php echo home_url(); ?>/jugador-<?php echo $jugador->id; ?>">
         <div class="jugador-relacionado">
 		<?php if($jugador->avatar){ ?>
-		<div class="avatar-relacionado" style="background-image:url(<?php 
+		<div class="avatar-relacionado" style="background-image:url(<?php
 echo  Yii::app()->request->baseUrl."/".$jugador->avatar[0]->imagen_data()["url"]; ?>);" ></div>
 		<?php }else{ ?>
         <div class="avatar-relacionado placeholder" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);" ></div>

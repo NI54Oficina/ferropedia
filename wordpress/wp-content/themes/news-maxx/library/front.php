@@ -949,10 +949,10 @@ function kopa_the_headline()
         }else{
             $posts = new WP_Query( 'posts_per_page='.$limit."&category__not_in=".get_cat_ID( 'jugador' ));
         }*/
-		
+
 		 $title = get_option('kopa_theme_options_topnew_title', __('Últimas actualizaciones', 'newsmaxx'));
-		
-        
+
+
         $args = array(
             'posts_per_page'      => $limit
         );
@@ -970,7 +970,7 @@ function kopa_the_headline()
 		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'Ferropedistas' ),get_cat_ID( 'Evento' ));
         $posts = new WP_Query( $args );
         $index = 1;
-		
+
         ?>
             <div class="kp-headline-wrapper clearfix">
                 <span class="kp-headline-title"><?php echo $prefix; ?></span>
@@ -1033,9 +1033,11 @@ function kopa_the_topnew()
 
     <div class="widget kopa-nothumb-carousel-widget loading">
          <div class="links-sociales" style="float:left;color:#a43c93;position:absolute;padding-left:20px;">
-                  <li> <i class="fa fa-facebook" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                  <li> <a href="https://www.facebook.com//LaFerropedia"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                  <li> <a href="https://twitter.com/laferropedia"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                  <li> <a href="https://www.youtube.com/LaFerropedia"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                  <li> <a href="https://www.instagram.com/Laferropedia/"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+
                 </div><h4 class="widget-title"><?php echo $title; ?></h4>
         <div class="owl-carousel kopa-nothumb-carousel loading">
 			<?php //$query = new WP_Query( array( 'category__not_in' => array( get_cat_ID( 'jugador' ) ) ) ); ?>
@@ -1099,10 +1101,10 @@ function kopa_the_topnew()
                         <span class="triangle-1st"></span>
                         <span class="triangle-2nd"></span>
                         <div class="widget widget_awesomeweatherwidget masonry-brick">
-							<?php 
+							<?php
 							$proxPartido= DataExtra::model()->findByAttributes(array("titulo"=>"ProximoPartido"));
 							$proxPartido= explode(";",$proxPartido->texto);
-							
+
 							?>
                           <h1><?php echo $proxPartido[0]; ?></h1>
                           <p><?php echo $proxPartido[1]; ?><br>

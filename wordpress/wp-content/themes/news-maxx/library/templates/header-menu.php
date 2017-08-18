@@ -35,15 +35,19 @@
             <div class="wrapper clearfix">
               <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:29%;">
 
-                <li title="Con la Verde" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/con-la-verde.svg" alt=""><p>Con la Verde</p></a></li>
-                <li title="Museo de la Emoción Verdolaga" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/museo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/museo.svg" alt=""><p>Museo de la Emoción Verdolaga</p></a></li>
-                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/category/cuna-cajon/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cuna-cajon.svg" alt=""><p>De la Cuna hasta el Cajón</p></a></li>
-                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mudo/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/rincon.svg" alt=""><p>Rincón del Mudo</p></a></li>
-				<li title="Sobre LaFerropedia" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/sobre-ferropedia.svg" alt=""><p>Sobre LaFerropedia</p></a></li>
+                <li title="Con la Verde" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img  src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/con-la-verde.svg" alt=""><p>Con la Verde</p></a></li>
+                <li title="Museo de la Emoción Verdolaga" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/museo/"><img class="menu-down" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/museo.svg" alt=""><p>Museo de la <br> Emoción Verdolaga</p></a></li>
+                <li title="De la Cuna hasta el Cajón" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/category/cuna-cajon/"><img class="menu-down" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cuna-cajon.svg" alt=""><p>De la Cuna <br>hasta el Cajón</p></a></li>
+                <li title="Rincón del mudo" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/rincon-mudo/"><img class="menu-down" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/rincon.svg" alt=""><p>Rincón <br> del Mudo</p></a></li>
+				<li class="menu-down"  title="Sobre LaFerropedia" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/equipo-laferropedia/"><img class="menu-down" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/sobre-ferropedia.svg" alt=""><p>Sobre <br> LaFerropedia</p></a></li>
                 <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://localhost/ferropedia/equipo-laferropedia/"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-rinconmudo-blanco.svg" alt=""></a></li> -->
               </ul>
 
-
+              <style media="screen">
+                .menu-down{
+                  margin-top: -10px;
+                }
+              </style>
 
 
                 <?php

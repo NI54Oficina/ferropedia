@@ -25,7 +25,7 @@ global $kopa_setting;
 </div>
 
   </div>
-  
+
    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:80px 100px; background-image:url(<?php echo get_template_directory_uri(); ?>/img/tile_home.png);">
 
 
@@ -51,7 +51,7 @@ global $kopa_setting;
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:100px; padding-right:100px;padding-top:40px;">
 
 
-  <p style=" background-color:white; color:#006443; width:100%; border-bottom:4px solid #006443; font-size:2em; padding:10px; font-family: 'Condensed-bold-italic';">Ferropedistas</p>
+  <p style=" background-color:white; color:#006443; width:100%; border-bottom:4px solid #006443; font-size:2em; padding:10px; font-family: 'Condensed-bold-italic';">Equipo</p>
 </div>
 
   <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 container-post-ferropedistas" style="padding:50px 100px; margin-bottom:100px;">
@@ -66,31 +66,31 @@ global $kopa_setting;
           foreach($posts as $post){  ?>
 
 			<div class="col-lg-6 col-md-6 col-sm-4 col-xs-4" style="padding-bottom:60px;">
-				
+
 				<div class="get-post element-f col-lg-6 col-md-6 col-sm-12 col-xs-12 square" style="text-align:center; padding:20px;" id-post="<?php the_ID();?>" >
 				  <div class="" style="height:100%; border:1px solid white; ">
 					  <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" alt="">
 				  </div>
-				  
+
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 square"  style="display:table;">
 				<div style="display: table-cell;vertical-align:bottom;height:100%;padding-bottom:10px;">
 				<p style="margin-top:20px;color:white; font-family:'Condensed-bold-italic'; font-size:2em;"><?php $title= the_title_attribute(array("echo" => 0));
 					$t=split("//", $title);echo $t[0]; ?> <span style="color:#00b643"><?php echo $t[1] ?></span></p>
 					<p  style="color:#7b7b7b; font-family:'Condensed-bold-italic'; font-size:1.3em;"><?php echo get_field('volanta') ?></p>
-					
+
 				</div>
 				</div>
-				
+
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p style="line-height:18px;"><?php echo $post->post_content; ?></p>
 				</div>
             </div>
-			
-			
-			
-			
-			
+
+
+
+
+
 
       <?php }  wp_reset_postdata();   ?>
   </div>
@@ -129,8 +129,8 @@ global $kopa_setting;
 
     }
 
-    
-	
+
+
 	.body-quienessomos li{
       color: white;
       font-family: 'Roboto-regular';
@@ -142,28 +142,28 @@ global $kopa_setting;
 	  list-style:none;
 	  min-height:140px;
     }
-	
+
 	.body-quienessomos ol{
 		padding-left:0;
 	}
-	
+
 	.body-quienessomos ol li::before{
 		color:#55c792;
 		display:block;
-		
+
 		position:absolute;
 		left:40px;
-		
+
 		font-family: Georgia;
 		font-size: 70px;
 		line-height: 60px;
 		padding-top: 4px;
-		
+
 		font-family: 'Roboto-bold';
 		border-bottom: 3px solid #55c792;
-		
+
 	}
-	
+
 	.body-quienessomos ol li:nth-child(1)::before{content:"01";}
 	.body-quienessomos ol li:nth-child(2)::before{content:"02";}
 	.body-quienessomos ol li:nth-child(3)::before{content:"03";}
@@ -194,21 +194,21 @@ global $kopa_setting;
 	.body-quienessomos ol li:nth-child(28)::before{content:"28";}
 	.body-quienessomos ol li:nth-child(29)::before{content:"29";}
 	.body-quienessomos ol li:nth-child(30)::before{content:"30";}
-	
+
 
 
     .body-quienessomos ol li{
 		padding-left:160px;
     }
-	
+
 	.page-content-area{
 		padding-bottom:0;
 	}
-	
+
 
   </style>
 
- 
+
 </div>
 
 
@@ -276,19 +276,19 @@ global $kopa_setting;
     font-family: 'Roboto-regular';
 	font-size:15px;
 	line-height:23px;
-	
+
   }
-  
+
   .body-quienessomos a{
 	  color:inherit;
-	  
+
 		text-decoration:underline !important;
   }
-  
+
   .body-quienessomos a:hover{
 	  color:#F7F7F7;
   }
-  
+
   .body-quienessomos strong{
 	  font-weight:initial;
 	  font-family:'Roboto-bold';

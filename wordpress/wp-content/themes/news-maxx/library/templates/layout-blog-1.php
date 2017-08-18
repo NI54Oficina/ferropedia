@@ -37,8 +37,8 @@
 		$gTexto= explode('/',$general["texto"]);
 	?>
 
-      <h2>Totales<span style="color:#8f8f8f">*</span></h2>
-      <!-- <p>Última actualización: 24 de abril a las 19.00pm</p> -->
+      <h2>Todos los partidos<span style="color:#8f8f8f">*</span></h2>
+
 
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:30px;">
         <p class="tipo-partido">PARTIDOS JUGADOS</p>
@@ -80,7 +80,16 @@
 
 
   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 first-right-box" hid="1">
-    <h2>Historial</h2>
+
+    <style>
+      .first-right-box h2 span{
+        color: #8f8f8f;
+        font-size: 12px;
+        font-family: 'Roboto';
+      }
+    </style>
+
+    <h2>Historial <span> *Última actualización: 24 de abril a las 19.00pm</span></h2>
 
     <?php //$var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales']; ?>
 
@@ -146,7 +155,7 @@
 		<?php $destacado= Jugador::model()->findByPk(26); ?>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left" style="padding:0 15px;">
 
-        
+
 		<div class="avatar-destacado" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
 		<div style="width:100%;text-align:center;">
 		<div class="escudito"></div></div>
@@ -230,11 +239,11 @@ $criteria->select = "*";
       <!-- dt -->
 
 
-	<?php if(true){ 
-	
+	<?php if(true){
+
 		$criteria = new CDbCriteria;
 		$criteria->limit = 2;
-		
+
 		$criteria->order = 'RAND()';
 		$criteria->select = "*";
 
@@ -242,7 +251,7 @@ $criteria->select = "*";
 		foreach($dts as $dt){
 	?>
 
-		
+
 		 <a href="<?php echo home_url(); ?>/director-tecnico-<?php echo $dt->id; ?>">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador">
 		<div class="border-jugador">
@@ -261,7 +270,7 @@ $criteria->select = "*";
       <a href="<?php echo home_url(); ?>/director-tecnico/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
-        <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono_jugador_grande.svg);">
+        <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/director-tecnico-grande.svg);">
 
             <label>+ Directores Técnicos</label>
         </div>
@@ -282,7 +291,7 @@ $criteria->select = "*";
 <a href="<?php echo home_url(); ?>/rincon-mudo"><h2 class="titulo-home">El rincón <span class="sub-verde">del mudo</span></h2></a>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-box-left" style="overflow:hidden;">
-  
+
 
     <?php    $posts= get_posts( array('numberposts' => 1, "post_type"=>"post", 'category'=>2 ) );
 
@@ -294,7 +303,7 @@ $criteria->select = "*";
 		<h4 style="color:white;"> </h4>
       <!-- <div class="triangulo-verde"></div> -->
     </div>
-	
+
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-right">
       <h2><?php the_title_attribute($posts[0]->ID ); ?></h2>
@@ -304,11 +313,11 @@ $criteria->select = "*";
 
               // Get content parts
               $content_parts = get_extended( $content );
-				
+
 			$main=$content_parts['main'];
 			$main= substr($main,0,300);
 			$main= substr($main,0,strrpos($main," "));
-			
+
               // Output part before <!--more--> tag
              echo $main.'...'; ?>
     </p>
@@ -320,7 +329,7 @@ $criteria->select = "*";
 
   </div>
 
-  
+
 
 </div>
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
@@ -333,7 +342,7 @@ $criteria->select = "*";
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-box bloque">
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
-	
+
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <a href="<?php echo home_url(); ?>/category/cuna-cajon"><h2 class="titulo-home">De la cuna <span class="sub-verde">hasta el cajón</span></h2></a>
 	</div>
@@ -356,7 +365,7 @@ $criteria->select = "*";
 				<hr>
 				</div>
                 <h6><?php echo $posts_cuna[0]->post_title; ?></h6>
-				
+
                 <p class="bajada"><?php // Fetch post content
                       $content = get_post_field( 'post_content',$posts_cuna[0]->ID );
 
@@ -366,7 +375,7 @@ $criteria->select = "*";
                       $main=$content_parts['main'];
 			$main= substr($main,0,140);
 			$main= substr($main,0,strrpos($main," "));
-			
+
               // Output part before <!--more--> tag
              echo $main.'...'; ?></p>
 
@@ -434,14 +443,14 @@ $criteria->select = "*";
 					'posts_per_page' => 3,
 					"category_name"=> "cuna-cajon"
 				) );
-				
+
 
 				if ( $query->have_posts() ) {
 					// The 2nd Loop
 					while ( $query->have_posts() ) {
 						$query->the_post();
 
-      
+
         $post_categories = wp_get_post_categories( $recent["ID"]);
         $date= get_the_date();?>
         <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr(the_title())?>">
@@ -516,13 +525,13 @@ $criteria->select = "*";
           <div class="thumb hover-black" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>);"></div>
             <!-- <div class="triangulo-verde"></div> -->
           </div>
-		
+
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-container top-shadow">
-		  
+
 		  <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-museo-verde.svg" alt="">
             <p><?php the_title_attribute($post->ID ); ?></p>
 
-            
+
 
             <div class="info-date">
               <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>

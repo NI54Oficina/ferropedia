@@ -14,7 +14,7 @@
 							</div>
 
                             <div class="flex-caption">
-								<h5 style="color:white;">#UnDíaComoHoy</h5>
+								<h5 style="color:white;font-size:14px;">#UnDíaComoHoy</h5>
                                 <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white ">NACÍA CARLOS TIMOTEO GRIGUOL</h3>
                                 <p style="font-family:'Roboto-regular'; padding-top:10px;color:white;">Ex futbolista y director técnico argentino.  Nació en Las Palmas, Córdoba el 4 de septiembre de 1934.
                                   Actualmente asesora al juvenil equipo de Ferro Carril Oeste.</p>
@@ -43,12 +43,12 @@
 
                     </div>
 		<?php } ?>
-				<?php 
+				<?php
 				$today = getdate();
 				$args = array(
 					'date_query' => array(
 						array(
-							
+
 							'month' => $today['mon'],
 							/*'day'   =>  $today['mday'],*/
 						),
@@ -57,7 +57,7 @@
 				);
 				$query = new WP_Query( $args );
 				if ( $query->have_posts() ) {
-							
+
 							while ( $query->have_posts() ) {
 								$query->the_post(); ?>
 					<div class="item">
@@ -67,9 +67,9 @@
 							</div>
 
                             <div class="flex-caption">
-								<h5 style="color:white;"><?php echo get_field("volanta"); ?></h5>
-                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white "><?php echo the_title(); ?></h3>
-                                <div style="font-family:'Roboto-regular'; padding-top:10px;color:white;"><?php the_content(); ?></div>
+								<h5 style="color:white; font-size:14px;"><?php echo get_field("volanta"); ?></h5>
+                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white; font-size:21px;"><?php echo the_title(); ?></h3>
+                                <div style="font-family:'Roboto-regular'; padding-top:10px;color:white; font-size:12px;"><?php the_content(); ?></div>
                                     <!-- <span class="arrow-wrapper">
                                         <span class="arrow-left"></span>
                                         <span class="arrow-right"></span>
@@ -79,8 +79,8 @@
                         </article>
 
                     </div>
-					
-					
+
+
 							<?php }
 				}else{
 				?>

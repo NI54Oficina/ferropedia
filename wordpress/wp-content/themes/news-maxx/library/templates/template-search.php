@@ -19,22 +19,22 @@ get_template_part( 'library/templates/header', 'extra' );
   $cat = get_category( $c );
 
   if($cat->slug =="cuna-cajon"){?>
-	
+
 	<div class="label-name-page">
         <?php echo get_the_post_thumbnail(21);   ?>
-		
-    
+
+
 	 <!-- para seo !-->
 	  <div class="header-text-content" style="padding:0 60px;height:0;padding-left:30px;">
-	<h1 >De la cuna <span class="sub-verde">hasta el cajón</span></h1>
+	<h1 >De la Cuna <span class="sub-verde">hasta el Cajón</span></h1>
 	</div>
 	<div class="bajada-cuna">
 	<p ><?php echo $cat->description ?></p>
     </div>
     </div>
-    
-	
-	
+
+
+
 
   <?php  }  ?>
 
@@ -42,7 +42,7 @@ get_template_part( 'library/templates/header', 'extra' );
 
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-search">
-	
+
 
 
     <section class="col-lg-9 col-md-9 col-sm-12 col-xs-12 entry-list">

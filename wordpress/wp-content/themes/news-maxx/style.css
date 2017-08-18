@@ -5745,7 +5745,7 @@ body {
 
 	.trio-cuna-cajon .bajo-titulo p{color:#a43c93;display:inline-block;margin-right:10px;}
 
-	
+
 	.titulo-home{font-size:3em !important; font-family:"Condensed-bold-italic";}
 
 .main-section .wrapper .sidebar {
@@ -8966,6 +8966,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
     font-size: 20px;
     margin:0 15px;
 	cursor:pointer;
+  color:#a43c93;
 }
 
 .links-sociales li{
@@ -9337,7 +9338,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 	border-bottom:5px solid black;
 	padding:15px 25px;
 	margin-top:0;
-	
+
 }
 
 .sub-verde{
@@ -9355,7 +9356,7 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 	background-position: center;
 	background-repeat:no-repeat;
 	height:100%;
-	
+
 }
 
 .hover-black{
@@ -9549,7 +9550,7 @@ padding: 0 35px;
 	padding:0;
   }
 
-  
+
 
   .six-container-left > div  img{
     height: 250px;
@@ -9579,7 +9580,7 @@ padding: 0 35px;
 	font-size:12px;
 	font-family:'Condensed-regular';
 	/*background:rgba(0,0,0,0.2);*/
-	
+
   }
   .six-container-left .title-container > p.bajada{
 	color:#55c792;
@@ -9596,9 +9597,9 @@ padding: 0 35px;
 	text-align:left;
 	margin-top:0;
 	padding-top:5px;
-	
+
   }
-  
+
   .six-container-left .title-container hr{
 	width:100%; margin:auto; margin-top:0px; margin-bottom:5px; border-color:rgba(0,0,0,0.3); border-width:2px;
   }
@@ -9621,7 +9622,7 @@ padding: 0 35px;
   .six-container-right .six-inner-container{
     padding: 15px 0;
   }
-  
+
   .six-container-right a:last-child .six-inner-container{border-bottom:0;}
 
   .six-container-right .six-inner-container{
@@ -9719,10 +9720,10 @@ padding: 0 35px;
 	font-family:'Roboto-Bold';
 	font-size:15px;
 	text-align:left;
-	
+
 	display:inline-block;
 	padding-top:10px;
-		
+
 }
 
 .get-post:hover{
@@ -9815,11 +9816,11 @@ padding: 0 35px;
 	margin:auto;
 	padding-left:60px;
   }*/
-  
+
   .label-name-page .header-text-content{
     font-family: 'Roboto-regular';
     padding: 0 20%;
-    
+
     background-repeat: repeat;
     background-position: center;
     background-size: auto 100%;
@@ -9832,12 +9833,12 @@ padding: 0 35px;
 	top:-80px;
 	left: 50px;
   }
-  
+
   .label-name-page  h1{
   text-align:left;
   color:white;
   font-family:'Condensed-bold-italic';
-	font-size:40px;
+	font-size:48px;
 	margin-top:0;
 	margin-bottom:0;
   }
@@ -10051,10 +10052,10 @@ padding: 0 35px;
 
 	.jugadores-container-busqueda{
 	padding:5px;
-		
+
 		margin-top:30px;
 	}
-	
+
 	.label-busqueda{
 		display:inline-block;
 		width:100%;
@@ -10212,6 +10213,7 @@ padding: 0 35px;
 		background-color:#080808;
 		text-align:center;
 		padding: 20px 0;
+    box-shadow:0px 0px 16px -1px rgba(0,0,0,0.72);
 	}
 
 	.votos .promedio-votos{
@@ -10314,7 +10316,7 @@ padding: 0 35px;
 	.tecnica-galeria{
 		padding:15px;
 	}
-	
+
 	.tecnica-galeria .container-img-gallery{
 		overflow:hidden;
 	}
@@ -10323,11 +10325,11 @@ padding: 0 35px;
 		width:100%;
 		height:100%;
 	}
-	
+
 	.tecnica-galeria .container-img-gallery a{
 		text-align:center;
 	}
-	
+
 	.tecnica-galeria .container-img-gallery a .cover-green-gallery{
 		width:100% !important;
 		height:100% !important;
@@ -10335,7 +10337,7 @@ padding: 0 35px;
 	.thumb-gallery-jugador{
 		width:100%; height:100%; background-repeat:no-repeat; background-position:center; /*background-size:cover;*/
 	}
-	
+
 	.tecnica-detalle,.tecnica-video,.tecnica-galeria{
 		margin-top:35px;
 	}
@@ -10349,7 +10351,7 @@ padding: 0 35px;
 box-shadow: 0px 10px 8px -1px rgba(0,0,0,0.75);
 margin-bottom:15px;
 	}
-	
+
 	.tecnica-detalle h2{
 		margin-bottom:35px;
 	}
@@ -10375,7 +10377,7 @@ margin-bottom:15px;
 	  font-size:18px;
 	  padding:10px;
     }
-	
+
 	.jugador-relacionado
 	{width:100%;}
 
@@ -10412,7 +10414,7 @@ margin-bottom:15px;
       font-size: 1.2em;
       padding: 10px 0;
     }
-	
+
 	.informacion-tecnica{
 		padding-left:25px;
 	}
@@ -10534,7 +10536,7 @@ margin-bottom:15px;
       padding:10px 0 20px 0;
       text-align: center;
     }
-	
+
 	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row div{
 		border-top:1px solid #22221f;
 	}
@@ -10598,7 +10600,7 @@ margin-bottom:15px;
 box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.72);
 
 	}
-	
+
 	.top-shadow{
 		border-top: 4px solid rgba(0,0,0,0.4);
 	}

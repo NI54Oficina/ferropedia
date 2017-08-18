@@ -57,12 +57,13 @@ $footer_sidebar[3] = ($kopa_setting) ? $sidebars[$kopa_position[($total-1)]] : '
 
 
 
-      <h1>LaFerropedia <br></h1>
-      <p>Seguinos</p>
+        <a href="equipo-laferropedia/"><h1>LaFerropedia <br></h1></a>
+    <p style="margin-bottom:0">Seguinos</p>
 
-      <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com//LaFerropedia"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/laferropedia"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <a href="https://www.youtube.com/LaFerropedia"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/Laferropedia/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
 
         <p id="copyright">©2017 FERROPEDIA • LEGALES</p>
 <!--
