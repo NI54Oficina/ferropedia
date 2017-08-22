@@ -31,8 +31,12 @@
 
     <div class="wrapper">
 
+
+
         <nav class="main-nav">
             <div class="wrapper clearfix">
+
+
               <ul id="main-menu" class="main-menu clearfix sf-js-enabled sf-arrows" style="margin-left:29%;">
 
                 <li title="Con la Verde" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo home_url(); ?>/ficha-jugador/"><img  src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/con-la-verde.svg" alt=""><p>Con la Verde</p></a></li>
@@ -174,6 +178,8 @@
                     <a href="<?php echo home_url(); ?>/equipo-laferropedia/">  <li>Sobre LaFerropedia</li></a>
                   </ul>
                 </nav>
+
+
         <!-- search box -->
 
     </div>
@@ -185,7 +191,13 @@
 <div class="header-bottom">
 
     <div class="wrapper">
+      <div class="links-sociales links-sociales-mobile" style="float:left;color:#a43c93;position:absolute;padding-left:20px;">
+               <li> <a href="https://www.facebook.com//LaFerropedia"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+               <li> <a href="https://twitter.com/laferropedia"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+               <li> <a href="https://www.youtube.com/LaFerropedia"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+               <li> <a href="https://www.instagram.com/Laferropedia/"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
 
+             </div>
         <nav class="secondary-nav">
             <?php
             if ( has_nav_menu( 'second-nav' )) {
