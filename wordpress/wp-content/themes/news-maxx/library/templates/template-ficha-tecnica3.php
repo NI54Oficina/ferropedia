@@ -154,8 +154,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
 
 		  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 informacion-tecnica-inner">
-            <h2><?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?></h2>
-            <p>Total partidos ganados</p>
+            <h2>&nbsp;<!--<?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?>!--></h2>
+            <p>&nbsp;<!--Total partidos ganados!--></p>
 			<h3><?php if($ultimo[0]!=""){ echo $ultimo[0]; }else{ echo "---"; } ?></h3>
             <h4><?php if($ultimo[1]!=""){ echo "Ferro ".$ultimo[1]; }else{ echo "---"; } ?></h4>
             <p>Último partido</p>
@@ -258,7 +258,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 	
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shadow" style="padding:0;" >
-			  <h2>Campañas de <?php echo $model->nombre; ?> <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
+			  <h2>Campañas de <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
 
 			  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
 				<nav>
@@ -354,11 +354,19 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 
 
-		  <?php foreach($otros as $data){ ?>
+		   <?php 
+		  $side="even";
+		  foreach($otros as $data){ ?>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle">
-          <h2><?php echo $data["titulo"]; ?></h2>
+          <h2 class="<?php echo $side; ?>"><?php echo $data["titulo"]; ?></h2>
           <p>
-            <?php echo $data["texto"]; ?>
+            <?php echo str_replace("* ","&#9679 ",$data["texto"]);
+				if($side=="even"){
+					$side="odd";
+				}else{
+					$side="even";
+				}
+			?>
           </p>
 		</div>
 		<?php } ?>

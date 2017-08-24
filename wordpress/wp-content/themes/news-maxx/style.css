@@ -10222,16 +10222,27 @@ padding: 0 35px;
       font-family: 'Condensed-bold-italic';
     }
 
-    .post-template-template-ficha-tecnica  .tecnica-detalle h2, .tecnica-galeria h2{
+    .post-template-template-ficha-tecnica  .tecnica-detalle h2.even, .tecnica-galeria h2{
       /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
       /*background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);*/
 	  background:repeating-linear-gradient( -45deg, rgba(41, 119, 43, 0.85), rgba(41, 119, 43, 0.87) 2px, #006327 4px, #006327 6px );
     }
-
-    .post-template-template-ficha-tecnica3 .tecnica-detalle h2, .tecnica-galeria h2{
+	
+	.post-template-template-ficha-tecnica  .tecnica-detalle h2.odd{
       /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
       /*background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);*/
-	  background:repeating-linear-gradient( -45deg, rgba(41, 119, 43, 0.85), rgba(41, 119, 43, 0.87) 2px, ##006443 4px, #006443 6px );
+	background:repeating-linear-gradient(-45deg, rgb(156, 57, 139), rgba(132, 55, 118, 0.95) 2px, #a43c93 4px, #a43c93 6px)
+    }
+
+    .post-template-template-ficha-tecnica3 .tecnica-detalle h2.even{
+      
+	  background:repeating-linear-gradient( -45deg, rgba(41, 119, 43, 0.85), rgba(41, 119, 43, 0.87) 2px, #006443 4px, #006443 6px );
+    }
+	
+	.post-template-template-ficha-tecnica3  .tecnica-detalle h2.odd{
+      /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
+      /*background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);*/
+	background:repeating-linear-gradient(-45deg, rgb(156, 57, 139), rgba(132, 55, 118, 0.95) 2px, #a43c93 4px, #a43c93 6px)
     }
 
 	.votos{
@@ -10282,7 +10293,8 @@ padding: 0 35px;
 	.votos .votar .rating{display:inline-block;}
 
 	.votos .cancel-on-png, .votos .cancel-off-png, .votos .star-on-png, .votos .star-off-png, .votos .star-half-png{
-		color:#a43c93;
+		color:#5d2854;
+		/*a43c93*/
 		font-size:40px;
 	}
 	.votos .rating2 i{display:block;font-size:17px;color:white;text-align:left;padding-left:20px;opacity:0.7;font-family:"Condensed-regular";}

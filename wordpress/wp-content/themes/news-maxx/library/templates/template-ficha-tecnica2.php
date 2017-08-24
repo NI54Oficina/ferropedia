@@ -131,8 +131,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
             <h2><?php echo $lastTorneo[0]; ?></h2>
             <p>Todos partidos jugados</p>
-            <h3><?php echo $model->detalle_puesto; ?></h3>
-            <h4><?php echo $model->puesto; ?></h4>
+            <h3><?php echo $model->puesto; ?></h3>
+            <h4><?php echo $model->detalle_puesto; ?></h4>
             <p>Puesto</p>
           </div>
 
@@ -249,7 +249,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 		<div	 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shadow" style="padding:0;" >
-			  <h2>Campañas de <?php echo $model->nombre; ?> <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
+			  <h2>Campañas de <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
 
 			  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
 				<nav>
@@ -339,11 +339,19 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 
 
-		  <?php foreach($otros as $data){ ?>
+		  <?php 
+		  $side="even";
+		  foreach($otros as $data){ ?>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-detalle">
-          <h2><?php echo $data["titulo"]; ?></h2>
+          <h2 class="<?php echo $side; ?>"><?php echo $data["titulo"]; ?></h2>
           <p>
-            <?php echo $data["texto"]; ?>
+            <?php echo str_replace("* ","&#9679 ",$data["texto"]);
+				if($side=="even"){
+					$side="odd";
+				}else{
+					$side="even";
+				}
+			?>
           </p>
 		</div>
 		<?php } ?>
@@ -357,7 +365,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 		<?php if($model->imagenes){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-galeria contenido-interno-tecnica">
-          <h2>Galería de fotos</h2>
+          <!--<h2 >Galería de fotos</h2>!-->
 
 
 

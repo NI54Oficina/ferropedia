@@ -240,7 +240,7 @@ global $kopa_setting;
               <?php foreach($puesto as $jugador){ ?>
 				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 jugador-node <?php
 				if($auxE==0){echo " left-side";}else{ echo " right-side";}
-				?>" nombre="<?php echo $jugador->nombre." ".$jugador->apellido; ?>"  data-voto="<?php
+				?>" nombre="<?php echo $jugador->apellido." ".$jugador->nombre; ?>"  data-voto="<?php
 					$the_slug = 'jugador-'.$jugador->id;
 					$args = array(
 					  'name'        => $the_slug
