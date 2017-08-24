@@ -390,7 +390,9 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 					<div class="row">
 			      <div id="demo-test-gallery" class="demo-gallery col-lg-12 col-md-12 col-sm-12 col-xs-12" data-pswp-uid="1">
 
-							<?php for($i=0; $i<count($model->imagenes); $i++){   ?>
+							<?php for($i=0; $i<count($model->imagenes); $i++){
+							if( $model->imagenes[$i]["destacada"]){continue;}
+							?>
 
 
 								<div style="padding:0 2.5px 5px 2.5px;" class="<?php	if($i==0){ echo "col-lg-6 col-md-6 col-sm-6 col-xs-6 square"; }else{ echo "col-lg-3 col-md-3 col-sm-3 col-xs-3 square";} ?> container-img-gallery">

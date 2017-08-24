@@ -28,7 +28,7 @@ class StaffController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"listar"),
+				'actions'=>array('index','view',"listar","ciudad"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -123,6 +123,33 @@ class StaffController extends Controller
 						"_wp_page_template" => "template-ficha-tecnica3.php"
 						)
 				));
+				
+				if(isset($_POST['Partido'])){
+					
+					
+					$ultimo= new DataExtra();
+					$ultimo->titulo= "Último partido";
+					$ultimo->model="Staff";
+					$ultimo->modelId=$model->id;
+					if($_POST["Partido"]["ultimo"]!=""){
+						$ultimo->texto=$_POST["Partido"]["ultimo"];
+					}else{
+						$ultimo->texto="s/d";
+					}
+					$ultimo->save();
+					
+					$debut= new DataExtra();
+					$debut->titulo= "Primer partido";
+					$debut->model="Staff";
+					$debut->modelId=$model->id;
+					if($_POST["Partido"]["debut"]!=""){
+						$debut->texto=$_POST["Partido"]["debut"];
+					}else{
+						$debut->texto="s/d";
+					}
+					$debut->save();
+						
+				}
 
 				
 				$this->redirect(array('view','id'=>$model->id));
@@ -183,7 +210,50 @@ class StaffController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		$partido['debut']= DataExtra::model()->findByAttributes(array("model"=>"Staff","modelId"=>$id,"titulo"=>"Primer partido"));
+		if(!isset($partido["debut"])){
+			$debut= new DataExtra();
+			$debut->titulo= "Primer partido";
+			$debut->model="Staff";
+			$debut->modelId=$model->id;
+			$debut->texto="s/d";
+			$debut->save();
+			$partido['debut']= "s/d";
+		}else{
+			$partido['debut']= $partido['debut']->texto;
+		}
+		
+		$partido['ultimo']= DataExtra::model()->findByAttributes(array("model"=>"Staff","modelId"=>$id,"titulo"=>"Último partido"));
+		if(!isset($partido["ultimo"])){
+			$debut= new DataExtra();
+			$debut->titulo= "Último partido";
+			$debut->model="Staff";
+			$debut->modelId=$model->id;
+			$debut->texto="s/d";
+			$debut->save();
+			$partido['ultimo']= "s/d";
+		}else{
+			$partido['ultimo']= $partido['ultimo']->texto;
+		}
+		
+		if(isset($_POST['Partido'])){
+			
+			if($_POST["Partido"]["ultimo"]!=""){
+				
+				$ultimo= DataExtra::model()->findByAttributes(array("model"=>"Staff","modelId"=>$id,"titulo"=>"Último partido"));
+				$ultimo->texto=$_POST["Partido"]["ultimo"];
+				$ultimo->save();
+				$partido["ultimo"]=$ultimo->texto;
+			}
+			if($_POST["Partido"]["debut"]!=""){
+				$debut= DataExtra::model()->findByAttributes(array("model"=>"Staff","modelId"=>$id,"titulo"=>"Primer partido"));
+				$debut->texto=$_POST["Partido"]["debut"];
+				$debut->save();
+				$partido["debut"]=$debut->texto;
+			}
+		}
+		
+		
 		if(isset($_POST['Staff']))
 		{
 			$model->attributes=$_POST['Staff'];
@@ -210,7 +280,6 @@ class StaffController extends Controller
 						  "post_title"=>$model->nombre." ".$model->apellido,
 							"post_name"=>"director-tecnico-".$model->id,
 							"post_status" => "publish",
-							"post_type"=>"director-tecnico",
 							"post_category"=>array(get_cat_ID( 'director-tecnico' ))
 					  );
 					  wp_update_post( $my_post );
@@ -224,7 +293,7 @@ class StaffController extends Controller
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+			'model'=>$model,"partido"=>$partido
 		));
 	}
 
@@ -293,6 +362,30 @@ class StaffController extends Controller
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+	
+	public function actionCiudad(){
+		/*$puestos= array();
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"arquero")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"defensor")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"delantero")));
+		$this->layout='jugador';
+		$this->render('listar',array("model"=>$puestos
+			
+		));*/
+		set_time_limit (100000);
+		$jugadores= Staff::model()->findAll();
+		foreach($jugadores as $jugador){
+			
+			if($jugador->ciudad_natal!=""){
+				$jugador->nacimiento.= " | ".$jugador->ciudad_natal;
+				echo $jugador->nacimiento;
+				echo "<br>";
+				$jugador->ciudad_natal="";
+				$jugador->save();
+			}
 		}
 	}
 }

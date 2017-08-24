@@ -76,11 +76,12 @@ class Staff extends CActiveRecord
 			'id' => 'ID',
 			'nombre' => 'Nombre',
 			'apellido' => 'Apellido',
-			'nacimiento' => 'Nacimiento',
+			'nacimiento' => 'Fecha y lugar de nacimiento',
+			'defuncion' => 'Fecha y lugar de defunción',
 			'ciudad_natal' => 'Ciudad Natal',
 			'puesto' => 'Puesto',
 			'detalle_puesto' => 'Detalle Puesto',
-			'defuncion' => 'Defuncion',
+			
 		);
 	}
 

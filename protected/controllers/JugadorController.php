@@ -28,7 +28,7 @@ class JugadorController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"listar","deleteAll","puestos","sacarSab"),
+				'actions'=>array('index','view',"listar","deleteAll","puestos","sacarSab","ciudad"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -310,7 +310,33 @@ class JugadorController extends Controller
 						"_wp_page_template" => "template-ficha-tecnica.php"
 						)
 				));
-
+				
+				if(isset($_POST['Partido'])){
+					
+					
+					$ultimo= new DataExtra();
+					$ultimo->titulo= "Último partido";
+					$ultimo->model="Jugador";
+					$ultimo->modelId=$model->id;
+					if($_POST["Partido"]["ultimo"]!=""){
+						$ultimo->texto=$_POST["Partido"]["ultimo"];
+					}else{
+						$ultimo->texto="s/d";
+					}
+					$ultimo->save();
+					
+					$debut= new DataExtra();
+					$debut->titulo= "Debut";
+					$debut->model="Jugador";
+					$debut->modelId=$model->id;
+					if($_POST["Partido"]["debut"]!=""){
+						$debut->texto=$_POST["Partido"]["debut"];
+					}else{
+						$debut->texto="s/d";
+					}
+					$debut->save();
+						
+				}
 				
 				$this->redirect(array('view','id'=>$model->id));
 				
@@ -333,6 +359,49 @@ class JugadorController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+		$partido['debut']= DataExtra::model()->findByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Debut"));
+		if(!isset($partido["debut"])){
+			$debut= new DataExtra();
+			$debut->titulo= "Debut";
+			$debut->model="Jugador";
+			$debut->modelId=$model->id;
+			$debut->texto="s/d";
+			$debut->save();
+			$partido['debut']= "s/d";
+		}else{
+			$partido['debut']= $partido['debut']->texto;
+		}
+		
+		$partido['ultimo']= DataExtra::model()->findByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Último partido"));
+		if(!isset($partido["ultimo"])){
+			$debut= new DataExtra();
+			$debut->titulo= "Último partido";
+			$debut->model="Jugador";
+			$debut->modelId=$model->id;
+			$debut->texto="s/d";
+			$debut->save();
+			$partido['ultimo']= "s/d";
+		}else{
+			$partido['ultimo']= $partido['ultimo']->texto;
+		}
+		
+		
+		if(isset($_POST['Partido'])){
+			
+			if($_POST["Partido"]["ultimo"]!=""){
+				
+				$ultimo= DataExtra::model()->findByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Último partido"));
+				$ultimo->texto=$_POST["Partido"]["ultimo"];
+				$ultimo->save();
+				$partido["ultimo"]=$ultimo->texto;
+			}
+			if($_POST["Partido"]["debut"]!=""){
+				$debut= DataExtra::model()->findByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Debut"));
+				$debut->texto=$_POST["Partido"]["debut"];
+				$debut->save();
+				$partido["debut"]=$debut->texto;
+			}
+		}
 
 		if(isset($_POST['Jugador']))
 		{
@@ -360,7 +429,6 @@ class JugadorController extends Controller
 						  "post_title"=>$model->nombre." ".$model->apellido,
 							"post_name"=>"jugador-".$model->id,
 							"post_status" => "publish",
-							"post_type"=>"jugador",
 							"post_category"=>array(get_cat_ID( 'jugador' ))
 					  );
 					  wp_update_post( $my_post );
@@ -372,9 +440,10 @@ class JugadorController extends Controller
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
+		
 
 		$this->render('update',array(
-			'model'=>$model,
+			'model'=>$model,"partido"=>$partido
 		));
 	}
 
@@ -484,4 +553,6 @@ class JugadorController extends Controller
 			}
 		}
 	}
+	
+	
 }

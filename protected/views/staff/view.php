@@ -23,20 +23,29 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 <?php } ?>
 <p><strong>Nombre:</strong> <?php echo $model->nombre; ?></p>
 <p><strong>Apellido:</strong> <?php echo $model->apellido; ?></p>
-<p><strong>Nacimiento:</strong> <?php echo $model->nacimiento; ?></p>
+<p><strong>Fecha y lugar de nacimiento:</strong> <?php echo $model->nacimiento; ?></p>
 <?php if(isset($model->defuncion)&&$model->defuncion!=0){ ?>
-<p><strong>Defunción:</strong> <?php echo $model->defuncion; ?></p>
+<p><strong>Fecha y lugar de defunción:</strong> <?php echo $model->defuncion; ?></p>
 <?php } ?>
+<?php if(false){ ?>
 <p><strong>Ciudad Natal:</strong> <?php echo $model->ciudad_natal; ?></p>
+<?php } ?>
 <p><strong>Puesto:</strong> Director Técnico
 <?php if(isset($model->detalle_puesto)&&$model->detalle_puesto!=""){ ?>
 <p><?php echo $model->detalle_puesto; ?></p>
 <?php } ?>
 
+<p><strong>Primer partido:</strong> <?php $debut= DataExtra::model()->findByAttributes(array("model"=>"Staff","modelId"=>$model->id,"titulo"=>"Primer partido"));
+if(isset($debut)){echo $debut->texto; } ?></p>
+<p><strong>Último Partido:</strong> <?php 
+		$ultimo= DataExtra::model()->findByAttributes(array("model"=>"Staff","modelId"=>$model->id,"titulo"=>"Último partido"));
+if(isset($ultimo)){echo $ultimo->texto; }
+		?></p><br><br>
+
 <?php if(count($model->data())>0|| is_user_logged_in()){ ?>
 <h4>Data adicional</h4>
 <ul>
-<?php foreach($model->data as $data){ if($data->titulo=="Torneo"){continue;}?>
+<?php foreach($model->data as $data){ if($data->titulo=="Torneo"||$data->titulo=="Primer partido"||$data->titulo=="Último partido"){continue;}?>
 	<li>
 	<strong><?php echo $data->titulo; ?></strong>
 	<p><?php echo $data->texto; ?></p> <?php if(is_user_logged_in()){ ?>
