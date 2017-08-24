@@ -6402,6 +6402,10 @@ Categories page
 .entry-list > ul > li .entry-item .entry-content {
     padding-top: 15px;
     padding-right: 20px; }
+
+.entry-content a:hover p i{
+      color:#00b643;
+    }
 .entry-list > ul > li .entry-item .entry-content header {
     overflow: hidden;
     margin-bottom: 10px; }
@@ -9343,6 +9347,10 @@ body.post-template-default.single.single-post, body.archive.tag, body.seach, bod
 	padding:15px 25px;
 	margin-top:0;
 
+}
+
+.titulo-home .sub-verde{
+	color:#00b643;
 }
 
 .sub-verde{

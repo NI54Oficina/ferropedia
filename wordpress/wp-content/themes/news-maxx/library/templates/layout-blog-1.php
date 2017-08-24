@@ -70,7 +70,7 @@
 	</div>
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	<p>* Faltan los campeonatos de 1912 y el 1919</p>
+	<p>* Faltan los campeonatos de 1912 y 1919</p>
 	</div>
 
     </div>

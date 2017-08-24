@@ -115,17 +115,32 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-title">
           <p>  <?php echo get_post(get_post_thumbnail_id())->post_excerpt;   ?>  </p>
         </div>
-		
+
 
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-left-colum">
 
+        <style media="screen">
+
+          .content-tags label{
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+          }
+
+          .content-tags{
+            padding-top: 20px;
+          }
+
+        </style>
 
         <?php if(has_tag()){ ?>
           <div class="tags">
             <p class="title-left-colum">ETIQUETAS</p>
+            <div class="content-tags">
+                <?php the_tags( '<label>', '</label>, <label>', '</label>' ); ?>
+            </div>
 
-            <?php the_tags( '<label>', '</label>, <label>', '</label>' ); ?>
+
 
           </div>
 
@@ -181,13 +196,13 @@
 
           <div class="share">
             <div  class="title-left-colum">COMPARTIR <div class="links-sociales" style="padding:0;" >
-			
+
                   <i class="fa fa-facebook" aria-hidden="true" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>','','width=500,height=400')" ></i>
                   <i class="fa fa-twitter" aria-hidden="true" onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo wp_get_shortlink(); ?>&amp;original_referer=<?php echo wp_get_shortlink(); ?>&text=<?php echo get_the_title(); ?>','','width=500,height=400')"></i>
 
                 </div>
                 </div>
-			
+
 
           </div>
         </div>
@@ -197,12 +212,12 @@
 
 
           <?php if(strlen(get_field('fuente'))!=0){ ?>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#eff0ef;box-shadow: 0px 2px 5px 3px rgba(173,173,173,1);margin-top:30px;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0 10px;">
 
 
           <div class="fuente">
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="padding:0;">
-                <img style="max-width:35px;" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-verde.svg" alt="">
+                <img style="max-width:30px;" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-verde.svg" alt="">
             </div>
 
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding:0;">
@@ -280,7 +295,7 @@
                 margin:15px 0;
               }
 				.owl-theme .owl-controls{
-					padding-bottom:40px;					
+					padding-bottom:40px;
 				}
             </style>
 
@@ -369,7 +384,7 @@
 			  ?>
           </div>
         </div>
-		
+
 
         <div class="clear"></div>
 

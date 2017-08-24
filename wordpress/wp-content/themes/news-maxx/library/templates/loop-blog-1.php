@@ -27,7 +27,7 @@
                         <span class="entry-meta pull-left">&nbsp;/&nbsp;</span>
                         <span class="entry-author pull-left"><?php _e('Por ', 'newsmaxx');?><?php
 						$autor=get_field("name_author");
-						
+
 						if($autor!=""){
 							echo $autor;
 						}else{
@@ -35,20 +35,20 @@
 						}
 						 ?></span>
                     </header>
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ><p><?php 
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ><p><?php
 					$myexcerpt = apply_filters('the_excerpt', get_the_excerpt());
 					$main= substr($myexcerpt,0,140);
 					$main= substr($main,0,strrpos($main," "));
-			
+
 					// Output part before <!--more--> tag
 					echo $main.'... ';
-					?> <i>Leer más</i></p></a>
+					?> <i class="leer-mas">Leer más</i></p></a>
                     <?php if ( 'show' === get_option( 'kopa_theme_options_blog_readmore_status', 'show' ) ) : ?>
                         <i class="fa fa-external-link search-icon"></i>
                         <!--<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="more-link"><span>Leer más</span></a>!-->
                     <?php endif; ?>
                 </div>
-				
+
                 <!-- entry-content -->
 
             </article>

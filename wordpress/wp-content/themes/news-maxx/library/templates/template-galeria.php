@@ -25,9 +25,9 @@ global $kopa_setting;
 
   </div>
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50); min-height:400px;padding-bottom:50px;">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height:400px;">
-        <img src="<?php echo get_field('foto_portada') ?>" style="position:absolute; bottom:0" alt="">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.50);padding-bottom:50px;">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style=";">
+        <!-- <img src="<?php echo get_field('foto_portada') ?>" style="position:absolute; bottom:0" alt=""> -->
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:20px;">
       <h1 style="border-bottom:2px solid black;font-size:48px; line-height:50px;padding-bottom:10px;"><?php $title= the_title_attribute(array("echo" => 0));
@@ -75,11 +75,11 @@ echo  $content ;
       padding-top: 45%;
       font-size:4em;
       font-family: 'Condensed-bold-italic';
-	  
+
     }
-	
-	
-	
+
+
+
 	.box-gallery p{
 		display:inline-block;
 background:rgba(0,0,0,0.5);
@@ -89,9 +89,9 @@ width:100%;
 padding:10px;
 margin-bottom:0;
 	}
-	
-	
-	
+
+
+
 
     .box-gallery span:hover{
       opacity: 1;
@@ -191,7 +191,7 @@ $new =trim($content_parts['main']);
     </script> -->
 
       <a href="<?php the_permalink();?>">
-	
+
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 max-box-gallery get-post" id-post="<?php the_ID();?>" style=" display: table !important;">
 
 
@@ -199,7 +199,7 @@ $new =trim($content_parts['main']);
             <?php  //echo the_post_thumbnail('full' ); ?>
 
 
-         
+
 		  <p><?php echo get_the_title(); ?></p>
         </div>
 
@@ -233,7 +233,7 @@ $new =trim($content_parts['main']);
     .img-sector-padre .contenido-dinamico{
       display: none;
     }
-	
+
 	.img-sector-padre .contenido-dinamico p{
 			display:block;
 			position:relative;

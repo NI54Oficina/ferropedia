@@ -18,7 +18,8 @@ global $kopa_setting;
   <div class="label-name-page">
     <?php the_post_thumbnail( 'full' );   ?>
 <div style="padding:0;height:0;">
-    <div class="header-text-content">
+    <div class="header-text-content" style="padding-left: 25px;
+    padding-top: 0;">
       <h1><?php the_title(); ?></h1>
       <?php //the_content(); ?>
     </div>
@@ -120,6 +121,10 @@ global $kopa_setting;
       font-size: 1.8em;
       font-family: 'Roboto-bold';
       color: white;
+    }
+
+    .body-quienessomos strong{
+      color:#2ab163;
     }
 
 
