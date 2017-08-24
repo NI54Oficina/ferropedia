@@ -49,6 +49,12 @@
 	
 	.custom-post-template .post-content-text p{
 		margin-bottom:0;
+		text-indent:15px;
+	}
+	
+	.custom-post-template .post-content-text p b,.custom-post-template .post-content-text p strong{
+		font-weight:100;
+		font-family:Roboto-bold;
 	}
 
     .custom-post-template .post-left-colum > div{

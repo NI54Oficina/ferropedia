@@ -301,7 +301,9 @@ class JugadorController extends Controller
 		if(isset($_POST['Jugador']))
 		{
 			$model->attributes=$_POST['Jugador'];
+			$model->apellido= str_replace("'","&apos;",$model->apellido);
 			if($model->save()){
+				$model->apellido= str_replace("&apos;","'",$model->apellido);
 				wp_insert_post(array(
 					"post_title"=>$model->nombre." ".$model->apellido,
 					"post_name"=>"jugador-".$model->id,
@@ -356,7 +358,7 @@ class JugadorController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$model->apellido= str_replace("&apos;","'",$model->apellido);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		$partido['debut']= DataExtra::model()->findByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Debut"));
@@ -406,8 +408,9 @@ class JugadorController extends Controller
 		if(isset($_POST['Jugador']))
 		{
 			$model->attributes=$_POST['Jugador'];
+			$model->apellido= str_replace("\'","&apos;",$model->apellido);
 			if($model->save()){
-				
+				$model->apellido= str_replace("&apos;","'",$model->apellido);
 				$the_slug = 'jugador-'.$model->id;
 				$queried_post = get_page_by_path($the_slug,OBJECT,'post');
 				

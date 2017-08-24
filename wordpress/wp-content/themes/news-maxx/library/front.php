@@ -967,7 +967,7 @@ function kopa_the_headline()
         if ( $tax_query ) {
             $args['tax_query'] = $tax_query;
         }
-		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'Ferropedistas' ),get_cat_ID( 'Evento' ));
+		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'Equipo' ),get_cat_ID( 'Evento' ),get_cat_ID( 'Director Técnico' ));
         $posts = new WP_Query( $args );
         $index = 1;
 
@@ -1026,7 +1026,7 @@ function kopa_the_topnew()
         if ( $tax_query ) {
             $args['tax_query'] = $tax_query;
         }
-		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'Ferropedistas' ),get_cat_ID( 'Evento' ));
+		$args["category__not_in"]=array( get_cat_ID( 'jugador' ),get_cat_ID( 'Equipo' ),get_cat_ID( 'Evento' ),get_cat_ID( 'Director Técnico' ));
         $posts = new WP_Query( $args );
         $index = 1;
         ?>
@@ -1056,6 +1056,13 @@ function kopa_the_topnew()
                               //foreach($post_categories as $c){
 
                               $cat = get_category( $c );
+							  if($cat->slug=="destacada"){
+								$c =$post_categories[1];
+
+                              //foreach($post_categories as $c){
+
+								$cat = get_category( $c );  
+							  }
 
                               switch($cat->slug){
                                case "museo":
@@ -1324,7 +1331,7 @@ add_filter( 'pre_get_posts', 'ja_search_filter' );
  */
 function ja_search_filter( $query ) {
 	if ( $query->is_search && !is_admin() ){
-		$query->set( 'cat',$query->get("cat").", -".get_cat_ID( 'Ferropedistas' ).", -".get_cat_ID( 'Evento' ) );
+		$query->set( 'cat',$query->get("cat").", -".get_cat_ID( 'Equipo' ).", -".get_cat_ID( 'Evento' ) );
 		//echo $query->get("cat");
 		//exit();
 		//$query->category__not_in=array( get_cat_ID( 'Ferropedistas' ),get_cat_ID( 'Evento' ));

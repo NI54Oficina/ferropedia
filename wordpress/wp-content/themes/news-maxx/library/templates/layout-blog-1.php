@@ -288,7 +288,7 @@ $criteria->select = "*";
 
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
 
-<a href="<?php echo home_url(); ?>/rincon-mudo"><h2 class="titulo-home">El rincón <span class="sub-verde">del mudo</span></h2></a>
+<a href="<?php echo home_url(); ?>/rincon-mudo"><h2 class="titulo-home">El Rincón <span class="sub-verde">del Mudo</span></h2></a>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-box-left" style="overflow:hidden;">
 
@@ -344,7 +344,7 @@ $criteria->select = "*";
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <a href="<?php echo home_url(); ?>/category/cuna-cajon"><h2 class="titulo-home">De la cuna <span class="sub-verde">hasta el cajón</span></h2></a>
+    <a href="<?php echo home_url(); ?>/category/cuna-cajon"><h2 class="titulo-home">De la Cuna <span class="sub-verde">hasta el Cajón</span></h2></a>
 	</div>
 
     <?php

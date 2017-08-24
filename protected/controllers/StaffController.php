@@ -78,7 +78,7 @@ class StaffController extends Controller
 					"post_title"=>$jugador->nombre." ".$jugador->apellido,
 					"post_name"=>"director-tecnico-".$jugador->id,
 					"post_status" => "publish",
-					"post_category"=>array(get_cat_ID( 'director-tecnico' )),
+					"post_category"=>array(get_cat_ID( 'Director Técnico' )),
 					"meta_input"=>array(
 						"_wp_page_template" => "template-ficha-tecnica3.php"
 						)
@@ -91,7 +91,7 @@ class StaffController extends Controller
 				  "post_title"=>$jugador->nombre." ".$jugador->apellido,
 					"post_name"=>"director-tecnico-".$jugador->id,
 					"post_status" => "publish",
-					"post_category"=>array(get_cat_ID( 'director-tecnico' ))
+					"post_category"=>array(get_cat_ID( 'Director Técnico' ))
 			  );
 			  wp_update_post( $my_post );
 			  update_post_meta( $queried_post->ID, '_wp_page_template', 'template-ficha-tecnica3.php' );
@@ -114,7 +114,9 @@ class StaffController extends Controller
 		if(isset($_POST['Staff']))
 		{
 			$model->attributes=$_POST['Staff'];
+			$model->apellido= str_replace("'","&apos;",$model->apellido);
 			if($model->save()){
+				$model->apellido= str_replace("&apos;","'",$model->apellido);
 				wp_insert_post(array(
 					"post_title"=>$model->nombre." ".$model->apellido,
 					"post_name"=>"director-tecnico-".$model->id,
@@ -207,7 +209,7 @@ class StaffController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$model->apellido= str_replace("&apos;","'",$model->apellido);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		$partido['debut']= DataExtra::model()->findByAttributes(array("model"=>"Staff","modelId"=>$id,"titulo"=>"Primer partido"));
@@ -256,10 +258,17 @@ class StaffController extends Controller
 		
 		if(isset($_POST['Staff']))
 		{
+			
 			$model->attributes=$_POST['Staff'];
+			//echo $model->apellido;
+			//echo "<br>";
+			$model->apellido= str_replace("\'","&apos;",$model->apellido);
+			//echo $model->apellido;
+			//exit();
 			if($model->save()){
-				
+				$model->apellido= str_replace("&apos;","'",$model->apellido);
 				$the_slug = 'director-tecnico-'.$model->id;
+				
 				$queried_post = get_page_by_path($the_slug,OBJECT,'post');
 				
 				if( $queried_post === NULL) {

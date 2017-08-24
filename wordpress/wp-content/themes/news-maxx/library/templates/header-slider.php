@@ -68,8 +68,8 @@
 
                             <div class="flex-caption">
 								<h5 style="color:white; font-size:14px;"><?php echo get_field("volanta"); ?></h5>
-                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white; font-size:21px;"><?php echo the_title(); ?></h3>
-                                <div style="font-family:'Roboto-regular'; padding-top:10px;color:white; font-size:12px;"><?php the_content(); ?></div>
+                                <h3 class="entry-title" style="font-family:'Condensed-bold-italic'; color:white; font-size:24px;"><?php echo the_title(); ?></h3>
+                                <div style="font-family:'Roboto-regular'; padding-top:10px;color:white; font-size:13px;"><?php the_content(); ?></div>
                                     <!-- <span class="arrow-wrapper">
                                         <span class="arrow-left"></span>
                                         <span class="arrow-right"></span>
