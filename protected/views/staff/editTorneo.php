@@ -10,7 +10,17 @@ $texto= explode("/", $model->texto);
  if($guardado=="si"){ ?>
 	 <h4 style="background-color:green;padding:10px;color:white;">Guardado</h4>
  <?php }
+ if(!isset($model->id)){
+	 ?>
+	 <h1>Agregar Torneo</h1>
+	 <?php
+	 }else{
+		 ?>
+	<h1>Editar Torneo</h1>	 
+		 <?php
+	 }
  ?>
+ 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -18,7 +28,9 @@ $texto= explode("/", $model->texto);
 	'enableAjaxValidation'=>false,
 )); ?>
 
+	<input type="hidden" name="modelId" value="<?php echo $model->modelId; ?>" />
 	
+	<input type="hidden" name="model" value="<?php echo $model->model; ?>" />
 
 	<?php echo $form->errorSummary($model); ?>
 	
@@ -39,19 +51,19 @@ $texto= explode("/", $model->texto);
 	</div>
 	<div class="row">
 		<label>Pe</label>
-		<input name="DataExtra[linea5]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea5]" class="form-control" value="<?php echo $texto[4]; ?>"/>
 	</div>
 	<div class="row">
 		<label>Pp</label>
-		<input name="DataExtra[linea6]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea6]" class="form-control" value="<?php echo $texto[5]; ?>"/>
 	</div>
 	<div class="row">
 		<label>Gf</label>
-		<input name="DataExtra[linea7]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea7]" class="form-control" value="<?php echo $texto[6]; ?>"/>
 	</div>
 	<div class="row">
 		<label>Gc</label>
-		<input name="DataExtra[linea8]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea8]" class="form-control" value="<?php echo $texto[7]; ?>"/>
 	</div>
 	
 	<?php }else{ ?>
@@ -74,19 +86,19 @@ $texto= explode("/", $model->texto);
 	</div>
 	<div class="row">
 		<label>Pe</label>
-		<input name="DataExtra[linea5]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea5]" class="form-control" value="<?php echo $texto[4]; ?>"/>
 	</div>
 	<div class="row">
 		<label>Pp</label>
-		<input name="DataExtra[linea6]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea6]" class="form-control" value="<?php echo $texto[5]; ?>"/>
 	</div>
 	<div class="row">
 		<label>Gf</label>
-		<input name="DataExtra[linea7]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea7]" class="form-control" value="<?php echo $texto[6]; ?>"/>
 	</div>
 	<div class="row">
 		<label>Gc</label>
-		<input name="DataExtra[linea8]" class="form-control" value="<?php echo $texto[3]; ?>"/>
+		<input name="DataExtra[linea8]" class="form-control" value="<?php echo $texto[7]; ?>"/>
 	</div>
 	
 	

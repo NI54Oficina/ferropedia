@@ -100,7 +100,7 @@ global $kopa_setting;
           <nav class="menu-jugadores">
 			<div><p class="selected">Directores Técnicos</p></div>
 
-			<a style="float:right;display:inline-block;padding:5px;border:solid green 1px;right:30px; top:30px;color:white;" href="<?php echo home_url(); ?>/ficha-jugador">Jugadores</a>
+			<a class="otra-categoria" href="<?php echo home_url(); ?>/con-la-verde">Jugadores</a>
           </nav>
 			
 			
@@ -114,7 +114,7 @@ global $kopa_setting;
           <div class="jugadores-cancha col-lg-5 col-md-5 col-sm-5 col-xs-12">
 
             <div class="min-height-upper-container" hid="1">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha.png" alt="">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-dt.png" alt="">
             </div>
 
 
@@ -141,7 +141,7 @@ global $kopa_setting;
 
                 <div class="contenido-1 contenido-dinamico">
                   <?php $auxPos=1; foreach($votados as $jugador){ ?>
-				  <a href="<?php echo home_url(); ?>/director-tecnico<?php echo $jugador->id; ?>">
+				  <a href="<?php echo home_url(); ?>/director-tecnico-<?php echo $jugador->id; ?>">
                   <p><span>0<?php echo $auxPos++; ?></span> <?php echo $jugador->nombre." ".$jugador->apellido; ?></p>
 				  </a>
 				  <?php } ?>
@@ -185,9 +185,9 @@ global $kopa_setting;
 
               <!-- <img src="" alt=""> -->
 			  
-			 <!-- <span class="escudito" ><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span>!-->
+			 
 			  
-			<label><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
+			<label><span style="z-index:100;margin:auto;top:-20px;max-width:30px;min-width:30px;min-height:30px;max-height:35px;" class="escudito" ><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
 
             </div>
 			</a>
@@ -232,8 +232,10 @@ global $kopa_setting;
               <?php foreach($directores as $jugador){ ?>
 				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 jugador-node <?php
 				if($auxE==0){echo " left-side";}else{ echo " right-side";}
-				?>" nombre="<?php echo $jugador->nombre." ".$jugador->apellido; ?>"  data-voto="<?php
-					$the_slug = 'director-tecnico-'.$jugador->id;
+				?>" data-nombre="<?php 
+				$auxN=$jugador->apellido." ".$jugador->nombre;
+				echo strtolower( trim($auxN)); ?>"  data-voto="<?php
+					$the_slug = 'jugador-'.$jugador->id;
 					$args = array(
 					  'name'        => $the_slug
 					);

@@ -18,6 +18,12 @@
 <h1>Administrar torneos de <span class="sub-verde"><?php echo $jugador->nombre." ".$jugador->apellido; ?></span></h1>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/jugador/<?php echo $jugador->id; ?>">Volver</a>
 
+
+<form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/jugador/editTorneo" method="post" >
+  <input type="hidden" name="modelId"  value="<?php echo $id; ?>" />
+  <button style="color:white;">Agregar torneo</button>
+</form>
+
 <table id="tablePais" style="width:100%;">
 <thead> <tr>
             <th style="min-width:50px;">Año</th>

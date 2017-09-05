@@ -1091,7 +1091,7 @@ function kopa_the_topnew()
                             <header>
                                 <span class="entry-date pull-left">
                                   <!-- <i class="fa fa-pencil-square-o"></i> -->
-                                  <?php the_time(get_option('date_format')); ?></span>
+                                  <?php echo  get_the_date( 'j')." de ".get_the_date( 'F')." de ".get_the_date( 'Y'); ?></span>
                             </header>
                             <h6 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a></h6>
                         </div>

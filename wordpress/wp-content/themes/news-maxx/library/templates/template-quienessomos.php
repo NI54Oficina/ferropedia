@@ -20,7 +20,7 @@ global $kopa_setting;
 <div style="padding:0;height:0;">
     <div class="header-text-content" style="padding-left: 25px;
     padding-top: 0;">
-      <h1><?php the_title(); ?></h1>
+      <h1><?php //the_title(); ?>Sobre <span class="sub-verde">LaFerropedia</span></h1>
       <?php //the_content(); ?>
     </div>
 </div>
@@ -140,9 +140,10 @@ global $kopa_setting;
       color: white;
       font-family: 'Roboto-regular';
       padding: 30px 100px;
+	  padding-top:25px;
       margin:10px 0;
       background-color: #006443;
-      min-height: 100px;
+      min-height: 110px;
 	  font-size:14px;
 	  list-style:none;
 	  min-height:140px;
@@ -159,17 +160,28 @@ global $kopa_setting;
 		position:absolute;
 		left:40px;
 
-		font-family: Georgia;
+		/*font-family: Georgia;
 		font-size: 70px;
 		line-height: 60px;
-		padding-top: 4px;
-
+		padding-top: 4px;*/
+		width:90px;
+		height:90px;
+		background-image:url('<?php echo get_template_directory_uri(); ?>/img/camiseta-01.png');
+		background-size:cover;
+		content:" 	";
 		font-family: 'Roboto-bold';
-		border-bottom: 3px solid #55c792;
+		/*border-bottom: 3px solid #55c792;*/
 
 	}
-
-	.body-quienessomos ol li:nth-child(1)::before{content:"01";}
+	<?php for($a=0;$a<11;$a++){ ?>
+	.body-quienessomos ol li:nth-child(<?php echo $a; ?>)::before{
+	
+			background-image:url('<?php echo get_template_directory_uri(); ?>/img/camiseta-<?php echo $a; ?>.png');
+		}
+		<?php
+	} ?>
+	
+	/*.body-quienessomos ol li:nth-child(1)::before{content:"01";}
 	.body-quienessomos ol li:nth-child(2)::before{content:"02";}
 	.body-quienessomos ol li:nth-child(3)::before{content:"03";}
 	.body-quienessomos ol li:nth-child(4)::before{content:"04";}
@@ -198,7 +210,7 @@ global $kopa_setting;
 	.body-quienessomos ol li:nth-child(27)::before{content:"27";}
 	.body-quienessomos ol li:nth-child(28)::before{content:"28";}
 	.body-quienessomos ol li:nth-child(29)::before{content:"29";}
-	.body-quienessomos ol li:nth-child(30)::before{content:"30";}
+	.body-quienessomos ol li:nth-child(30)::before{content:"30";}*/
 
 
 

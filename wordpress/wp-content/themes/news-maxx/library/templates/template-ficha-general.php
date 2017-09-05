@@ -108,7 +108,7 @@ global $kopa_setting;
             <div><p>Delanteros</p></div>
 			
 			
-			<a style="float:right;display:inline-block;padding:5px;border:solid green 1px;right:30px; top:30px;color:white;" href="<?php echo home_url(); ?>/director-tecnico">Directores Técnicos</a>
+			<a class="otra-categoria" href="<?php echo home_url(); ?>/con-la-verde-dt">Directores Técnicos</a>
 
           </nav>
 
@@ -122,7 +122,12 @@ global $kopa_setting;
           <div class="jugadores-cancha col-lg-5 col-md-5 col-sm-5 col-xs-12">
 
             <div class="min-height-upper-container" hid="1">
-                <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha.png" alt="">
+				<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-arquero.png"  alt="">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-defensor.png" style="display:none;" alt="">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-mediocampista.png" style="display:none;" alt="">
+				<img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/cancha-delantero.png" style="display:none;" alt="">
+                
+                
             </div>
 
 
@@ -193,9 +198,7 @@ global $kopa_setting;
 
               <!-- <img src="" alt=""> -->
 			  
-			 <!-- <span class="escudito" ><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span>!-->
-			  
-			<label><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
+			 <label><span style="z-index:100;margin:auto;top:-20px;max-width:30px;min-width:30px;min-height:30px;max-height:35px;" class="escudito" ><?php if(false){ ?>10<?php }else{ ?>&nbsp;<?php } ?></span><?php echo $jugador->nombre." ".$jugador->apellido; ?></label>
 
             </div>
 			</a>
@@ -240,7 +243,9 @@ global $kopa_setting;
               <?php foreach($puesto as $jugador){ ?>
 				<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 jugador-node <?php
 				if($auxE==0){echo " left-side";}else{ echo " right-side";}
-				?>" nombre="<?php echo $jugador->apellido." ".$jugador->nombre; ?>"  data-voto="<?php
+				?>" data-nombre="<?php 
+				$auxN=$jugador->apellido." ".$jugador->nombre;
+				echo strtolower( trim($auxN)); ?>"  data-voto="<?php
 					$the_slug = 'jugador-'.$jugador->id;
 					$args = array(
 					  'name'        => $the_slug

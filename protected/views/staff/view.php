@@ -52,7 +52,7 @@ if(isset($ultimo)){echo $ultimo->texto; }
 	<a href="<?php echo Yii::app()->request->baseUrl; ?>/dataExtra/delete/<?php echo $data->id; ?>" class="confirmation">Borrar</a> / 
 	<a href="<?php echo Yii::app()->request->baseUrl; ?>/dataExtra/update/<?php echo $data->id; ?>">Editar</a>
 	<?php } ?>
-	</li><br>
+	</li>
 	
 <?php } ?></ul>
 <?php } ?>
@@ -63,10 +63,66 @@ if(isset($ultimo)){echo $ultimo->texto; }
   <input type="hidden" name="modelId"  value="<?php echo $model->id; ?>" />
   <button style="color:white;">Agregar data</button>
 </form>
+
+
+<?php 
+$model->logros; ?>
+<?php if(count($model->logros)>0){ ?>
+<hr>
+<h4>Logros</h4>
+<?php } ?>
+<?php 
+$model->logros;
+foreach($model->logros as $logro){
+	?>
+	<div style="display:inline-block;width:100px;">
+		<p><strong>Año:</strong> <?php echo $logro->fecha; ?></p>
+		<p><img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo $logro->tipo; ?>.svg" /></p>
+		<a href="<?php echo home_url(); ?>/staff/deleteLogro/<?php echo $logro->id; ?>">Borrar</a>
+	</div>
+	<?php
+}
+?>
+<br>
+<br>
 <hr>
 
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/staff/torneos/<?php echo $model->id; ?>">Ver Campañas</a>
+<form id="logro"name="logro" action="<?php echo Yii::app()->request->baseUrl; ?>/staff/crearLogro" method="post" >
+	<input name="model" value="<?php echo get_class($model); ?>" type="hidden" />
+  <input type="hidden" name="modelId"  value="<?php echo $model->id; ?>" />
+  <input id="copa" style="display:inline-block;"  type="radio" name="tipo" value="copa" checked> <label for="copa"><img src="<?php echo get_template_directory_uri(); ?>/img/copa-verde.svg" /></label></input>
+  <input id="ascenso" style="display:inline-block;"   type="radio" name="tipo" value="ascenso"><label for="ascenso"><img src="<?php echo get_template_directory_uri(); ?>/img/ascenso.svg" /></label></input>
+  <input id="descenso" style="display:inline-block;"  type="radio" name="tipo" value="descenso"><label for="descenso"><img src="<?php echo get_template_directory_uri(); ?>/img/descenso.svg" /></label></input><br>
+  <input   name="fecha" placeholder="Año" value="" />
+  
+  <button style="color:white;background:gray;font-size:13px;padding-top:5px;padding-bottom:5px;margin-left:10px;">Agregar logro</button>
+</form>
+<br>
 
+
+<style>
+#logro input[type=radio]:checked{
+	opacity:0;
+}
+#logro input:checked + label{
+	opacity:1;
+}
+
+#logro input[type=radio]{
+	opacity:0;
+}
+#logro input + label{
+	opacity:0.5;
+}
+</style>
+<hr>
+<br>
+<a class="button-like" href="<?php echo Yii::app()->request->baseUrl; ?>/staff/torneos/<?php echo $model->id; ?>">Ver Campañas</a>
+<br>
+<br>
+
+<hr>
+<br>
 <?php if(false){ ?>
 <form name="myform" action="<?php echo Yii::app()->request->baseUrl; ?>/relImagen/create" method="post" target="_blank">
 

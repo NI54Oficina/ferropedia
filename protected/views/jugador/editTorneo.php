@@ -11,6 +11,17 @@ $texto= explode("/", $model->texto);
 	 <h4 style="background-color:green;padding:10px;color:white;">Guardado</h4>
  <?php }
  ?>
+ <?php
+ if(!isset($model->id)){
+	 ?>
+	 <h1>Agregar Torneo</h1>
+	 <?php
+	 }else{
+		 ?>
+	<h1>Editar Torneo</h1>	 
+		 <?php
+	 }
+ ?>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -18,7 +29,9 @@ $texto= explode("/", $model->texto);
 	'enableAjaxValidation'=>false,
 )); ?>
 
+	<input type="hidden" name="modelId" value="<?php echo $model->modelId; ?>" />
 	
+	<input type="hidden" name="model" value="<?php echo $model->model; ?>" />
 
 	<?php echo $form->errorSummary($model); ?>
 	

@@ -21,7 +21,7 @@
                         <h6 class="entry-title" itemscope="" itemtype="http://schema.org/Event">
                             <a itemprop="name" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                         </h6>
-                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i><?php echo the_time(get_option('date_format')); ?></span>
+                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i><?php echo  get_the_date( 'j')." de ".get_the_date( 'F')." de ".get_the_date( 'Y'); ?></span>
                         <span class="entry-meta pull-left">&nbsp;/&nbsp;</span>
                         <span class="entry-author pull-left"><?php _e('Por ', 'newsmaxx');?><?php
 						$autor=get_field("name_author");

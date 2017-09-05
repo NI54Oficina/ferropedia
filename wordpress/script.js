@@ -41,7 +41,7 @@ $(window).on('resize', function(){
 
 
 function _openmodal(){
-
+return;
 
   $('.container-gallery  div.max-box-gallery').on('click', function(){
 
@@ -223,6 +223,7 @@ function slider(padreMenu,padreContenedor ){
 
     function cycleItems() {
       var item = $(padreContenedor+'.contenido-dinamico').eq(currentIndex);
+	 
       items.hide();
       item.fadeIn("slow");
     }
@@ -245,19 +246,23 @@ function slider(padreMenu,padreContenedor ){
 var currentTipoJugador=0;
 
 function slider2(padreMenu,padreContenedor ){
-
+	 var index=0;
+	
+	index=currentTipoJugador;
   //if(padreMenu==null && padreContenedor==null){padreMenu=''; padreContenedor='';}
 
-    var index=0;
+   
 	
     $(padreContenedor+' .contenido-dinamico').eq(0).fadeIn();
-    currentTipoJugador = 0,
-      items = $(padreContenedor+' .contenido-dinamico'),
+    
+      items = $(padreContenedor+' .contenido-dinamico');
       itemAmt = items.length;
 
     function cycleItems() {
 		
       var item = $(padreContenedor+' .contenido-dinamico').eq(currentTipoJugador);
+	   $(".jugadores-cancha img").hide();
+		$(".jugadores-cancha img").eq(currentTipoJugador).fadeIn("slow");
       items.hide();
       item.fadeIn("slow");
     }
@@ -272,8 +277,30 @@ function slider2(padreMenu,padreContenedor ){
 	
       cycleItems();
     });
-
-
+	if(window.location.hash) {
+		console.log(window.location.hash);
+	switch(window.location.hash){
+		case "#delantero":
+			currentTipoJugador=4;
+			break;
+		case "#arquero":
+			currentTipoJugador=1;
+			break;
+		case "#mediocampista":
+			currentTipoJugador=3;
+			break;
+		case "#defensor":
+			currentTipoJugador=2;
+			break;
+			
+	}
+	 $(padreMenu+'.menu-dinamico nav p').removeClass('selected');
+	 $(padreMenu+'.menu-dinamico nav div:nth-child('+currentTipoJugador+') p').addClass('selected');
+	 currentTipoJugador-=1;
+		cycleItems();
+	}
+	
+	
 
 
 }
@@ -303,6 +330,8 @@ function slider_get_post(){
 
         // console.log(currentIndex);
         var item = $('.img-sector-padre > .contenido-dinamico').eq(index_post_slider);
+		
+		
         items.hide();
         item.fadeIn("slow");
 
@@ -668,7 +697,7 @@ function get_post(){
 }
 
 function NotaCarousel(){
-	if($(".trio-cuna-cajon").length>0&& $("#gallery-2 .gallery-item").length>0){
+	if($(".trio-cuna-cajon").length>0&& $(".gallery .gallery-item").length>0){
 		try{
 						console.log("entra?");
 						
@@ -676,7 +705,7 @@ function NotaCarousel(){
 						$(".custom-post-template .thumbnail-container > img").remove();
 						$(".custom-post-template .thumbnail-container > .gallery-item").remove();
 						//$(".custom-post-template .thumbnail-container").html(" ");
-						$("#gallery-2 .gallery-item").each(function(){
+						$(".gallery .gallery-item").each(function(){
 							$(this).attr("href","#");
 							$(this).find("a").removeAttr("href");
 							$(".custom-post-template .thumbnail-container").append("<div class='gallery-item'>"+$(this).html()+"</div>");
@@ -725,6 +754,8 @@ function sortJugadores(){
 		if(this.value==2){
 			sortData="voto";
 			order="desc";
+		}else{
+			sortData="nombre";
 		}
 		var auxJ=currentTipoJugador+1;
 		

@@ -33,13 +33,13 @@ $secciones= ["jugador"];
 	?>
 	<div style="display:inline-block;width:200px;" class="btn-nav">
 	<h3 style="text-transform:capitalize">Directores Técnicos</h3>
-		<a href="<?php echo home_url().'/'."staff".'/create'; ?>" target="_blank">Crear</a>/
-		<a href="<?php echo home_url().'/'."staff".'/admin'; ?>" target="_blank">Administrar</a>
+		<a href="<?php echo home_url().'/'."staff".'/create'; ?>" >Crear</a>/
+		<a href="<?php echo home_url().'/'."staff".'/admin'; ?>" >Administrar</a>
 		<hr>
 	</div>
 <div style="display:inline-block;width:200px;" class="btn-nav">
 		<h3>Datos Especiales</h3>
-		<a href="<?php echo home_url().'/'."dataExtra".'/proximo'; ?>" >Editar Próximo Partido</a>/
+		<a href="<?php echo home_url().'/'."dataExtra".'/proximo'; ?>" >Editar Próximo Partido</a><br>
 		<a href="<?php echo home_url().'/'."dataExtra".'/resultados'; ?>" >Editar Estadísticas totales</a>
 		<hr>
 </div>
@@ -76,7 +76,7 @@ $secciones= ["jugador"];
 .content-admin table{color:black;}
 .content-admin #sidebar{display:none;}
 .content-admin .form-group{max-width:600px;}
-.content-admin button, .admin-submit,[type=submit],.label-show{padding:10px;border:none;border-radius:10px;font-size:16px;min-width:100px;background-color:#a43c93;margin-top:10px;color:white;}
+.content-admin button, .admin-submit,[type=submit],.label-show{padding:10px;border:none;border-radius:5px;font-size:16px;min-width:100px;background-color:#a43c93;margin-top:10px;color:white;}
 .form_date{margin-bottom:10px;}
 .content-admin .form{max-width:600px;}
 .extra-data{width:100%;}

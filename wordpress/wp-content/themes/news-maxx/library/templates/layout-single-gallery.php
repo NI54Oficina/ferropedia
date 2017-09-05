@@ -275,6 +275,7 @@
 				.owl-theme .owl-controls{
 					padding-bottom:40px;					
 				}
+				
             </style>
 
             <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>

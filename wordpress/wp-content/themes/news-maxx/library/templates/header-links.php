@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="utf-8">
-    <title><?php wp_title('|', true, 'right'); ?></title>
+    <title><?php echo str_replace("//","",wp_title('|', false, 'right')); ?></title>
     <?php
     if ('enable' === get_option('kopa_theme_options_responsive_status', 'enable')) {
         ?>
@@ -15,6 +15,16 @@
     <!-- Le fav and touch icons -->
     
     <link rel="icon" href="<?php echo home_url(); ?>/fav-icon.png" type="image/png" sizes="16x16">
+	
+	
+	
+	<?php
+	$model= $GLOBALS["jugador"];
+	if($model->avatar){ ?>
+	
+	<meta property="og:image"              content="<?php
+			echo   home_url()."/".$model->avatar[0]->imagen_data()["url"]; ?>" />
+	<?php } ?>
 	
 	
     

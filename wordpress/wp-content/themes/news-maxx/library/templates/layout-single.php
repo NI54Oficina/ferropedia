@@ -128,14 +128,26 @@
           }
 
           .content-tags{
-            padding-top: 20px;
+            padding-top: 0px;
           }
 
         </style>
+		
+		<div class="share" style="padding-bottom:100px;">
+            <div  class="title-left-colum" style="border:none;"><div class="links-sociales" style="padding:0;" >
+
+                  <i class="fa fa-facebook" style="margin-left:0;font-size:26px;" aria-hidden="true" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>','','width=500,height=400')" ></i>
+                  <i class="fa fa-twitter" style="font-size:26px;" aria-hidden="true" onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo wp_get_shortlink(); ?>&amp;original_referer=<?php echo wp_get_shortlink(); ?>&text=<?php echo get_the_title(); ?>','','width=500,height=400')"></i>
+
+                </div>
+                </div>
+
+
+          </div>
 
         <?php if(has_tag()){ ?>
           <div class="tags">
-            <p class="title-left-colum">ETIQUETAS</p>
+            <p class="title-left-colum">Etiquetas</p>
             <div class="content-tags">
                 <?php the_tags( '<label>', '</label>, <label>', '</label>' ); ?>
             </div>
@@ -168,14 +180,14 @@
 
 
                   <div class="related">
-                    <p  class="title-left-colum">RELACIONADOS</p>
+                    <p  class="title-left-colum">Relacionados</p>
 
                     <?php     while( $my_query->have_posts() && $max<4) {
                             $my_query->the_post(); ?>
 
                             <a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow">
                             <p class="relacionados">
-                              <span><?php echo  get_the_date( 'l F j, Y' ) ?><br></span>
+                              <span><?php echo  get_the_date( 'j ' ).' de '.get_the_date( 'F, Y' ); ?><br></span>
                                 <?php the_title(); ?>
                             </p>
                             </a>
@@ -193,18 +205,6 @@
             titulo noticia</p> -->
 
 
-
-          <div class="share">
-            <div  class="title-left-colum">COMPARTIR <div class="links-sociales" style="padding:0;" >
-
-                  <i class="fa fa-facebook" aria-hidden="true" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>','','width=500,height=400')" ></i>
-                  <i class="fa fa-twitter" aria-hidden="true" onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo wp_get_shortlink(); ?>&amp;original_referer=<?php echo wp_get_shortlink(); ?>&text=<?php echo get_the_title(); ?>','','width=500,height=400')"></i>
-
-                </div>
-                </div>
-
-
-          </div>
         </div>
 
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 post-content-text">
@@ -216,12 +216,12 @@
 
 
           <div class="fuente">
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="padding:0;">
-                <img style="max-width:30px;" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-verde.svg" alt="">
+            <div style="width:20px;display:inline-block;position:absolute;">
+                <img style="width:35px;margin-top:5px;" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-fuentes.svg" alt="">
             </div>
 
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding:0;">
-              <p style="font-size:0.8em;color:#888888;margin:0; font-family:'Roboto-bold';">Fuentes</p>
+            <div style="display:inline-block;padding-left:40px;">
+              <p style="font-size:0.8em;color:#888888;margin:0; font-family:'Roboto-bold';">Fuente</p>
               <p style="font-size:0.8em; color:#888888;margin:0"><?php echo get_field('fuente'); ?></p>
             </div>
 
@@ -237,7 +237,7 @@
         <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 container-move-entradas">
             <?php
 
-            $cat = get_the_category();
+            /*$cat = get_the_category();
             $current_cat_id = $cat[0]->cat_ID;
 
             $args = array(
@@ -251,7 +251,13 @@
 
             $thisindex = array_search( $id, $ids );
             $previd = $ids[ $thisindex - 1 ];
-            $nextid = $ids[ $thisindex + 1 ];
+            $nextid = $ids[ $thisindex + 1 ];*/
+			$previousPost=get_previous_post(true);
+			$previd=$previousPost->ID;
+			
+			$nextPost=get_next_post(true);
+			$nextid=$nextPost->ID;
+			
             ?>
 
             <style >
@@ -298,19 +304,25 @@
 					padding-bottom:40px;
 				}
             </style>
-
+			
+			<?php if(isset($previd)){ ?>
             <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>
+			<?php } ?>
 
-
+			<?php if(isset($nextid)){ ?>
             <a href="<?php echo get_permalink($nextid); ?>"><p class="siguiente-entrada">Siguiente &gt;</p></a>
-
+			<?php } ?>
             <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 linea-divisoria"></div>
 
+			<?php if(isset($previd)){ ?>
+            <a href="<?php echo get_permalink($previd); ?>"><h6 class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo  get_the_date( 'j',$previd)." de ".get_the_date( 'F',$previd)." de ".get_the_date( 'Y',$previd); ?>			</span></h6></a>
+			<?php } ?>
 
-            <a href="<?php echo get_permalink($previd); ?>"><h6 class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></h6></a>
-
-
-             <a href="<?php echo get_permalink($nextid); ?>"><h6 class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></h6></a>
+			<?php if(isset($nextid)){ ?>
+             <a href="<?php echo get_permalink($nextid); ?>"><h6 class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span>
+			 <?php echo  get_the_date( 'j',$nextid)." de ".get_the_date( 'F',$nextid)." de ".get_the_date( 'Y',$nextid); ?>
+			 </span></h6></a>
+			<?php } ?>
 
 
 
@@ -322,8 +334,8 @@
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 widget">
 
 
-          <div class="twitter-container">
-          <?php echo do_shortcode("[custom-twitter-feeds]"); ?>
+          <div class="twitter-container" style="margin-bottom:40px;">
+          <?php echo do_shortcode("[custom-twitter-feeds screenname='notibaenred']"); ?>
           </div>
 
 

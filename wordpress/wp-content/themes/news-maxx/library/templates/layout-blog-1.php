@@ -89,7 +89,7 @@
       }
     </style>
 
-    <h2>Historial <span> *Última actualización: 24 de abril a las 19.00pm</span></h2>
+    <h2>Historial <span> *Última actualización: 24 de abril.</span></h2>
 
     <?php //$var =['Campeonatos locales', 'Copas Locales', 'Copas Internacionales']; ?>
 
@@ -150,9 +150,9 @@
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-left">
-		<a href="<?php echo home_url(); ?>/ficha-jugador"><h2 class="titulo-home">Con la <span class="sub-verde">Verde</span></h2></a>
+		<a href="<?php echo home_url(); ?>/con-la-verde"><h2 class="titulo-home">Con la <span class="sub-verde">Verde</span></h2></a>
 
-		<?php $destacado= Jugador::model()->findByPk(26); ?>
+		<?php $destacado= Jugador::model()->findByPk(81); ?>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box-left" style="padding:0 15px;">
 
 
@@ -188,15 +188,24 @@
 		<?php echo $debut[0]; ?><br>
 		Ferro <?php echo $debut[1]; ?>
 		</p>
-
-        <img class="copa-verde" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/copa-verde.svg" alt="">
+		<div style="padding-top:20px;">
+			<?php $destacado->logros;
+			if(count($destacado->logros)>0){ 
+				foreach($destacado->logros as $logro){ ?>
+					<div style="display:inline-block;width:40px;text-align:center;color:white;"><img style="max-width:100%;" src="<?php echo get_template_directory_uri(); ?>/img/<?php echo $logro->tipo; ?>.svg" /><br><?php echo $logro->fecha; ?>
+					</div>
+			<?php }
+			 }else{ ?>
+				 
+			 <?php } ?>
+			 </div>
 
       </div>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 second-box-right">
 
-      <a href="<?php echo home_url(); ?>/ficha-jugador/">
+      <a href="<?php echo home_url(); ?>/con-la-verde/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-verde rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono_jugador_grande.svg);">
@@ -267,7 +276,7 @@ $criteria->select = "*";
 	  </a>
 
       <?php } ?>
-      <a href="<?php echo home_url(); ?>/director-tecnico/">
+      <a href="<?php echo home_url(); ?>/con-la-verde-dt/">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 box-jugador box-mas-jugador">
 		<div class="border-jugador">
         <div class="imagen-jugador-violeta rectangle placeholder-avatar" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/director-tecnico-grande.svg);">
@@ -322,7 +331,7 @@ $criteria->select = "*";
              echo $main.'...'; ?>
     </p>
 
-      <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
+      <p class="fecha-post-home violeta"><?php echo  get_the_date( 'j' )." de ".get_the_date( 'F' )." de ".get_the_date( 'Y' ); ?></p>
     </div>
 </a>
   <?php }  wp_reset_postdata();  ?>
@@ -334,7 +343,13 @@ $criteria->select = "*";
 </div>
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 third-box-right twitter-widget">
       <?php // echo do_shortcode("[custom-twitter-feeds]"); ?>
-    <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
+    <!--<img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">!-->
+	<div class="twitter-container widget widget-content" style="border:none;">
+		<!-- widget twitter -->
+		<?php echo do_shortcode("[custom-twitter-feeds screenname='notibaenred']"); ?>
+		
+		<!-- widget twitter -->
+	</div>
   </div>
 </div>
 
@@ -344,7 +359,7 @@ $criteria->select = "*";
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title six-box-left">
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <a href="<?php echo home_url(); ?>/category/cuna-cajon"><h2 class="titulo-home">De la Cuna <span class="sub-verde">hasta el Cajón</span></h2></a>
+    <a href="<?php echo home_url(); ?>/cuna-cajon"><h2 class="titulo-home">De la Cuna <span class="sub-verde">hasta el Cajón</span></h2></a>
 	</div>
 
     <?php
@@ -380,8 +395,8 @@ $criteria->select = "*";
              echo $main.'...'; ?></p>
 
                 <div class="info-date">
-                  <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' , $posts_cuna[0]->ID); ?></p>
-                  <p class="fecha-post-home verde"> Ver comentarios</p>
+                  <p class="fecha-post-home violeta"><?php echo  get_the_date( 'j' , $posts_cuna[0]->ID)." de ".get_the_date( 'F' , $posts_cuna[0]->ID)." de ".get_the_date( 'Y' , $posts_cuna[0]->ID); ?></p>
+                  <?php if(false){ ?><p class="fecha-post-home verde"> Ver comentarios</p><?php } ?>
                 </div>
 
               </div>
@@ -412,7 +427,8 @@ $criteria->select = "*";
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 six-inner-container">
 
 		<div class="col-lg-4 col-md-4 mini-thumb hover-black" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>);"></div>
-        <p class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><?php the_title_attribute($post->ID ); ?> <br>  <span> <?php echo  get_the_date( 'l F j, Y' ) ?></span></p>
+		
+        <p class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><?php the_title_attribute($post->ID ); ?> <br>  <span> <?php echo  get_the_date( 'j')." de ".get_the_date( 'F')." de ".get_the_date( 'Y'); ?></span></p>
 
       </div></a>
 
@@ -452,7 +468,7 @@ $criteria->select = "*";
 
 
         $post_categories = wp_get_post_categories( $recent["ID"]);
-        $date= get_the_date();?>
+        ?>
         <a href="<?php echo get_permalink($recent["ID"]);  ?>" title="<?php echo esc_attr(the_title())?>">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bloque-widget">
@@ -460,7 +476,7 @@ $criteria->select = "*";
             <p class="widget-numero"><?php   echo $nro ?></p>
           </div>
           <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-            <p><?php   echo $date ?></p>
+            <p><?php echo  get_the_date( 'j')." de ".get_the_date( 'F')." de ".get_the_date( 'Y'); ?></p>
             <p><?php echo the_title();  ?></p>
           </div>
         </div>
@@ -483,7 +499,7 @@ $criteria->select = "*";
 
   <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 box-with-title fourth-box-left">
 
-    <a href="<?php echo home_url(); ?>/museo"><h2 class="titulo-home">Museo de la <span class="sub-verde">Emoción Verdolaga</span></h2></a>
+    <a href="<?php echo home_url(); ?>/museo-verdolaga"><h2 class="titulo-home">Museo de la <span class="sub-verde">Emoción Verdolaga</span></h2></a>
 
     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fourth-container">
 
@@ -534,8 +550,8 @@ $criteria->select = "*";
 
 
             <div class="info-date">
-              <p class="fecha-post-home violeta"><?php echo  get_the_date( 'l F j, Y' ) ?></p>
-              <p class="fecha-post-home verde"> Ver comentarios</p>
+              <p class="fecha-post-home violeta"><?php echo  get_the_date( 'j')." de ".get_the_date( 'F')." de ".get_the_date( 'Y'); ?></p>
+              
             </div>
           </div>
 
@@ -549,7 +565,7 @@ $criteria->select = "*";
 
 
   </div>
-
+	<?php if(false){ ?>
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fourth-box-right ultimos-comentarios-widget" style="overflow:hidden;">
 		<div style="width:100%; background-color:#a43c93;">
       <h3 style="color:white;text-align:center;margin-top:0;padding-top:15px; font-family:'Condensed-bold-italic'">ÚLTIMOS COMENTARIOS</h3>
@@ -593,7 +609,7 @@ $criteria->select = "*";
 
     </div>
 
-
+	<?php } ?>
 
 
 

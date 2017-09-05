@@ -29,7 +29,10 @@ get_template_part( 'library/templates/header', 'extra' );
 	<h1 >De la Cuna <span class="sub-verde">hasta el Cajón</span></h1>
 	</div>
 	<div class="bajada-cuna">
-	<p ><?php echo $cat->description ?></p>
+	<p ><?php 
+	$page= get_page_by_path("cuna-cajon");
+	echo $page->post_content;
+	?></p>
     </div>
     </div>
 
@@ -51,8 +54,12 @@ get_template_part( 'library/templates/header', 'extra' );
 
 
    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <?php //echo do_shortcode("[custom-twitter-feeds]"); ?>
-      <img style="width: 100%;"src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/twitter-demo-10.png" alt="">
+      <div class="twitter-container widget widget-content" style="border:none;">
+		<!-- widget twitter -->
+		<?php echo do_shortcode("[custom-twitter-feeds screenname='notibaenred']"); ?>
+		
+		<!-- widget twitter -->
+	</div>
 
    </div>
 

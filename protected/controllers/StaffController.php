@@ -15,7 +15,7 @@ class StaffController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -28,11 +28,11 @@ class StaffController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"listar","ciudad"),
+				'actions'=>array('index','view',"listar"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update',"torneos","editTorneo"),
+				'actions'=>array('create','update',"torneos","editTorneo","crearLogro","deleteLogro"),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -54,6 +54,27 @@ class StaffController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+	}
+	
+	public function actionCrearLogro(){
+		
+		if(isset($_POST["model"])&&isset($_POST["modelId"])){
+			$logro= new Logro();
+			$logro->model= $_POST["model"];
+			$logro->modelId= $_POST["modelId"];
+			$logro->tipo= $_POST["tipo"];
+			$logro->fecha= $_POST["fecha"];
+			$logro->save();
+			$id=$logro->modelId;
+			$this->redirect(array('staff/'.$id));
+		}
+	}
+	
+	public function actionDeleteLogro($id){
+		$model= Logro::model()->findByPk($id);
+		$modelId= $model->modelId;
+		$model->delete();
+		$this->redirect(array('staff/'.$modelId));
 	}
 	
 	public function actionListar(){
@@ -120,7 +141,7 @@ class StaffController extends Controller
 				wp_insert_post(array(
 					"post_title"=>$model->nombre." ".$model->apellido,
 					"post_name"=>"director-tecnico-".$model->id,
-					"post_category"=>array(get_cat_ID( 'director-tecnico' )),
+					"post_category"=>array(get_cat_ID( 'Director Técnico' )),
 					"meta_input"=>array(
 						"_wp_page_template" => "template-ficha-tecnica3.php"
 						)
@@ -171,31 +192,56 @@ class StaffController extends Controller
 		$torneos= DataExtra::model()->findAllByAttributes(array("model"=>"Staff","modelId"=>$id,"titulo"=>"Torneo"));
 		$staff= Staff::model()->findByPk($id);
 		$this->render('torneos',array(
-			'torneos'=>$torneos, "staff"=>$staff
+			'torneos'=>$torneos, "staff"=>$staff,"id"=>$id
 		));
 	}
 	
-	public function actionEditTorneo($id)
+	public function actionEditTorneo($id=0)
 	{
-		$model= DataExtra::model()->findByPk($id);
-
-		$guardado="no";
-		if(isset($_POST['DataExtra']))
-		{
-			$texto="";
-			foreach($_POST["DataExtra"] as $d){
-				$texto.=$d."/";
-			}
-			$model->texto=$texto;
-			if($model->save()){
-				$guardado="si";
+		if($id!=0){
+			
+			$model= DataExtra::model()->findByPk($id);
+			
+			$guardado="no";
+			if(isset($_POST['DataExtra']))
+			{
+				$texto="";
+				foreach($_POST["DataExtra"] as $d){
+					$texto.=$d."/";
+				}
+				$model->texto=$texto;
+				if($model->save()){
+					$guardado="si";
+					
+				}
+				$this->redirect(array('staff/torneos/','id'=>$model->modelId));
+				exit();
 				
 			}
-			$this->redirect(array('staff/torneos/','id'=>$model->modelId));
-			exit();
-			
+		}else{
+			$model= new DataExtra();
+			if(isset($_POST["modelId"])){
+				$model->modelId=$_POST["modelId"];
+				$model->model="Staff";
+			}
+			if(isset($_POST['DataExtra']))
+			{
+				$texto="";
+				foreach($_POST["DataExtra"] as $d){
+					$texto.=$d."/";
+				}
+				$model->texto=$texto;
+				$model->model="Staff";
+				$model->titulo="Torneo";
+				
+				
+				
+				if($model->save(false)){
+					$this->redirect(array('staff/torneos/','id'=>$model->modelId));
+					exit();
+				}
+			}
 		}
-
 		$this->render('editTorneo',array(
 			'model'=>$model,"guardado"=>$guardado
 		));
@@ -276,7 +322,7 @@ class StaffController extends Controller
 						"post_title"=>$model->nombre." ".$model->apellido,
 						"post_name"=>"director-tecnico-".$model->id,
 						"post_status" => "publish",
-						"post_category"=>array(get_cat_ID( 'director-tecnico' )),
+						"post_category"=>array(get_cat_ID( 'Director Técnico' )),
 						"meta_input"=>array(
 							"_wp_page_template" => "template-ficha-tecnica3.php"
 							)
@@ -289,7 +335,7 @@ class StaffController extends Controller
 						  "post_title"=>$model->nombre." ".$model->apellido,
 							"post_name"=>"director-tecnico-".$model->id,
 							"post_status" => "publish",
-							"post_category"=>array(get_cat_ID( 'director-tecnico' ))
+							"post_category"=>array(get_cat_ID( 'Director Técnico' ))
 					  );
 					  wp_update_post( $my_post );
 					  update_post_meta( $queried_post->ID, '_wp_page_template', 'template-ficha-tecnica3.php' );
@@ -394,6 +440,24 @@ class StaffController extends Controller
 				echo "<br>";
 				$jugador->ciudad_natal="";
 				$jugador->save();
+			}
+		}
+	}
+	
+	public function actionTotales(){
+		$staffs= Staff::model()->findAll();
+		foreach($staffs as $staff){
+			$staff->data;
+			$auxT=0;
+			foreach($staff->data as $data){
+				
+				if(strpos(strtolower($data->texto),"total")!==false){
+					$auxT++;
+				}
+			}
+			if($auxT>1){
+				echo $staff->id;
+				echo "<br>";
 			}
 		}
 	}

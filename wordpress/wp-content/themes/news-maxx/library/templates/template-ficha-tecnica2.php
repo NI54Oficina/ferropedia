@@ -1,7 +1,6 @@
 <?php
 $model= $GLOBALS["jugador"];
-?>
-<?php
+
 $aux=$_SERVER[REQUEST_URI];
 $aux= substr($aux,strpos($aux,"jugador-"));
 if(strpos($aux,"/")){
@@ -19,7 +18,8 @@ if(!isset($model)){
 	$model= Jugador::model()->findByPk($aux);
 
 }
-
+global $jugador;
+$jugador=$model;
 
 // get_header();
 
@@ -61,6 +61,8 @@ $debut= explode(";",$debut);
 $debut=str_replace("(","<br>(",$debut);
 $ultimo= explode(";",$ultimo);
 $ultimo=str_replace("(","<br>(",$ultimo);
+
+$model->puesto= strtolower($model->puesto);
 
 
 
@@ -115,7 +117,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
   <div class="wrapper clearfix">
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box-ficha-tecnica">
-
+		<a style="color:white;position:absolute;z-index:1000;" href="<?php echo home_url(); ?>/con-la-verde#<?php echo $model->puesto; ?>"> Volver</a>
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;padding-top:90px;">
           <!--<div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>!-->
 		  <div class="cancha cancha-<?php echo $model->puesto; ?>">
@@ -130,14 +132,27 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
             <h2><?php echo $lastTorneo[0]; ?></h2>
-            <p>Todos partidos jugados</p>
+            <p>Total partidos jugados</p>
             <h3><?php echo $model->puesto; ?></h3>
             <h4><?php echo $model->detalle_puesto; ?></h4>
             <p>Puesto</p>
           </div>
+		  
+		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
+            <h2><?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?></h2>
+			<?php if($model->puesto=="arquero"){ ?>
+            <p>Total Goles Recibidos</p>
+			<?php }else{ ?> 
+			<p>Total Goles Convertidos</p>
+			<?php } ?>
+			<h3><?php if($ultimo[0]!=""){ echo $ultimo[0]; }else{ echo "---"; } ?></h3>
+            <h4><?php if($ultimo[1]!=""){ echo "Ferro ".$ultimo[1]; }else{ echo "---"; } ?></h4>
+            <p>Último partido</p>
+          </div>
 
 
 		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
+		  
             <h2>&nbsp;<!--<?php echo rand(1,8); ?>!--></h2>
             <p>&nbsp;<!--Total partidos ganados!--></p>
             <h3><?php if($debut[0]!=""){ echo $debut[0]; }else{ echo "---"; } ?></h3>
@@ -146,13 +161,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
           </div>
 
 
-		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 informacion-tecnica-inner">
-            <h2><?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?></h2>
-            <p>Total Goles Convertidos</p>
-			<h3><?php if($ultimo[0]!=""){ echo $ultimo[0]; }else{ echo "---"; } ?></h3>
-            <h4><?php if($ultimo[1]!=""){ echo "Ferro ".$ultimo[1]; }else{ echo "---"; } ?></h4>
-            <p>Último partido</p>
-          </div>
+
 
 		  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px 10px;background-color:rgba(32, 32, 31,0.5)">
@@ -172,7 +181,9 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 		  </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:90px;padding-left:20px;padding-right:20px;">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:0px;padding-left:20px;padding-right:20px;">
+			
+			 <div style="width:100%;padding-top:10px;"></div>
 			<?php if($model->avatar){ ?>
 			<div class="jugador-principal square" style="background-image:url(<?php
 echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>);"></div>
@@ -180,7 +191,17 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 			<div class="jugador-principal square" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
 			<?php } ?>
 			<!--<img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">!-->
-
+			<div style="padding-top:20px;">
+			<?php $model->logros;
+			if(count($model->logros)>0){ 
+				foreach($model->logros as $logro){ ?>
+					<div style="display:inline-block;width:40px;text-align:center;"><img style="max-width:100%;" src="<?php echo get_template_directory_uri(); ?>/img/<?php echo $logro->tipo; ?>.svg" /><br><?php echo $logro->fecha; ?>
+					</div>
+			<?php }
+			 }else{ ?>
+				 
+			 <?php } ?>
+			 </div>
 			<div class="compartir-jugador">
 			<p style="">Compartir</p>
 			<div class="links-sociales" >
@@ -249,7 +270,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 		<div	 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shadow" style="padding:0;" >
-			  <h2>Campañas de <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
+			  <h2>Campañas</span></h2>
 
 			  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
 				<nav>
@@ -306,7 +327,15 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 					</div>
 
 					<?php  } ?>
-
+				
+				<div class="col-lg-12 cuerpo-tabla contenido-dinamico total" >
+			  <div class="row">
+					<div class="col-lg-2 columna-gris">Total</div>
+					<div class="col-lg-4"> </div>
+					<div class="col-lg-3 partidos-jugados"><?php echo $lastTorneo["0"]; ?></div>
+					<div class="col-lg-3 goles-convertidos"><?php echo $lastTorneo["1"]; ?></div>
+					</div>
+					</div>
 
 
 			  </div>
@@ -365,7 +394,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 		<?php if($model->imagenes){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-galeria contenido-interno-tecnica">
-          <!--<h2 >Galería de fotos</h2>!-->
+          <h2 >Galería</h2>
 
 
 
@@ -785,7 +814,8 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
           <!-- <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/galeria-imagenes.png" alt=""> -->
 
-
+		
+	
 
 
         </div>
@@ -797,9 +827,10 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
         <?php
 
 		$destacadoId= $model->id;
+		$modelPuesto=$model->puesto;
 		$criteria = new CDbCriteria;
 $criteria->limit = 5;
-$criteria->condition = "id != $destacadoId";
+$criteria->condition = "id != $destacadoId and puesto='$modelPuesto'";
 $criteria->order = 'RAND()';
 $criteria->select = "*";
 
@@ -820,18 +851,49 @@ echo  Yii::app()->request->baseUrl."/".$jugador->avatar[0]->imagen_data()["url"]
 		</a>
         <?php } ?>
         </div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;float:initial;max-width:250px;">
+		<a class="mas-jugadores"style="color:white;" href="<?php echo home_url(); ?>/con-la-verde#<?php echo $model->puesto; ?>">Más <?php 
+		switch($model->puesto){
+			case "defensor":
+			echo "defensores";
+			break;
+			case "delantero":
+			echo "delanteros";
+			break;
+			case "arquero":
+			echo "arqueros";
+			break;
+			case "mediocampista":
+			echo "mediocampistas";
+			break;
+			
+		}
+		?></a>
+		</div>
+        </div>
+
+		
+		<style>
+		.page-content-area{padding-bottom:0;}.main-section.non-trio{padding-bottom:0;}
+		</style>
+		<div style="width:100%;background-color:white;display:inline-block;float:left;border-top: 10px solid #006327;padding:60px;margin-top:60px;">
+    <?php
+	//if($ip=="181.10.58.12"){
+		
+		echo do_shortcode('[fbcomments url="'.get_permalink().'" ]'); 
+	//}
+	?>
+	</div>
+		
+		
+        </div>
+
+        </div>
+
         </div>
 
 
-        </div>
-
-        </div>
-
-        </div>
-
-
-
-    <?php//comments_template(); ?>
+	
 
 <?php
 ?>

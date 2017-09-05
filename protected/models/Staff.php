@@ -64,6 +64,7 @@ class Staff extends CActiveRecord
 			'imagenes'=>array(self::HAS_MANY ,"RelImagen",array('modelId'=>'id'),"condition"=>"model = '$nombreClase'", ),
 			'avatar'=>array(self::HAS_MANY ,"RelImagen","modelId","condition"=>"avatar.destacada=1 and avatar.model = '$nombreClase' " ),
 			'data'=>array(self::HAS_MANY ,"DataExtra",array('modelId'=>'id'),"condition"=>"model = '$nombreClase'", ),
+			'logros'=>array(self::HAS_MANY ,"Logro",array('modelId'=>'id'),"condition"=>"model = '$nombreClase'", ),
 		);
 	}
 

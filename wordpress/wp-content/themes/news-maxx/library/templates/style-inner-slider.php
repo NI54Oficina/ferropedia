@@ -25,7 +25,9 @@
     }
 
     .custom-post-template .thumbnail-container{
-      background-image: repeating-linear-gradient( -45deg,   #e4e4e4,   #e8e8e8 5px,   #dcdcdc 5px,   #dcdcdc 10px );
+      /*background-image: repeating-linear-gradient( -45deg,   #e4e4e4,   #e8e8e8 5px,   #dcdcdc 5px,   #dcdcdc 10px );*/
+	  background-image:url("<?php echo get_template_directory_uri(); ?>/img/fondo-post-cuna.jpg");
+	  background-size:cover;
       position: relative;
       
       overflow: hidden;
@@ -52,6 +54,16 @@
 		text-indent:15px;
 	}
 	
+	.custom-post-template .post-content-text a{
+		font-family:Roboto-bold;
+		text-decoration:underline !important;
+		transition:0.5s;
+	}
+	.custom-post-template .post-content-text a:hover{
+		color:#00b643;
+		transition:0.5s;
+	}
+	
 	.custom-post-template .post-content-text p b,.custom-post-template .post-content-text p strong{
 		font-weight:100;
 		font-family:Roboto-bold;
@@ -70,17 +82,19 @@
     }
 
     .custom-post-template .post-left-colum .title-left-colum{
-      border: 1px solid black;
-      padding: 10px;
+      /*border: 1px solid black;*/
+	  border-bottom: #b2b2b2 1px solid;
       font-family: 'Condensed-bold-italic';
-      color:black;
-      font-size: 1.2em;
+      color:#b2b2b2;
+      font-size: 13px;
     }
 
     .custom-post-template .post-left-colum .tags label a {
       color:#a43c93;
-      font-size: 'Roboto-regular';
+      font-family: 'Roboto-regular';
       display: inline;
+	  font-size:14px;
+	  font-weight:initial;
     }
 
     .custom-post-template .post-left-colum .related p.relacionados{
@@ -135,6 +149,7 @@
 
 .gallery-icon{padding-bottom:20px;padding-top:10px;}
 
-#gallery-2{display:none;}
+.gallery{display:none;}
+.gallery~ul{display:none;}
 
   </style>

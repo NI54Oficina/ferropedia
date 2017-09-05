@@ -28,11 +28,11 @@ class JugadorController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"listar","deleteAll","puestos","sacarSab","ciudad"),
+				'actions'=>array('index','view',"listar","puestos"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update',"checkDatos","torneos","editTorneo"),
+				'actions'=>array('create','update',"checkDatos","torneos","editTorneo","crearLogro","deleteLogro"),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -82,6 +82,28 @@ class JugadorController extends Controller
 		 }
 		}
 		
+	}
+	
+	public function actionCrearLogro(){
+		//var_dump($_POST);
+		//exit();
+		if(isset($_POST["model"])&&isset($_POST["modelId"])){
+			$logro= new Logro();
+			$logro->model= $_POST["model"];
+			$logro->modelId= $_POST["modelId"];
+			$logro->tipo= $_POST["tipo"];
+			$logro->fecha= $_POST["fecha"];
+			$logro->save();
+			$id=$logro->modelId;
+			$this->redirect(array('jugador/'.$id));
+		}
+	}
+	
+	public function actionDeleteLogro($id){
+		$model= Logro::model()->findByPk($id);
+		$modelId= $model->modelId;
+		$model->delete();
+		$this->redirect(array('jugador/'.$modelId));
 	}
 
 	/**
@@ -159,91 +181,18 @@ class JugadorController extends Controller
 
 	}
 	
-	
-	
 	public function actionTorneos($id){
-		/*set_time_limit (100000);
-		$jugadores= Jugador::model()->findAll();
-		foreach($jugadores as $jugador){
-			$jugador->data;
-			$lastTorneo="";
-			$debut="";
-			$ultimo="";
-			$torneos=array();
-			$otros= array();
-			header('Content-Type: text/html; charset=utf-8');
-				$torneo=0;
-			
-			foreach($jugador->data as $data){
-				/*if($data["titulo"]=="Debut"){
-					//$debut =$data["texto"];
-				}else if($data["titulo"]=="Torneo"){
-					//$lastTorneo= $data["texto"];
-					$ultimo= $data;
-				}else if($data["titulo"]=="Último partido"){
-					//$ultimo= $data;
-				}else{
-					//array_push($otros,$data);
-				}*/
-				/*if($data["titulo"]=="Torneo"){
-					$lastTorneo= $data;
-					$torneo++;
-				$auxT= explode("/",$data["texto"]);
-				/*if($data["texto"]=="AÑO/Torneo/PJ/GC/"){
-					$data->delete();
-				}*/
-				//if(count($auxT)==5&& !is_numeric($auxT[2])&&strpos($data["texto"],"Total")===false){
-				//if(count($auxT)==5){
-					/*if(isset($torneos[$auxT[0]])){
-						array_push($torneos[$auxT[0]],$auxT);
-					}else{
-						$torneos[$auxT[0]]= array($auxT);
-					}*/
-					//$data["texto"]= preg_replace('/'.preg_quote("/", '/').'/',"-",$data["texto"],1);
-					//$data->save();
-					//echo $data["texto"];
-					//echo "<br>";
-					//echo "<hr>";
-					//$data["texto"]= $data["texto"]."0/";
-					//$data->save();
-				//}
-			/*	}
-			 }
-			 if($torneo==1){
-				 echo $jugador->id;
-				 echo '<br>';
-				 $auxD= new DataExtra();
-				 $auxD->model="Jugador";
-				 $auxD->modelId=$jugador->id;
-				 
-				 
-				 $auxT= substr($lastTorneo["texto"],strpos($lastTorneo['texto'],"/")+1);
-				 $auxT= substr($auxT,strpos($auxT,"/"));
-				 $auxD->texto= "Total".$auxT;
-				 $auxD->titulo= "Torneo";
-				 $auxD->save();
-			 }
-			 
-			 }
-			 /*if(strpos($ultimo["texto"],"Total")===false&&strpos($ultimo["texto"],"TOTAL")===false&&strpos($ultimo["texto"],"Totales")===false&&strpos($ultimo["texto"],"TOTALES")===false){
-				 $ultimo["texto"]= 'Texto/'.$ultimo["texto"];
-				 $ultimo->save();
-			 }*/
-		/*	 if(strpos($ultimo["texto"],"Texto")!==false){
-				  $ultimo["texto"]= str_replace("Texto","Total",$ultimo["texto"]);
-				  $ultimo->save();
-			 }
-		}*/
-		
+				
 		$torneos= DataExtra::model()->findAllByAttributes(array("model"=>"Jugador","modelId"=>$id,"titulo"=>"Torneo"));
 		$jugador= Jugador::model()->findByPk($id);
 		$this->render('torneos',array(
-			'torneos'=>$torneos,"jugador"=>$jugador
+			'torneos'=>$torneos,"jugador"=>$jugador,"id"=>$id
 		));
 	}
 	
-	public function actionEditTorneo($id)
+	public function actionEditTorneo($id=0)
 	{
+		if($id!=0){
 		$model= DataExtra::model()->findByPk($id);
 
 		$guardado="no";
@@ -261,6 +210,30 @@ class JugadorController extends Controller
 			$this->redirect(array('jugador/torneos/','id'=>$model->modelId));
 			exit();
 				//$this->redirect(array('view','id'=>$model->id));
+		}
+		}else{
+			$model= new DataExtra();
+			if(isset($_POST["modelId"])){
+				$model->modelId=$_POST["modelId"];
+				$model->model="Jugador";
+			}
+			if(isset($_POST['DataExtra']))
+			{
+				$texto="";
+				foreach($_POST["DataExtra"] as $d){
+					$texto.=$d."/";
+				}
+				$model->texto=$texto;
+				$model->model="Jugador";
+				$model->titulo="Torneo";
+				
+				
+				
+				if($model->save(false)){
+					$this->redirect(array('jugador/torneos/','id'=>$model->modelId));
+					exit();
+				}
+			}
 		}
 
 		$this->render('editTorneo',array(
@@ -557,5 +530,21 @@ class JugadorController extends Controller
 		}
 	}
 	
-	
+	public function actionTotales(){
+		$staffs= Jugador::model()->findAll();
+		foreach($staffs as $staff){
+			$staff->data;
+			$auxT=0;
+			foreach($staff->data as $data){
+				
+				if(strpos(strtolower($data->texto),"total")!==false){
+					$auxT++;
+				}
+			}
+			if($auxT>1){
+				echo $staff->id;
+				echo "<br>";
+			}
+		}
+	}
 }

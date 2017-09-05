@@ -19,7 +19,8 @@ if(!isset($model)){
 	$model= Staff::model()->findByPk($aux);
 
 }
-
+global $jugador;
+$jugador=$model;
 
 
 
@@ -128,7 +129,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
   <div class="wrapper clearfix">
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 first-box-ficha-tecnica">
-
+		<a style="color:white;position:absolute;z-index:1000;" href="<?php echo home_url(); ?>/con-la-verde-dt/"> Volver</a>
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;height:100%;padding-top:90px;">
           <!--<div class="sector-cancha-float cancha-<?php echo $model->puesto; ?>"></div>!-->
 		  <div class="cancha cancha-<?php echo $model->puesto; ?>">
@@ -143,7 +144,7 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 informacion-tecnica-inner">
             <h2><?php echo $lastTorneo[0]; ?></h2>
-            <p>Todos partidos dirigidos</p>
+            <p>Total partidos dirigidos</p>
             <h3><?php if($debut[0]!=""){ echo $debut[0]; }else{ echo "---"; } ?></h3>
             <h4><?php if($debut[1]!=""){ echo "Ferro ".$debut[1]; }else{ echo "---"; } ?></h4>
             <p>Debut</p>
@@ -154,8 +155,8 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 
 
 		  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 informacion-tecnica-inner">
-            <h2>&nbsp;<!--<?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?>!--></h2>
-            <p>&nbsp;<!--Total partidos ganados!--></p>
+            <h2><?php if(!isset($lastTorneo[1])||$lastTorneo[1]==""){echo 0;}else{ echo $lastTorneo[1];} ?></h2>
+            <p>Total partidos ganados</p>
 			<h3><?php if($ultimo[0]!=""){ echo $ultimo[0]; }else{ echo "---"; } ?></h3>
             <h4><?php if($ultimo[1]!=""){ echo "Ferro ".$ultimo[1]; }else{ echo "---"; } ?></h4>
             <p>Último partido</p>
@@ -179,20 +180,31 @@ $ultimo=str_replace("(","<br>(",$ultimo);
 		  </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:90px;padding-left:20px;padding-right:20px;">
-		
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="text-align:center;padding-top:0px;padding-left:20px;padding-right:20px;">
+			
+			 <div style="width:100%;padding-top:10px;"></div>
 			<?php if($model->avatar){ ?>
-			<div class="jugador-principal square" style="background-image:url(<?php 
+			<div class="jugador-principal square" style="background-image:url(<?php
 echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; ?>);"></div>
 			<?php }else{ ?>
 			<div class="jugador-principal square" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);"></div>
 			<?php } ?>
 			<!--<img class="jugador-principal" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/ejemplo.png" alt="">!-->
-
+			<div style="padding-top:20px;">
+			<?php $model->logros;
+			if(count($model->logros)>0){ 
+				foreach($model->logros as $logro){ ?>
+					<div style="display:inline-block;width:40px;text-align:center;"><img style="max-width:100%;" src="<?php echo get_template_directory_uri(); ?>/img/<?php echo $logro->tipo; ?>.svg" /><br><?php echo $logro->fecha; ?>
+					</div>
+			<?php }
+			 }else{ ?>
+				 
+			 <?php } ?>
+			 </div>
 			<div class="compartir-jugador">
 			<p style="">Compartir</p>
 			<div class="links-sociales" >
-			
+
                   <i class="fa fa-facebook" aria-hidden="true" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>','','width=500,height=400')" ></i>
                   <i class="fa fa-twitter" aria-hidden="true" onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo get_permalink(); ?>&amp;original_referer=<?php echo get_permalink(); ?>&text=Mirá la ficha de <?php echo $model->nombre." ".$model->apellido; ?> en LaFerropedia','','width=500,height=400')"></i>
 
@@ -258,7 +270,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 	
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-dinamica campanas-jugador" style="margin-top:40px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shadow" style="padding:0;" >
-			  <h2>Campañas de <span class="sub-verde"><?php echo $model->apellido; ?></span></h2>
+			  <h2>Campañas</h2>
 
 			  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
 				<nav>
@@ -272,12 +284,14 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 				<?php //var_dump($torneos); ?>
 			  <div class="tabla-anios-jugador">
 				<div class="titulo-tabla">
-				  <div class="col-lg-2">Temporada</div>
-				  <div class="col-lg-2">División</div>
-				  <div class="col-lg-2">Partidos jugados</div>
-				  <div class="col-lg-2">Partidos ganados</div>
-				  <div class="col-lg-2">Partidos empatados</div>
-				  <div class="col-lg-2">Partidos perdidos</div>
+				  <div class="col-lg-3">Temporada</div>
+				  <div class="col-lg-3">División</div>
+				  <div class="col-lg-1">PJ</div>
+				  <div class="col-lg-1">PG</div>
+				  <div class="col-lg-1">PE</div>
+				  <div class="col-lg-1">PP</div>
+				  <div class="col-lg-1">GF</div>
+				  <div class="col-lg-1">GC</div>
 				</div>
 
 
@@ -289,12 +303,14 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 					<?php foreach($value as $torneo){ ?>
 					<div class="row">
-					<div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
-					<div class="col-lg-2"><?php echo $torneo[1]; ?></div>
-					<div class="col-lg-2 partidos-jugados"><?php echo $torneo[2]; ?></div>
-					<div class="col-lg-2 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
-					<div class="col-lg-2 partidos-jugados"><?php if($torneo[4]==""){echo "0";}else{ echo $torneo[4]; }?></div>
-					<div class="col-lg-2 goles-convertidos"><?php if($torneo[5]==""){echo "0";}else{ echo $torneo[5]; }?></div>
+					<div class="col-lg-3 columna-gris"><?php echo $torneo[0]; ?></div>
+					<div class="col-lg-3"><?php echo $torneo[1]; ?></div>
+					<div class="col-lg-1 partidos-jugados"><?php echo $torneo[2]; ?></div>
+					<div class="col-lg-1 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
+					<div class="col-lg-1 partidos-jugados"><?php if($torneo[4]==""){echo "0";}else{ echo $torneo[4]; }?></div>
+					<div class="col-lg-1 goles-convertidos"><?php if($torneo[5]==""){echo "0";}else{ echo $torneo[5]; }?></div>
+					<div class="col-lg-1 partidos-jugados"><?php if($torneo[6]==""){echo "0";}else{ echo $torneo[6]; }?></div>
+					<div class="col-lg-1 goles-convertidos"><?php if($torneo[7]==""){echo "0";}else{ echo $torneo[7]; }?></div>
 					</div>
 
 
@@ -310,21 +326,35 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 					<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
 					<?php foreach($value as $torneo){ ?>
 					<div class="row">
-					<div class="col-lg-2 columna-gris"><?php echo $torneo[0]; ?></div>
-					<div class="col-lg-2"><?php echo $torneo[1]; ?></div>
-					<div class="col-lg-2 partidos-jugados"><?php echo $torneo[2]; ?></div>
-					<div class="col-lg-2 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
-					<div class="col-lg-2 partidos-jugados"><?php if($torneo[4]==""){echo "0";}else{ echo $torneo[4]; }?></div>
-					<div class="col-lg-2 goles-convertidos"><?php if($torneo[5]==""){echo "0";}else{ echo $torneo[5]; }?></div>
+					<div class="col-lg-3 columna-gris"><?php echo $torneo[0]; ?></div>
+					<div class="col-lg-3"><?php echo $torneo[1]; ?></div>
+					<div class="col-lg-1 partidos-jugados"><?php echo $torneo[2]; ?></div>
+					<div class="col-lg-1 goles-convertidos"><?php if($torneo[3]==""){echo "0";}else{ echo $torneo[3]; }?></div>
+					<div class="col-lg-1 partidos-jugados"><?php if($torneo[4]==""){echo "0";}else{ echo $torneo[4]; }?></div>
+					<div class="col-lg-1 goles-convertidos"><?php if($torneo[5]==""){echo "0";}else{ echo $torneo[5]; }?></div>
+					<div class="col-lg-1 partidos-jugados"><?php if($torneo[6]==""){echo "0";}else{ echo $torneo[6]; }?></div>
+					<div class="col-lg-1 goles-convertidos"><?php if($torneo[7]==""){echo "0";}else{ echo $torneo[7]; }?></div>
 					</div>
 					<?php } ?>
 					</div>
 
 					<?php  } ?>
 
-
+				<div class="col-lg-12 cuerpo-tabla contenido-dinamico total" >
+			  <div class="row">
+					<div class="col-lg-3 columna-gris">Total</div>
+					<div class="col-lg-3"> </div>
+					<div class="col-lg-1 partidos-jugados"><?php echo $lastTorneo["0"]; ?></div>
+					<div class="col-lg-1 goles-convertidos"><?php echo $lastTorneo["1"]; ?></div>
+					<div class="col-lg-1 partidos-jugados"><?php echo $lastTorneo["2"]; ?></div>
+					<div class="col-lg-1 goles-convertidos"><?php echo $lastTorneo["3"]; ?></div>
+					<div class="col-lg-1 partidos-jugados"><?php echo $lastTorneo["4"]; ?></div>
+					<div class="col-lg-1 goles-convertidos"><?php echo $lastTorneo["5"]; ?></div>
+					</div>
+					</div>
 
 			  </div>
+			  
 			  </div>
 
 
@@ -380,7 +410,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 		
 		<?php if($model->imagenes){ ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tecnica-galeria contenido-interno-tecnica">
-          <h2>Galería de fotos</h2>
+          <h2>Galería</h2>
 
 
 
@@ -413,7 +443,9 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 					<div class="row">
 			      <div id="demo-test-gallery" class="demo-gallery col-lg-12 col-md-12 col-sm-12 col-xs-12" data-pswp-uid="1">
 
-							<?php for($i=0; $i<count($model->imagenes); $i++){   ?>
+							<?php for($i=0; $i<count($model->imagenes); $i++){   
+							if( $model->imagenes[$i]["destacada"]){continue;}
+							?>
 							
 
 								<div style="padding:0 2.5px 5px 2.5px;" class="<?php	if($i==0){ echo "col-lg-6 col-md-6 col-sm-6 col-xs-6 square"; }else{ echo "col-lg-3 col-md-3 col-sm-3 col-xs-3 square";} ?> container-img-gallery">
@@ -816,7 +848,7 @@ $criteria->condition = "id != $destacadoId";
 $criteria->order = 'RAND()';
 $criteria->select = "*";
 
-		$jugadores= Jugador::model()->findAll($criteria);
+		$jugadores= Staff::model()->findAll($criteria);
 
 		foreach($jugadores as $jugador){
 		?>
@@ -828,23 +860,36 @@ echo  Yii::app()->request->baseUrl."/".$jugador->avatar[0]->imagen_data()["url"]
 		<?php }else{ ?>
         <div class="avatar-relacionado placeholder" style="background-image:url(<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/avatar-jugador.svg);" ></div>
 		<?php } ?>
-        <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?> <br> <span><?php echo $jugador["puesto"]; ?></span></label>
+        <label><?php echo $jugador["nombre"]." ".$jugador["apellido"]; ?> <br></label>
         </div>
 		</a>
         <?php } ?>
         </div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;float:initial;max-width:250px;">
+		<a class="mas-jugadores"style="color:white;" href="<?php echo home_url(); ?>/con-la-verde-dt/">Más directores técnicos</a>
+		</div>
+        </div>
+		
+		
+			<style>
+		.page-content-area{padding-bottom:0;}.main-section.non-trio{padding-bottom:0;}
+		</style>
+		<div style="width:100%;background-color:white;display:inline-block;float:left;border-top: 10px solid #006327;padding:60px;margin-top:60px;">
+    <?php
+	//if($ip=="181.10.58.12"){
+		
+		echo do_shortcode('[fbcomments url="'.get_permalink().'" ]'); 
+	//}
+	?>
+	</div>
+
+        </div>
+
+        </div>
+
         </div>
 
 
-        </div>
-
-        </div>
-
-        </div>
-
-
-
-    <?php//comments_template(); ?>
 
 <?php
 ?>

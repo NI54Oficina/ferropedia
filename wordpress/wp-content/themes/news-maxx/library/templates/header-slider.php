@@ -50,7 +50,7 @@
 						array(
 
 							'month' => $today['mon'],
-							/*'day'   =>  $today['mday'],*/
+							'day'   =>  $today['mday'],
 						),
 					),
 					"category_name"=>"evento"

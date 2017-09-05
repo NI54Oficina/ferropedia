@@ -2,4 +2,4 @@
   
   <a href="<?php echo home_url(); ?>"><img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/logo-laferropedia.png" style="height:100px;" alt=""></a>
 </div>
-<style>#main-menu{margin-left:20px !important;padding:3px;} .main-nav .links-sociales{/*display:inline-flex;*/}</style>
+<style>#main-menu{margin-left:20px !important;padding:3px;} .header-bottom .links-sociales{ right:40px;top:-40px;}</style>
