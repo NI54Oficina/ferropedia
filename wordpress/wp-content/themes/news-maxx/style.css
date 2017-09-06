@@ -9925,12 +9925,12 @@ font-family:'Roboto-Bold';
     nav.menu-jugadores p.selected{
       background-color: #006327;
     }
-	
+
 	nav.menu-jugadores .otra-categoria{
 		float:right;display:inline-block;padding:5px;border:solid green 1px;right:30px; top:30px;color:white;
 		transition:.5s;
 	}
-	
+
 	nav.menu-jugadores .otra-categoria:hover{
 		transition:.5s;
 		border-color:transparent;
@@ -9958,7 +9958,7 @@ font-family:'Roboto-Bold';
 
 	.jugadores-content .jugadores-muchosjugadores .jugadores-j label{
 		height:60px;
-		
+
 	}
 
     .jugadores-content .jugadores-muchosjugadores .jugadores-j span,.escudito{
@@ -9974,7 +9974,7 @@ font-family:'Roboto-Bold';
       margin-top: -30px;
 	  min-height:30px;
 	  min-width:30px;
-	  
+
     }
 
 	.escudito{
@@ -10259,7 +10259,7 @@ font-family:'Roboto-Bold';
       /*background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);*/
 	  background:repeating-linear-gradient( -45deg, rgba(41, 119, 43, 0.85), rgba(41, 119, 43, 0.87) 2px, #006327 4px, #006327 6px );
     }
-	
+
 	.post-template-template-ficha-tecnica  .tecnica-detalle h2.odd{
       /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
       /*background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);*/
@@ -10267,10 +10267,10 @@ font-family:'Roboto-Bold';
     }
 
     .post-template-template-ficha-tecnica3 .tecnica-detalle h2.even{
-      
+
 	  background:repeating-linear-gradient( -45deg, rgba(41, 119, 43, 0.85), rgba(41, 119, 43, 0.87) 2px, #006443 4px, #006443 6px );
     }
-	
+
 	.post-template-template-ficha-tecnica3  .tecnica-detalle h2.odd{
       /*repeating-linear-gradient( -45deg,   black,   black 2px,   rgba(255,255,255,.2) 6px,   rgba(255,255,255,.2) 5px )*/
       /*background:repeating-linear-gradient(-45deg, rgba(0,182,67,.7), rgba(0,182,67,.7) 2px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.2) 5px);*/
@@ -10401,14 +10401,14 @@ font-family:'Roboto-Bold';
 		float:initial;
 		padding:0;
 	}
-	
+
 	/**Twitter**/
 	#ctf .ctf-item{
 		padding:20px;
 		padding-left:60px;
 	}
 	#ctf.ctf-super-narrow .ctf-author-avatar{
-		margin-left:-45px;	
+		margin-left:-45px;
 	}
 	#ctf.ctf-super-narrow .ctf-author-box{
 		margin-left:0;
@@ -10416,8 +10416,8 @@ font-family:'Roboto-Bold';
 	#ctf .ctf-author-name{
 		margin-left:0;
 	}
-	
-	
+
+
 	#ctf .ctf-header{
 	padding-top:15px;
 	}
@@ -10450,10 +10450,10 @@ font-family:'Roboto-Bold';
 	#ctf.ctf-super-narrow .ctf-header-user{
 		min-height:initial;
 	}
-	
+
 	#ctf p.ctf-tweet-text a{
 		color:white;
-		
+
 	}
 	#ctf p.ctf-tweet-text{
 		color:#e1bedb;
@@ -10461,16 +10461,16 @@ font-family:'Roboto-Bold';
 	#ctf.ctf-super-narrow .ctf-more span{
 		color:#e1bedb;
 	}
-	
+
 	#ctf.ctf-super-narrow .ctf-author-name{
 		color:white !important;
 	}
-	
+
 	.twitter-container{
 		max-height:600px;
 		overflow:auto;
 	}
-	
+
 	/*Fin twitter*/
 
 	.compartir-jugador p{
@@ -10590,7 +10590,7 @@ margin-bottom:15px;
       font-size: 1.2em;
       padding: 10px 0;
     }
-	
+
 	.mas-jugadores{
 		border:solid 1px green;
 		padding:8px;
@@ -10650,11 +10650,11 @@ margin-bottom:15px;
 	.informacion-tecnica-inner h4{
 
       font-family: 'Condensed-italic';
-	  
+
 	  margin-top:5px;
 	  margin-bottom:5px;
     }
-	
+
 	.informacion-tecnica-inner h4::first-letter{
 		text-transform:capitalize;
 	}
@@ -10710,7 +10710,7 @@ margin-bottom:15px;
 	  background-color:#080808;
 	  padding-left:0;
 	  padding-right:0;
-	  
+
     }
 
     .informacion-dinamica .menu-anios nav{
@@ -10758,13 +10758,13 @@ margin-bottom:15px;
       padding:10px 0 20px 0;
       text-align: center;
     }
-	
-	
+
+
 
 	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla .row div{
 		border-top:1px solid #22221f;
 	}
-	
+
 	.informacion-dinamica .menu-anios .tabla-anios-jugador .cuerpo-tabla.total .row div{
 		border-top:1px solid white;
 		font-family:Condensed-bold;
@@ -10816,6 +10816,17 @@ margin-bottom:15px;
 	background-color:#080808;
 
     }
+
+  .template-single-gallery  .post-content-text .inner-post-content-text{
+    background-color: white;
+    padding:80px;
+  }
+
+  .template-single-gallery  .post-content-text{
+    padding:5% 15%;
+    padding-bottom: 0;
+  }
+
 	.custom-post-template .post-content-text .fuente p{
 		text-indent:0;
 		font-size:0.8em;

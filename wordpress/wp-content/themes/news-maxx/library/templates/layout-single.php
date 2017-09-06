@@ -81,6 +81,8 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-post-template main-section trio-cuna-cajon">
 
  <?php include("style-inner-slider.php"); ?>
+
+
   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
 
 
@@ -132,7 +134,7 @@
           }
 
         </style>
-		
+
 		<div class="share" style="padding-bottom:100px;">
             <div  class="title-left-colum" style="border:none;"><div class="links-sociales" style="padding:0;" >
 
@@ -254,10 +256,10 @@
             $nextid = $ids[ $thisindex + 1 ];*/
 			$previousPost=get_previous_post(true);
 			$previd=$previousPost->ID;
-			
+
 			$nextPost=get_next_post(true);
 			$nextid=$nextPost->ID;
-			
+
             ?>
 
             <style >
@@ -304,7 +306,7 @@
 					padding-bottom:40px;
 				}
             </style>
-			
+
 			<?php if(isset($previd)){ ?>
             <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>
 			<?php } ?>

@@ -39,7 +39,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("template-single-gallery"); ?> >
 
   <?php
   get_template_part( 'library/templates/header', 'links' );
@@ -56,7 +56,7 @@
 
     <div class="wrapper">
 
-        <?php kopa_the_topnew(); ?>
+        <?php //kopa_the_topnew(); ?>
         <!-- top new -->
 
     </div>
@@ -65,11 +65,24 @@
 </div>
 <!-- stripe-box -->
 
-<div class="bn-box">
+<div class="">
+<div class="" style="background-color:white; text-align:center">
+<?php site_url(); ?>
 
+<?php 	$post_categories = wp_get_post_categories( get_the_ID() );
+  foreach($post_categories as $c){
+  $cat = get_category( $c );?>
+
+  <img src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-<?php echo $cat->slug; ?>-verde.svg" alt="">
+  <?php }?>
+
+
+  <p class="subtitulo"><?php echo get_field("volanta"); ?></p>
+  <h1><?php the_title_attribute(); ?></h1>
+</div>
 <div class="wrapper clearfix">
 
-    <?php kopa_the_headline(); ?>
+    <?php// kopa_the_headline(); ?>
     <!-- kp-headline-wrapper -->
 
 </div>
@@ -78,10 +91,11 @@
 </div>
 
 <div class="wrapper clearfix">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-post-template main-section trio-cuna-cajon">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-col pull-left custom-post-template main-section trio-cuna-cajon" style="padding-left:0; padding-right:0">
 
  <?php include("style-inner-slider.php"); ?>
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:black">
 
 
 
@@ -90,24 +104,22 @@
 
         <?php// get_template_part( 'library/templates/loop', 'single' ); ?>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nombre-categoria">
-          <?php 	$post_categories = wp_get_post_categories( get_the_ID() );
-            foreach($post_categories as $c){
-            $cat = get_category( $c );
-            echo $cat->name."  ";
+        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nombre-categoria"> -->
 
-            }?>
-        </div>
 
-        <p class="subtitulo"><?php echo get_field("volanta"); ?></p>
 
-        <h1><?php the_title_attribute(); ?></h1>
-		<div class="bajo-titulo">
+
+        <!-- </div> -->
+
+
+
+
+		<!-- <div class="bajo-titulo">
 		<p><?php echo get_the_date(); ?></p>
 		<p>&#9652;</p>
 		<p><?php $count_key = 'wpb_post_views_count';
     $count = get_post_meta(get_the_ID(), $count_key, true); echo $count; ?> visitas</p>
-		</div>
+		</div> -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">
           <?php the_post_thumbnail(array(1000, 520)); ?>
 
@@ -115,13 +127,14 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-title">
           <p>  <?php echo get_post(get_post_thumbnail_id())->post_excerpt;   ?>  </p>
         </div>
-		
 
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-left-colum">
+
+        <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-left-colum"> -->
 
 
-        <?php if(has_tag()){ ?>
+        <!-- <?php if(has_tag()){ ?>
+          <p>asjdnhjkasdasdkjansdkjasjkd</p>
           <div class="tags">
             <p class="title-left-colum">ETIQUETAS</p>
 
@@ -129,11 +142,11 @@
 
           </div>
 
-          <?php  }?>
+          <?php  }?> -->
 
 
 
-            <?php
+            <!-- <?php
                 $tags = wp_get_post_terms( get_queried_object_id(), 'post_tag', ['fields' => 'ids'] );
                 $args = [
                     'post__not_in'        => array( get_queried_object_id() ),
@@ -169,7 +182,7 @@
                        </div>
 
               <?php   }
-                ?>
+                ?> -->
 
             <!-- <p class="relacionados"><span>Fecha</span><br>
             titulo noticia</p>
@@ -179,21 +192,30 @@
 
 
 
-          <div class="share">
+          <!-- <div class="share">
             <p  class="title-left-colum">COMPARTIR</p>
 
+          </div> -->
+        <!-- </div> -->
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 post-content-text">
+
+          <div class="inner-post-content-text">
+            <?php the_content(); ?>
+
+
+            <?php if(strlen(get_field('fuente'))!=0){ ?>
+            <p class="fuente-new-template" style="padding-top: 15px;  padding-left: 0;border-top: 1px solid #888888;text-indent: 0;margin-top: 30px;  color:#888888;font-size:0.8em"><?php echo get_field('fuente'); ?></p>
+            <?php } ?>
           </div>
-        </div>
-
-        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 post-content-text">
-          <?php the_content(); ?>
 
 
-          <?php if(strlen(get_field('fuente'))!=0){ ?>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#eff0ef;box-shadow: 0px 2px 5px 3px rgba(173,173,173,1);margin-top:30px;">
 
 
-          <div class="fuente">
+            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:10px;background-color:#eff0ef;box-shadow: 0px 2px 5px 3px rgba(173,173,173,1);margin-top:30px;"> -->
+
+
+          <!-- <div class="fuente">
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="padding:0;">
                 <img style="max-width:35px;" src="<?php echo site_url(); ?>/wp-content/themes/news-maxx/img/icono-dechiquitomiviejo-verde.svg" alt="">
             </div>
@@ -206,104 +228,109 @@
 
           </div>
 
-          </div>
-
-        <?php } ?>
-
-        </div>
-
-        <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 container-move-entradas">
-            <?php
-
-            $cat = get_the_category();
-            $current_cat_id = $cat[0]->cat_ID;
-
-            $args = array(
-              'numberposts' => -1, "post_type"=>"post", 'category'=>$current_cat_id , 'orderby'  => 'post_date', 'order'    => 'DESC');
-            $posts = get_posts( $args );
-
-            $ids = array();
-            foreach ( $posts as $thepost ) {
-                $ids[] = $thepost->ID;
-            }
-
-            $thisindex = array_search( $id, $ids );
-            $previd = $ids[ $thisindex - 1 ];
-            $nextid = $ids[ $thisindex + 1 ];
-            ?>
-
-            <style >
-
-            .container-move-entradas{
-              padding: 50px 10px;
-            }
-
-            .container-move-entradas a > p{
-              font-family: 'Condensed-bold';
-              font-size: 1.2em;
-              width: auto;
-            }
-
-            .container-move-entradas p{
-              font-family: 'Condensed-bold-italic';
-              color: black;
-              font-size: 1.4em;
-              word-wrap: break-word;
-              width: 300px;
-
-            }
-
-            .container-move-entradas p span{
-              font-family: 'Roboto-regular';
-              color:#A43C93;
-              font-size: 10px;;
-            }
-
-              .siguiente-entrada{
-                float:right;
-              }
-
-              .anterior-entrada{
-                float:left;
-              }
-
-              .linea-divisoria{
-                width: 100%;
-                border:1px solid black;
-                margin:15px 0;
-              }
-				.owl-theme .owl-controls{
-					padding-bottom:40px;					
-				}
-				
-            </style>
-
-            <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>
-
-
-            <a href="<?php echo get_permalink($nextid); ?>"><p class="siguiente-entrada">Siguiente &gt;</p></a>
-
-            <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 linea-divisoria"></div>
-
-
-            <p class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
-
-
-            <p class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
+          </div> -->
 
 
 
+        <!-- </div> -->
 
-        </div>
+
 
         </div>
         <!-- main-col -->
-     
+
         <div class="clear"></div>
 
 
 </div>
 
+
+<div class="col-lg-12 col-md12 col-sm-12 col-xs-12 container-move-entradas">
+    <?php
+
+    $cat = get_the_category();
+    $current_cat_id = $cat[0]->cat_ID;
+
+    $args = array(
+      'numberposts' => -1, "post_type"=>"post", 'category'=>$current_cat_id , 'orderby'  => 'post_date', 'order'    => 'DESC');
+    $posts = get_posts( $args );
+
+    $ids = array();
+    foreach ( $posts as $thepost ) {
+        $ids[] = $thepost->ID;
+    }
+
+    $thisindex = array_search( $id, $ids );
+    $previd = $ids[ $thisindex - 1 ];
+    $nextid = $ids[ $thisindex + 1 ];
+    ?>
+
+    <style >
+
+    .container-move-entradas{
+      padding: 50px 10px;
+      box-shadow: inset 2px 8px 10px 0px rgba(0,0,0,0.2);
+      border-top: 4px double rgba(0,0,0,0.2)
+    }
+
+    .container-move-entradas a > p{
+      font-family: 'Condensed-bold';
+      font-size: 1.2em;
+      width: auto;
+    }
+
+    .container-move-entradas p{
+      font-family: 'Condensed-bold-italic';
+      color: black;
+      font-size: 1.4em;
+      word-wrap: break-word;
+      width: 300px;
+
+    }
+
+    .container-move-entradas p span{
+      font-family: 'Roboto-regular';
+      color:#A43C93;
+      font-size: 10px;;
+    }
+
+      .siguiente-entrada{
+        float:right;
+      }
+
+      .anterior-entrada{
+        float:left;
+      }
+
+      .linea-divisoria{
+        width: 100%;
+        border:1px solid black;
+        margin:15px 0;
+      }
+      .owl-theme .owl-controls{
+        padding-bottom:40px;
+      }
+
+
+    </style>
+
+    <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>
+
+
+    <a href="<?php echo get_permalink($nextid); ?>"><p class="siguiente-entrada">Siguiente &gt;</p></a>
+
+    <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 linea-divisoria"></div>
+
+
+    <p class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
+
+
+    <p class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
+
+
+
+
+</div>
 </div>
 <!-- wrapper -->
 
