@@ -290,8 +290,8 @@
     }
 
 
-    // $previd = $ids[ $thisindex - 1 ];
-    // $nextid = $ids[ $thisindex + 1 ];
+    $previd = $ids[ $thisindex - 1 ];
+    $nextid = $ids[ $thisindex + 1 ];
 ?>
 
 
@@ -325,13 +325,9 @@
       font-size: 10px;;
     }
 
-      .siguiente-entrada{
-        float:right;
-      }
 
-      .anterior-entrada{
-        float:left;
-      }
+
+
 
       .linea-divisoria{
         width: 100%;
@@ -345,18 +341,6 @@
 
     </style>
 
-    <!-- <a href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada">&lt; Anterior</p></a>
-
-
-    <a href="<?php echo get_permalink($nextid); ?>"><p class="siguiente-entrada">Siguiente &gt;</p></a>
-
-    <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 linea-divisoria"></div>
-
-
-    <p class="anterior-entrada"><?php echo get_the_title($previd); ?> <br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p>
-
-
-    <p class="siguiente-entrada"><?php echo get_the_title($nextid); ?><br><span><?php echo get_the_date('D M j' ,$previd); ?> </span></p> -->
 
  <ul class="masonry-list2">
 
@@ -380,6 +364,15 @@
 
        <?php  }
        ?>
+
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  " style="text-align:center">
+         <a style="display: inline-flex; width:auto" href="<?php echo get_permalink($previd); ?>"><p class="anterior-entrada" style="margin: 0 20px;" >&lt; Anterior</p></a>
+         <a  style="display: inline-flex; width:auto" href="<?php echo get_permalink($nextid); ?>"><p class="siguiente-entrada"  style="margin: 0 20px;">Siguiente &gt;</p></a>
+       </div>
+
+
+
+
 
 
 
