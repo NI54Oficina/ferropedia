@@ -120,13 +120,19 @@
 		<p><?php $count_key = 'wpb_post_views_count';
     $count = get_post_meta(get_the_ID(), $count_key, true); echo $count; ?> visitas</p>
 		</div> -->
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">
-          <?php the_post_thumbnail(array(1000, 520)); ?>
 
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-title">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0 15%;">
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-container">
+        <?php the_post_thumbnail(array(1000, 520)); ?>
+
+      </div>
+
+    </div>
+
+        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumbnail-title">
           <p>  <?php echo get_post(get_post_thumbnail_id())->post_excerpt;   ?>  </p>
-        </div>
+        </div> -->
 
 
 
