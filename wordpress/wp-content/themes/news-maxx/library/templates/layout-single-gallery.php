@@ -321,7 +321,7 @@
       color: black;
       font-size: 1.4em;
       word-wrap: break-word;
-      width: 300px;
+      width: 100%;
 
     }
 
@@ -594,7 +594,7 @@ width: 100%;
 bottom: 0;
 left: 0;
 overflow: hidden;
-padding: 40px;
+padding: 10px;
 position: absolute;
 right: 0;
 top: 0;
@@ -644,6 +644,7 @@ font-size: 18px;
 font-weight: 300;
 line-height: 24px;
 margin: 1em 0 0;
+color:white;
 }
 
 *,
