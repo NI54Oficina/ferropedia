@@ -219,7 +219,7 @@
 		$destacadoId= $destacado->id;
 		$criteria = new CDbCriteria;
 $criteria->limit = 2;
-$criteria->condition = "id != $destacadoId";
+$criteria->condition = "id != $destacadoId and activo = 1";
 $criteria->order = 'RAND()';
 $criteria->select = "*";
 
@@ -252,7 +252,7 @@ $criteria->select = "*";
 
 		$criteria = new CDbCriteria;
 		$criteria->limit = 2;
-
+		$criteria->condition = "activo = 1";
 		$criteria->order = 'RAND()';
 		$criteria->select = "*";
 

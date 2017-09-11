@@ -453,10 +453,11 @@ class JugadorController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Jugador('search');
+		/*$model=new Jugador('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Jugador']))
-			$model->attributes=$_GET['Jugador'];
+			$model->attributes=$_GET['Jugador'];*/
+		$model= Jugador::model()->findAll();
 
 		$this->render('admin',array(
 			'model'=>$model,

@@ -47,11 +47,15 @@ foreach($model->data as $data){
 				$torneos[$auxT[0]]= array($auxT);
 			}
 		}
+		$key= $auxT[0];
+		if($key=="Total"||$key=="Totales"||$key=="TOTAL"||$key=="TOTALES"){
 		$lastTorneo= $data["texto"];
+		
 		$lastTorneo= str_replace("Total/",'',$lastTorneo);
 		$lastTorneo= str_replace("Totales/",'',$lastTorneo);
 		$lastTorneo= str_replace("TOTALES/",'',$lastTorneo);
 		$lastTorneo= str_replace("TOTAL/",'',$lastTorneo);
+		}
 	}else if($data["titulo"]=="Último partido"){
 		$ultimo= $data["texto"];
 	}else{

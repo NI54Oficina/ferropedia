@@ -44,7 +44,7 @@ class Staff extends CActiveRecord
 			array('nombre, apellido', 'required'),
 			array('nombre, apellido, nacimiento, ciudad_natal, detalle_puesto, defuncion', 'length', 'max'=>300),
 			array('puesto', 'length', 'max'=>100),
-			array('nacimiento, ciudad_natal, puesto, detalle_puesto, defuncion', 'safe'),
+			array('nacimiento, ciudad_natal, puesto, detalle_puesto, defuncion,activo', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, nombre, apellido, nacimiento, ciudad_natal, puesto, detalle_puesto, defuncion', 'safe', 'on'=>'search'),

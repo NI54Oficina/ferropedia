@@ -11,9 +11,15 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	
 
 	<?php echo $form->errorSummary($model); ?>
+	
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'activo'); ?>
+		<?php echo $form->checkBox($model,'activo'); ?>
+		<?php echo $form->error($model,'activo'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>

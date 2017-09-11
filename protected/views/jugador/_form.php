@@ -14,12 +14,19 @@
 	
 
 	<?php echo $form->errorSummary($model); ?>
+	
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'activo'); ?>
+		<?php echo $form->checkBox($model,'activo'); ?>
+		<?php echo $form->error($model,'activo'); ?>
+	</div>
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>300,"class"=>"form-control")); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
+	
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'apellido'); ?>

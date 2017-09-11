@@ -44,11 +44,16 @@ foreach($model->data as $data){
 				$torneos[$auxT[0]]= array($auxT);
 			}
 		}
+		$key= $auxT[0];
+		if($key=="Total"||$key=="Totales"||$key=="TOTAL"||$key=="TOTALES"){
 		$lastTorneo= $data["texto"];
+		
 		$lastTorneo= str_replace("Total/",'',$lastTorneo);
 		$lastTorneo= str_replace("Totales/",'',$lastTorneo);
 		$lastTorneo= str_replace("TOTALES/",'',$lastTorneo);
 		$lastTorneo= str_replace("TOTAL/",'',$lastTorneo);
+		}
+		
 	}else if($data["titulo"]=="Último partido"){
 		$ultimo= $data["texto"];
 	}else{
@@ -275,7 +280,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 			  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-anios menu-dinamico">
 				<nav>
 				  <p class="selected">Todos</p>
-				  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+				  <?php foreach($torneos as $key=>$value){ if($key=="Total"||$key=="Totales"||$key=="TOTAL"||$key=="TOTALES"){continue;} ?>
 				  <p><?php echo $key; ?></p>
 				  <?php } ?>
 
@@ -295,7 +300,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 				<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
 
 
-					<?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+					<?php foreach($torneos as $key=>$value){ if($key=="Total"||$key=="Totales"||$key=="TOTAL"||$key=="TOTALES"){continue;} ?>
 
 					<?php foreach($value as $torneo){ ?>
 					<div class="row">
@@ -314,7 +319,7 @@ echo  Yii::app()->request->baseUrl."/".$model->avatar[0]->imagen_data()["url"]; 
 
 			  </div>
 
-			  <?php foreach($torneos as $key=>$value){ if(!is_int($key)||strlen($key)!=4){continue;} ?>
+			  <?php foreach($torneos as $key=>$value){ if($key=="Total"||$key=="Totales"||$key=="TOTAL"||$key=="TOTALES"){continue;} ?>
 					<div class="col-lg-12 cuerpo-tabla contenido-dinamico">
 					<?php foreach($value as $torneo){ ?>
 					<div class="row">

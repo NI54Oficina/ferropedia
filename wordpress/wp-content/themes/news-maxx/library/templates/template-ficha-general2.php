@@ -1,7 +1,7 @@
 <?php
 //$puestos= $GLOBALS["puestos"];
 
-$directores= Staff::model()->findAll();
+$directores= Staff::model()->findAllByAttributes(array("activo"=>1));
 			
 $query = new WP_Query( array(
     'meta_key' => 'wpb_post_views_count',

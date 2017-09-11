@@ -1,10 +1,10 @@
 <?php
 //$puestos= $GLOBALS["puestos"];
 $puestos= array();
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"arquero")));
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"defensor")));
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista")));
-			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"delantero")));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"arquero","activo"=>1)));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"defensor","activo"=>1)));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"mediocampista","activo"=>1)));
+			array_push($puestos,Jugador::model()->findAllByAttributes(array("puesto"=>"delantero","activo"=>1)));
 
 			
 $query = new WP_Query( array(

@@ -382,11 +382,12 @@ class StaffController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Staff('search');
+		/*$model=new Staff('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Staff']))
 			$model->attributes=$_GET['Staff'];
-
+		*/
+		$model= Staff::model()->findAll();
 		$this->render('admin',array(
 			'model'=>$model,
 		));
